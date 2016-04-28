@@ -9,7 +9,7 @@ The OCS server receives inventories which are sent by agents in XML format, and 
 
 Schema of data transmission :
 
-    Raw data -> XML formatting -> sending in HTTP or HTTPS in /ocsinventory -> handling with mod_perl on the fly -> DB mysql
+`Raw `**`data`**` -> `**`XML`**` formatting -> sending in HTTP or HTTPS in `**`/ocsinventory`**` -> handling with `**`mod_perl`**` on the fly -> DB `**`mysql`**
 
 Management server is made up of 4 main components:
 
