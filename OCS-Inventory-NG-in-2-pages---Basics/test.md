@@ -1,4 +1,4 @@
-#SNewbie documentation - What you should know
+#Newbie documentation - What you should know
 ##OCS Inventory NG in 5 lines, what is it ?
 
 OCS Inventory NG or **Open Computer and Software Inventory Next Generation** is free software that enables users to automatically inventory their IT assets. OCS-NG collects information about the hardware and software of networked machines running the OCS client program ("OCS Inventory Agent"). OCS can be used to visualize the inventory through a web interface. Furthermore, OCS allows the possibility of deploying applications on the computers according to search criteria. Agent-side IpDiscover and snmp scan make it possible to identify the entire network of computers and devices.
