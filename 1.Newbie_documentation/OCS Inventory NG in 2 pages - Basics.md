@@ -18,7 +18,7 @@ Management server is made up of 4 main components:
 3. **Administration console, which allows administrators to query the database server using their favorite browser (Apache, php)**
 4. **Deployment server, which stores all package deployment configuration (Apache, ssl)**
 
-![OCS Inventory Structure Diagram](img/Architecture_OCS.jpg)
+![OCS Inventory Structure Diagram](../img/Architecture_OCS.jpg)
 
 ## Deployment tools of the solution
 
