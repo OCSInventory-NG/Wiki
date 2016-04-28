@@ -48,7 +48,7 @@ We assume that you have:
 * MySQL version 4.1.0 or higher with InnoDB engine active.
 * Make utility such as GNU make.
 
-      Note: OCS Inventory NG Server Setup will check for all these components and will exit if any are missing.
+**`Note`**`: OCS Inventory NG Server Setup will check for all these components and will exit if any are missing.`
 
 ## Installing Communication server required PERL modules.
 
@@ -57,5 +57,63 @@ The Web communication server requires Apache web server and Perl 5 scripting lan
 It acts as an Apache module which handles HTTP OCS Inventory agents' requests to a virtual directory /ocsinventory.
 
 
-    Warning: You must have root privileges to set required perl modules up.
-    It is better for system integrity to use your distribution's precompiled packages when they are available. Some of these packages are only avalaible in [EPEL](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse).
+**`Warning`**`: You must have root privileges to set required perl modules up.
+It is better for system integrity to use your distribution's precompiled packages when they are available.
+Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`.`
+
+**On Fedora/Redhat like Linux**, you can use “yum” to set required modules up:
+
+    yum install perl-XML-Simple
+    yum install perl-Compress-Zlib
+    yum install perl-DBI
+    yum install perl-DBD-MySQL
+    yum install perl-Apache-DBI
+    yum install perl-Net-IP
+    yum install perl-SOAP-Lite
+
+**On Debian like Linux**, you can use “apt-get” to set required modules up:
+
+    apt-get install libxml-simple-perl
+    apt-get install libcompress-zlib-perl
+    apt-get install libdbi-perl
+    apt-get install libdbd-mysql-perl
+    apt-get install libapache-dbi-perl
+    apt-get install libnet-ip-perl
+    apt-get install libsoap-lite-perl
+    cpan -i XML::Entities
+
+**On Gentoo like Linux**, you can use "emerge" to get required modules set up:
+
+    emerge dev-perl/XML-Simple
+    emerge perl-core/IO-Compress
+    emerge dev-perl/Apache-DBI
+    emerge dev-perl/Net-IP
+    emerge dev-perl/SOAP-Lite
+    emerge app-portage/g-cpan
+    g-cpan -i XML::Entities
+
+If a precompiled package is not available for your distribution, you can download the package source
+from http://search.cpan.org and build it on your system (make and C compiler must be available). For example:
+
+    tar –xvzf package_name.tar.gz
+    cd package_name
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+You can also install the missing modules using the cpan script. i.e.
+
+    cpan -i Compress::Zlib
+
+**`Note`**`: If you are not using system perl interpreter, but another one such as the XAMPP/LAMPP perl interpreter,
+you must call this perl interpreter, not the system one, by specifying full path to your perl interpreter.
+For example:
+    /opt/lampp/bin/perl Makefile.PL
+`
+
+
+
+
+
+
