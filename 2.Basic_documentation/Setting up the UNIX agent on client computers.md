@@ -44,19 +44,15 @@ _**On Fedora/Redhat like Linux**, you can use “yum” tool to set required mod
 _Optional modules: these modules are available on EPEL repository. Don't forget to add this repository
 to your system or download each package individually from the repository_
 
-    yum install perl-Crypt-SSLeay perl-Net-SNMP perl-Proc-Daemon perl-Proc-PID-File
-    perl-Sys-Syslog pciutils smartmontools monitor-edid
+    yum install perl-Crypt-SSLeay perl-Net-SNMP perl-Proc-Daemon perl-Proc-PID-File perl-Sys-Syslog pciutils smartmontools monitor-edid
 
 _**On Debian like Linux**, you can use “apt-get” tool to set required modules up:_
 
-    apt-get install dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl
-    libdigest-md5-perl libnet-ssleay-perl
+    apt-get install dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl libnet-ssleay-perl
 
 _Optional modules:_
 
-    apt-get install libcrypt-ssleay-perl (to use SSL) libnet-snmp-perl (to use SNMP feature)
-    libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl
-    pciutils smartmontools read-edid nmap
+    apt-get install libcrypt-ssleay-perl (to use SSL) libnet-snmp-perl (to use SNMP feature) libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
 **Unix agent 2.0 is now installed without script “setup.sh”. During compilation, information about
 configuration and dependencies are returned. However, it will never upgrade an install module.
@@ -184,12 +180,12 @@ Here is a sample configuration file for OCS Inventory NG Linux agent.
 
 **Figure 5 : Sample agent’s configuration file ocsinv.conf for a network connected computer.**
 
-# Deploying agent through scripted installation without user interaction.
+# Deploying agent through scripted installation without user interaction
 
 Actually not possible in version 2.0. This feature will be integrated in 2.1.
 
 **`Warning`**`: This feature will be only available in OCS 2.1. Don't try this options using OCS 2.0
-Unix Unix agent...it won't work !!`
+Unix agent...it won't work !!`
 
 Since OCS Unix Unified agent 2.1, you are able to launch _postinst.pl_ script in non-interactive mode.
 A set of launch arguments has been added to this script to allow to set all configuration options
@@ -218,8 +214,7 @@ For example, if you want to install OCS Unix Unified agent in non-interactive mo
 create a crontab, set a custom tag, enable debug mode, set a log file path and activate download feature,
 you have to run this command:
 
-    env PERl_AUTOINSTALL=1 perl Makefile.PL && make && make install && perl postinstl.pl --nowizard
-    --server=http://yourserver/ocsinventory --crontab
+    env PERl_AUTOINSTALL=1 perl Makefile.PL && make && make install && perl postinstl.pl --nowizard --server=http://yourserver/ocsinventory --crontab
 
 # Agent’s command line switches
 
