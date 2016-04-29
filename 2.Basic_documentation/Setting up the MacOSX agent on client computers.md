@@ -11,7 +11,7 @@ Download OCS MacOSX agent from OCS Inventory NG website download page(
 [http://www.ocsinventory-ng.org/en/#home-en](http://www.ocsinventory-ng.org/en/#home-en)
 ), unzip the file and double click "Ocsinventory_Agent_MacOSX.pkg".
 
-![Mac OSX Icon](../img/En_macosx_agent_pkg_icon.png)
+![Mac OSX Icon](../img/EN_macosx_agent_pkg_icon.png)
 
 Click "Next".
 
@@ -19,7 +19,7 @@ Click "Next".
 
 Validate license agreement by clicking "Continue" and "Agree".
 
-![Accept licence](../img/EN_macosx_agent_install.licence.png)
+![Accept licence](../img/EN_macosx_agent_install_licence.png)
 
 If you already made an OCS MacOSX agent installation, you may be asked if you want to launch
 OCS MacOSX configuration. Click on "Yes" to launch configuration panel or "No" to skip this step.
@@ -27,7 +27,7 @@ OCS MacOSX configuration. Click on "Yes" to launch configuration panel or "No" t
 **`Warning`*`: message=If you click on "Yes", /etc/ocsinventory-agent/ocsinventory-agent.cfg
 file content will be erased !`
 
-![Ocs agent already exist](../img/EN_macosx_install_configuration_warn.png)
+![Ocs agent already exist](../img/EN_macosx_agent_install_configuration_warn.png)
 
 Set your OCS MacOSX agent configuration by choosing serveral options:
 * Http or https for MacOSX agent communication to OCS server ("http" by default).
@@ -47,7 +47,7 @@ If you activate OCS MacOSX agent packages download feature without specifying a 
 **`Warning`**`: message=If you activate OCS MacOSX agent packages download feature without specifying a
 certificate file path, OCS MacOSX agent packages download feature won't work !!!`
 
-![No folder specify](../img/EN_macosx_configuration_dowload_warn.png)
+![No folder specify](../img/EN_macosx_agent_configuration_dowload_warn.png)
 
 Set how OCS MacOSX agent will be launched by MacOSX Launchd daemon by choosing several options:
 * Periodicity for OCS MacOSX agent to be launched by Launchd daemon (5 hours by default).
@@ -55,6 +55,7 @@ Set how OCS MacOSX agent will be launched by MacOSX Launchd daemon by choosing s
 * Activate or Unactivate OCS MacOSX agent launch, using Launchd daemon, after installation (unactivated by default)
 
 ![Daemon Option](../img/EN_macosx_agent_install_daemon_options.png)
+
 Select hard drive where you want to install OCS MacOSX agent and click "Continue".
 
 ![Select Destination](../img/EN_macosx_agent_install_destination.png)
