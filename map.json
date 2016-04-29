@@ -1,0 +1,17 @@
+{
+  "ocs": [
+    {
+      "class": "guide-nav-item",
+      "label": "Index",
+      "repo": "ocs",
+      "docPath": "README.md",
+      "default": true
+    },
+    {
+    "class": "guide-sub-nav-item",
+    "repo": "ocs",
+    "label": "Pour commencer",
+    "docPath": "1.Newbie_documentation/"
+    }
+  ]
+}
