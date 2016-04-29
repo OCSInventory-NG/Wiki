@@ -477,7 +477,7 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
 ------|------
 **/work_dir="path to directory"** | Agent must use "path to directory" as working dir (this directory may included configuration file). Default is "%ALLUSERSPROFILE%\Application Data\OCS Inventory NG\Agent" or "%PROGRAMDATA%\OCS Inventory NG\Agent"
 **/local[="path to folder"]** | Agent do not contact communication server, and store inventory in xml compressed .ocs file into folder "path to folder". If no "path to folder" provided, agent assume folder as data folder</nowiki>
-**/debug[=level]** | Generate a very verbose log file "ocsinventory.log" into agent's install folder. \s 0 => disable verboselogs (default) 1 => enable default verbose logs (default when no level provided provided) 2 => enable debuging logs
+**/debug[=level]** | Generate a very verbose log file "ocsinventory.log" into agent's install folder.<br/>  0 => disable verboselogs (default) 1 => enable default verbose logs (default when no level provided provided) 2 => enable debuging logs
 
 **/notag** | Agent must NOT prompt user for TAG in any case
 **/tag="my value"** |
