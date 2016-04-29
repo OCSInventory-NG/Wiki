@@ -210,15 +210,15 @@ you must enter full path to your Apache daemon, not the system one.`
 Enter or validate Apache main configuration file path, generally “/etc/apache/conf/apache.conf”
 or “/etc/httpd/conf/httpd.conf”.
 
-![Location of apache's configuration file](../img/Where_apache_configuration_file)
+![Location of apache's configuration file](../img/Where_apache_configuration_file.png)
 
 Enter or validate Apache daemon running user account, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-![User which can run apache](../img/Which_user_apache_run)
+![User which can run apache](../img/Which_user_apache_run.png)
 
 Enter or validate Apache daemon user group, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-![Group which can run apache](../img/Which_group_apache_run)
+![Group which can run apache](../img/Which_group_apache_run.png)
 
 Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL interpreter.
 
@@ -256,7 +256,8 @@ Setup will next try to determine your Apache mod_perl version. If it is not able
 it will ask you to enter it.
 
 **`Note`**`: You can check which version of mod_perl you are using by querying your server's software database.`
-   * `Under RPM enabled Linux distribution (RedHat/Fedora, Mandriva…), `**`run rpm –q mod_perl`**`.`
+
+* `Under RPM enabled Linux distribution (RedHat/Fedora, Mandriva…), `**`run rpm –q mod_perl`**`.`
 * `Under DPKG enabled Linux distribution (Debian, Ubuntu…), run dpkg –l `**`libapache*-mod-perl*`**`.`
 
 Next, it will prompt you to enter log directory where Communication server will store debugging/tuning logs.
