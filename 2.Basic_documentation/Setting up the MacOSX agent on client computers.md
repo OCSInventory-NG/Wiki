@@ -24,7 +24,7 @@ Validate license agreement by clicking "Continue" and "Agree".
 If you already made an OCS MacOSX agent installation, you may be asked if you want to launch
 OCS MacOSX configuration. Click on "Yes" to launch configuration panel or "No" to skip this step.
 
-**`Warning`*`: message=If you click on "Yes", /etc/ocsinventory-agent/ocsinventory-agent.cfg
+**`Warning`**`: message=If you click on "Yes", /etc/ocsinventory-agent/ocsinventory-agent.cfg
 file content will be erased !`
 
 ![Ocs agent already exist](../img/EN_macosx_agent_install_configuration_warn.png)
@@ -47,7 +47,7 @@ If you activate OCS MacOSX agent packages download feature without specifying a 
 **`Warning`**`: message=If you activate OCS MacOSX agent packages download feature without specifying a
 certificate file path, OCS MacOSX agent packages download feature won't work !!!`
 
-![No folder specify](../img/EN_macosx_agent_configuration_dowload_warn.png)
+![No folder specify](../img/EN_macosx_agent_configuration_download_warn.png)
 
 Set how OCS MacOSX agent will be launched by MacOSX Launchd daemon by choosing several options:
 * Periodicity for OCS MacOSX agent to be launched by Launchd daemon (5 hours by default).
