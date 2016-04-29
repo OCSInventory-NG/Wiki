@@ -1,6 +1,7 @@
 # Setting up management server
 
 Management server is made up of 4 main components:
+
 1. **Database server**, which stores inventory information
 2. **Communication server**, which handles HTTP communications between database server and agents.
 3. **Administration console**, which allows administrators to query the database server using their favorite browser.
