@@ -681,8 +681,101 @@ Setup actions :
 **`Note`**`: This user will be used by Administration server and Communication server to connect to the database.
 If you do not wish to use default MySQL user `**`ocs`**` with `**`ocs`**` password, you must update
 in the file `**`dbconfig.inc.php`**` PHP constants `**`COMPTE_BASE`**`, which is MySQL user login, and/or PSWD_BASE,
-which MySQL user password.`
-
+which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to [Secure your OCS Inventory NG Server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Secure)
-for all information about modifications of configuration files.
+Refer to `[`Secure your OCS Inventory NG Server`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Secure)
+`for all information about modifications of configuration files.`
+
+To secure you server, refer to
+[Secure your OCS Inventory NG Server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Secure)
+documentation.
+
+If you don't want to secure your OCS Inventory Server, you have to deactivate the Warning message
+in user profile. Procedure is in the same documentation page.
+
+
+**`Warning`**`: We recommend you to read this documentation and follow the procedure`
+
+
+Finally, you may fill in a text describing the TAG, a string displayed at first launch of the agent to ask
+user to enter the TAG Value. It's a generic data which allows you to sort the new computers
+(geographical site, first floor, john room....). If you don't want this functionality, just let it blank.
+
+![Installation of ocsreports](../img/Installation_ocsreports_2.jpg)
+
+Configuration of Management server is now finished.
+
+![Ocsreports' homsecreen](../img/Homescreen_ocsreports.png)
+
+Default Administrator login is **admin** as user and **admin** as password.
+
+## Updating security of XAMPP components.
+
+**`Warning`**`: By default, XAMPP is set up without security. MySQL root account do not have password, XAMPP
+web configuration interface is accessible by everybody without authentication… You must update this.`
+
+
+Open your favorite web browser on the server and point it on URL
+[http://localhost/xampp/splash.php](http://localhost/xampp/splash.php)
+to connect the XAMPP configuration GUI.
+
+Click on the language you want to access the XAMPP main configuration menu.
+
+Then, click **[ Security ]** on the left menu. As you will see, all is marked as unsecure or unknown
+for non started components.
+
+![Xampp](../img/Xampp.png)
+
+You can change this by clicking the link
+[http://localhost/security/xamppsecurity.php](http://localhost/security/xamppsecurity.php).
+
+First of all, you must fill in MySQL root password and select phpMyAdmin authentication method.
+
+**`Note`**`: You can change this at any time by visiting the security web page of XAMPP server.`
+
+Validate your changes by clicking **[ Password changing ]** button.
+
+You can then protect the access to XAMPP configuration menu by filling in user and password for
+XAMPP DIRECTORY PROTECTION. As is, this user and password will be asked to connect to XAMPP
+configuration menu through a web browser.
+
+Validate your changes by clicking _[ Make safe the XAMPP directory ]_ button.
+
+![Xampp security's menu](../img/Xampp_security.png)
+
+**`Note`**`: Do not enable PHP safe mode, as you may encounter errors on Administration console.`
+
+
+Finally, you must restart Apache and MySQL services for changes to take effect.
+
+Open XAMPP Control Panel from system tray or from OCS Inventory NG start menu folder,
+click **[ Stop ]** button for Apache, then **[ Start ]** button and do the same for MySQL.
+
+You can now reselect **[ Security ]** on left side menu to see that all started services are now secured.
+
+![Xampp security's status](../img/Xampp_security_status.png)
+
+## Upgrading management server
+
+To upgrade web communication server and administration console, you must follow instructions
+as described in the section
+[Installing management server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Installing_management_server._2)
+. Just ensure that setup detects old installation folder correctly.
+
+You don’t need to update XAMPP components. Setup, by default, will not select XAMPP components install.
+If you do so, **backup your databases and web sites if you want to also upgrade XAMPP components !**
+See the section
+[Backup/restore of OCS Inventory NG database](http://wiki.ocsinventory-ng.org/index.php/Documentation:Backup).
+
+At the end of the process, Setup will launch your default browser to run the upgrade process to ensure
+that your database schema and default data are up to date. Upgrade process looks like configuration
+of management server as described in the section
+[Configuring management server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Configuring_management_server.).
+
+**`Note`**`: You will see warning regarding max size of package you will be able to deploy.
+Please, see the section`
+[`Uploads size for package deployment`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Errors#Uploads_size_for_package_deployment.)
+`.) to configure your server to match your need.`
+
+
+
