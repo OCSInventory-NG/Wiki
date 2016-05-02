@@ -82,7 +82,7 @@ By clicking on configuration standard button of Android (different depending on 
 
 ![Server's configuration of android agent](../img/Config_android_agent_2_en.png)
 
-* SERVER URL : define URL address of OCS Inventory NG server(By default:
+* **SERVER URL** : define URL address of OCS Inventory NG server(By default:
 [http://ocsinventory-ng/ocsinventory](http://ocsinventory-ng/ocsinventory))
 
     **`Note`**`: If your OCS Inventory NG server listens on an other port than classic port, you have to define it in serveur URL.
