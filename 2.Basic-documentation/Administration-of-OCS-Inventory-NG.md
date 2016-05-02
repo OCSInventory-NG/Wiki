@@ -14,6 +14,8 @@ the default "admin" user.`
 Click on the toolbar config menu and then on users to display all configured OCS Inventory NG
 Administration server users.
 
+![Users access](../img/EN_Administration_OCS_19.png)
+
 ![Users administration](../img/EN_Administration_OCS_1.png)
 
 You can add new users by entering their name, password (user will be able to change it when logged in),
@@ -35,7 +37,9 @@ on red cross at the end of the corresponding line.
 
 ### **Access to main configuration page**
 
-Click on the toolbar **Config** menu and then config to display all general options.
+Click on the toolbar **Config** menu and then **config** to display all general options.
+
+![config access](../img/EN_Administration_OCS_19.png)
 
 ![OCS config](../img/EN_Administration_OCS_2.png)
 
@@ -324,6 +328,8 @@ Click **Manage** toolbar menu and then **local import**, browse your hard drive 
 file or ".xml" file created by agent release and click **[ Send ]** button.
 
 ![Local Import](../img/EN_Administration_OCS_17.png)
+
+![Local Import](../img/EN_Administration_OCS_18.png)
 
 ### **With Communication server through a Perl script**
 
