@@ -269,6 +269,8 @@ For example, if the database is lost, all clients will come back with their admi
 You can define the administrative information you want for each computer by clicking
 **Manage** toolbar menu and then **Administrative Data**.
 
+![Access Administrative Data](../img/EN_Administration_OCS_17.png)
+
 ![Administrative Data](../img/EN_Administration_OCS_12.png)
 
 You can add new administrative information definition by entering their name (space or special
