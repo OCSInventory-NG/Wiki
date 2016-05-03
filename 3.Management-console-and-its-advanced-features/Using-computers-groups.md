@@ -105,7 +105,7 @@ all the computers that will be members of the dynamic group later will be affect
    In the same way, you can setup computers profiles that will deploy in a given order all the software
    components associated to their profile.
 
-## Affect package on a group
+### **Affect package on a group**
 
 Once you created and activated a package, you can affect this package to group. Go to the group page
 and click on _Customization_. In the right corner of array, click on the link _Add Package_.
