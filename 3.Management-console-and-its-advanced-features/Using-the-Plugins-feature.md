@@ -51,51 +51,51 @@ The structure of your module should look like the example below.
 Integration of module in the OCS interface is made in « 4all_config.txt » file.
 This file is composed by differents branchs :
 
-   ### **ORDER_FIRST_TABLE**
+### **ORDER_FIRST_TABLE**
 
-   This part defines the icons at the top right to display. The names presented here are the names of files in /plugins/main_sections/img.
+This part defines the icons at the top right to display. The names presented here are the names of files in /plugins/main_sections/img.
 
-   ### **ORDER_SECOND_TABLE**
+### **ORDER_SECOND_TABLE**
 
-   This part defines the icons at the top left to display. The names presented here are the names of files in /plugins/main_sections/img.
+This part defines the icons at the top left to display. The names presented here are the names of files in /plugins/main_sections/img.
 
-   ### **LBL**
+### **LBL**
 
-   Here are the names defined in the display modules. For an icon, text label will appear. We must always use the language files for labels.
+Here are the names defined in the display modules. For an icon, text label will appear. We must always use the language files for labels.
 
-   ### **URL**
+### **URL**
 
-   This part is useful only for display in the URL of the page. It will be in the form : <module_name> : <url_name_of_module>
+This part is useful only for display in the URL of the page. It will be in the form : <module_name> : <url_name_of_module>
 
-   ### **DIRECTORY**
+### **DIRECTORY**
 
-   In this part, you must specify the location of the pages you have created. So, you will have : <page_name> : <my_module_directory> If you have multiple pages, then you will add:
+In this part, you must specify the location of the pages you have created. So, you will have : <page_name> : <my_module_directory> If you have multiple pages, then you will add:
 
-     <page_name_1> : <my_module_directory>
-     <page_name_2> : <my_module_directory>
+    <page_name_1> : <my_module_directory>
+    <page_name_2> : <my_module_directory>
 
-   ### **MENU**
+### **MENU**
 
-   Here are defined the pages belonging to the menu display. Nous avons donc : <module_name> :
-   <menu_name> The module name is defined by the name of the icon.
+Here are defined the pages belonging to the menu display. Nous avons donc : <module_name> :
+<menu_name> The module name is defined by the name of the icon.
 
-   ### **MENU_NAME**
+### **MENU_NAME**
 
-   Each menu must be defined here. The naming convention is followed as this:
+Each menu must be defined here. The naming convention is followed as this:
 
-   <menu_name> : <name>_smenu
+<menu_name> : <name>_smenu
 
-   ### **MENU_TITLE**
+### **MENU_TITLE**
 
-   Menu title. It is important to use language files. <menu_name> : g(<number_in_language_file>)
+Menu title. It is important to use language files. <menu_name> : g(<number_in_language_file>)
 
-   ### **JAVASCRIPT**
+### **JAVASCRIPT**
 
-   If you created javascript to load in the header, it must be noted in this section:
-   <javascript_page_name>.js : <directory_where_the_life_is_located>
+If you created javascript to load in the header, it must be noted in this section:
+<javascript_page_name>.js : <directory_where_the_life_is_located>
 
-   Once you have finished to report your module, it only remains to define the profiles having
-   the rights to access them.
+Once you have finished to report your module, it only remains to define the profiles having
+the rights to access them.
 
 ## Access to the module by a profile
 
