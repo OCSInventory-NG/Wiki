@@ -20,7 +20,7 @@ and modify options
 
 ### **Create a profile**
 
-Click on Create Profile, enter your informations and click on OK.
+Click on Create Profile at the left of the page, enter your informations and click on OK.
 
 ![Profile's Creation](../img/EN_users_profiles_9.png)
 
@@ -30,7 +30,7 @@ Click on Profile at the left of the page and you can access to the different pro
 
 ![Profile's edition](../img/EN_users_profiles_5.png)
 
-You can click on the cross to delete a profile or on the profile you want to edit.
+You can click on the cross in the column "actions" to delete a profile or on the profile you want to edit.
 
 Now you can do many things.
 
@@ -205,7 +205,7 @@ Description of pages :
 
 ### **Create an user**
 
-Click on Create User, enter your informations and click on OK.
+Click on Create User at the left of the page, enter your informations and click on OK.
 
 ![User's creation](../img/EN_users_profiles_8.png)
 
@@ -215,8 +215,10 @@ Click on User at the left of the page and you can access to the different profil
 
 ![User's edition](../img/EN_users_profiles_3.png)
 
-You can click on the cross to delete an user or on the user you want to update.
+You can click on the cross in the column "actions" to delete an user or on the user you want to update.
 
 #### **Update an user**
+
+For update an user, enter the informations and click on OK.
 
 ![User's update](../img/EN_users_profiles_4.png)
