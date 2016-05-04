@@ -222,3 +222,5 @@ You can click on the cross in the column "actions" to delete an user or on the u
 For update an user, enter the informations and click on OK.
 
 ![User's update](../img/EN_users_profiles_4.png)
+
+You can add a group to the list of the groups with this icon ![User's update](../img/EN_users_profiles_4.png).
