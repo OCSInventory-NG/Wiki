@@ -118,7 +118,7 @@ However, the user **georgess**, may well identify but can not connect directly. 
 default a **Local Administrator** profile, which has a limited view of the park of machines.
 So, after the connection of that user, it will have the following message:
 
-![users](../img/EN_ocs_ldap_9.png)
+![users](../img/EN_ocs_ldap_10.png)
 
 For that user can access the administration console of OCS Inventory NG, it will wait a
 **Super Administrator** gives it access to TAG witch interested it.
