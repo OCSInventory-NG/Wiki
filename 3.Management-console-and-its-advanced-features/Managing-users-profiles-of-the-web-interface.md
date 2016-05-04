@@ -223,4 +223,4 @@ For update an user, enter the informations and click on OK.
 
 ![User's update](../img/EN_users_profiles_4.png)
 
-You can add a group to the list of the groups with this icon ![User's update](../img/EN_users_profiles_4.png).
+You can add a group to the list of the groups with this icon ![Icon](../img/EN_users_profiles_6.png).
