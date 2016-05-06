@@ -448,7 +448,7 @@ For removing the package activation follow the steps below:
 2. List of available (not yet activated) and enabled (activated and ready to be deployed) packages
 will appear.
 
-**`Note`**`: If the package is activated, its Name contains hyperlink.`
+    **`Note`**`: If the package is activated, its Name contains hyperlink.`
 
 3. Click on the link of the package for which you want to remove the activation.
 
