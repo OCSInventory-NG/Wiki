@@ -13,15 +13,15 @@ These IP addresses to scan are directly sent to OCS agent by OCS server when OCS
 (PROLOG step).
 
 You can find more information about Ipdiscover
-[here](http://wiki.ocsinventory-ng.org/index.php/Documentation:Ipdiscover).
+[here](../5.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
 
 **`Warning`**`: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`
 
 **`Warning`**`: Since OCS Inventory 2.0.3, you MUST set OCS server address in
 /etc/ocsinventory-agent/ocsinventory-agnet.cfg to use`
 [_`https://your_ocs_server/ocsinventory`_](https://your_ocs_server/ocsinventory)
-`instead of`[_`http://your_ocs_server/ocsinventory_`](http://your_ocs_server/ocsinventory).
-`If not, OCS agent won't receive SNMP scans orders from OCS server.`
+`instead of`[_`http://your_ocs_server/ocsinventory`_](http://your_ocs_server/ocsinventory)`.
+If not, OCS agent won't receive SNMP scans orders from OCS server.`
 
 
 SNMP scanning step by step :
