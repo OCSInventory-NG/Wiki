@@ -104,7 +104,7 @@ Then upload your **ocspackage.exe** file.
 
 ## Deploying agent on a domain
 
-Refer to [[Deploying Agent using launcher OcsLogon.exe through Login Script or Active Directory GPO](../2.Basic-documentation/Setting-up-the-Windows-Agent-2.0-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)]
+Refer to [[Deploying Agent using launcher OcsLogon.exe through Login Script or Active Directory GPO](../2.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)]
 
 **`Warning`**`: Mysql server must accept files larger than 5M. Edit `**`my.cnf`**` file and modify
 `**`max_allowed_packets`**` value to fix it more than 5M. Save this file and restart service.`
