@@ -213,7 +213,7 @@ Also, you can pass to the installer the following agent's command line parameter
 * /TAG=
 * /D=
 
-## Deploying Agent using launcher OcsLogon.exe through Login Script or Active Directory GPO.
+## Deploying Agent using launcher OcsLogon.exe through Login Script or Active Directory GPO
 
 Launcher “OcsLogon.exe” is a small tool able to run inside a login script or an Active Directory GPO.
 Its purpose is to setup Agent, if not already installed on client computers, and to launch the
