@@ -97,7 +97,7 @@ Then, click on _Send_.
 Now, you can see your new group of redistribution, as previously described, clicking on _Groups_ in Inventory,
 and then Groups of redistribution tag.
 
-![Computers of the group "added"](../img/EN_using_redistribution_servers_11.jpg)
+![Computers of the group "added"](../img/EN_using_redistribution_servers_12.jpg)
 
 ### **Overwrite an existing group**
 
