@@ -77,3 +77,5 @@ Click on **Rights to manage** tab, an set **See warning messages of the GUI** to
 Finally, register modification.
 
 ![GUI message](../img/EN_secure_ocs_3.png)
+
+For more informations about users and profile, click [here](../3.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md).
