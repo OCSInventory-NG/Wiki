@@ -23,11 +23,11 @@ If you want to automate this synchronisation, you have to create a cronjob.
 
 ## Configuration of management console
 
-![Inventory Files Acces](../img/EN_ocs_master_slave_1.png)
+![Inventory Files Acces](../img/EN_ocs_master_slave_1.jpg)
 
 To configure this feature, click on _Config_, and _Config_. Then, click on _Inventory Files_ tab.
 
-![Inventory Files Tab](../img/EN_ocs_master_slave_2.png)
+![Inventory Files Tab](../img/EN_ocs_master_slave_2.jpg)
 
 **`Warning`**`: Don't forget to create the directory with writable rights.`
 
