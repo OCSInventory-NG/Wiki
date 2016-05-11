@@ -76,4 +76,4 @@ Click on **Rights to manage** tab, an set **See warning messages of the GUI** to
 
 Finally, register modification.
 
-![GUI message](../img/EN_secure_ocs_3.svg)
+![GUI message](../img/EN_secure_ocs_3.png)
