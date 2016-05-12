@@ -167,7 +167,7 @@ in “C:\OCSinventoryNG\xampp\mysql\bin” under Windows), in the section corres
         port=3306
         socket=mysql
 
-**Figure 16 : Sample my.cnf MySQL configuration file.**
+    **Figure 16 : Sample my.cnf MySQL configuration file.**
 
 2. Add switch “--old-password” to the command line launching MySQL server.
 
