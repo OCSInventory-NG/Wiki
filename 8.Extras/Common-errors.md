@@ -180,23 +180,22 @@ Next, you may have to update ‘root’ password with the following commands:
 * Connect to MySQL database “mysql –u root –p mysql” as root to update his password.
 * Then, run the update statement “update user set password=OLD_PASSWORD(‘root_password’) where user=’root’;”
 * Once terminated, exit mysql command interpreter by entering “exit” command.
-<br/>
 
-    [root@linux root]# mysql -u root -p mysql
-    Enter password:
-    Reading table information for completion of table and column names
-    You can turn off this feature to get a quicker startup with -A'
-    Welcome to the MySQL monitor. Commands end with ; or \g.
-    Your MySQL connection id is 19 to server version: 4.1.7-standard
-    Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
-
-    mysql> update user set password=OLD_PASSWORD('admin123') where user='root';
-    Query OK, 1 row affected (0.00 sec)
-    Rows matched: 1 Changed: 1 Warnings: 0
-
-    mysql> exit
-    Bye
-    [root@linux root]#
+        [root@linux root]# mysql -u root -p mysql
+        Enter password:
+        Reading table information for completion of table and column names
+        You can turn off this feature to get a quicker startup with -A'
+        Welcome to the MySQL monitor. Commands end with ; or \g.
+        Your MySQL connection id is 19 to server version: 4.1.7-standard
+        Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+    
+        mysql> update user set password=OLD_PASSWORD('admin123') where user='root';
+        Query OK, 1 row affected (0.00 sec)
+        Rows matched: 1 Changed: 1 Warnings: 0
+    
+        mysql> exit
+        Bye
+        [root@linux root]#
 
 **Figure 17 : Sample MySQL root password update**
 
