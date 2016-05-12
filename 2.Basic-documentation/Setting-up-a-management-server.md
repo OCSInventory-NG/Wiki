@@ -33,7 +33,6 @@ We assume that you have:
 
 ## Requirements
 
-
 * Apache version 1.3.33 or higher / Apache version 2.0.46 or higher.
     * Mod_perl version 1.29 or higher.
     * Mod_php version 4.3.2 or higher.
@@ -54,7 +53,7 @@ We assume that you have:
 ## Installing Communication server required PERL modules.
 
 The Web communication server requires Apache web server and Perl 5 scripting language and some additional modules for Perl 5
-(see [Requirements](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Requirements.)).
+(see [Requirements](../2.Basic-documentation/Setting-up-a-management-server.md#Requirements)).
 It acts as an Apache module which handles HTTP OCS Inventory agents' requests to a virtual directory _/ocsinventory_.
 
 
@@ -116,7 +115,7 @@ For example:`
 ## Installing Administration console required PHP modules
 
 The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
-for PHP (see [Requirements](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Requirements.)).
+for PHP (see [Requirements](../2.Basic-documentation/Setting-up-a-management-server.md#Requirements)).
 
 On Fedora/Redhat like Linux, you can use “yum” to install PHP Zip support:
 
@@ -266,7 +265,7 @@ Validate or enter directory path. If it does not exist, this directory will be c
 ![Location of the comunication's server directory](../img/Where_server_com_directory.png)
 
 Next, setup will check for required PERL modules
-(cf [Requirements](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Requirements.).):
+(cf [Requirements](../2.Basic-documentation/Setting-up-a-management-server.md#Requirements).):
 
 * XML::Simple version 2.12 or higher
 * Compress::Zlib version 1.33 or higher
@@ -409,7 +408,7 @@ Setup will ask you to enter Apache root document directory, usually “/var/www/
 ![Location of apache's root directory](../img/Where_apache_root_directory.png)
 
 Next, setup will check for required PERL modules
-(cf [Requirements](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Requirements.).):
+(cf [Requirements](../2.Basic-documentation/Setting-up-a-management-server.md#Requirements).):
 
 * XML::Simple version 2.12 or higher
 * DBI version 1.40 or higher
@@ -425,7 +424,7 @@ If everything is OK, setup will install Administration console into the “ocsre
 * Copy files into /ocsreports directory.
 * Fix directories and files permissions to allow Apache daemon reading and writing to required directories
 (write access is required in /ocsreports, /ocsreports/ipd and /download, cf § 11.4 [Files and directories
-permissions under Linux](http://wiki.ocsinventory-ng.org/index.php/Documentation:Errors#Files_and_directories_permissions_under_Linux).).
+permissions under Linux](../8.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
 * Configure PERL script ipdiscover-util.pl to access database and install it.
 
 ![Restart Apache](../img/Restart_and_enjoy.png)
@@ -440,7 +439,7 @@ or
 
 ![Apache restarted](../img/Apache_restart.png)
 
-## Configuring management server.
+## Configuring management server
 
 **`Warning`**`: We recommend you to check your php.ini when you upgrade your server from 1.x to 2.x,
 specially these variables :`
@@ -462,7 +461,7 @@ Otherwise, you can rerun configuration process by browsing
 URL (this must be used when upgrading OCS Inventory management server).
 
 **`Note`**`: You will see warning regarding max size of package you will be able to deploy. Please, see`
-[`Uploads size for package deployment`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Errors#Uploads_size_for_package_deployment.)
+[`Uploads size for package deployment`](../8.Extras/Common-errors.md#uploads-size-for-package-deployment)
 ` to configure your server to match your need.`
 
 ![Installation's page of ocsreports](../img/Installation_ocsreports.png)
@@ -485,11 +484,11 @@ If you do not wish to use default MySQL user `**`ocs`**` with `**`ocs`**` passwo
 **`dbconfig.inc.php`**` PHP constants `**`COMPTE_BASE`**`, which is MySQL user login,
 and/or `**`PSWD_BASE`**`, which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Secure)
+Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 ` for all information about modifications of configuration files.`
 
 To secure you server, refer to
-[Secure your OCS Inventory NG Server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Secure)
+[Secure your OCS Inventory NG Server](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 documentation.
 
 If you don't want to secure your OCS Inventory Server, you have to desactivate Warning message in user profile.
@@ -514,7 +513,7 @@ and login in with **admin** as user and **admin** as password.
 
 ![Ocsreports' homsecreen](../img/Homescreen_ocsreports.png)
 
-## Upgrading management server.
+## Upgrading management server
 
 When new versions of web communication server or web administration console are released,
 you must upgrade your installation.
@@ -618,7 +617,7 @@ Choose installation directory, by default **C:\Program Files\OCS Inventory NG**.
 free hard disk space if XAMPP components are not installed, otherwise, only 10MB are required.
 
 **`Note`**`: When upgrading, you must ensure that Setup detects the folder including XAMPP directory.
-See `[`Upgrading management server`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Upgrading_management_server._2)`.`
+See `[`Upgrading management server`](../2.Basic-documentation/Setting-up-a-management-server.md#Upgrading_management_server_2)`.`
 
 ![Choose the components](../img/EN_06_choose_components.gif)
 
@@ -627,7 +626,7 @@ components are already installed.
 
 **`Note`**`: OCS Inventory NG Server Setup now use standard XAMPP setup. So, it may be able to upgrade existing
 XAMPP installation. However, by default, Setup will _not_ upgrade XAMPP components.
-See `[`Upgrading management server`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Upgrading_management_server._2)`.`
+See `[`Upgrading management server`](../2.Basic-documentation/Setting-up-a-management-server.md#upgrading-management-server)`.`
 
 ![Select the Start Menu folder](../img/EN_07_start_menu.gif)
 
@@ -645,7 +644,7 @@ Last, Setup will install OCS Inventory NG Server files, configure XAMPP Apache a
 OCS Inventory NG Server, and automatically start MySQL and Apache server
 
 At the end of the process, Setup will launch your default browser to start OCS Inventory NG Server configuration
-(see [Configuring management server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Configuring_management_server._2)).
+(see [Configuring management server](../2.Basic-documentation/Setting-up-a-management-server.md#Configuring_management_server_2)).
 
 ![End of the installation](../img/EN_12_completing.gif)
 
@@ -685,11 +684,11 @@ If you do not wish to use default MySQL user `**`ocs`**` with `**`ocs`**` passwo
 in the file `**`dbconfig.inc.php`**` PHP constants `**`COMPTE_BASE`**`, which is MySQL user login, and/or PSWD_BASE,
 which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Secure)
+Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 `for all information about modifications of configuration files.`
 
 To secure you server, refer to
-[Secure your OCS Inventory NG Server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Secure)
+[Secure your OCS Inventory NG Server](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 documentation.
 
 If you don't want to secure your OCS Inventory Server, you have to deactivate the Warning message
@@ -761,23 +760,20 @@ You can now reselect **[ Security ]** on left side menu to see that all started 
 
 To upgrade web communication server and administration console, you must follow instructions
 as described in the section
-[Installing management server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Installing_management_server._2)
+[Installing management server](../2.Basic-documentation/Setting-up-a-management-server.md#Installing_management_server_2)
 . Just ensure that setup detects old installation folder correctly.
 
 You don’t need to update XAMPP components. Setup, by default, will not select XAMPP components install.
 If you do so, **backup your databases and web sites if you want to also upgrade XAMPP components !**
 See the section
-[Backup/restore of OCS Inventory NG database](http://wiki.ocsinventory-ng.org/index.php/Documentation:Backup).
+[Backup/restore of OCS Inventory NG database](../8.Extras/Backup-restore-of-OCS-Inventory-NG-database.md).
 
 At the end of the process, Setup will launch your default browser to run the upgrade process to ensure
 that your database schema and default data are up to date. Upgrade process looks like configuration
 of management server as described in the section
-[Configuring management server](http://wiki.ocsinventory-ng.org/index.php/Documentation:Server#Configuring_management_server.).
+[Configuring management server](../2.Basic-documentation/Setting-up-a-management-server.md#Configuring_management_server).
 
 **`Note`**`: You will see warning regarding max size of package you will be able to deploy.
 Please, see the section`
-[`Uploads size for package deployment`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Errors#Uploads_size_for_package_deployment.)
+[`Uploads size for package deployment`](../8.Extras/Common-errors.md#Uploads_size_for_package_deployment)
 `.) to configure your server to match your need.`
-
-
-
