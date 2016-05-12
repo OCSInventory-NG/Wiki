@@ -20,11 +20,11 @@ Erwan (Airoine) cherchant l'inspiration dans une pinte de bière (la deuxième d
 
 ![Pierre](../img/Pierre.jpg)
 
-Pierre (plemmet) mangeant la glace de l'homme invisible... A moins que ce soit la <bip> de
+Pierre (plemmet) mangeant la glace de l'homme invisible... A moins que ce soit la \<bip> de
 l'homme invisible..
 
 
 ![Ordi](../img/Ordi.jpg)
 
-Un bel ordi (sous kubuntu... burkkkkk!!!) appartenant à mortheres... <troll> Et oui, OpenBSD
-ne fonctionne pas sur un portable! </troll>
+Un bel ordi (sous kubuntu... burkkkkk!!!) appartenant à mortheres... \<troll> Et oui, OpenBSD
+ne fonctionne pas sur un portable! \</troll>
