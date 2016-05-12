@@ -174,7 +174,7 @@ your deployment server and copy your Authority certificate file into file **cace
 for your deployement server, and copy server certificate into file **cacert.pem**.
 
 Refer to § 8.8
-[Using SSL certificates in Package deployment](http://wiki.ocsinventory-ng.org/index.php/Documentation:Teledeploy#Using_SSL_certificates_in_Package_deployment.)
+[Using SSL certificates in Package deployment](Deploying-packages-or-executing-commands-on-client-hosts.md#using-ssl-certificates-in-package-deployment)
 for more informations.
 
 **`Warning`**`: You `**`ONLY`**` can upload .zip or .tar.gz files.`
