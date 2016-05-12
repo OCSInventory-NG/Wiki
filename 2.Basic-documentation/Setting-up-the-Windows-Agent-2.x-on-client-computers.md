@@ -33,11 +33,11 @@ and the agent stops. Otherwise, the server may answer that Agent has to:
 * **Send an inventory**: the agent retrieves all computer properties and sends them using HTTP
 or HTTPS protocol to the server. The server ask this only if the last inventory date in the database
 is older than the general option “FREQUENCY”, specified in days (see
-[Managing OCS Inventory NG general options](http://wiki.ocsinventory-ng.org/index.php/Documentation:Administration#Managing_OCS_Inventory_NG_general_options.).)
+[Managing OCS Inventory NG general options](Administration-of-OCS-Inventory-NG.md#managing-ocs-inventory-ng-general-options).)
 * **Discover the network**: Agent scans his IP subnet for active devices listening on the network,
 then sends these data using HTTP or HTTPS protocol to the server. The server ask this only if the
 computer is elected to run IPDISCOVERY (see
-[Using IP discovery feature](http://wiki.ocsinventory-ng.org/index.php/Documentation:Ipdiscover).)
+[Using IP discovery feature](../5.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).)
 * **Deploy a package**: Agent contacts the deployment server using the HTTPS protocol to get the information file
 (file INFO which describes the package), downloads package fragments from the deployement server,
 rebuilds the package and launches it.
@@ -80,11 +80,11 @@ results to Communication server using HTTP or HTTPS.
 
 
 **`Note`**`: You must have Administrator privileges to set up OCS Inventory NG Agent as a service,
-or you may use OCS Inventory NG `[`Packager`](http://wiki.ocsinventory-ng.org/index.php/Tools:Packager)
+or you may use OCS Inventory NG `[`Packager`](../6.OCS-Tools/OCS-Packager.md)
 `to create an installer able to run even if user do not
 have Administrator privileges. Refer to`
-[`Uploading Agent for deployment through launcher “OcsLogon.exe”`](http://wiki.ocsinventory-ng.org/index.php/Documentation:Administration#Uploading_Agent_for_deployment_through_launcher_.E2.80.9COcsLogon.exe.E2.80.9D.)
-`or OCS Inventory NG `[`Packager`](http://wiki.ocsinventory-ng.org/index.php/Tools:Packager)` documentation.`
+[`Uploading Agent for deployment through launcher “OcsLogon.exe”`](Administration-of-OCS-Inventory-NG.md#uploading-agent-for-deployment-through-launcher-ocslogonexe)
+`or OCS Inventory NG `[`Packager`](../6.OCS-Tools/OCS-Packager.md)` documentation.`
 
 * OCS Inventory NG Agent “OCSInventory.exe” is launched by service “OcsService.exe” every **PROLOG_FREQ** hours.
 It keeps trace of the countdown in seconds in file “ocsinventory.ini” (value **TTO_WAIT**), so it is the time
@@ -299,7 +299,7 @@ or User policy will run at user login.
 **`Note`**`: In our example, we will use Computer policy and Startup script. Communication Server address
 is “ocs.mycompany.tld”, and we choose to set up Service Agent version using Packager all-in-one installer
 “ocspackage.exe” (See`
-[`Using OCS Packager to create an all-in-one installer to setup agent and server certificate`](http://wiki.ocsinventory-ng.org/index.php/Tools:Packager)
+[`Using OCS Packager to create an all-in-one installer to setup agent and server certificate`](../6.OCS-Tools/OCS-Packager.md)
 `). If you choose to use Standalone Agent, it’s better to use User policy and startup script,
 to allow agent running each time a user log in.`
 
