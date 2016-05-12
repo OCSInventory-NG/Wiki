@@ -167,7 +167,7 @@ in “C:\OCSinventoryNG\xampp\mysql\bin” under Windows), in the section corres
         port=3306
         socket=mysql
 
-    **Figure 16 : Sample my.cnf MySQL configuration file.**
+     **Figure 16 : Sample my.cnf MySQL configuration file.**
 
 2. Add switch “--old-password” to the command line launching MySQL server.
 
@@ -188,16 +188,16 @@ Next, you may have to update ‘root’ password with the following commands:
         Welcome to the MySQL monitor. Commands end with ; or \g.
         Your MySQL connection id is 19 to server version: 4.1.7-standard
         Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
-    
+
         mysql> update user set password=OLD_PASSWORD('admin123') where user='root';
         Query OK, 1 row affected (0.00 sec)
         Rows matched: 1 Changed: 1 Warnings: 0
-    
+
         mysql> exit
         Bye
         [root@linux root]#
 
-**Figure 17 : Sample MySQL root password update**
+     **Figure 17 : Sample MySQL root password update**
 
 ### **PHP Requested content-length**
 
@@ -326,12 +326,11 @@ You can check which version of mod_perl is installed by launching following comm
 * On RPM based Linux: rpm -q mod_perl
 * On Debian package based Linux: dpkg –l libapache*-mod-perl*
 
+        [root@linux conf.d]# rpm -q mod_perl
 
-    [root@linux conf.d]# rpm -q mod_perl
+        mod_perl-1.99_16-4.centos4
 
-    mod_perl-1.99_16-4.centos4
-
-    [root@linux conf.d]#
+        [root@linux conf.d]#
 
 If mod_perl is installed, check Apache configuration files to ensure mod_perl is enabled.
 You may found something like this:
@@ -372,16 +371,16 @@ Then restart Apache web server.
 
 **If this error concerns Perl module "Apache2/connection.pm"** like below
 
-[Sun Mar 05 12:46:09 2006] [error] [client client_ip] failed to resolve handle
-Ocsinventory: Can't locate Apache2/Connection.pm in @INC (@INC contains:...)
+    [Sun Mar 05 12:46:09 2006] [error] [client client_ip] failed to resolve handle
+    Ocsinventory: Can't locate Apache2/Connection.pm in @INC (@INC contains:...)
 
 You probably have installed Communication server for use with Apache mod_perl 1.999_22 and newer. Open OCS Inventory NG apache configuration file « ocsinventory.conf » and set variable « OCS_PERL_VERSION » to 1 to enable use of mod_perl version 1.999_21 or previous.
 
-# Which version of mod_perl we are using
-# For mod_perl <= 1.999_21, replace VERSION_MP by 1
-# For mod_perl > 1.999_21, replace VERSION_MP by 2
+    # Which version of mod_perl we are using
+    # For mod_perl <= 1.999_21, replace VERSION_MP by 1
+    # For mod_perl > 1.999_21, replace VERSION_MP by 2
 
-PerlSetEnv OCS_MODPERL_VERSION 1
+    PerlSetEnv OCS_MODPERL_VERSION 1
 
 Then restart Apache web server.
 
