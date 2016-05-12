@@ -617,7 +617,7 @@ Choose installation directory, by default **C:\Program Files\OCS Inventory NG**.
 free hard disk space if XAMPP components are not installed, otherwise, only 10MB are required.
 
 **`Note`**`: When upgrading, you must ensure that Setup detects the folder including XAMPP directory.
-See `[`Upgrading management server`](../2.Basic-documentation/Setting-up-a-management-server.md#upgrading-management-server-2)`.`
+See `[`Upgrading management server`](../2.Basic-documentation/Setting-up-a-management-server.md#upgrading-management-server-1)`.`
 
 ![Choose the components](../img/EN_06_choose_components.gif)
 
@@ -626,7 +626,7 @@ components are already installed.
 
 **`Note`**`: OCS Inventory NG Server Setup now use standard XAMPP setup. So, it may be able to upgrade existing
 XAMPP installation. However, by default, Setup will _not_ upgrade XAMPP components.
-See `[`Upgrading management server`](../2.Basic-documentation/Setting-up-a-management-server.md#upgrading-management-server-2)`.`
+See `[`Upgrading management server`](../2.Basic-documentation/Setting-up-a-management-server.md#upgrading-management-server-1)`.`
 
 ![Select the Start Menu folder](../img/EN_07_start_menu.gif)
 
@@ -644,7 +644,7 @@ Last, Setup will install OCS Inventory NG Server files, configure XAMPP Apache a
 OCS Inventory NG Server, and automatically start MySQL and Apache server
 
 At the end of the process, Setup will launch your default browser to start OCS Inventory NG Server configuration
-(see [Configuring management server](../2.Basic-documentation/Setting-up-a-management-server.md#configuring-management-server-2)).
+(see [Configuring management server](../2.Basic-documentation/Setting-up-a-management-server.md#configuring-management-server-1)).
 
 ![End of the installation](../img/EN_12_completing.gif)
 
@@ -760,7 +760,7 @@ You can now reselect **[ Security ]** on left side menu to see that all started 
 
 To upgrade web communication server and administration console, you must follow instructions
 as described in the section
-[Installing management server](../2.Basic-documentation/Setting-up-a-management-server.md#installing-management-server-2)
+[Installing management server](../2.Basic-documentation/Setting-up-a-management-server.md#installing-management-server-1)
 . Just ensure that setup detects old installation folder correctly.
 
 You don’t need to update XAMPP components. Setup, by default, will not select XAMPP components install.
@@ -775,5 +775,5 @@ of management server as described in the section
 
 **`Note`**`: You will see warning regarding max size of package you will be able to deploy.
 Please, see the section`
-[`Uploads size for package deployment`](../8.Extras/Common-errors.md#uploads_size_for_package_deployment)`
+[`Uploads size for package deployment`](../8.Extras/Common-errors.md#uploads-size-for-package-deployment)`
 .) to configure your server to match your need.`
