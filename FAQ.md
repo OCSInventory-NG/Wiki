@@ -18,7 +18,7 @@
 
 **Solution**: ocsinventory is a virtual directory call by mod_perl in apache. ocsinventory directory must not exist.
 
-* Fatal error: main() [<a href='function.main'>function.main</a>]: The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition "language" of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition in /usr/share/ocsinventory-reports/ocsreports/install.php on line 29
+* Fatal error: main() [\<a href='function.main'>function.main</a>]: The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition "language" of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition in /usr/share/ocsinventory-reports/ocsreports/install.php on line 29
 
 **Solution**: Edit the php.ini file and change the value of session_auto_start from 1 to 0. Save and restart apache.
 
