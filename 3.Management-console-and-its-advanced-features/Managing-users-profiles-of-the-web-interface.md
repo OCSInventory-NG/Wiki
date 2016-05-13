@@ -8,7 +8,7 @@ All changes made to a profile cause a backup of the original file. This backup i
 
     ocsreports/plugins/main_sections/conf/old_conf
 
-You can choose to store these files elsewhere by going to _Config_, _Interface_ tab.
+You can choose to store these files elsewhere by going to _Config_ then click on _Config_ and _Interface_ tab.
 
 ![Interface Config](../img/EN_users_profiles_1.png)
 
@@ -58,8 +58,8 @@ that match the TAG of computers would be visible to that user.
 
 Description of options :
 
-**`Note`**`: the blacklisting of serial numbers and MAC addresses is useful for the management
-of duplicate machines.`
+**`Note: the blacklisting of serial numbers and MAC addresses is useful for the management
+of duplicate machines.`**
 
 * _Rights to blacklist on MAC addresses_ : Fix the right to the profile to blacklist serial numbers
 of network cards of machines. If the profile has a restricted view on machines, it can blaclister

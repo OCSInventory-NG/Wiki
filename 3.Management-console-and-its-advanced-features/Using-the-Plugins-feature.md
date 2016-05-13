@@ -19,13 +19,13 @@ For this certain rules of development were organized.
 ## Architectural rules of code
 
 In a first time, it's important to respect files architecture. It's necessary to create a new branch in
-the /plugins/main_sections directory, and named your new directory « ms_<your_module_name> »
+the /plugins/main_sections directory, and named your new directory « ms_\<your_module_name> »
 
 ![Code's architecture](../img/EN_plugin_features_1.jpg)
 
 Interface icons are in the directory/plugins/main_sections/img. If you want to add an icon associate
 to your module, you will have to do it in this directory. The name of the new icon will be in the form
-« ms_<your_module_name>.png » for inactive icon and « ms_<your_module_name>_a.png » for active icon.
+« ms_\<your_module_name>.png » for inactive icon and « ms_\<your_module_name>_a.png » for active icon.
 Add an icon is not an obligation because you can add your module to a menu already in place or even
 create a menu on a icon.
 
@@ -65,34 +65,36 @@ Here are the names defined in the display modules. For an icon, text label will 
 
 ### **URL**
 
-This part is useful only for display in the URL of the page. It will be in the form : <module_name> : <url_name_of_module>
+This part is useful only for display in the URL of the page. It will be in the form :
+\<module_name> : \<url_name_of_module>
 
 ### **DIRECTORY**
 
-In this part, you must specify the location of the pages you have created. So, you will have : <page_name> : <my_module_directory> If you have multiple pages, then you will add:
+In this part, you must specify the location of the pages you have created. So, you will have :
+\<page_name> : \<my_module_directory> If you have multiple pages, then you will add:
 
     <page_name_1> : <my_module_directory>
     <page_name_2> : <my_module_directory>
 
 ### **MENU**
 
-Here are defined the pages belonging to the menu display. Nous avons donc : <module_name> :
-<menu_name> The module name is defined by the name of the icon.
+Here are defined the pages belonging to the menu display. Nous avons donc : \<module_name> :
+\<menu_name> The module name is defined by the name of the icon.
 
 ### **MENU_NAME**
 
 Each menu must be defined here. The naming convention is followed as this:
 
-<menu_name> : <name>_smenu
+\<menu_name> : \<name>_smenu
 
 ### **MENU_TITLE**
 
-Menu title. It is important to use language files. <menu_name> : g(<number_in_language_file>)
+Menu title. It is important to use language files. \<menu_name> : g(\<number_in_language_file>)
 
 ### **JAVASCRIPT**
 
 If you created javascript to load in the header, it must be noted in this section:
-<javascript_page_name>.js : <directory_where_the_life_is_located>
+\<javascript_page_name>.js : \<directory_where_the_life_is_located>
 
 Once you have finished to report your module, it only remains to define the profiles having
 the rights to access them.
@@ -106,11 +108,11 @@ you have the list below:
 ![Profil's folders](../img/EN_plugin_features_3.jpg)
 
 If you want to give access to your module to the profile « sadmin », simply edit sadmin_config.txt
-file and add your pages names in the section <PROFILE_PAGE>
+file and add your pages names in the section \<PROFILE_PAGE>
 
 If your module must be visible to all, you should edit the configuration files of profiles.
 
-**`Warning`**`: If your module contains several visible pages visible to the user, you must declare all.`
+**`Warning: If your module contains several visible pages visible to the user, you must declare all.`**
 
 Once this is done, your module will be active until the next logon.
 
@@ -193,9 +195,9 @@ Different sections of the details of a machine are managed as independent module
 ## Architecture rules code
 
 It is important to respect the architecture file. It is necessary to create a new section in the directory
-/plugins/computer_detail an named you directory as « cd_<your_module_name> »
+/plugins/computer_detail an named you directory as « cd_\<your_module_name> »
 
-![cd_<your_module_name>](../img/EN_plugin_features_4.jpg)
+![cd_\<your_module_name>](../img/EN_plugin_features_4.jpg)
 
 Icons corresponding to the sections of Machine Details are present in the directory
 /plugins/computer_detail/img . The format of these icons respects standard format of OCS icons.
@@ -223,7 +225,7 @@ It is important to use the language files and therefore follow the structure : <
 
 This part is optional. It allows drunk or not an icon, depending on the presence of data in a database.
 To make this operational, it is necessary to have the two formats of icon.
-You must follow the format  : <module_name>:<table_presence_hardware_id>
+You must follow the format  : \<module_name>:\<table_presence_hardware_id>
 
 # Delegate identification rights to an other application
 
@@ -271,8 +273,8 @@ the name of the page that will serve as authentication.
 
 By default, authentication is done with the file local.php.
 
-**`Tip`**`: It is possible to combine the authentication methods.
-     You can give many values to the variable $ list_methode`
+**`Tip: It is possible to combine the authentication methods.
+     You can give many values to the variable $ list_methode`**
 
 Exemple :
 
@@ -317,10 +319,10 @@ For the moment, the management of identification must be done by editing identit
 You can change the variable $ list_methode that defines the method that will be used for identification.
 This variable is an array.
 
-**`Tip`**` : You can earn rights from multiple method.
+**`Tip : You can earn rights from multiple method.
      For exemple : $list_methode=array(0=>"local.php",1=>"ldap.php") ;
      lets start by looking for person rights locally connected,
-     then search for other rights from page ldap.php.`
+     then search for other rights from page ldap.php.`**
 
 # Delegate sub-networks configuration of ipdiscover to an other application
 
@@ -354,5 +356,5 @@ For the moment this configuration can be done by editing the file
 Change the variable $list_methode, which is an array type, you can call your own methods.
 It is again possible to combine the methods of calculating the ipdiscover.
 
-**`Note`**`: If the calculation of ipdiscover is not made locally, you will have no way to add/delete/modify
-the subnets via Web interface, because it will managed from an toher database.`
+**`Note: If the calculation of ipdiscover is not made locally, you will have no way to add/delete/modify
+the subnets via Web interface, because it will managed from an toher database.`**

@@ -4,9 +4,9 @@ It is possible to delegate authentication to the administration console of OCS I
 database. Some modules have already been developed and are available natively in version 2.0. So we will
 see how to delegate the connection to the OCSInventory NG GUI to LDAP.
 
-**`Note`**`: For this documentation, we set up an LDAP from the following documentation :`
-[`http://doc.ubuntu-fr.org/openldap-server`](http://doc.ubuntu-fr.org/openldap-server)`
-and we kept the default configuration.`
+**`Note: For this documentation, we set up an LDAP from the following documentation :
+`[`http://doc.ubuntu-fr.org/openldap-server`](http://doc.ubuntu-fr.org/openldap-server)`
+and we kept the default configuration.`**
 
 ## Connection to OCS Inventory NG management console with administrator account
 
@@ -77,8 +77,8 @@ the request for _username / password_ will be in this form
 
 ![connection's id and pw](../img/EN_ocs_ldap_6.jpg)
 
-**`Note`**`: In this case, the choice of language will no longer directly available.
-You will need to choose it and freeze it in the var.php file.`
+**`Note: In this case, the choice of language will no longer directly available.
+You will need to choose it and freeze it in the var.php file.`**
 
 ## Modification of backend/identity/identity.php file
 
@@ -118,7 +118,7 @@ However, the user **georgess**, may well identify but can not connect directly. 
 default a **Local Administrator** profile, which has a limited view of the park of machines.
 So, after the connection of that user, it will have the following message:
 
-![users](../img/EN_ocs_ldap_10.png)
+![users](../img/EN_ocs_ldap_9.png)
 
 For that user can access the administration console of OCS Inventory NG, it will wait a
 **Super Administrator** gives it access to TAG witch interested it.

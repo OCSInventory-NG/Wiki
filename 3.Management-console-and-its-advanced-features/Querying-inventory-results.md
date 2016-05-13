@@ -15,9 +15,9 @@ the number of displayed lines per page. Theses customizations settings are saved
 user between sessions. This means that when you come back to OCS Inventory NG Administration
 console, your settings are restored as they were during your last visit.
 
-**`Note`**`: Computers marked with a red bullet at beginning of line are computers whith
+**`Note: Computers marked with a red bullet at beginning of line are computers whith
 specific customization parameters. They may have specific inventory frequency,
-ipdiscover status or have package deployment affected.`
+ipdiscover status or have package deployment affected.`**
 
 ## All computers
 
@@ -107,13 +107,13 @@ parameter you’ve selected:
 * BETWEEN
 * OUT OF
 
-**`Note`**`: Don’t forget to enable the parameter in the search!`
+**`Note: Don’t forget to enable the parameter in the search!`**
 
 ![Results search criteria](../img/EN_querying_ir_10.png)
 
-**`Note`**`: You can search for as many software as you wish in one search query. This means that you
+**`Note: You can search for as many software as you wish in one search query. This means that you
 can search for computers having software1 and software2 and… Unlike software field, all others
-fields can only be specified once in any given search query.`
+fields can only be specified once in any given search query.`**
 
 ## Search Software
 

@@ -92,18 +92,18 @@ all the computers members this group will have this package affected automatical
 packages on static and dynamics groups in the same way. When you affect a package on a dynamic group,
 all the computers that will be members of the dynamic group later will be affected automatically too.
 
-   **Tip**: With a such mechanism, you can even manage package dependencies.
+**`Tip: With a such mechanism, you can even manage package dependencies.`**
 
-   For example, dynamic group of computers that have no Firefox are in the "no Firefox group".
-   This group is associated with deployment of "FirefoxInstall" package. Another group is defined on
-   the packages history: "FirefoxInstalled" group, that contains the computers having successfully
-   setup Firefox. On this group, there is an associated package named "FirefoxPrivateExtensionXpi".
-   When a new computer will check in, it will be added on the first group. As a member of this group,
-   it will deploy Firefox. When it will check in with Firefox installed, it will be removed from the
-   first group and included in the second group and will install the XPI extensions.
+For example, dynamic group of computers that have no Firefox are in the "no Firefox group".
+This group is associated with deployment of "FirefoxInstall" package. Another group is defined on
+the packages history: "FirefoxInstalled" group, that contains the computers having successfully
+setup Firefox. On this group, there is an associated package named "FirefoxPrivateExtensionXpi".
+When a new computer will check in, it will be added on the first group. As a member of this group,
+it will deploy Firefox. When it will check in with Firefox installed, it will be removed from the
+first group and included in the second group and will install the XPI extensions.
 
-   In the same way, you can setup computers profiles that will deploy in a given order all the software
-   components associated to their profile.
+In the same way, you can setup computers profiles that will deploy in a given order all the software
+components associated to their profile.
 
 ### **Affect package on a group**
 
