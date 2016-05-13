@@ -219,7 +219,7 @@ This party set order the modules will be displayed.
 ### <**LBL**>
 
 This part of the bubble-defined labels that are displayed when moving the mouse over the icon.
-It is important to use the language files and therefore follow the structure : <module_name>:g(<line_number>)
+It is important to use the language files and therefore follow the structure : \<module_name>:g(\<line_number>)
 
 ### <**ISAVAIL**>
 
