@@ -57,10 +57,10 @@ to allow QUALITY to be computed from representative data.
 inventory results from number of days defined by ‘IPDISCOVER_MAX_ALIVE’ option, it will replace
 this host by a new one.
 
-**`Note`**`: You can customize agent’s ipdiscover settings for each computer from the administration console.
+**`Note: You can customize agent’s ipdiscover settings for each computer from the administration console.
 You can totally disable ipdiscover or force ipdiscover on a specific network. These options are
 available on the computer properties page, under “Customization” section. However, the election
-mechanism is the best way to do the network discovery. Use ipdiscover customization with care.`
+mechanism is the best way to do the network discovery. Use ipdiscover customization with care.`**
 
 ## How do agents work?
 
@@ -98,7 +98,7 @@ You can view which computers run the IP discovery scans by clicking on toolbar �
 
 ## Manage names of your networks
 
-**`Note`**`: You may define your sub networks by a name and a unique ID, to view results easily.`
+**`Note: You may define your sub networks by a name and a unique ID, to view results easily.`**
 
 ![List of networks](../img/EN_ip_discover_feature_2.png)
 
@@ -203,7 +203,7 @@ is inventoried / discovered.
 
 #### **Prerequires**
 
-**`Note`**`: This feature requires the following components :`
+**`Note: This feature requires the following components :`**
 
     * nmap (tested on 3.75)
     * nmblookup (part of Samba suite, tested on 3.0.7/3.0.10)

@@ -15,13 +15,13 @@ These IP addresses to scan are directly sent to OCS agent by OCS server when OCS
 You can find more information about Ipdiscover
 [here](../5.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
 
-**`Warning`**`: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`
+**`Warning: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
 
-**`Warning`**`: Since OCS Inventory 2.0.3, you MUST set OCS server address in
+**`Warning: Since OCS Inventory 2.0.3, you MUST set OCS server address in
 /etc/ocsinventory-agent/ocsinventory-agnet.cfg to use
 `[_`https://your_ocs_server/ocsinventory`_](https://your_ocs_server/ocsinventory)`
 instead of`[_`http://your_ocs_server/ocsinventory`_](http://your_ocs_server/ocsinventory)`.
-If not, OCS agent won't receive SNMP scans orders from OCS server.`
+If not, OCS agent won't receive SNMP scans orders from OCS server.`**
 
 
 SNMP scanning step by step :
@@ -73,8 +73,8 @@ version 2c etc...)
 * SNMP community name : it is the community name you set in your SNMP device(s). For many SNMP devices,
 the default SNMP community name is public.
 
-**`Note`**`: In OCS Inventory NG 2.0, only SNMp v1, v2 and v2c are supported. SNMp v3 will be supported
-in future releases.`
+**`Note: In OCS Inventory NG 2.0, only SNMp v1, v2 and v2c are supported. SNMp v3 will be supported
+in future releases.`**
 
 If you set your own SNMP communities in your SNMP devices, you have to add it in OCS Inventory
 configuration. OCS agent will received informations about this communities and will try to scans SNMP
@@ -110,7 +110,7 @@ First, go to its _Configuration_'s page and click on the _pencil_. Then, click o
 
 ![Computer Pencil](../img/EN_snmp_scan_feature_7.png)
 
-**`Note`**`: Since OCS Inventory NG 2.1, you can scan remote networks (others that where the agent is located)`
+**`Note: Since OCS Inventory NG 2.1, you can scan remote networks (others that where the agent is located)`**
 
 ![Networks scans tab](../img/EN_snmp_scan_feature_6.png)
 
@@ -178,8 +178,8 @@ If no errors are displayed on stdout, this means that you have no errors.
 To allow Unix Unified agent to download snmp_com.txt file using HTTPS, you have to copy SSL certificate file
 (as cacert.pem) in your OCS server configuration directory in your basevardir directory.
 
-**`Note`**`: basevardir directory is the path specified in your /etc/ocsinventory-agent/ocsinventory-agent.cfg
-using basevardir= parameter.`
+**`Note: basevardir directory is the path specified in your /etc/ocsinventory-agent/ocsinventory-agent.cfg
+using basevardir= parameter.`**
 
 Your OCS server configuration directory is a directory created automatically using your OCS server URL
 (http:__ocsinventory-ng_ocsinventory for example).
@@ -189,9 +189,9 @@ is [_http://ocsinventory-ng/ocsinventory_](http://ocsinventory-ng/ocsinventory),
 so you have to copy your cacert.pem certificate file in
 /var/lib/ocsinventory-agent/http:__ocsinventory-ng_ocsinventory directory.
 
-**`Note`**`: If you already use a SSL certificate for OCS packages deployment, you may not have to copy a
+**`Note: If you already use a SSL certificate for OCS packages deployment, you may not have to copy a
 new one for SNMP scans feature. Indeed, if you use the same HTTPS server for OCS package deployment
-and snmp_com.txt file download, cacert.pem file will be same one in the same directory.`
+and snmp_com.txt file download, cacert.pem file will be same one in the same directory.`**
 
 ### **Scans informations using debug mode**
 
