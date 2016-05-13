@@ -4,9 +4,9 @@
 Agent on computers**. You just need to have administrative credentials on remote comuter and it will do
 the job for you.
 
-**`Note`**`: To push setup on Windows Computer, it requires administrative shares enabled (no simple file sharing)
+**`Note: To push setup on Windows Computer, it requires administrative shares enabled (no simple file sharing)
 and Microsoft SysInternals PsExec free utility
-(`[`http://technet.microsoft.com/en-us/sysinternals/bb897553.aspx`](http://technet.microsoft.com/en-us/sysinternals/bb897553.aspx)`).`
+(`[`http://technet.microsoft.com/en-us/sysinternals/bb897553.aspx`](http://technet.microsoft.com/en-us/sysinternals/bb897553.aspx)`).`**
 
 `To push setup on Unix computer, it requires PuTTY SSH and PuTTY PSCP free tools
 (`[`http://www.chiark.greenend.org.uk/~sgtatham/putty/`](http://www.chiark.greenend.org.uk/~sgtatham/putty/)`).`
@@ -61,9 +61,9 @@ Click **[ OK ]** button to save changes.
 
 ## Pushing OCS Inventory NG agent for Windows setup
 
-**`Note`**`: To push setup, administrative shares must be enabled on remote computer. Moreover, on computers
+**`Note: To push setup, administrative shares must be enabled on remote computer. Moreover, on computers
 not members of a Windows domain, you have to disable “Using simple share (recommended)”
-using “Folders options”.`
+using “Folders options”.`**
 
 Click on **[ Windows Agent ]** button of Agent Deployment Tool main window to start deploying on Windows computers. You can choose to deploy Agent on
 
@@ -102,16 +102,16 @@ and click **[ Next ]** button
 Provide credentials of an Administrator account on remote computers with associated
 password and click **[ Next ]** button.
 
-**`Note`**`: If computers are in an Active Directory or Samba Domain, you must specify account
-like `*`DOMAIN_NAME\Administrator`*`. Otherwise, only the account name without domain name is enough.`
+**`Note: If computers are in an Active Directory or Samba Domain, you must specify account
+like DOMAIN_NAME\Administrator. Otherwise, only the account name without domain name is enough.`**
 
 ![Windows Deployment Tool Authentification](../img/OCS-NG-Deploy-Tool-Deploy-Win_3.png)
 
 You are now ready to process. Choose the number of computers to push installation simultaneously
 (up to 10 computers) using the slider and click **[ Start ]** button.
 
-**`Note`**`: WARNING !!! Increasing the simultaneous connections will increase the memory and CPU use
-on the computer which is running OCS Inventory NG Agent Deployment Tool.`
+**`Note: WARNING !!! Increasing the simultaneous connections will increase the memory and CPU use
+on the computer which is running OCS Inventory NG Agent Deployment Tool.`**
 
 Agent Deployment Tool will first check if remote computer is up and running Windows OS,
 copy installation files to remote computer through administratibe shares,
