@@ -115,7 +115,7 @@ Configuration begins. Choice to configure agent now or later.
 
 ![Installation of Unix agent](../img/Unix_agent.jpg)
 
-Select the path of configuration file directory
+Select the path of configuration file directory.
 
 ![Installation of Unix agent](../img/Unix_agent_2.jpg)
 
@@ -124,11 +124,11 @@ Validation to create the directory, and definition of OCS Inventory NG server ad
 You will then have to choose between 3 methods for generating inventory:
 
 1. http: computer is connected to the network and is able to reach the Communication server with
-HTTP protocol. **USED BY DEFAULT**
+HTTP protocol **USED BY DEFAULT**.
 
 2. https: computer is connected to the network and is able to reach the Communication server with
 HTTPS protocol. You have to configure SSL on your OCS Server and copy the SSL certificate
-on the agent directory to use this method
+on the agent directory to use this method.
 
 3.  local: computer is not connected to the network and inventory will be generated in a file
 to manually send to OCS Inventory NG operator. This option must be set manually
@@ -149,23 +149,23 @@ Examples :
 
 ![Installation of Unix agent](../img/Unix_agent_3.jpg)
 
-Choice to use or not apache auth, and possibility to define an administrative tag
+Choice to use or not apache auth, and possibility to define an administrative tag.
 
 ![Installation of Unix agent](../img/Unix_agent_4.jpg)
 
-Choice to create or not a cron task, definition and validation of agent files directory
+Choice to create or not a cron task, definition and validation of agent files directory.
 
 ![Installation of Unix agent](../img/Unix_agent_5.jpg)
 
-Choice to remove or not the old agent version
+Choice to remove or not the old agent version.
 
 ![Installation of Unix agent](../img/Unix_agent_6.jpg)
 
-Choice to use or not software deployment feature, SNMP scans feature and send an inventory
+Choice to use or not software deployment feature, SNMP scans feature and send an inventory.
 
 ![Installation of Unix agent](../img/Unix_agent_7.jpg)
 
-If Accountinfo file doesn't exist, it will be created, and the inventory will be sent to the server
+If Accountinfo file doesn't exist, it will be created, and the inventory will be sent to the server.
 
 ![Installation of Unix agent](../img/Unix_agent_8.jpg)
 

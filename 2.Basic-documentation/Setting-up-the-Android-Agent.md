@@ -14,7 +14,7 @@ cannot communicate with the server, or where the service version is not
 wanted or allowed.
 
 When an inventory is done, agent uses and writes in files stored in directory
-"SDCARD/ocs". This directory is **/mnt/sdcard/ocs**
+"SDCARD/ocs". This directory is **/mnt/sdcard/ocs**.
 
 ## Prerequisites
 
@@ -83,12 +83,12 @@ By clicking on configuration standard button of Android (different depending on 
 ![Server's configuration of android agent](../img/Config_android_agent_2_en.png)
 
 * **SERVER URL** : define URL address of OCS Inventory NG server(By default:
-[http://ocsinventory-ng/ocsinventory](http://ocsinventory-ng/ocsinventory))
+[http://ocsinventory-ng/ocsinventory](http://ocsinventory-ng/ocsinventory)).
 
     **`Note`**`: If your OCS Inventory NG server listens on an other port than classic port, you have to define it in serveur URL.
     Example :`[`https://ocsinventory-ng:4443/ocsinventory`](https://ocsinventory-ng:4443/ocsinventory)
 
-* **SSL CONTROL** : possible to active and desactive SSL control
+* **SSL CONTROL** : possible to active and desactive SSL control.
 * **AUTHENTIFICATION** : define if server needs authentification. If yes, you have to define
 **Login** and **Password**.
 * **HTTP PROXY** : define if agent use a proxy. If yes, you have to define **Address** and
@@ -106,7 +106,6 @@ import/export is stored in directory "ocs".
 
 **`Note`**`: To import/export configuration, the device (phone/tablet) should not be connected
 via USB to a computer.`
-
 
 It's possible to edit the file manually as you want.
 

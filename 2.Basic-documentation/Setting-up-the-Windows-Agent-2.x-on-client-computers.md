@@ -298,9 +298,9 @@ or User policy will run at user login.
 
 **`Note`**`: In our example, we will use Computer policy and Startup script. Communication Server address
 is “ocs.mycompany.tld”, and we choose to set up Service Agent version using Packager all-in-one installer
-“ocspackage.exe” (See`
-[`Using OCS Packager to create an all-in-one installer to setup agent and server certificate`](../6.OCS-Tools/OCS-Packager.md)
-`). If you choose to use Standalone Agent, it’s better to use User policy and startup script,
+“ocspackage.exe” (See
+`[`Using OCS Packager to create an all-in-one installer to setup agent and server certificate`](../6.OCS-Tools/OCS-Packager.md)`
+). If you choose to use Standalone Agent, it’s better to use User policy and startup script,
 to allow agent running each time a user log in.`
 
 Expand “Computer configuration” tree in left pane and navigate as shown below to “Windows settings”
@@ -318,7 +318,7 @@ Launcher “Ocslogon.exe” and all-in-one installer “Ocspackage.exe” files.
 ![Ocspackage.exe](../img/GPO_Computer_startup_script_3.png)
 
 Next close “Startup” folder and click “Add” script button, click “Browse” button to select launcher
-“OcsLogon.exe” , and fill in Launcher parameters, in our example
+“OcsLogon.exe” , and fill in Launcher parameters, in our example :
 
 * “/PACKAGER” to use OCS Packager all-in-one installer,
 * “/GPO” to use setup file located in the same folder as OcsLogon.exe aka the GPO folder,
@@ -333,7 +333,7 @@ Validate each window to activate Computer Startup script GPO.
 ![Script OK](../img/GPO_Computer_startup_script_5.png)
 
 Update if needed default GPO filters to meet your needs, for example to apply this GPO only
-to specified Active Directory OU or site.
+to specified Active Directory or site.
 
 ![Activate Filter](../img/GPO_Activate_Filter.png)
 
@@ -408,19 +408,19 @@ We assume that the agent setup file is called agentsetup.exe and it was placed o
 
 * Install silently on all computers currently logged in your domain:
 
-      psexec \\* -s \\Server\NetLogon\OCS-NG-Windows-Agent-Setup.exe /S /NOSPLASH /SERVER=http://my_ocs_server/ocsinventory
+        psexec \\* -s \\Server\NetLogon\OCS-NG-Windows-Agent-Setup.exe /S /NOSPLASH /SERVER=http://my_ocs_server/ocsinventory
 
 * Install silently on a single computer:
 
-      psexec \\COMPUTER_NAME -s \\Server\NetLogon\OCS-NG-Windows-Agent-Setup.exe /S /NOSPLASH /SERVER=http://my_ocs_server/ocsinventory
+        psexec \\COMPUTER_NAME -s \\Server\NetLogon\OCS-NG-Windows-Agent-Setup.exe /S /NOSPLASH /SERVER=http://my_ocs_server/ocsinventory
 
 * Install silently on all computers using the domain administrator credentials:
 
-      psexec \\* -s -u Domain\Administrator -p Password \\Server\NetLogon\OCS-NG-Windows-Agent-Setup.exe /S /NOSPLASH /SERVER=http://my_ocs_server/ocsinventory
+        psexec \\* -s -u Domain\Administrator -p Password \\Server\NetLogon\OCS-NG-Windows-Agent-Setup.exe /S /NOSPLASH /SERVER=http://my_ocs_server/ocsinventory
 
 * Install silently on specific computers (ALL.TXT is a text file that lists target computer names, one per line), using domain administrator credentials:
 
-      psexec @ALL.TXT -s -u Domain\Administrator -p Password \\Server\NetLogon\OCS-NG-Windows-Agent-Setup.exe /S /NOSPLASH /SERVER=http://my_ocs_server/ocsinventory
+        psexec @ALL.TXT -s -u Domain\Administrator -p Password \\Server\NetLogon\OCS-NG-Windows-Agent-Setup.exe /S /NOSPLASH /SERVER=http://my_ocs_server/ocsinventory
 
 ## Generating inventory of a non network connected Windows computer
 
@@ -428,7 +428,7 @@ Run “OCS-NG-Windows-Agent-Setup.exe” on client computer, from an USB stick f
 
 ![Icone installer Windows Agent](../img/Windows_Agent_2.0_Setup_0.png)
 
-..and click “Next” button
+..and click “Next” button.
 
 ![Start Installation](../img/Windows_Agent_2.0_Setup_1.png)
 

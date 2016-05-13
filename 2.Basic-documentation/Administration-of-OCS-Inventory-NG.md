@@ -171,7 +171,7 @@ used under Windows to launch agent as a service through an entry in registry key
 HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices.
 
 This will create the file “ocspackage.exe” to upload into Administration console. Click on
-toolbar **Config** menu
+toolbar **Config** menu.
 
 ![Toolbar Config Menu](../img/EN_Administration_OCS_3.png)
 
@@ -355,7 +355,6 @@ This will import inventory results into the database.
     ---------------------------
     Successly inventoried : 1''
     Errors : 0
-    :-)
 
 If you have multiple files to import, you can put them in a directory and them launch the script
 “Ocsinventory_local.pl” without argument, but within the directory where resides files to import.
@@ -365,4 +364,3 @@ If you have multiple files to import, you can put them in a directory and them l
     ---------------------------
     Successly inventoried : 1
     Errors : 0
-    :-)

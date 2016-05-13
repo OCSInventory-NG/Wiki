@@ -2,10 +2,11 @@
 
 Management server is made up of 4 main components:
 
-1. **Database server**, which stores inventory information
+1. **Database server**, which stores inventory information.
 2. **Communication server**, which handles HTTP communications between database server and agents.
-3. **Administration console**, which allows administrators to query the database server using their favorite browser.
-4. **Deployment server**, which stores all package deployment configuration (requires HTTPS!)
+3. **Administration console**, which allows administrators to query the database server using
+their favorite browser.
+4. **Deployment server**, which stores all package deployment configuration (requires HTTPS!).
 
 These 4 components can be hosted on a single computer or on different computers to allow load balancing. Above 10000 inventoried computers, we recommend using at least 2 physical servers, one hosting database server + Communication server and the other one hosting a database replica + Administration server + Deployement server.
 
@@ -396,7 +397,7 @@ main configuration file, replacing existing configuration.`
     allow from all
     Satisfy any
     </location>
-Figure 2: Apache configuration sample file
+**Figure 2: Apache configuration sample file**
 
 Communication server installation is now finished. You will be prompted to set Administration console up.
 Enter “y” or validate to set Administration console up, enter “n” to skip Administration console installation.
@@ -453,16 +454,17 @@ specially these variables :`
     mysql -f -hlocalhost -uroot -p DBNAME < ocsbase.sql >log.log
 
 Else, open your favorite web browser and point it on URL
-[http://administration_console/ocsreports](http://administration_console/ocsreports)to connect the Administration server.
+[http://administration_console/ocsreports](http://administration_console/ocsreports) to connect
+the Administration server.
 
 As database is not yet created, this will begin OCS Inventory setup process.
 Otherwise, you can rerun configuration process by browsing
 [http://administration_console/ocsreports/install.php](http://administration_console/ocsreports/install.php)
 URL (this must be used when upgrading OCS Inventory management server).
 
-**`Note`**`: You will see warning regarding max size of package you will be able to deploy. Please, see`
-[`Uploads size for package deployment`](../8.Extras/Common-errors.md#uploads-size-for-package-deployment)
-` to configure your server to match your need.`
+**`Note`**`: You will see warning regarding max size of package you will be able to deploy. Please, see
+`[`Uploads size for package deployment`](../8.Extras/Common-errors.md#uploads-size-for-package-deployment)`
+to configure your server to match your need.`
 
 ![Installation's page of ocsreports](../img/Installation_ocsreports.png)
 
@@ -484,8 +486,8 @@ If you do not wish to use default MySQL user `**`ocs`**` with `**`ocs`**` passwo
 **`dbconfig.inc.php`**` PHP constants `**`COMPTE_BASE`**`, which is MySQL user login,
 and/or `**`PSWD_BASE`**`, which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
-` for all information about modifications of configuration files.`
+Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
+for all information about modifications of configuration files.`
 
 To secure you server, refer to
 [Secure your OCS Inventory NG Server](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
@@ -494,7 +496,7 @@ documentation.
 If you don't want to secure your OCS Inventory Server, you have to desactivate Warning message in user profile.
 Procedure is in the same documentation page.
 
-**`Warning`**`: We recommend you to read this documentation and follow the procedure`
+**`Warning`**`: We recommend you to read this documentation and follow the procedure.`
 
 
 Finally, you may fill in a text describing the TAG, a string displayed at first launch of the agent to ask user
@@ -531,8 +533,8 @@ not do this, because you want to upgrade, and not install from scratch.`
 Database upgrade can take a long time.`
 
 **`Warning: We recommend you to migrate your OCS database to UTF8. Refer to`**
-[**`Migrate your OCS database to UTF8`**](http://wiki.ocsinventory-ng.org/index.php/Howtos:Migrate_your_OCS_database_to_UTF8)
-**`HowTo. You have to do this migration ONLY AFTER update.`**
+[**`Migrate your OCS database to UTF8`**](http://wiki.ocsinventory-ng.org/index.php/Howtos:Migrate_your_OCS_database_to_UTF8)**`
+HowTo. You have to do this migration ONLY AFTER update.`**
 
 To upgrade web communication server and administration console, you must follow instructions as described in
 Installing management server. You don’t need to update Perl modules if not required in the release notes.
@@ -557,7 +559,7 @@ Finally, you may fill in a text describing the TAG if you wish to use it.
 ![Installation of ocsreports](../img/Installation_ocsreports_3.jpg)
 
 **`Note`**`: Notice that installers says about how to log in to server after upgrade. Actually use
-your user/pass that you used before upgrade, especially if you removed/disabled user admin :)`
+your user/pass that you used before upgrade, especially if you removed/disabled user admin.`
 
 # Under Windows Operating System
 
@@ -641,7 +643,7 @@ You will be prompted to start XAMPP Control Panel. Please, answer **No**.
 Then, it will launch XAMPP perl addon setup in silent mode.
 
 Last, Setup will install OCS Inventory NG Server files, configure XAMPP Apache and MySQL servers for
-OCS Inventory NG Server, and automatically start MySQL and Apache server
+OCS Inventory NG Server, and automatically start MySQL and Apache server.
 
 At the end of the process, Setup will launch your default browser to start OCS Inventory NG Server configuration
 (see [Configuring management server](Setting-up-a-management-server.md#configuring-management-server-1)).
@@ -684,8 +686,8 @@ If you do not wish to use default MySQL user `**`ocs`**` with `**`ocs`**` passwo
 in the file `**`dbconfig.inc.php`**` PHP constants `**`COMPTE_BASE`**`, which is MySQL user login, and/or PSWD_BASE,
 which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
-`for all information about modifications of configuration files.`
+Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
+for all information about modifications of configuration files.`
 
 To secure you server, refer to
 [Secure your OCS Inventory NG Server](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
@@ -695,7 +697,7 @@ If you don't want to secure your OCS Inventory Server, you have to deactivate th
 in user profile. Procedure is in the same documentation page.
 
 
-**`Warning`**`: We recommend you to read this documentation and follow the procedure`
+**`Warning`**`: We recommend you to read this documentation and follow the procedure.`
 
 
 Finally, you may fill in a text describing the TAG, a string displayed at first launch of the agent to ask
@@ -760,8 +762,8 @@ You can now reselect **[ Security ]** on left side menu to see that all started 
 
 To upgrade web communication server and administration console, you must follow instructions
 as described in the section
-[Installing management server](Setting-up-a-management-server.md#installing-management-server-1)
-. Just ensure that setup detects old installation folder correctly.
+[Installing management server](Setting-up-a-management-server.md#installing-management-server-1).
+Just ensure that setup detects old installation folder correctly.
 
 You don’t need to update XAMPP components. Setup, by default, will not select XAMPP components install.
 If you do so, **backup your databases and web sites if you want to also upgrade XAMPP components !**
