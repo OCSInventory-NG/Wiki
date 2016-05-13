@@ -36,7 +36,7 @@ error when downloading file "ocsagent.exe". This means that launcher is not able
 installation file. So try disabling use of proxy by adding « /NP » to agent’s command line launch,
 and then take a look at § 11.1.4 Agent HTTP errors., and then at § 11.3 Communication server errors.
 
-**`Note`**`: same error for file "label" is not blocking one. This means you aren't using TAG.`
+**`Note: same error for file "label" is not blocking one. This means you aren't using TAG.`**
 
 ### **Windows agent does not send inventory to server**
 
@@ -112,7 +112,7 @@ especially file "error.log", generally located under "/var/log/httpd".
 Do you have included in apache configuration content of apache_config file ? Do you have updated this
 content to match your need ?
 * **301**: This error means that you already have a directory named "/ocsinventory" in your apache server,
-and this name conflicts with apache <location> directive of apache_config file. You must change name of
+and this name conflicts with apache \<location> directive of apache_config file. You must change name of
 "/ocsinventory" directory.
 
 In all case, you must also take a look at Communication Server log files and check § 11.3
@@ -259,10 +259,10 @@ The first one is fairly obvious if you set this off, uploading is disabled for y
 you will not be able to upload software for deployment. We will cover the rest of the configuration
 settings in detail below.
 
-**`Note`**`: On some Linux distributions (for example Debian), you do not need to modify php.ini,
+**`Note: On some Linux distributions (for example Debian), you do not need to modify php.ini,
 but just edit the ocsinventory-reports.conf which is in the conf.d directory
 (in Debian /etc/apache2/conf.d/ocsinventory-reports.conf).
-All the settings needed regarding to PHP are located in this file.`
+All the settings needed regarding to PHP are located in this file.`**
 
 Remenber to restart Apache web server for changes to take effect.
 

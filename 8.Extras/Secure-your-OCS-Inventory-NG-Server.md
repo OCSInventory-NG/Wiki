@@ -61,13 +61,13 @@ Under Linux, generally in
     # Password for user
     PerlSetVar OCS_DB_PWD password
 
-**`Warning`**`: Don't forget to restart apache. Else, OCS Inventory NG server will return an ERROR 500 to agents
-which contact it.`
+**`Warning: Don't forget to restart apache. Else, OCS Inventory NG server will return an ERROR 500 to agents
+which contact it.`**
 
 # Desactivate warning message in management console
 
-**`Warning`**`: We recommend you to secure your server following preceding paragraphs, but if you want,
-you can desactivate warning message in GUI`
+**`Warning: We recommend you to secure your server following preceding paragraphs, but if you want,
+you can desactivate warning message in GUI`**
 
 You have to connect to management console, click on **User** icon, then on **Administer profiles** tab,
 and choose the profile to modify.

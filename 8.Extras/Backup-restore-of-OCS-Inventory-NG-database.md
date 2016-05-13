@@ -16,7 +16,7 @@ Simply run the following command to backup OCS Inventory NG database:
 
 This will save database content of OCS Inventory NG database _ocsweb_ into file _mysqldump_ocsweb.sql_.
 
-**`Note`**`: If you do not have backup software for MySQL then you may find Auto MySQL Backup handy :)`
+**`Note: If you do not have backup software for MySQL then you may find Auto MySQL Backup handy :)`**
 
 ## Restoring OCS Inventory NG database
 
@@ -30,7 +30,7 @@ Just run MySQL command line interpreter to import saveset previously created “
     mysql>source <path_to_saveset>
     mysql>exit
 
-**`Note`**`: You will be prompted from root password. If you haven’t yet set root password, do use "-p"
-command line switch.`
+**`Note: You will be prompted from root password. If you haven’t yet set root password, do use "-p"
+command line switch.`**
 
 ![Linux Command](../img/Restaure_bdd.jpg)
