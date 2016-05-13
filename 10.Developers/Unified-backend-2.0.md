@@ -1,4 +1,4 @@
-**`Warning`**`: This documentation is for the 2.0 Unix OCS Agent. It won't work with 1.1.x Unix OCS Agent.`
+**`Warning: This documentation is for the 2.0 Unix OCS Agent. It won't work with 1.1.x Unix OCS Agent.`**
 
 # Presentation
 

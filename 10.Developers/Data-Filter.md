@@ -4,9 +4,9 @@ Data Filter is a Perl module for OCS engine. Its goal is to filter inventory dat
 data directly in XML received by OCS server. The data will be deleted in XML just before storing inventory
 in database. This module will be integrated in OCS 2.0 .
 
-**`Warning`**`: For the moment, Data Filter is only able to delete data from the hardware database table.
+**`Warning: For the moment, Data Filter is only able to delete data from the hardware database table.
 A more sophisticated Data filter will be integrated and deletion of any databae data will be possible.
-The more sophisticated Data Filter module will only be OCS 2.0 compatible`
+The more sophisticated Data Filter module will only be OCS 2.0 compatible`**
 
 ## Source Code
 

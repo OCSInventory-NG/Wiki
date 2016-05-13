@@ -52,10 +52,10 @@ to convert database from one encoding(except ubuntu):
 3. dump data
 4. mysqldump -u ocs -p --default-character-set=latin1 -a --skip-set-charset --insert-ignore
 --no-create-info ocsweb > ./ocsweb.sql
-5. recode -f <windows charset>..UTF8 ./ocsweb.sql
+5. recode -f \<windows charset>..UTF8 ./ocsweb.sql
 6. drop databse and create new one for version 1.3
 7. import data from ./ocsweb.sql
-8. mysql -u ocs -p ocsweb <./ocsweb.sql
+8. mysql -u ocs -p ocsweb \<./ocsweb.sql
 
 **Write perl script,**
 

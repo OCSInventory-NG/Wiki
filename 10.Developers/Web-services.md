@@ -95,9 +95,9 @@ The following other search criteria may be used besides of checksum:
 
 **ASKING_FOR** allows to specify which answer is needed, META or INVENTORY.
 
-In both cases, root is always <COMPUTERS/>, and every computer is marked up with <COMPUTER/>.
+In both cases, root is always \<COMPUTERS/>, and every computer is marked up with \<COMPUTER/>.
 
-(<!ELEMENT COMPUTERS(COMPUTER*)><!ELEMENT COMPUTER(Changing here)>...)
+(\<!ELEMENT COMPUTERS(COMPUTER*)>\<!ELEMENT COMPUTER(Changing here)>...)
 
 META are computers metadata:
 
@@ -258,7 +258,7 @@ Here is an example of a Perl script which invokes the Web Service:
       ->uri("$proto://$s/Apache/Ocsinventory/Interface")
       ->proxy("$proto://$u".($u?':':'').($u?"$pw\@":'')."$s/ocsinterface\n")
       ->$f(@params);
-    
+
     if($lite->fault){
       print "ERROR:\n\n",XML::Entities::decode( 'all', $lite->fault->{faultstring} ),"\nEND\n\n";
     }
