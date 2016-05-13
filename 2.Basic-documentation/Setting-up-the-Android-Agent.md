@@ -28,7 +28,7 @@ Have a device under Android 2.1 or higher.
 : Download and uncompress the lastestversion of Android Agent from download page of our website.
 This package contains file :
 
-**`OCSInventoryAgent-0.9.0.apk`**`: install Android agent, without any specific configuration.`
+**`OCSInventoryAgent-0.9.0.apk: install Android agent, without any specific configuration.`**
 
 Place this file on SDCARD and launch it.
 
@@ -85,8 +85,8 @@ By clicking on configuration standard button of Android (different depending on 
 * **SERVER URL** : define URL address of OCS Inventory NG server(By default:
 [http://ocsinventory-ng/ocsinventory](http://ocsinventory-ng/ocsinventory)).
 
-    **`Note`**`: If your OCS Inventory NG server listens on an other port than classic port, you have to define it in serveur URL.
-    Example :`[`https://ocsinventory-ng:4443/ocsinventory`](https://ocsinventory-ng:4443/ocsinventory)
+    **`Note: If your OCS Inventory NG server listens on an other port than classic port, you have to define it in serveur URL.
+    Example :`[`https://ocsinventory-ng:4443/ocsinventory`](https://ocsinventory-ng:4443/ocsinventory)**
 
 * **SSL CONTROL** : possible to active and desactive SSL control.
 * **AUTHENTIFICATION** : define if server needs authentification. If yes, you have to define
@@ -94,9 +94,9 @@ By clicking on configuration standard button of Android (different depending on 
 * **HTTP PROXY** : define if agent use a proxy. If yes, you have to define **Address** and
 **port** of proxy server.
 
-**`Warning`**`: To work with SSL control, you have to import CA in Android. To do this, use menu Localisation
+**`Warning: To work with SSL control, you have to import CA in Android. To do this, use menu Localisation
 and security/Import certficate from SDCARD. Certificates MUST BE in the root of SDCARD. Extensions .crt and .cer are detected. Extension
-.pem isn't always.`
+.pem isn't always.`**
 
 ## Feature of import/export configuration
 
@@ -104,8 +104,8 @@ This feature allows to export agent configuration when defined, to import in oth
 **org.ocsinventory.android.agent_preferences.xml** file containing configuration parameters to
 import/export is stored in directory "ocs".
 
-**`Note`**`: To import/export configuration, the device (phone/tablet) should not be connected
-via USB to a computer.`
+**`Note: To import/export configuration, the device (phone/tablet) should not be connected
+via USB to a computer.`**
 
 It's possible to edit the file manually as you want.
 

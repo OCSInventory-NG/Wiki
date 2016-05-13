@@ -2,10 +2,10 @@
 
 ## Installing OCS MacOSX agent 2.0
 
-**`Note`**`: OCS MacOSX agent 2.0 agent is full compatible under MacOSX 10.6 Snow Leopard and more.
+**`Note: OCS MacOSX agent 2.0 agent is full compatible under MacOSX 10.6 Snow Leopard and more.
 Under MacOSX 10.4 Tiger and MacOSX 10.5 Leopard, SSL layer and packages deployment feature won't work
 but inventory using HTTP connection will work. If you want to run OCS MacOSX agent under older MacOSX systems,
-you have to use the old OCS MacOSX 1.1 beta1 agent.`
+you have to use the old OCS MacOSX 1.1 beta1 agent.`**
 
 Download OCS MacOSX agent from OCS Inventory NG website download page(
 [http://www.ocsinventory-ng.org/en/#home-en](http://www.ocsinventory-ng.org/en/#home-en)
@@ -24,8 +24,8 @@ Validate license agreement by clicking "Continue" and "Agree".
 If you already made an OCS MacOSX agent installation, you may be asked if you want to launch
 OCS MacOSX configuration. Click on "Yes" to launch configuration panel or "No" to skip this step.
 
-**`Warning`**`: message=If you click on "Yes", /etc/ocsinventory-agent/ocsinventory-agent.cfg
-file content will be erased !`
+**`Warning: message=If you click on "Yes", /etc/ocsinventory-agent/ocsinventory-agent.cfg
+file content will be erased !`**
 
 ![Ocs agent already exist](../img/EN_macosx_agent_install_configuration_warn.png)
 
@@ -44,8 +44,8 @@ Click on "Continue" to validate configuration.
 
 If you activate OCS MacOSX agent packages download feature without specifying a certificate file path, you may have this warning.
 
-**`Warning`**`: message=If you activate OCS MacOSX agent packages download feature without specifying a
-certificate file path, OCS MacOSX agent packages download feature won't work !!!`
+**`Warning: message=If you activate OCS MacOSX agent packages download feature without specifying a
+certificate file path, OCS MacOSX agent packages download feature won't work !!!`**
 
 ![No folder specify](../img/EN_macosx_agent_configuration_download_warn.png)
 

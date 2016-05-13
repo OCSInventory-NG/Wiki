@@ -4,10 +4,10 @@ Adminstrative Console: Point your browser to
 [http://.your_administration_server/ocsreports](http://.your_administration_server/ocsreports)
 and login with username “admin”, and password “admin”.
 
-**`Warning`**`: You must change the default password or better, add a new administrative user and remove
-the default "admin" user.`
+**`Warning: You must change the default password or better, add a new administrative user and remove
+the default "admin" user.`**
 
-**`Note`**`: All these features are only available to OCS Inventory NG administrators.`
+**`Note: All these features are only available to OCS Inventory NG administrators.`**
 
 ## Managing OCS Inventory NG Administration server users.
 
@@ -118,8 +118,8 @@ Click **[ Update ]** button when you set all changes.
 
 ## Uploading Agent for deployment through launcher “OcsLogon.exe”
 
-**`Warning`**`: This feature works only for network connected computers able to connect to the
-Communication server.`
+**`Warning: This feature works only for network connected computers able to connect to the
+Communication server.`**
 
 
 OCS Inventory NG is able to automatically install an agent on computers when the launcher “OcsLogon.exe”
@@ -136,8 +136,8 @@ One or both of the following 2 files must be uploaded to the server:
 [Packager](../6.OCS-Tools/OCS-Packager.md), to deploy the Windows
 service version of the Agent, even if the connected user does not have Administrator privileges.
 
-**`Warning`**`: A control is made on files name imported via GUI. You will not upload file having a
-different name of ocsagent.exe and ocspackages.exe.`
+**`Warning: A control is made on files name imported via GUI. You will not upload file having a
+different name of ocsagent.exe and ocspackages.exe.`**
 
 
 To create the “ocspackage.exe” file, run the
@@ -179,8 +179,8 @@ Click **[ Agent ]** toolbar menu, browse your hard drive to select agent file an
 
 ![Add agent](../img/EN_Administration_OCS_4.png)
 
-**`Note`**`: If you encounter error while uploading agent, refer to common errors § 11.2.3 PHP Requested
-content-length.`
+**`Note: If you encounter error while uploading agent, refer to common errors § 11.2.3 PHP Requested
+content-length.`**
 
 ## Using Registry Query feature
 
@@ -207,15 +207,15 @@ You can delete a request clicking on red cross.
 
 ### **Create a new registry request**
 
-**`Warning`**`: Since OCS Inventory NG 2.0, you do not have to double backslash in the path of the hive.`
+**`Warning: Since OCS Inventory NG 2.0, you do not have to double backslash in the path of the hive.`**
 
 Click _Add_ button to add a new query. Enter a name for this query, for example PDFCreator Version if you
 want to retrieve version number, select the registry hive (HKEY_LOCAL_MACHINE in this example), enter the
 registry key (SOFTWARE\PDFCreator\program) and the value name to query (ApplicationVersion) and validate.
 
-**`Note`**`: Put star (*) in field “Name of the key” to get all values of the key (This is useful to get all
+**`Note: Put star (*) in field “Name of the key” to get all values of the key (This is useful to get all
 values of key “HKLM\Software\Microsoft\Windows\CurrentVersion\Run” to know which process are automatically
-started for example).`
+started for example).`**
 
 ![Add Registry](../img/EN_Administration_OCS_8.png)
 
@@ -255,8 +255,8 @@ and click “merge redundant computers”: all the data from checked computers w
 
 The administrative data of the oldest computer are kept on the merged device.
 
-**`Note`**`: When those filters are applied, some values are filtered out (For example: 'NNNNNNN' or
-'xxxxxxxxxxx' for serial number).`
+**`Note: When those filters are applied, some values are filtered out (For example: 'NNNNNNN' or
+'xxxxxxxxxxx' for serial number).`**
 
 ## Editing administrative information
 
@@ -323,9 +323,9 @@ of Management server (database server, web communication server and web administ
 are installed on the same computer.). We assume that you’re able to save this file in your hard disk
 from your mailbox, or any other way.
 
-**`Note`**`: If Communication Server is not running on standard HTTP port 80, or on the same computer
+**`Note: If Communication Server is not running on standard HTTP port 80, or on the same computer
 as Administration console, you must update General Options. See § 6.2 Managing OCS Inventory NG
-general options.`
+general options.`**
 
 Click **Manage** toolbar menu and then **local import**, browse your hard drive to select the ".ocs"
 file or ".xml" file created by agent release and click **[ Send ]** button.
@@ -345,8 +345,8 @@ Go to the directory where you’ve installed Communication server, “/usr/local
 and run the script “Ocsinventory_local.pl” with path to file which contains inventory results as argument.
 
 
-**`Note`**`: With OCSInventory NG Server for Windows, import script “local_import.bat” is located in
-“INSTALLDIR\binutils” directory, where “INSTALLDIR” is the installation folder selected during server setup.`
+**`Note: With OCSInventory NG Server for Windows, import script “local_import.bat” is located in
+“INSTALLDIR\binutils” directory, where “INSTALLDIR” is the installation folder selected during server setup.`**
 
 This will import inventory results into the database.
 

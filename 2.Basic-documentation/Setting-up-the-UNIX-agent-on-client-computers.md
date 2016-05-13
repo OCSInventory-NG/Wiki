@@ -4,7 +4,7 @@ OCS Inventory NG agent for Linux can only be set up locally. You cannot deploy t
 through the network currently as is possible for Windows agent. However, you can choose during
 setup to activate auto-update of the agent if you’ve chosen HTTP inventory method.
 
-**`Warning`**`: You must have root privileges to set Administration server up.`
+**`Warning: You must have root privileges to set Administration server up.`**
 
 ## Requirements
 
@@ -34,8 +34,8 @@ Optional modules:
 * Nmap (v3.90 or superior)
 
 
-**`Note`**`: It’s better for system integrity to use the precompiled packages for your distribution
-if they are available.`
+**`Note: It’s better for system integrity to use the precompiled packages for your distribution
+if they are available.`**
 
 _**On Fedora/Redhat like Linux**, you can use “yum” tool to set required modules up like following:_
 
@@ -92,8 +92,8 @@ variable to install agent non-interactively.
        make
        make install
 
-**`Note`**`: Installer writes a log file “ocs_agent_setup.log” in the same directory. If you encounter any errors,
-please refer to this log for the detailed error message.`
+**`Note: Installer writes a log file “ocs_agent_setup.log” in the same directory. If you encounter any errors,
+please refer to this log for the detailed error message.`**
 
 A check for PERL interpreter binary, C/C++ compiler and make utility is made during installation.
 If one of these components is not found, setup will stop.
@@ -184,8 +184,8 @@ Here is a sample configuration file for OCS Inventory NG Linux agent.
 
 Actually not possible in version 2.0. This feature will be integrated in 2.1.
 
-**`Warning`**`: This feature will be only available in OCS 2.1. Don't try this options using OCS 2.0
-Unix agent...it won't work !!`
+**`Warning: This feature will be only available in OCS 2.1. Don't try this options using OCS 2.0
+Unix agent...it won't work !!`**
 
 Since OCS Unix Unified agent 2.1, you are able to launch _postinst.pl_ script in non-interactive mode.
 A set of launch arguments has been added to this script to allow to set all configuration options

@@ -14,9 +14,9 @@ These 4 components can be hosted on a single computer or on different computers 
 
 **Figure 1 : OCS Inventory NG communication architecture.**
 
-**`Note`**`: If you want to use multiple computers to host OCS inventory NG management server,
+**`Note: If you want to use multiple computers to host OCS inventory NG management server,
 we recommend that you set it up on Linux servers. OCS Inventory NG server for Windows comes as an integrated package
-including all required components (apache, perl, php, mod_perl, mysql…).`
+including all required components (apache, perl, php, mod_perl, mysql…).`**
 
 **Database** server currently can only be MySQL 4.1 or higher with InnoDB engine active.
 **Communication server** needs Apache Web Server 1.3.X/2.X and is written in PERL as an Apache module. Why? Because PERL scripts are compiled when Apache starts, and not at each request. This is better performance-wise. Communication server may require some additional PERL modules, according to your distribution.
@@ -49,7 +49,8 @@ We assume that you have:
 * MySQL version 4.1.0 or higher with InnoDB engine active.
 * Make utility such as GNU make.
 
-**`Note`**`: OCS Inventory NG Server Setup will check for all these components and will exit if any are missing.`
+**`Note: OCS Inventory NG Server Setup will check for all these components and will exit
+if any are missing.`**
 
 ## Installing Communication server required PERL modules.
 
@@ -58,9 +59,9 @@ The Web communication server requires Apache web server and Perl 5 scripting lan
 It acts as an Apache module which handles HTTP OCS Inventory agents' requests to a virtual directory _/ocsinventory_.
 
 
-**`Warning`**`: You must have root privileges to set required perl modules up.
+**`Warning: You must have root privileges to set required perl modules up.
 It is better for system integrity to use your distribution's precompiled packages when they are available.
-Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`.`
+Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`.`**
 
 **On Fedora/Redhat like Linux**, you can use “yum” to set required modules up:
 
@@ -107,9 +108,9 @@ You can also install the missing modules using the cpan script. i.e.
 
     cpan -i Compress::Zlib
 
-**`Note`**`: If you are not using system perl interpreter, but another one such as the XAMPP/LAMPP perl interpreter,
+**`Note: If you are not using system perl interpreter, but another one such as the XAMPP/LAMPP perl interpreter,
 you must call this perl interpreter, not the system one, by specifying full path to your perl interpreter.
-For example:`
+For example:`**
 
     /opt/lampp/bin/perl Makefile.PL
 
@@ -164,8 +165,8 @@ On Debian like Linux, you can use “apt-get” to set it up:
 
 **You must have root privileges to set management server up.**
 
-**`Note`**`: Ensure MySQL InnoDB engine is activated on your database server.
-Open my.cnf and ensure there is no line “skip-innodb” or this line is commented (begins with ‘#’).`
+**`Note: Ensure MySQL InnoDB engine is activated on your database server.
+Open my.cnf and ensure there is no line “skip-innodb” or this line is commented (begins with ‘#’).`**
 
 Download latest version of server tarball “OCSNG_UNIX_SERVER-2.1.x.tar.gz” from OCS Inventory Web Site.
 
@@ -179,13 +180,13 @@ For example, [y]/n means that “y” (yes) is the default choice, and “n” (
 
     sh setup.sh
 
-**`Note`**`: Installer writes a log file “ocs_server_setup.log” in the same directory.
-If you encounter any error, please refer to this log for detailed error message.`
+**`Note: Installer writes a log file “ocs_server_setup.log” in the same directory.
+If you encounter any error, please refer to this log for detailed error message.`**
 
 ![Sh Setup](../img/Setup_sh.png)
 
-**`Warning`**`: If you’re upgrading from OCS Inventory NG 1.01 and previous,
-you must first remove any Apache configuration file for Communication server.`
+**`Warning: If you’re upgrading from OCS Inventory NG 1.01 and previous,
+you must first remove any Apache configuration file for Communication server.`**
 
 
 Type “y” or “enter” to validate and, then enter MySQL server host address, in most cases localhost.
@@ -202,8 +203,8 @@ If all is OK, enter MySQL server port, generally 3306.
 Enter or validate path to Apache daemon binary, generally “/usr/sbin/httpd”. It will be used to find
 Apache configuration files.
 
-**`Note`**`: If you’re not using system Apache daemon, but another one like XAMPP/LAMPP Apache server,
-you must enter full path to your Apache daemon, not the system one.`
+**`Note: If you’re not using system Apache daemon, but another one like XAMPP/LAMPP Apache server,
+you must enter full path to your Apache daemon, not the system one.`**
 
 ![Location of apache's daemon binary](../img/Where_apache_daemon_binary.png)
 
@@ -222,9 +223,9 @@ Enter or validate Apache daemon user group, generally “apache” or “www” 
 
 Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL interpreter.
 
-**`Note`**`: If you’re not using system perl interpreter, but another one like XAMPP/LAMPP perl interpreter,
+**`Note: If you’re not using system perl interpreter, but another one like XAMPP/LAMPP perl interpreter,
 you must specify full path to this perl interpreter, not the default system one
-(/opt/lampp/bin/perl generally used in XAMPP/LAMPP).`
+(/opt/lampp/bin/perl generally used in XAMPP/LAMPP).`**
 
 ![Location of perl's interpreter binary](../img/Where_perl_interpreter_binary.png)
 
@@ -255,7 +256,7 @@ enter **no**.
 Setup will next try to determine your Apache mod_perl version. If it is not able to determine mod_perl version,
 it will ask you to enter it.
 
-**`Note`**`: You can check which version of mod_perl you are using by querying your server's software database.`
+**`Note: You can check which version of mod_perl you are using by querying your server's software database.`**
 
 * `Under RPM enabled Linux distribution (RedHat/Fedora, Mandriva…), `**`run rpm –q mod_perl`**`.`
 * `Under DPKG enabled Linux distribution (Debian, Ubuntu…), run dpkg –l `**`libapache*-mod-perl*`**`.`
@@ -276,7 +277,7 @@ Next, setup will check for required PERL modules
 * Net::IP version 1.21 or higher
 * SOAP::Lite version 0.66 or higher
 
-**`Warning`**`: If any of these modules is missing, setup will abort.`
+**`Warning: If any of these modules is missing, setup will abort.`**
 
 ![When installation is aborted](../img/Installation_aborted.png)
 
@@ -291,9 +292,9 @@ If all is OK, setup will install Communication server:
 this file will be copied under this directory. Otherwise, you will be prompted to add content of this file
 to the end of Apache main configuration file.
 
-**`Warning`**`: Do not add content to apache main configuration file if it is not a fresh install!
+**`Warning: Do not add content to apache main configuration file if it is not a fresh install!
 You must manually copy content of the ocsinventory.conf.local file created by setup into apache
-main configuration file, replacing existing configuration.`
+main configuration file, replacing existing configuration.`**
 
     ################################################################################
     #
@@ -416,7 +417,7 @@ Next, setup will check for required PERL modules
 * DBD::Mysql version 2.9004 or higher
 * Net::IP version 1.21 or higher
 
-**`Warning`**`: If any of these modules is missing, setup will abort.`
+**`Warning: If any of these modules is missing, setup will abort.`**
 
 If everything is OK, setup will install Administration console into the “ocsreports” subdirectory:
 
@@ -442,14 +443,14 @@ or
 
 ## Configuring management server
 
-**`Warning`**`: We recommend you to check your php.ini when you upgrade your server from 1.x to 2.x,
-specially these variables :`
+**`Warning: We recommend you to check your php.ini when you upgrade your server from 1.x to 2.x,
+specially these variables :`**
 
 * `max_execution_time`
 * `max_input_time`
 * `memory_limit`
 
-**`Note`**`: You are not obliged to launch install.php, you can use this command too :`
+**`Note: You are not obliged to launch install.php, you can use this command too :`**
 
     mysql -f -hlocalhost -uroot -p DBNAME < ocsbase.sql >log.log
 
@@ -462,9 +463,9 @@ Otherwise, you can rerun configuration process by browsing
 [http://administration_console/ocsreports/install.php](http://administration_console/ocsreports/install.php)
 URL (this must be used when upgrading OCS Inventory management server).
 
-**`Note`**`: You will see warning regarding max size of package you will be able to deploy. Please, see
+**`Note: You will see warning regarding max size of package you will be able to deploy. Please, see
 `[`Uploads size for package deployment`](../8.Extras/Common-errors.md#uploads-size-for-package-deployment)`
-to configure your server to match your need.`
+to configure your server to match your need.`**
 
 ![Installation's page of ocsreports](../img/Installation_ocsreports.png)
 
@@ -481,13 +482,13 @@ Setup actions :
 * Grant to user **ocs** privileges _Select | Insert | Update | Delete | Create | Drop | References | Index | Alter
 | Create temp | Lock_ on database **ocsweb**.
 
-**`Note`**`: This user will be used by Administration server and Communication server to connect to the database.
-If you do not wish to use default MySQL user `**`ocs`**` with `**`ocs`**` password, you must update in the file`
-**`dbconfig.inc.php`**` PHP constants `**`COMPTE_BASE`**`, which is MySQL user login,
-and/or `**`PSWD_BASE`**`, which MySQL user password.
+**`Note: This user will be used by Administration server and Communication server to connect to the database.
+If you do not wish to use default MySQL user ocs with ocs password, you must update in the file
+dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login,
+and/or PSWD_BASE, which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
 Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
-for all information about modifications of configuration files.`
+for all information about modifications of configuration files.`**
 
 To secure you server, refer to
 [Secure your OCS Inventory NG Server](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
@@ -496,8 +497,7 @@ documentation.
 If you don't want to secure your OCS Inventory Server, you have to desactivate Warning message in user profile.
 Procedure is in the same documentation page.
 
-**`Warning`**`: We recommend you to read this documentation and follow the procedure.`
-
+**`Warning: We recommend you to read this documentation and follow the procedure.`**
 
 Finally, you may fill in a text describing the TAG, a string displayed at first launch of the agent to ask user
 to enter the TAG Value. It's a generic data which allows you to sort the new computers
@@ -520,20 +520,20 @@ and login in with **admin** as user and **admin** as password.
 When new versions of web communication server or web administration console are released,
 you must upgrade your installation.
 
-**`Note`**`: Ensure MySQL InnoDB engine is activated on your database server. Open my.cnf and ensure there is
-no line with `*`skip-innodb`*` or this line is commented out(begins with ‘#’).`
+**`Note: Ensure MySQL InnoDB engine is activated on your database server. Open my.cnf and ensure there is
+no line with skip-innodb or this line is commented out(begins with ‘#’).`**
 
-**`Warning`**`: Backup your database before upgrading! If you encounter any errors while upgrading, restore your database,
-then upgrade MySQL server to version 4.1.20 or higher. Then, rerun upgrade procedure.`
+**`Warning: Backup your database before upgrading! If you encounter any errors while upgrading, restore your database,
+then upgrade MySQL server to version 4.1.20 or higher. Then, rerun upgrade procedure.`**
 
-**`Warning`**`: Notice that many package removers are asking if you want to also remove database - you should
-not do this, because you want to upgrade, and not install from scratch.`
+**`Warning: Notice that many package removers are asking if you want to also remove database - you should
+not do this, because you want to upgrade, and not install from scratch.`**
 
-**`Warning`**`: Make sure you set max_execution_time limit in php.ini to zero (unlimited).
-Database upgrade can take a long time.`
+**`Warning: Make sure you set max_execution_time limit in php.ini to zero (unlimited).
+Database upgrade can take a long time.`**
 
-**`Warning: We recommend you to migrate your OCS database to UTF8. Refer to`**
-[**`Migrate your OCS database to UTF8`**](http://wiki.ocsinventory-ng.org/index.php/Howtos:Migrate_your_OCS_database_to_UTF8)**`
+**`Warning: We recommend you to migrate your OCS database to UTF8. Refer to`
+[`Migrate your OCS database to UTF8`](http://wiki.ocsinventory-ng.org/index.php/Howtos:Migrate_your_OCS_database_to_UTF8)`
 HowTo. You have to do this migration ONLY AFTER update.`**
 
 To upgrade web communication server and administration console, you must follow instructions as described in
@@ -544,8 +544,8 @@ Then, just point your favorite browser to URL
 and it will run the upgrade process to ensure that your database schema and default data are up to date.
 Upgrade process looks like configuration of management server as described in Configuring management server.
 
-**`Note`**`: You will see warning regarding max size of package you will be able to deploy. Please, see Uploads size for
-package deployment.) to configure your server to match your needs.`
+**`Note: You will see warning regarding max size of package you will be able to deploy. Please,
+see Uploads size for package deployment.) to configure your server to match your needs.`**
 
 ![Installation's page of ocsreports](../img/Installation_ocsreports.png)
 
@@ -558,8 +558,8 @@ Finally, you may fill in a text describing the TAG if you wish to use it.
 
 ![Installation of ocsreports](../img/Installation_ocsreports_3.jpg)
 
-**`Note`**`: Notice that installers says about how to log in to server after upgrade. Actually use
-your user/pass that you used before upgrade, especially if you removed/disabled user admin.`
+**`Note: Notice that installers says about how to log in to server after upgrade. Actually use
+your user/pass that you used before upgrade, especially if you removed/disabled user admin.`**
 
 # Under Windows Operating System
 
@@ -588,16 +588,16 @@ which sets the following components up on a single computer:
 * Xdebug 2.1.0rc1
 * Tomcat 7.0.3 (with mod_proxy_ajp as connector)
 
-**`Note`**`: Even if all these components are installed, you will be able to choose the components
-you want to automatically start.`
+**`Note: Even if all these components are installed, you will be able to choose the components
+you want to automatically start.`**
 
 ## Installing management server
 
-**`Warning`**`: You must have Administrator privileges to set OCS Inventory NG server up under Windows NT4,
-Windows 2000, Windows XP or Windows Server 2003.`
+**`Warning: You must have Administrator privileges to set OCS Inventory NG server up under Windows NT4,
+Windows 2000, Windows XP or Windows Server 2003.`**
 
 
-Download **[**[**OCSNG-Windows-Server-2.0.zip**](http://launchpad.net/ocsinventory-windows-server/stable-2.0/2.0/+download/OCSNG-Windows-Server-2.0.zip)**]**
+Download **[[OCSNG-Windows-Server-2.0.zip](http://launchpad.net/ocsinventory-windows-server/stable-2.0/2.0/+download/OCSNG-Windows-Server-2.0.zip)]**
 from OCS Inventory Web Site, unpack it and launch **OCSNG-Windows-Server-2.0.exe**.
 
 ![Xampp Directory](../img/EN_02_xampp_directory.gif)
@@ -618,17 +618,17 @@ Click **[ Next ]** button and accept License agreement.
 Choose installation directory, by default **C:\Program Files\OCS Inventory NG**. You need 400 MB of
 free hard disk space if XAMPP components are not installed, otherwise, only 10MB are required.
 
-**`Note`**`: When upgrading, you must ensure that Setup detects the folder including XAMPP directory.
-See `[`Upgrading management server`](Setting-up-a-management-server.md#upgrading-management-server-1)`.`
+**`Note: When upgrading, you must ensure that Setup detects the folder including XAMPP directory.
+See `[`Upgrading management server`](Setting-up-a-management-server.md#upgrading-management-server-1)`.`**
 
 ![Choose the components](../img/EN_06_choose_components.gif)
 
 Then, you have to validate components to install. Only **OCS Inventory NG Server** is required, if XAMPP
 components are already installed.
 
-**`Note`**`: OCS Inventory NG Server Setup now use standard XAMPP setup. So, it may be able to upgrade existing
+**`Note: OCS Inventory NG Server Setup now use standard XAMPP setup. So, it may be able to upgrade existing
 XAMPP installation. However, by default, Setup will _not_ upgrade XAMPP components.
-See `[`Upgrading management server`](Setting-up-a-management-server.md#upgrading-management-server-1)`.`
+See `[`Upgrading management server`](Setting-up-a-management-server.md#upgrading-management-server-1)`.`**
 
 ![Select the Start Menu folder](../img/EN_07_start_menu.gif)
 
@@ -652,9 +652,9 @@ At the end of the process, Setup will launch your default browser to start OCS I
 
 Setup is now finished and you can click **[ Finished ]** button.
 
-**`Note`**`: OCS Inventory NG setup for Windows has installed XAMPP components under `*`xampp`*` subfolder of
+**`Note: OCS Inventory NG setup for Windows has installed XAMPP components under xampp subfolder of
 selected installation directory. Apache web server document root directory is located in the
-`*`htdocs`*` sub directory of XAMPP. This is here that `*`ocsreports`*` administration console files are installed.`
+htdocs sub directory of XAMPP. This is here that ocsreports administration console files are installed.`**
 
 _Communication server files are now located into PERL standard libraries._
 
@@ -681,13 +681,13 @@ Setup actions :
 * Grant to user **ocs** privileges _Select | Insert | Update | Delete | Create | Drop | References | Index
 | Alter | Create temp | Lock_ on database **ocsweb**.
 
-**`Note`**`: This user will be used by Administration server and Communication server to connect to the database.
-If you do not wish to use default MySQL user `**`ocs`**` with `**`ocs`**` password, you must update
-in the file `**`dbconfig.inc.php`**` PHP constants `**`COMPTE_BASE`**`, which is MySQL user login, and/or PSWD_BASE,
+**`Note: This user will be used by Administration server and Communication server to connect to the database.
+If you do not wish to use default MySQL user ocs with ocs password, you must update
+in the file dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login, and/or PSWD_BASE,
 which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
 Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
-for all information about modifications of configuration files.`
+for all information about modifications of configuration files.`**
 
 To secure you server, refer to
 [Secure your OCS Inventory NG Server](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
@@ -697,7 +697,7 @@ If you don't want to secure your OCS Inventory Server, you have to deactivate th
 in user profile. Procedure is in the same documentation page.
 
 
-**`Warning`**`: We recommend you to read this documentation and follow the procedure.`
+**`Warning: We recommend you to read this documentation and follow the procedure.`**
 
 
 Finally, you may fill in a text describing the TAG, a string displayed at first launch of the agent to ask
@@ -714,8 +714,8 @@ Default Administrator login is **admin** as user and **admin** as password.
 
 ## Updating security of XAMPP components.
 
-**`Warning`**`: By default, XAMPP is set up without security. MySQL root account do not have password, XAMPP
-web configuration interface is accessible by everybody without authentication… You must update this.`
+**`Warning: By default, XAMPP is set up without security. MySQL root account do not have password, XAMPP
+web configuration interface is accessible by everybody without authentication… You must update this.`**
 
 
 Open your favorite web browser on the server and point it on URL
@@ -734,7 +734,7 @@ You can change this by clicking the link
 
 First of all, you must fill in MySQL root password and select phpMyAdmin authentication method.
 
-**`Note`**`: You can change this at any time by visiting the security web page of XAMPP server.`
+**`Note: You can change this at any time by visiting the security web page of XAMPP server.`**
 
 Validate your changes by clicking **[ Password changing ]** button.
 
@@ -746,7 +746,7 @@ Validate your changes by clicking _[ Make safe the XAMPP directory ]_ button.
 
 ![Xampp security's menu](../img/Xampp_security.png)
 
-**`Note`**`: Do not enable PHP safe mode, as you may encounter errors on Administration console.`
+**`Note: Do not enable PHP safe mode, as you may encounter errors on Administration console.`**
 
 
 Finally, you must restart Apache and MySQL services for changes to take effect.
@@ -775,7 +775,7 @@ that your database schema and default data are up to date. Upgrade process looks
 of management server as described in the section
 [Configuring management server](Setting-up-a-management-server.md#configuring_management_server).
 
-**`Note`**`: You will see warning regarding max size of package you will be able to deploy.
-Please, see the section`
-[`Uploads size for package deployment`](../8.Extras/Common-errors.md#uploads-size-for-package-deployment)`
-.) to configure your server to match your need.`
+**`Note: You will see warning regarding max size of package you will be able to deploy.
+Please, see the section
+`[`Uploads size for package deployment`](../8.Extras/Common-errors.md#uploads-size-for-package-deployment)`
+.) to configure your server to match your need.`**

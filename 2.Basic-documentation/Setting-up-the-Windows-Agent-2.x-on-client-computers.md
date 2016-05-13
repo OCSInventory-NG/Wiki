@@ -424,7 +424,7 @@ We assume that the agent setup file is called agentsetup.exe and it was placed o
 
 ## Generating inventory of a non network connected Windows computer
 
-Run “OCS-NG-Windows-Agent-Setup.exe” on client computer, from an USB stick for example..
+Run “OCS-NG-Windows-Agent-Setup.exe” on client computer, from an USB stick for example...
 
 ![Icone installer Windows Agent](../img/Windows_Agent_2.0_Setup_0.png)
 
@@ -496,7 +496,7 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
 **/proxy_port=port** | Proxy server port
 **/proxy_user=username** | Proxy authentication credentials
 **/proxy_pwd=password** | Proxy authentication credentials
-**/D=<directory installation>** | specify the directory where your want to install ocsinventory agent (default %PROGRAMFILES%\ocs inventory agent)
+**/D=/<directory installation>** | specify the directory where your want to install ocsinventory agent (default %PROGRAMFILES%\ocs inventory agent)
 
 ## Sample configuration file "ocsinventory.ini"
 
