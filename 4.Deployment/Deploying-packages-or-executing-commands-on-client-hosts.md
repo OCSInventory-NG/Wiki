@@ -4,11 +4,11 @@ OCS Inventory NG includes a package deployment feature for client computers. Fro
 management server, you can upload packages which will be downloaded through HTTP/HTTPS and executed
 by the agent on client computer.
 
-**`Note`**`: This feature has been tested with OCS Inventory NG Agent for Windows service only.
+**`Note: This feature has been tested with OCS Inventory NG Agent for Windows service only.
 As software installation requires Administrator privileges, agent launched through a login
 script or shortcut in start menu under user account may not be able to launch software installation.
 Also, background download of package may take a long time, and may block login script.
-So, we do not recommend using the package deployment feature when using the login script inventory.`
+So, we do not recommend using the package deployment feature when using the login script inventory.`**
 
 ## How does it work?
 
@@ -45,8 +45,8 @@ to run specific operating system configuration command.
 client computer. **There is no command associated with this action, only a path to specify where
 to store extracted files.**
 
-**`Note`**`: All packages you want want to deploy must be compressed with ZIP for Windows Agents and tar
-gzipped for Linux computers.`
+**`Note: All packages you want want to deploy must be compressed with ZIP for Windows Agents and tar
+gzipped for Linux computers.`**
 
 If you want to build your own installer, you may want to look at NullSoft Installer System
 ([http://nsis.sourceforge.net](http://nsis.sourceforge.net/)) or Inno Setup
@@ -70,9 +70,9 @@ parts to allow agents downloading part by part, and then easily resuming a faile
 If download of a fragment fails, only this fragment will be downloaded again, instead of the entire
 package. You will be able to choose fragment size according to your network capabilities.
 
-**`Note`**`: As you will upload your package through Administration console, you may configure PHP
+**`Note: As you will upload your package through Administration console, you may configure PHP
 and Apache to allow uploading large files. See § 11.2.4 Uploads size for package deployment to know
-how to configure this.`
+how to configure this.`**
 
 **Once your package is built, you must activate it**. Activation specifies which server(s)
 the package fragments will be downloaded from. You need to specify an https (ssl) URL for
@@ -112,10 +112,10 @@ option set to 0 seconds by default).
 If all packages have been successfully downloaded and installed, it stops. If not, it begins a new
 period of cycles.
 
-**`Warning`**`: Priority level 0 is a special level. All packages with priority 0 will be downloaded
+**`Warning: Priority level 0 is a special level. All packages with priority 0 will be downloaded
 before all others packages with greater priority at the beginning of each cycle. If download fails,
 agent will retry to download failed packages of priority 0, without checking others package.
-So it can completely stop deployments.`
+So it can completely stop deployments.`**
 
 **`USE PRIORITY LEVEL 0 WITH CARE!`**
 
@@ -177,7 +177,7 @@ Refer to § 8.8
 [Using SSL certificates in Package deployment](Deploying-packages-or-executing-commands-on-client-hosts.md#using-ssl-certificates-in-package-deployment)
 for more informations.
 
-**`Warning`**`: You `**`ONLY`**` can upload .zip or .tar.gz files.`
+**`Warning: You ONLY can upload .zip or .tar.gz files.`**
 
 First of all, you must build your package.
 
@@ -256,8 +256,8 @@ In field **Command**, just fill in path of executable file to launch with parame
 (full path is not required as application executable is listed on system search path, or is included
 in package). It’s this command which will be launched on client computer once package will be downloaded.
 
-**`Note`**`: Environnement variables are expanded in “Command”. It enables you to use things such
-as %SystemDrive%, %SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`
+**`Note: Environnement variables are expanded in “Command”. It enables you to use things such
+as %SystemDrive%, %SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`**
 
 In our following example, we deploy software using silent Windows Installer installation. So, ZIP
 file only include file “software.msi” and the “Command” field contains:
@@ -286,8 +286,8 @@ Choose action **Execute** and leave field **File** empty.
 In field **Command**, just fill in name of command with, optionally, parameters.
 It’s this command which will be launched on client computer once package will be downloaded.
 
-**`Note`**`: Environnement variables are expanded in “Command”. It enables you to use things such as %SystemDrive%,
-%SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`
+**`Note: Environnement variables are expanded in “Command”. It enables you to use things such as %SystemDrive%,
+%SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`**
 
 In our following example, we deploy a command to specify proxy address to use for System Applications under
 Windows. So the **Command** field contains:
@@ -314,8 +314,8 @@ Choose action **Store** and click **Browse** button to select your ZIP or TAR.GZ
 
 In field **Path**, just fill in path where agent will store extracted files once package will be downloaded.
 
-**`Note`**`: Environnement variables are expanded in “Command”. It enables you to use things such as
-%SystemDrive%, %SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`
+**`Note: Environnement variables are expanded in “Command”. It enables you to use things such as
+%SystemDrive%, %SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`**
 
 _Also, if provided folder path does not exist, it will be recursively created._
 
@@ -344,11 +344,11 @@ Agent will first download package information file. As this file is very critica
 be done using HTTP over SSL (HTTPS) to ensure that agent can authenticate deployment server. Next,
 download of package fragment described in information file will be done using standard HTTP.
 
-**`Note`**`: If you do not want to use Administration server as deployment server, you must first copy folder
+**`Note: If you do not want to use Administration server as deployment server, you must first copy folder
 “download/package_timestamp” from Administration server Apache document root directory to another web
-server. You may want to use a directory synchronization utility like rsync`
-([`http://samba.anu.edu.au/rsync`](http://samba.anu.edu.au/rsync))
-`to automatically do this task; otherwise, we will have to do it manually.`
+server. You may want to use a directory synchronization utility like rsync
+`([`http://samba.anu.edu.au/rsync`](http://samba.anu.edu.au/rsync))`
+to automatically do this task; otherwise, we will have to do it manually.`**
 
 You may also choose to host information file on a different web server than the one which hosts fragment
 files. For example, if you have multiple geographical sites with only one central Communication server,
@@ -375,8 +375,8 @@ In field “HTTPS url”, enter URL for download in HTTPS package information fi
 
 In field “HTTP url”, enter URL for downloading in HTTP package fragment files.
 
-**`Warning`**`: Do not enter localhost as server address in URL! Remenber that these URLs will be processed
-by agents.`
+**`Warning: Do not enter localhost as server address in URL! Remenber that these URLs will be processed
+by agents.`**
 
 If your HTTPS or HTTP deployement server works on non standard ports, you can specify working port using
 the standard notation “server_address:server_port/folder”. For example, your deployement server works
@@ -387,7 +387,8 @@ _https url: 192.168.1.1:4343/download_
 
 _http url: 192.168.1.1:8080/download_
 
-In our case, we’ve choosen to use Administration server as deployment server for both package information file and package fragments.
+In our case, we’ve choosen to use Administration server as deployment server for both package information
+file and package fragments.
 
 So we have filled in in both fill something like “ocs-admin-srv.domain.tld/download”.
 
@@ -448,7 +449,7 @@ For removing the package activation follow the steps below:
 2. List of available (not yet activated) and enabled (activated and ready to be deployed) packages
 will appear.
 
-    **`Note`**`: If the package is activated, its Name contains hyperlink.`
+    **`Note: If the package is activated, its Name contains hyperlink.`**
 
 3. Click on the link of the package for which you want to remove the activation.
 
@@ -456,10 +457,10 @@ will appear.
 
 5. The red cross icon in Delete column will remove the package activation.
 
-**`Note`**`: Removing the package activation has no affect on any computer where the package has already been
+**`Note: Removing the package activation has no affect on any computer where the package has already been
 installed. Furthermore, the package is still referenced in database, so all information and fragment
 files are still available in Administration server's download directory. However, it has the same
-status as if you have just built it.`
+status as if you have just built it.`**
 
 ## Deployment statistics and success validation
 
@@ -505,8 +506,8 @@ do not have yet receive order to deploy this package will have this order cancel
 **“Validate all”** will clear all statistics, and unaffect package from non notified computers.
 It is the same as **Validate Success + Unaffect not notified**.
 
-**`Warning`**`: You MUST validate deployment status once deployment ended to clear database deployment
-status for computer. Otherwise, database will grow up and speed down !`
+**`Warning: You MUST validate deployment status once deployment ended to clear database deployment
+status for computer. Otherwise, database will grow up and speed down !`**
 
 You can click on number for each status line to display computers having this deployment status.
 
@@ -540,9 +541,9 @@ Apache web server comes with OpenSSL cryptographic library, which allow creating
 
 ### **Using self signed certificates**
 
-**`Warning`**`: Take care about certificate validity period, as web server self signed certificate must be
+**`Warning: Take care about certificate validity period, as web server self signed certificate must be
 installed on each client computer running the agent. When certificate will expire, you will have to
-generate and deploy new certificate on each client computer!`
+generate and deploy new certificate on each client computer!`**
 
 #### **With OCS Inventory NG Server for Linux**
 
@@ -604,8 +605,8 @@ In our sample, we’ve generated self signed certificate for our server name “
 Linux. (server certificate is stored under “/etc/httpd/conf/ssl.crt” directory and server key is
 stored under “/etc/httpd/conf/ssl.key” directory).
 
-**`Note`**`: Generally, Apache/mod_ssl configuration is provided for your system. So, do not use
-following configuration if your system already has a configuration file for mod_ssl !`
+**`Note: Generally, Apache/mod_ssl configuration is provided for your system. So, do not use
+following configuration if your system already has a configuration file for mod_ssl !`**
 
     #
     # This is the Apache server configuration file providing SSL support.
@@ -895,8 +896,8 @@ it in Apache configuration.
 Linux. (server certificate is stored under “/etc/httpd/conf/ssl.crt” directory and server key is stored
 under “/etc/httpd/conf/ssl.key” directory).
 
-**`Note`**`: Generally, Apache for Win32 comes with a predefined Apache/mod_ssl configuration file. So,
-do not use following configuration if your system already has a configuration file for mod_ssl !`
+**`Note: Generally, Apache for Win32 comes with a predefined Apache/mod_ssl configuration file. So,
+do not use following configuration if your system already has a configuration file for mod_ssl !`**
 
     #
     # This is the Apache server configuration file providing SSL support.
@@ -1124,8 +1125,8 @@ indicate that you’re upgrading an already installed Service Agent, /NP to disa
 settings, /DEBUG to enable creation of log files, /SERVER to indicate that agent must connect to
 server at address “my_ocs_server.domain.tld”).
 
-**`Note`**`: Don’t forget /UPGRADE command line switch to allow upgrading an existing OCS Inventory NG agent
-installed as a service.`
+**`Note: Don’t forget /UPGRADE command line switch to allow upgrading an existing OCS Inventory NG agent
+installed as a service.`**
 
 ![Package builder page launch](../img/EN_deploying_packages_5.png)
 
@@ -1164,5 +1165,3 @@ Next, click **Deploy** on **Mass processing** line.
 To finish, click on Affect button in the corresponding line to the package you want.
 
 ![Deployment of packages)](../img/EN_deploying_packages_19.png)
-
-That’s all folks !
