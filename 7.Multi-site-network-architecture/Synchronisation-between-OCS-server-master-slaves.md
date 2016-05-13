@@ -8,8 +8,8 @@ these files to "inject" it to a higher level server. (in case of multi entities 
 In that case, you can use a cronjob if the two servers are connected, or put it on the higher level server
 and run it on loopback.
 
-**`Warning`**`: This feature just allows you to "inject" inventories into a higher level server. It will be
-impossible to deploy packages from the highest server.`
+**`Warning: This feature just allows you to "inject" inventories into a higher level server. It will be
+impossible to deploy packages from the highest server.`**
 
 ## Simplified Diagram
 
@@ -29,7 +29,7 @@ To configure this feature, click on _Config_, and _Config_. Then, click on _Inve
 
 ![Inventory Files Tab](../img/EN_ocs_master_slave_2.jpg)
 
-**`Warning`**`: Don't forget to create the directory with writable rights.`
+**`Warning: Don't forget to create the directory with writable rights.`**
 
 ## Server configuration
 
@@ -50,8 +50,8 @@ You can verify values here
     # Path to ocs files directory (must be writeable)
     PerlSetEnv OCS_OPT_OCS_FILES_PATH /home/ocs
 
-**`Warning`**`: Values in database (GUI) take precedence over the configuration file, that's why you
-have to use web interface to configure this feature.`
+**`Warning: Values in database (GUI) take precedence over the configuration file, that's why you
+have to use web interface to configure this feature.`**
 
 ## Command line options
 
@@ -68,7 +68,7 @@ have to use web interface to configure this feature.`
 --stdin |   | Read data from STDIN
 
 
-**`Note`**`: You can specify a --file or a --directory or STDIN. Current directory is the default`
+**`Note: You can specify a --file or a --directory or STDIN. Current directory is the default`**
 
 ## Exemples
 

@@ -100,4 +100,4 @@ Here, the configuration file of an agent using authentifiant proxy :
     OLD_PROLOG_FREQ=24
     TTO_WAIT=83460
 
-**`Note`**`: User name and password used to proxy authentification are encrypted.`
+**`Note: User name and password used to proxy authentification are encrypted.`**

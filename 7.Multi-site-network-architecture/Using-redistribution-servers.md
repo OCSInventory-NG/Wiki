@@ -8,10 +8,10 @@ locally, instead of downloading package on OCS Inventory NG server, and therefor
 
 ![Server Structure](../img/EN_using_redistribution_servers_1.jpg)
 
-**`Note`**`: "INFO" file is downloaded in HTTPS
+**`Note: "INFO" file is downloaded in HTTPS
 (`[`https://OCSserver/download/IdPackage/INFO`](https://OCSserver/download/IdPackage/INFO)`)
 and fragments are downloaded in HTTP
-(`[`http://WEBServer/download/IdPackage`](http://WEBServer/download/IdPackage)`)`
+(`[`http://WEBServer/download/IdPackage`](http://WEBServer/download/IdPackage)`)`**
 
 ## Configuration of web interface
 
@@ -132,20 +132,20 @@ Here, an exemple of a script to make the synchronization of the download directo
 There is a service rsyncd you can install if you use Windows on your servers of redistribution (IIS)(see
 [here](http://cygwin.com/)).
 
-**`Warning`**`: You have to synchronize `**`download`**` directory before activate package automatically
-in web interface.`
+**`Warning: You have to synchronize download directory before activate package automatically
+in web interface.`**
 
-**`Note`**`: When you activate the package automatically in web interface, script verify that the package directory
+**`Note: When you activate the package automatically in web interface, script verify that the package directory
 exists on servers of redistribution. If this directory is not found by the script to the URL entered,
-you will get a warning message.`
+you will get a warning message.`**
 
 ### **Script of synchronisation**
 
-**`Note`**`: In the example, the redistribution servers are configured basically. Download directory
-is in /var/www.`
+**`Note: In the example, the redistribution servers are configured basically. Download directory
+is in /var/www.`**
 
 `You can place your download directory where you want, provided to properly change the configuration
-of your apache server (or IIS), and your OCS server (configuration in web interface)`*
+of your apache server (or IIS), and your OCS server (configuration in web interface)`
 
     ##########################################################
     # OCS INVENTORY   -    TRANSFER OF DOWNLOAD DIRECTORY
