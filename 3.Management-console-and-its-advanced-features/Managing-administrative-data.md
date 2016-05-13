@@ -1,14 +1,14 @@
 # Management of administrative data
 
-If you had migrate ocs 1.* to 2.*, you have to update your accountinfo.
+If you had migrate ocs 1.x to 2.x, you have to update your accountinfo.
+
+![Access Update](../img/EN_administrative_data_1.png)
 
 Complex administrative data have been added in 2.0 release of OCS inventory NG. This feature allow
 you to simply add informations to machines or SNMP devices.
 
 Once this information added, it is present throughout the OCS web interface (multicriteria search,
 columns in tables). By default, just one data exists : TAG. This field is modifiable but not deletable.
-
-![Access Update](../img/EN_administrative_data_1.png)
 
 ## Configuration of management console
 
