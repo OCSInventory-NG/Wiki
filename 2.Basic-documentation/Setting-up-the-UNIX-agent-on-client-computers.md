@@ -71,9 +71,10 @@ Download “Ocsinventory-Agent-2.0.x.tar.gz” from OCS Inventory Web Site
 ([http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en)).
 
 1. Unpack it.
-
-       tar –xvzf Ocsinventory-Agent-2.0.x.tar.gz
-       cd Ocsinventory-Agent-2.0.x
+<br/>
+      
+   tar –xvzf Ocsinventory-Agent-2.0.x.tar.gz
+   cd Ocsinventory-Agent-2.0.x
 
 2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
 libraries ... and it generates the Makefile. During this step, we will create a temporary environment
