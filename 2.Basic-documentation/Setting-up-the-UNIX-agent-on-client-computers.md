@@ -71,16 +71,15 @@ Download “Ocsinventory-Agent-2.0.x.tar.gz” from OCS Inventory Web Site
 ([http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en)).
 
 1. Unpack it.
-<br/>
       
-   tar –xvzf Ocsinventory-Agent-2.0.x.tar.gz
-   cd Ocsinventory-Agent-2.0.x
+         tar –xvzf Ocsinventory-Agent-2.0.x.tar.gz
+         cd Ocsinventory-Agent-2.0.x
 
 2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
 libraries ... and it generates the Makefile. During this step, we will create a temporary environment
 variable to install agent non-interactively.
 
-       env PERL_AUTOINSTALL=1 perl Makefile.PL
+         env PERL_AUTOINSTALL=1 perl Makefile.PL
 
     Exemple :
 
@@ -90,8 +89,8 @@ variable to install agent non-interactively.
 
 3. Compilation
 
-       make
-       make install
+            make
+            make install
 
 **`Note: Installer writes a log file “ocs_agent_setup.log” in the same directory. If you encounter any errors,
 please refer to this log for the detailed error message.`**
