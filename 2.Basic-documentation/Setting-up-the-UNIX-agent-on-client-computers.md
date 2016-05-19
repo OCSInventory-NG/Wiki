@@ -79,7 +79,7 @@ Download “Ocsinventory-Agent-2.0.x.tar.gz” from OCS Inventory Web Site
 libraries ... and it generates the Makefile. During this step, we will create a temporary environment
 variable to install agent non-interactively.
 
-         env PERL_AUTOINSTALL=1 perl Makefile.PL
+        env PERL_AUTOINSTALL=1 perl Makefile.PL
 
     Exemple :
 
