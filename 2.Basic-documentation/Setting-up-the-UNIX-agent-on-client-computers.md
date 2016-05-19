@@ -89,8 +89,8 @@ variable to install agent non-interactively.
 
 3. Compilation
 
-            make
-            make install
+         make
+         make install
 
 **`Note: Installer writes a log file “ocs_agent_setup.log” in the same directory. If you encounter any errors,
 please refer to this log for the detailed error message.`**
