@@ -1,4 +1,4 @@
-# OCS Inventory NG Agent 2.0 on Unix Operating Systems.
+# OCS Inventory NG Agent 2.0 on Unix Operating Systems
 
 OCS Inventory NG agent for Linux can only be set up locally. You cannot deploy the agent
 through the network currently as is possible for Windows agent. However, you can choose during
