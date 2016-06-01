@@ -67,7 +67,7 @@ mechanism is the best way to do the network discovery. Use ipdiscover customizat
 Once agent has received order to proceed to discovery of his sub network, it identifies first network
 interface to use. It tries then to resolve through ARP all IP addresses answering on his segment
 (delay between 2 hosts scan may be defined using option “IPDISCOVER_LATENCY”, see
-[Managing OCS Inventory NG general options](../2.Basic-documentation/Administration-of-OCS-Inventory-NG.md#managing-ocs-inventory-ng-general-options)).
+[Managing OCS Inventory NG general options](../02.Basic-documentation/Administration-of-OCS-Inventory-NG.md#managing-ocs-inventory-ng-general-options)).
 All devices answering to the question are stored in XML inventory result and sent to server.
 
 ## Server tuning
