@@ -133,7 +133,7 @@ One or both of the following 2 files must be uploaded to the server:
 * **OCS-NG-Windows-Agent-Setup.exe** file for Windows, to deploy the standalone Agent
 (not running as a Windows service). This file is included in package OCSNG-Windows-Agent-2.0.zip.
 * **ocspackage.exe** file, created using OCS Inventory NG
-[Packager](../6.OCS-Tools/OCS-Packager.md), to deploy the Windows
+[Packager](../06.OCS-Tools/OCS-Packager.md), to deploy the Windows
 service version of the Agent, even if the connected user does not have Administrator privileges.
 
 **`Warning: A control is made on files name imported via GUI. You will not upload file having a
@@ -141,8 +141,8 @@ different name of ocsagent.exe and ocspackages.exe.`**
 
 
 To create the “ocspackage.exe” file, run the
-[OCS Inventory NG Packager](../6.OCS-Tools/OCS-Packager.md)
-[OCS Inventory NG Packager](../6.OCS-Tools/OCS-Packager.md)
+[OCS Inventory NG Packager](../06.OCS-Tools/OCS-Packager.md)
+[OCS Inventory NG Packager](../06.OCS-Tools/OCS-Packager.md)
 and fill in the following informations:
 
 * Path to file “OcsAgentSetup.exe”, the OCS Inventory NG service Agent installer, included in the package
