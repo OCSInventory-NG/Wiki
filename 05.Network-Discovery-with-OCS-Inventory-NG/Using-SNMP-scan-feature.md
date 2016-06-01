@@ -13,7 +13,7 @@ These IP addresses to scan are directly sent to OCS agent by OCS server when OCS
 (PROLOG step).
 
 You can find more information about Ipdiscover
-[here](../5.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
+[here](../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
 
 **`Warning: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
 
@@ -129,7 +129,7 @@ Then, click on the _Networks scans_ tab.
 ![Groups Pencil](../img/EN_snmp_scan_feature_8.png)
 
 For more informations about groups page, click
-[here](../3.Management-console-and-its-advanced-features/Using-computers-groups.md)
+[here](../03.Management-console-and-its-advanced-features/Using-computers-groups.md)
 
 ![Networks scans tab](../img/EN_snmp_scan_feature_6.png)
 
