@@ -37,9 +37,9 @@ favorite browser (Apache, php)**
 * Parckage tar.gz with automatic install script
 
 ### **Deployment tools of agents by the network**
-* [OCS Deployment Tool](../6.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md) based on psexec
-* [OCSPackager](../6.OCS-Tools/OCS-Packager.md) and
-[OCSLogon](../2.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)
+* [OCS Deployment Tool](../06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md) based on psexec
+* [OCSPackager](../06.OCS-Tools/OCS-Packager.md) and
+[OCSLogon](../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)
 based on GPO and logon scripts
 
 ## Interfacing with many softwares
