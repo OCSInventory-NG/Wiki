@@ -78,7 +78,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [HOWTO export accountinfo data](10.Developers/HOWTO-export-accountinfo-data.md)
 * [Unified Agent 2.x](10.Developers/Unified-Agent-2.x.md)
 * [UTF-8 migration plan](10.Developers/UTF-8-migration-plan.md)
-* [Meetings:About SNMP](10.Developers/Meetings:AboutSNMP.md)
+* [Meetings:About SNMP](10.Developers/Meetings-About-SNMP.md)
 
 # FAQ
 
