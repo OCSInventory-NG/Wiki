@@ -4,55 +4,55 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 ## Newbie documentation
 
-* [OCS Inventory NG in 2 pages - Basics](1.Newbie-documentation/OCS-Inventory-NG-Basics.md)
+* [OCS Inventory NG in 2 pages - Basics](01.Newbie-documentation/OCS-Inventory-NG-Basics.md)
 
 ## Basic documentation
 
-* [Setting up a management server](2.Basic-documentation/Setting-up-a-management-server.md)
-* [Setting up the UNIX agent on client computers](2.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md)
-* [Setting up the Windows Agent 2.X on client computers](2.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
-* [Setting up the MacOSX agent on client computers](2.Basic-documentation/Setting-up-the-MacOSX-agent-on-client-computers.md)
-* [Setting up the Android Agent](2.Basic-documentation/Setting-up-the-Android-Agent.md)
-* [Administration of OCS Inventory NG](2.Basic-documentation/Administration-of-OCS-Inventory-NG.md)
+* [Setting up a management server](02.Basic-documentation/Setting-up-a-management-server.md)
+* [Setting up the UNIX agent on client computers](02.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md)
+* [Setting up the Windows Agent 2.X on client computers](02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
+* [Setting up the MacOSX agent on client computers](02.Basic-documentation/Setting-up-the-MacOSX-agent-on-client-computers.md)
+* [Setting up the Android Agent](02.Basic-documentation/Setting-up-the-Android-Agent.md)
+* [Administration of OCS Inventory NG](02.Basic-documentation/Administration-of-OCS-Inventory-NG.md)
 
 ## Management console and its advanced features
 
-* [Querying inventory results](3.Management-console-and-its-advanced-features/Querying-inventory-results.md)
-* [Using computers groups](3.Management-console-and-its-advanced-features/Using-computers-groups.md)
-* [Using the Plugins feature](3.Management-console-and-its-advanced-features/Using-the-Plugins-feature.md)
-* [Managing users profiles of the web interface](3.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
-* [Managing administrative data](3.Management-console-and-its-advanced-features/Managing-administrative-data.md)
-* [Synchronization between OCS and LDAP](3.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
-* [Export a computer](3.Management-console-and-its-advanced-features/Export-a-computer.md)
+* [Querying inventory results](03.Management-console-and-its-advanced-features/Querying-inventory-results.md)
+* [Using computers groups](03.Management-console-and-its-advanced-features/Using-computers-groups.md)
+* [Using the Plugins feature](03.Management-console-and-its-advanced-features/Using-the-Plugins-feature.md)
+* [Managing users profiles of the web interface](03.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
+* [Managing administrative data](03.Management-console-and-its-advanced-features/Managing-administrative-data.md)
+* [Synchronization between OCS and LDAP](03.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
+* [Export a computer](03.Management-console-and-its-advanced-features/Export-a-computer.md)
 
 ## Deployment
 
-* [Deploying packages or executing commands on client hosts](4.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [Deploying packages or executing commands on client hosts](04.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
 
 ## Network Discovery with OCS Inventory NG
 
-* [Using IP discovery feature](5.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md)
-* [Using SNMP scan feature](5.Network-Discovery-with-OCS-Inventory-NG/Using-SNMP-scan-feature.md)
+* [Using IP discovery feature](05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md)
+* [Using SNMP scan feature](05.Network-Discovery-with-OCS-Inventory-NG/Using-SNMP-scan-feature.md)
 
 ## OCS Tools
 
-* [OCS Inventory NG Agent Deployement Tool](6.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
-* [OCS Packager](6.OCS-Tools/OCS-Packager.md)
-* [OCS Packager for MacOSX](6.OCS-Tools/OCS-Packager-for-MacOSX.md)
-* [Uninstall Windows Agent](6.OCS-Tools/Uninstall-Windows-Agent.md)
+* [OCS Inventory NG Agent Deployement Tool](06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
+* [OCS Packager](06.OCS-Tools/OCS-Packager.md)
+* [OCS Packager for MacOSX](06.OCS-Tools/OCS-Packager-for-MacOSX.md)
+* [Uninstall Windows Agent](06.OCS-Tools/Uninstall-Windows-Agent.md)
 
 ## Multi-site network architecture
 
-* [Using redistribution servers](7.Multi-site-network-architecture/Using-redistribution-servers.md)
-* [Using local proxy cache to deploy](7.Multi-site-network-architecture/Using-local-proxy-cache-to-deploy.md)
-* [Synchronisation between OCS server master/slaves](7.Multi-site-network-architecture/Synchronisation-between-OCS-server-master-slaves.md)
+* [Using redistribution servers](07.Multi-site-network-architecture/Using-redistribution-servers.md)
+* [Using local proxy cache to deploy](07.Multi-site-network-architecture/Using-local-proxy-cache-to-deploy.md)
+* [Synchronisation between OCS server master/slaves](07.Multi-site-network-architecture/Synchronisation-between-OCS-server-master-slaves.md)
 
 ## Extras
 
-* [Secure your OCS Inventory NG Server](8.Extras/Secure-your-OCS-Inventory-NG-Server.md)
-* [Management server tuning](8.Extras/Management-server-tuning.md)
-* [Backup/restore of OCS Inventory NG database ](8.Extras/Backup-restore-of-OCS-Inventory-NG-database.md)
-* [Common errors](8.Extras/Common-errors.md)
+* [Secure your OCS Inventory NG Server](08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
+* [Management server tuning](08.Extras/Management-server-tuning.md)
+* [Backup/restore of OCS Inventory NG database ](08.Extras/Backup-restore-of-OCS-Inventory-NG-database.md)
+* [Common errors](08.Extras/Common-errors.md)
 
 ## Howtos
 
