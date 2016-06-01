@@ -73,7 +73,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [HOWTO package OCS Unix server releases](10.Developers/HOWTO-package-OCS-Unix-server-releases.md)
 * [HOWTO package OCS Unix agent releases](10.Developers/HOWTO-package-OCS-Unix-agent-releases.md)
 * [HOWTO package OCS MacOSX agent releases](10.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
-* [HOWTO package OCS Windows server releases](10.Developers/)
+* [HOWTO package OCS Windows server releases](10.Developers/HOWTO-package-OCS-Windows-server-releases.md)
 * [HOWTO update language file](10.Developers/HOWTO-update-language-file.md)
 * [HOWTO export accountinfo data](10.Developers/HOWTO-export-accountinfo-data.md)
 * [Unified Agent 2.x](10.Developers/Unified-Agent-2.x.md)
