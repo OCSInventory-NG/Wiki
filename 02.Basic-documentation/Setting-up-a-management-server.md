@@ -686,7 +686,7 @@ If you do not wish to use default MySQL user ocs with ocs password, you must upd
 in the file dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login, and/or PSWD_BASE,
 which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](../8.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
+Refer to `[`Secure your OCS Inventory NG Server`](../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
 for all information about modifications of configuration files.`**
 
 To secure you server, refer to
