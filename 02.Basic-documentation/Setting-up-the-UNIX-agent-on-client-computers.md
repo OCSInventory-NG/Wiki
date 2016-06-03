@@ -1,10 +1,10 @@
 # OCS Inventory NG Agent 2.0 on Unix Operating Systems
 
 OCS Inventory NG agent for Linux can only be set up locally. You cannot deploy the agent
-through the network currently as is possible for Windows agent. However, you can choose during
+through the network currently as this is possible for Windows agent. However, you can choose during
 setup to activate auto-update of the agent if you’ve chosen HTTP inventory method.
 
-**`Warning: You must have root privileges to set Administration server up.`**
+**`Warning: You must have root privileges to set Ocsinventory-agent up.`**
 
 ## Requirements
 
@@ -63,7 +63,7 @@ openssl to be installed. If not installed, setup of Net::SSLeay will fail and OC
 setup will also fail.`
 
 **Also, a log file is generated. If you encounter any error while installing OCS Inventory NG agent,
-please refer to this file to have detailed error message.**
+please refer to this file to have detailed error messages.**
 
 ## Installing the agent non-interactively
 
@@ -130,7 +130,7 @@ HTTP protocol **USED BY DEFAULT**.
 HTTPS protocol. You have to configure SSL on your OCS Server and copy the SSL certificate
 on the agent directory to use this method.
 
-3.  local: computer is not connected to the network and inventory will be generated in a file
+3. local: computer is not connected to the network and inventory will be generated in a file
 to manually send to OCS Inventory NG operator. This option must be set manually
 in ocsinventory-agent.conf like this :
 
@@ -189,7 +189,7 @@ Unix agent...it won't work !!`**
 
 Since OCS Unix Unified agent 2.1, you are able to launch _postinst.pl_ script in non-interactive mode.
 A set of launch arguments has been added to this script to allow to set all configuration options
-as you can do in interactive mode. This is a list of all availaible _postinst.pl_ script arguments:
+as you can do in interactive mode. This is a list of all available _postinst.pl_ script arguments:
 
 * **--nowizard** : launch this script without interaction
 * **--server** : set OCS Inventory NG server address (e.g: http://ocsinventory-ng/ocsinventory)
@@ -214,11 +214,11 @@ For example, if you want to install OCS Unix Unified agent in non-interactive mo
 create a crontab, set a custom tag, enable debug mode, set a log file path and activate download feature,
 you have to run this command:
 
-    env PERl_AUTOINSTALL=1 perl Makefile.PL && make && make install && perl postinstl.pl --nowizard --server=http://yourserver/ocsinventory --crontab
+    env PERL_AUTOINSTALL=1 perl Makefile.PL && make && make install && perl postinstl.pl --nowizard --server=http://yourserver/ocsinventory --crontab
 
 # Agent’s command line switches
 
-If you encounter error, agent’s produce a log file in directory “/var/log/ocsinventory-client”.
+If you encounter errors, agent's produce a log file in directory “/var/log/ocsinventory-client”.
 
 However, agent’s also support some command line switches. You can use them while launching the
 agent manually using “ocsinv” command:
