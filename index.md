@@ -81,9 +81,6 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 # FAQ
 
-* Ipdiscover works fine but I have no SNMP data up in my OCS Inventory NG server ?
-
-    **Solution**: SNMP is not currently implemented in Windows agent. It will work in future version. You can use the unix agent instead to retrieve SNMP data.
 
 * Can I upgrade my server from version X to the last stable version ?
 
