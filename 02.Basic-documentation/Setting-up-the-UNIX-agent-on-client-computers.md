@@ -1,4 +1,4 @@
-# OCS Inventory NG Agent 2.0 on Unix Operating Systems
+# OCS Inventory NG Agent 2.x on Unix Operating Systems
 
 OCS Inventory NG agent for Linux can only be set up locally. You cannot deploy the agent
 through the network currently as this is possible for Windows agent. However, you can choose during
@@ -34,7 +34,7 @@ Optional modules:
 * Nmap (v3.90 or superior)
 
 
-**`Note: It’s better for system integrity to use the precompiled packages for your distribution
+**`Note: it’s better for system integrity to use the precompiled packages for your distribution
 if they are available.`**
 
 _**On Fedora/Redhat like Linux**, you can use “yum” tool to set required modules up like following:_
@@ -54,8 +54,8 @@ _Optional modules:_
 
     apt-get install libcrypt-ssleay-perl (to use SSL) libnet-snmp-perl (to use SNMP feature) libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
-**Unix agent 2.0 is now installed without script “setup.sh”. During compilation, information about
-configuration and dependencies are returned. However, it will never upgrade an install module.
+**Unix agent 2.x is now installed without script “setup.sh”. During compilation, information about
+configuration and dependencies are returned. However, it will never upgrade an installed module.
 If one module has version lower than required once, you must upgrade it yourself.**
 
 **`Warning`**`: The installer does not install ancestor dependencies. For example, Net::SSLeay requires
@@ -67,17 +67,16 @@ please refer to this file to have detailed error messages.**
 
 ## Installing the agent non-interactively
 
-Download “Ocsinventory-Agent-2.0.x.tar.gz” from OCS Inventory Web Site
+Download “Ocsinventory-Agent-2.x.y.tar.gz” from OCS Inventory Web Site
 ([http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en)).
 
 1. Unpack it.
       
-        tar –xvzf Ocsinventory-Agent-2.0.x.tar.gz
-        cd Ocsinventory-Agent-2.0.x
+        tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
+        cd Ocsinventory-Agent-2.x.y
 
 2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
-libraries ... and it generates the Makefile. During this step, we will create a temporary environment
-variable to install agent non-interactively.
+libraries ... and it generates the Makefile. During this step, a temporary environment variable is created to install agent non-interactively.
 
         env PERL_AUTOINSTALL=1 perl Makefile.PL
 
@@ -109,7 +108,7 @@ Setup will check for:
 * Net::SSLeay PERL module
 
 If not found, it will ask you if you wish to install it. Enter “y” or validate to enable install
-of required component. If you enter “n”, setup will stop here.
+of required component. You need to have access to Internet or local repositories. If you enter “n”, setup will stop here.
 
 Configuration begins. Choice to configure agent now or later.
 
@@ -119,7 +118,7 @@ Select the path of configuration file directory.
 
 ![Installation of Unix agent](../img/Unix_agent_2.jpg)
 
-Validation to create the directory, and definition of OCS Inventory NG server address (IP address or hoshtname.domain)
+Validation to create the directory, and definition of OCS Inventory NG server address (IP address or hostname.domain)
 
 You will then have to choose between 3 methods for generating inventory:
 
@@ -130,9 +129,7 @@ HTTP protocol **USED BY DEFAULT**.
 HTTPS protocol. You have to configure SSL on your OCS Server and copy the SSL certificate
 on the agent directory to use this method.
 
-3. local: computer is not connected to the network and inventory will be generated in a file
-to manually send to OCS Inventory NG operator. This option must be set manually
-in ocsinventory-agent.conf like this :
+3. local: computer is not connected to the network and inventory will be generated in a file manually sent to OCS Inventory NG by the operator. This option must be set manually in ocsinventory-agent.conf like this :
 
         local=/tmp
 
