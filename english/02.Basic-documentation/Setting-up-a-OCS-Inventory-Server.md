@@ -10,7 +10,7 @@ their favorite browser.
 
 These 4 components can be hosted on a single computer or on different computers to allow load balancing. Above 10000 inventoried computers, we recommend using at least 2 physical servers, one hosting database server + Communication server and the other one hosting a database replica + Administration server + Deployement server.
 
-![OCS Inventory Structure Diagram](../../img/Architecture_OCS.jpg)
+![OCS Inventory Structure Diagram](../../img/Architecture_OCS.png)
 
 **Figure 1 : OCS Inventory NG communication architecture.**
 
