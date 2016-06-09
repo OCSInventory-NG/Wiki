@@ -469,7 +469,7 @@ URL (this must be used when upgrading OCS Inventory management server).
 `[`Uploads size for package deployment`](../../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
 to configure your server to match your need.`**
 
-![Installation's page of ocsreports](../../img/Installation_ocsreports.png)
+![Installation's page of ocsreports](../../img/ocs-installation-db-init.png)
 
 Fill in information to connect to MySQL database server with a user who has the ability to create
 database, tables, indexes, etc (usually root):
@@ -501,15 +501,16 @@ Procedure is in the same documentation page.
 
 **`Warning: We recommend you to read this documentation and follow the procedure.`**
 
-Finally, you may fill in a text describing the TAG, a string displayed at first launch of the agent to ask user
-to enter the TAG Value. It's a generic data which allows you to sort the new computers
-(geographical site, first floor, john room....). If you don't want this functionality, just let it blank.
 
-![Installation of ocsreports](../../img/Installation_ocsreports_2.jpg)
+![Installation of ocsreports](../../img/ocs-installation-finish.png)
 
-Configuration of Management server is now finished.
+Click on the following link : "Click here to enter OCS-NG GUI"
 
-![Installation of ocsreports](../../img/Installation_ocsreports_3.jpg)
+![Update DB OCS Inventory](../../img/ocs-installation-update-db-2-2.png)
+
+Click on "Perform the update" button
+
+![Update DB OCS Inventory done](../../img/ocs-installation-update-db-2-2-finish.png)
 
 Just point your browser to the URL
 [http://administration_server/ocsreports](http://administration_server/ocsreports)
@@ -549,16 +550,22 @@ Upgrade process looks like configuration of management server as described in Co
 **`Note: You will see warning regarding max size of package you will be able to deploy. Please,
 see Uploads size for package deployment.) to configure your server to match your needs.`**
 
-![Installation's page of ocsreports](../../img/Installation_ocsreports.png)
+![Installation's page of ocsreports](../../img/ocs-installation-db-init.png)
 
 Fill in MySQL administrator name (usually root) and password, and MySQL database server address
 and click on **[ Send ]** button.
 
-![Installation of ocsreports](../../img/Installation_ocsreports_2.jpg)
 
-Finally, you may fill in a text describing the TAG if you wish to use it.
+![Installation of ocsreports](../../img/ocs-installation-finish.png)
 
-![Installation of ocsreports](../../img/Installation_ocsreports_3.jpg)
+Click on the following link : "Click here to enter OCS-NG GUI"
+
+![Update DB OCS Inventory](../../img/ocs-installation-update-db-2-2.png)
+
+Click on "Perform the update" button
+
+![Update DB OCS Inventory done](../../img/ocs-installation-update-db-2-2-finish.png)
+
 
 **`Note: Notice that installers says about how to log in to server after upgrade. Actually use
 your user/pass that you used before upgrade, especially if you removed/disabled user admin.`**
@@ -675,7 +682,7 @@ to create database, tables, indexes, etc:
 * MySQL user password (empty password by default)
 * MySQL hostname, localhost
 
-![Installation's page of ocsreports](../../img/ocs-installation-connexion.png)
+![Installation's page of ocsreports](../../img/ocs-installation-db-init.png)
 
 Setup actions :
 
