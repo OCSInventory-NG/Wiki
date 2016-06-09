@@ -6,7 +6,7 @@ when agents have to download a package. They will download the package on redist
 locally, instead of downloading package on OCS Inventory NG server, and therefore don't use WAN connection
 (except to download the file info which is hosted on the OCS Inventory NG server).
 
-![Server Structure](../img/EN_using_redistribution_servers_1.jpg)
+![Server Structure](../../img/EN_using_redistribution_servers_1.jpg)
 
 **`Note: "INFO" file is downloaded in HTTPS
 (`[`https://OCSserver/download/IdPackage/INFO`](https://OCSserver/download/IdPackage/INFO)`)
@@ -19,7 +19,7 @@ and fragments are downloaded in HTTP
 
 To see groups already created, click on Inventory, groups and then on _REDISTRIBUTION GROUPS_ tag.
 
-![Redistribution groups access](../img/EN_using_redistribution_servers_2.jpg)
+![Redistribution groups access](../../img/EN_using_redistribution_servers_2.jpg)
 
 When you click on the name of the group , a new window is opened. In the blue box at the top,
 you can see various informations about the group :
@@ -31,11 +31,11 @@ you can see various informations about the group :
 
 You can edit the description and name of the group by clicking on the pencil.
 
-![Edit Redistribution groups](../img/EN_using_redistribution_servers_3.jpg)
+![Edit Redistribution groups](../../img/EN_using_redistribution_servers_3.jpg)
 
 In the table below, you can see the machines connected to the group of redistribution.
 
-![Computers of Redistribution groups](../img/EN_using_redistribution_servers_4.jpg)
+![Computers of Redistribution groups](../../img/EN_using_redistribution_servers_4.jpg)
 
 ### **Create a group of redistribution**
 
@@ -51,12 +51,12 @@ In the result table, select the machines you want to add to the group of redistr
 the appropriate box (you can click on Page to select all machines). Click on _Groups_ at the
 bottom of the table result.
 
-![Search Windsows server 2012](../img/EN_using_redistribution_servers_5.jpg)
+![Search Windsows server 2012](../../img/EN_using_redistribution_servers_5.jpg)
 
 Select the tag corresponding to the type of group you want to create. In our case, _REDISTRIBUTION GROUPS_,
 then in the dropdown menu, choose _Create a group_.
 
-![Creation of the group](../img/EN_using_redistribution_servers_6.jpg)
+![Creation of the group](../../img/EN_using_redistribution_servers_6.jpg)
 
 Now, add informations in differents fields :
 
@@ -65,12 +65,12 @@ Now, add informations in differents fields :
 
 Then, click on _Send_.
 
-![Group created](../img/EN_using_redistribution_servers_7.jpg)
+![Group created](../../img/EN_using_redistribution_servers_7.jpg)
 
 Now, you can see your new group of redistribution, as previously described, clicking on _Inventory_,
 then _Groups_ and finally _Groups of redistribution_ tag.
 
-![List with the new group](../img/EN_using_redistribution_servers_8.jpg)
+![List with the new group](../../img/EN_using_redistribution_servers_8.jpg)
 
 ### **Add computers to a group of redistribution existing**
 
@@ -82,22 +82,22 @@ select your parameters, and click on Search button. In the result table, select 
 to the group of redistribution by checking the appropriate box (you can click on Page to select
 all machines). Click on _Groups_ at the bottom of the table result.
 
-![Search Windows server 2008](../img/EN_using_redistribution_servers_9.jpg)
+![Search Windows server 2008](../../img/EN_using_redistribution_servers_9.jpg)
 
 Select tag corresponding to the type og group you want to create. In our case, _REDISTRIBUTION GROUPS_,
 then in drop-down menu, choose _Add to Group_. A new drop-down menu appears. Select the group you want
 to add the new machine.
 
-![Add to group a computer](../img/EN_using_redistribution_servers_10.jpg)
+![Add to group a computer](../../img/EN_using_redistribution_servers_10.jpg)
 
 Then, click on _Send_.
 
-![Computer added to a group](../img/EN_using_redistribution_servers_11.jpg)
+![Computer added to a group](../../img/EN_using_redistribution_servers_11.jpg)
 
 Now, you can see your new group of redistribution, as previously described, clicking on _Groups_ in Inventory,
 and then Groups of redistribution tag.
 
-![Computers of the group "added"](../img/EN_using_redistribution_servers_12.jpg)
+![Computers of the group "added"](../../img/EN_using_redistribution_servers_12.jpg)
 
 ### **Overwrite an existing group**
 
@@ -106,22 +106,22 @@ select your parameters, and click on Search button. In the result table, select 
 to the group of redistribution by checking the appropriate box (you can click on Page to select
 all machines). Click on _Groups_ at the bottom of the table result.
 
-![Search Windows Server 2003](../img/EN_using_redistribution_servers_13.jpg)
+![Search Windows Server 2003](../../img/EN_using_redistribution_servers_13.jpg)
 
 Select tag corresponding to the type og group you want to create. In our case, _REDISTRIBUTION GROUPS_,
 then in drop-down menu, choose _Overwrite a Group_. A new drop-down menu appears. Select the group you
 want to overwrite.
 
-![Overwrite group](../img/EN_using_redistribution_servers_14.jpg)
+![Overwrite group](../../img/EN_using_redistribution_servers_14.jpg)
 
 Then, click on _Send_.
 
-![Group overwrited](../img/EN_using_redistribution_servers_15.jpg)
+![Group overwrited](../../img/EN_using_redistribution_servers_15.jpg)
 
 Now, you can see your new group of redistribution, as previously described, clicking on Groups icon,
 and then Groups of redistribution tag.
 
-![Computers of the group "overwrited"](../img/EN_using_redistribution_servers_16.jpg)
+![Computers of the group "overwrited"](../../img/EN_using_redistribution_servers_16.jpg)
 
 ## Synchronisation of packages between servers
 

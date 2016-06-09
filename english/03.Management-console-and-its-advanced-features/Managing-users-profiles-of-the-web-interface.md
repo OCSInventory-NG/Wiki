@@ -10,11 +10,11 @@ All changes made to a profile cause a backup of the original file. This backup i
 
 You can choose to store these files elsewhere by going to _Config_ then click on _Config_ and _Interface_ tab.
 
-![Interface Config](../img/EN_users_profiles_1.png)
+![Interface Config](../../img/EN_users_profiles_1.png)
 
 and modify options
 
-![conf_dir](../img/EN_users_profiles_2.png)
+![conf_dir](../../img/EN_users_profiles_2.png)
 
 ## Profiles Management
 
@@ -22,13 +22,13 @@ and modify options
 
 Click on Create Profile at the left of the page, enter your informations and click on OK.
 
-![Profile's Creation](../img/EN_users_profiles_9.png)
+![Profile's Creation](../../img/EN_users_profiles_9.png)
 
 ### **Access to profile's edition**
 
 Click on Profile at the left of the page and you can access to the different profiles which exist.
 
-![Profile's edition](../img/EN_users_profiles_5.png)
+![Profile's edition](../../img/EN_users_profiles_5.png)
 
 You can click on the cross in the column "actions" to delete a profile or on the profile you want to edit.
 
@@ -36,7 +36,7 @@ Now you can do many things.
 
 #### **Management of the profile restriction**
 
-![Management of the profile restriction](../img/EN_users_profiles_10.png)
+![Management of the profile restriction](../../img/EN_users_profiles_10.png)
 
 Description of options :
 
@@ -54,7 +54,7 @@ that match the TAG of computers would be visible to that user.
 
 #### **Profile permissions on the blacklist**
 
-![Profile permissions on the blacklist](../img/EN_users_profiles_11.png)
+![Profile permissions on the blacklist](../../img/EN_users_profiles_11.png)
 
 Description of options :
 
@@ -74,7 +74,7 @@ for ipdiscover. Sub-nets blacklisted enter in category _blacklist_ in ipdiscover
 
 #### **Administration rights of the profile**
 
-![Administration rights of the profile](../img/EN_users_profiles_12.png)
+![Administration rights of the profile](../../img/EN_users_profiles_12.png)
 
 Description of options :
 
@@ -114,7 +114,7 @@ to create or delete users groups of teledeploy workflow.
 
 #### **Access rights to differents pages of a profile**
 
-![Profiles' Tab](../img/EN_users_profiles_7.png)
+![Profiles' Tab](../../img/EN_users_profiles_7.png)
 
 Description of pages :
 
@@ -207,13 +207,13 @@ Description of pages :
 
 Click on Create User at the left of the page, enter your informations and click on OK.
 
-![User's creation](../img/EN_users_profiles_8.png)
+![User's creation](../../img/EN_users_profiles_8.png)
 
 ### **Access to User's edition**
 
 Click on User at the left of the page and you can access to the different profiles which exist.
 
-![User's edition](../img/EN_users_profiles_3.png)
+![User's edition](../../img/EN_users_profiles_3.png)
 
 You can click on the cross in the column "actions" to delete an user or on the user you want to update.
 
@@ -221,6 +221,6 @@ You can click on the cross in the column "actions" to delete an user or on the u
 
 For update an user, enter the informations and click on OK.
 
-![User's update](../img/EN_users_profiles_4.png)
+![User's update](../../img/EN_users_profiles_4.png)
 
-You can add a group to the list of the groups with this icon ![Icon](../img/EN_users_profiles_6.png).
+You can add a group to the list of the groups with this icon ![Icon](../../img/EN_users_profiles_6.png).

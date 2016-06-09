@@ -50,7 +50,7 @@ Launch OcsPackager.exe and accept the License agreement.
 
 The following window will appear:
 
-![OCS Packager Parameters](../img/Packager_2.jpg)
+![OCS Packager Parameters](../../img/Packager_2.jpg)
 
 **“Files and Options” group box:**
 
@@ -73,11 +73,11 @@ On a NT4 domain use the “domain\user” syntax.
 
 You should have something like this:
 
-![OCS Packager Parameters](../img/Packager_3.jpg)
+![OCS Packager Parameters](../../img/Packager_3.jpg)
 
 Click the **[ Next ]** button.
 
-![OCS Packager Export File On](../img/Packager_4.jpg)
+![OCS Packager Export File On](../../img/Packager_4.jpg)
 
 Select the destination folder and Click **[ OK ]**.
 
@@ -98,13 +98,13 @@ web server if you use the Ocslogon.exe **[/url:]** option.
 
 Log on to the administration console and select the Configuration icon:
 
-![Agent Page](../img/Packager_5.jpg)
+![Agent Page](../../img/Packager_5.jpg)
 
 Then upload your **ocspackage.exe** file.
 
 ## Deploying agent on a domain
 
-Refer to [[Deploying Agent using launcher OcsLogon.exe through Login Script or Active Directory GPO](../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)]
+Refer to [[Deploying Agent using launcher OcsLogon.exe through Login Script or Active Directory GPO](../../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)]
 
 **`Warning: Mysql server must accept files larger than 5M. Edit my.cnf file and modify
 max_allowed_packets value to fix it more than 5M. Save this file and restart service.`**

@@ -3,7 +3,7 @@
 We recommend you to secure you OCS Inventory NG Server.
 Since OCS Inventory NG 2.0, warning message prevents you about a security risk in management console.
 
-![Error message](../img/EN_secure_ocs_1.png)
+![Error message](../../img/EN_secure_ocs_1.png)
 
 ## Remove installation file
 
@@ -32,7 +32,7 @@ Create a new user: **user** with password:**password** with all privileges for o
 
     GRANT ALL PRIVILEGES ON `ocsweb` .* TO 'user'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
 
-![Error message](../img/EN_secure_ocs_2.png)
+![Error message](../../img/EN_secure_ocs_2.png)
 
 ### **Modify configuration files**
 
@@ -76,6 +76,6 @@ Click on **Rights to manage** tab, an set **See warning messages of the GUI** to
 
 Finally, register modification.
 
-![GUI message](../img/EN_secure_ocs_3.png)
+![GUI message](../../img/EN_secure_ocs_3.png)
 
-For more informations about users and profile, click [here](../03.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md).
+For more informations about users and profile, click [here](../../03.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md).

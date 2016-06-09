@@ -21,7 +21,7 @@ For this certain rules of development were organized.
 In a first time, it's important to respect files architecture. It's necessary to create a new branch in
 the /plugins/main_sections directory, and named your new directory « ms_\<your_module_name> »
 
-![Code's architecture](../img/EN_plugin_features_1.jpg)
+![Code's architecture](../../img/EN_plugin_features_1.jpg)
 
 Interface icons are in the directory/plugins/main_sections/img. If you want to add an icon associate
 to your module, you will have to do it in this directory. The name of the new icon will be in the form
@@ -44,7 +44,7 @@ In your development, consider that the header and footer php are already managed
 
 The structure of your module should look like the example below.
 
-![Module's structure](../img/EN_plugin_features_2.jpg)
+![Module's structure](../../img/EN_plugin_features_2.jpg)
 
 ## Integrate your module in OCSREPORTS interface
 
@@ -105,7 +105,7 @@ Profiles are defined in the directory /plugins/main_sections. They are configure
 XXX_config.txt (Off 4all_config.txt used to the general configuration of the modules). By default,
 you have the list below:
 
-![Profil's folders](../img/EN_plugin_features_3.jpg)
+![Profil's folders](../../img/EN_plugin_features_3.jpg)
 
 If you want to give access to your module to the profile « sadmin », simply edit sadmin_config.txt
 file and add your pages names in the section \<PROFILE_PAGE>
@@ -197,7 +197,7 @@ Different sections of the details of a machine are managed as independent module
 It is important to respect the architecture file. It is necessary to create a new section in the directory
 /plugins/computer_detail an named you directory as « cd_\<your_module_name> »
 
-![cd_\<your_module_name>](../img/EN_plugin_features_4.jpg)
+![cd_\<your_module_name>](../../img/EN_plugin_features_4.jpg)
 
 Icons corresponding to the sections of Machine Details are present in the directory
 /plugins/computer_detail/img . The format of these icons respects standard format of OCS icons.
@@ -237,7 +237,7 @@ to ocsreports, identification allow to calculate rights for the person who logon
 
 All the authentication part is in the directory /backend/AUTH
 
-![Authentification part](../img/EN_plugin_features_5.jpg)
+![Authentification part](../../img/EN_plugin_features_5.jpg)
 
 Page auth.php allow to manage the different methods that will be called during authentication.
 
@@ -296,7 +296,7 @@ rights management is on locale OCS database.
 
 All the identification portion is located in the directory /backend/identity
 
-![Identification portion identity](../img/EN_plugin_features_6.jpg)
+![Identification portion identity](../../img/EN_plugin_features_6.jpg)
 
 A page identity.php manages the various methods available for identification.
 
@@ -334,7 +334,7 @@ to an other application.
 All the identification portion is located in the directory /backend/ipdiscover.
 The principle is the same for the previous modules.
 
-![Identification portion ipdiscover](../img/EN_plugin_features_7.jpg)
+![Identification portion ipdiscover](../../img/EN_plugin_features_7.jpg)
 
 Page ipdiscover.php manages the various methods found in the directory /backend/ipdiscover/methode.
 

@@ -8,7 +8,7 @@ various criteria search. You can create dynamic, static or redistribution server
 
 To views the groups you created, click on the menu Inventory toolbar and then groups.
 
-![Access groups page](../img/EN_computers_groups_1.png)
+![Access groups page](../../img/EN_computers_groups_1.png)
 
 You can see three tabs :
 
@@ -16,7 +16,7 @@ You can see three tabs :
 * Static Groups tab : to view the list of static groups
 * Server Groups tab : to view the list of redistribution server groups
 
-![Groups page](../img/EN_computers_groups_2.png)
+![Groups page](../../img/EN_computers_groups_2.png)
 
 When you click on a group name, you go to the group page. In the top blue frame,
 you can see various informations about the group:
@@ -28,15 +28,15 @@ you can see various informations about the group:
 
 You can edit the description and the group name by clicking on the pencil.
 
-![Edit group](../img/EN_computers_groups_3.png)
+![Edit group](../../img/EN_computers_groups_3.png)
 
 If you click on "Customization", you can see all custom parameters applied to the group.
 
-![Customization](../img/EN_computers_groups_4.png)
+![Customization](../../img/EN_computers_groups_4.png)
 
 If you click on "All computers (cached)", you can see all the computers members of the group.
 
-![All computers (cached)](../img/EN_computers_groups_5.png)
+![All computers (cached)](../../img/EN_computers_groups_5.png)
 
 ## Using static groups
 
@@ -54,14 +54,14 @@ In the result table, check the computers you want to add to the static group (yo
 "the page" to select all the computers). Click on Groups at the bottom of the result table and
 go to the "For selection" section.
 
-![Request's results](../img/EN_computers_groups_6.png)
+![Request's results](../../img/EN_computers_groups_6.png)
 
 Now add informations in several fields:
 
 * _Name_ : enter the name of the group here
 * _Description_: add a description of the group here (optional)
 
-![Static group's creation](../img/EN_computers_groups_7.png)
+![Static group's creation](../../img/EN_computers_groups_7.png)
 
 Now, you can view your new static group, as described before, by clicking "Groups" and "Static groups" tab.
 
@@ -81,7 +81,7 @@ this computer will be automatically removed from the dynamic group, also when ne
 To create a dynamic group of computers, you have to make a various criteria search first.
 Click on "Search with various criteria", select your parameters, and click on "Search" button.
 
-![Dynamic group's creation](../img/EN_computers_groups_8.png)
+![Dynamic group's creation](../../img/EN_computers_groups_8.png)
 
 Now, you can view your new static group, as described before, by clicking "Groups" and "Dynamics groups" tab.
 
@@ -110,12 +110,12 @@ components associated to their profile.
 Once you created and activated a package, you can affect this package to group. Go to the group page
 and click on _Customization_. In the right corner of array, click on the link _Add Package_.
 
-![Add package](../img/EN_computers_groups_9.png)
+![Add package](../../img/EN_computers_groups_9.png)
 
 As you do for a single computer, click now on icon _ACTIONS_ in the right column and validate.
 
-![Affect package](../img/EN_computers_groups_10.png)
+![Affect package](../../img/EN_computers_groups_10.png)
 
 Now, your package is affected on your group and you can verify the affectation in the group custom parameters.
 
-![Package affected](../img/EN_computers_groups_11.png)
+![Package affected](../../img/EN_computers_groups_11.png)

@@ -78,4 +78,4 @@ before package is built. This will do the perl Makefile.PL and such, then copy t
 
 ## Application Flow
 
-![Diagramm](../img/Ocsng_app.jpg)
+![Diagramm](../../img/Ocsng_app.jpg)

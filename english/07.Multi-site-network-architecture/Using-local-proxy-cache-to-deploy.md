@@ -18,7 +18,7 @@ agents to download this bad package.
 
 ## Architecture
 
-![Proxy diagramm](../img/Proxy_cache_deploy.jpg)
+![Proxy diagramm](../../img/Proxy_cache_deploy.jpg)
 
 ## Prerequires
 
@@ -36,38 +36,38 @@ Depending on proxy type (transparent/authenticator), differents configurations a
 
 Launch **OCS-NG-Windows-Agent-Setup.exe** file. A windows opens. Click on **Next** button.
 
-![Start install agent](../img/Fr_install_agent_win_proxy1.jpg)
+![Start install agent](../../img/Fr_install_agent_win_proxy1.jpg)
 
 Accept user licence clicking on **I accept**.
 
-![Licence Agreement](../img/Fr_install_agent_win_proxy2.jpg)
+![Licence Agreement](../../img/Fr_install_agent_win_proxy2.jpg)
 
 Specify the address of your OCS Inventory NG server, authentification parameters of web server (optionnal)
 and if you want to do a SSL control, define certificate path.
 
-![OCS server properties](../img/Fr_install_agent_win_proxy3.jpg)
+![OCS server properties](../../img/Fr_install_agent_win_proxy3.jpg)
 
 Specify proxy type, proxy address, listen port, and its authentification parameters.
 
-![Proxy properties](../img/Fr_install_agent_win_proxy4.jpg)
+![Proxy properties](../../img/Fr_install_agent_win_proxy4.jpg)
 
 Specify if you want to have a better verbose in your logs, if you want to register OCS as a service
 and if you want or not see it in systray, administrative TAG of machine, and then if you want to send
 an inventory just after the end of the installation. Click on **Next** button.
 
-![OCS agent properties](../img/Fr_install_agent_win_proxy5.jpg)
+![OCS agent properties](../../img/Fr_install_agent_win_proxy5.jpg)
 
 Choose installation directory of binaries. Click on **Install** button.
 
-![Install folder](../img/Fr_install_agent_win_proxy6.jpg)
+![Install folder](../../img/Fr_install_agent_win_proxy6.jpg)
 
 Installation is in progress.
 
-![Install in progress](../img/Fr_install_agent_win_proxy7.jpg)
+![Install in progress](../../img/Fr_install_agent_win_proxy7.jpg)
 
 Click on Close button.
 
-![Install folder](../img/Fr_install_agent_win_proxy8.jpg)
+![Install folder](../../img/Fr_install_agent_win_proxy8.jpg)
 
 End of installation.
 

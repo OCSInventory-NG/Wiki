@@ -164,6 +164,7 @@ Choice to use or not software deployment feature, SNMP scans feature and send an
 
 If Accountinfo file doesn't exist, it will be created, and the inventory will be sent to the server.
 
+-![Installation of Unix agent](../../img/Unix_agent_8.jpg)
 
 Here is a sample configuration file for OCS Inventory NG Linux agent.
 

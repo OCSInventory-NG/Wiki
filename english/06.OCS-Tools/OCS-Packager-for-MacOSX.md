@@ -21,11 +21,11 @@ Download OCS MacOSX Packager for MacOSX from OCS Inventory NG website download p
 ([http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en)),
 unzip the file and double click _Ocsinventory_MacOSX_Packager.app_.
 
-![Mac OSX packager configuration window](../img/EN_macosx_packager_configuration_window.png)
+![Mac OSX packager configuration window](../../img/EN_macosx_packager_configuration_window.png)
 
 First of all, choose an OCS MacOSX installer package path by clicking the _Browse_ button.
 
-![Mac OSX packager configuration choose package](../img/EN_macosx_packager_configuration_choose_package.png)
+![Mac OSX packager configuration choose package](../../img/EN_macosx_packager_configuration_choose_package.png)
 
 Set your custom OCS MacOSX agent configuration by choosing serveral options:
 
@@ -44,49 +44,49 @@ Set your custom OCS MacOSX agent configuration by choosing serveral options:
 You can set a certificate file path using the Browse Button (mandatory if you activate OCS MacOSX
 agent packages download feature). Certificate file must be named as "cacert.pem".
 
-![Mac OSX packager configuration choose cacert](../img/EN_macosx_packager_configuration_choose_cacert.png)
+![Mac OSX packager configuration choose cacert](../../img/EN_macosx_packager_configuration_choose_cacert.png)
 
 Once you set your custom configuration, click on _Next_ button to validate configuration.
 
 If you do not set a path for OCS MacOSX installer package, you will have this warning:
 
-![Mac OSX packager configuration package warn](../img/EN_macosx_packager_configuration_package_warn.png)
+![Mac OSX packager configuration package warn](../../img/EN_macosx_packager_configuration_package_warn.png)
 
 **`Warning: OCS MacOSX installer package path is mandatory !`**
 
 If you activate OCS MacOSX agent packages download feature without specifying a certificate file path,
 you may have this warning:
 
-![Mac OSX packager configuration download warn](../img/EN_macosx_packager_configuration_download_warn.png)
+![Mac OSX packager configuration download warn](../../img/EN_macosx_packager_configuration_download_warn.png)
 
 **`Warning: If you activate OCS MacOSX agent packages download feature without specifying a certificate
 file path, OCS MacOSX agent packages download feature won't work !!!`**
 
-![Mac OSX packager export window](../img/EN_macosx_packager_export_window.png)
+![Mac OSX packager export window](../../img/EN_macosx_packager_export_window.png)
 
 Set export options for generated package:
 
 * Choose an export path by clicking on the Browse button
 * Specify a custom filename if needed ("ocspackage.pkg" by default)
 
-![Mac OSX packager export choose export](../img/EN_macosx_packager_export_choose_export.png)
+![Mac OSX packager export choose export](../../img/EN_macosx_packager_export_choose_export.png)
 
 If you do not set a export path, you will have this warning:
 
-![Mac OSX packager export path warn](../img/EN_macosx_packager_export_path_warn.png)
+![Mac OSX packager export path warn](../../img/EN_macosx_packager_export_path_warn.png)
 
 **`Warning: export path is mandatory !`**
 
 If you already have a same named file in export path, you will have this warning:
 
-![Mac OSX packager export package already exists warn](../img/EN_macosx_packager_export_package_already_exists_warn.png)
+![Mac OSX packager export package already exists warn](../../img/EN_macosx_packager_export_package_already_exists_warn.png)
 
 **`Note: Click Yes if you want to replace existing file. Click No if you do not want to replace existing
 file and choose an othe export path.`**
 
 When your custom OCS MacOSX agent installer has been generated, you will have this message:
 
-![Mac OSX packager end notification](../img/EN_macosx_packager_end_notification.png)
+![Mac OSX packager end notification](../../img/EN_macosx_packager_end_notification.png)
 
 A custom OCS MacOSX agent installer file has been created in export path you set in last window.
 

@@ -33,4 +33,4 @@ Just run MySQL command line interpreter to import saveset previously created “
 **`Note: You will be prompted from root password. If you haven’t yet set root password, do use "-p"
 command line switch.`**
 
-![Linux Command](../img/Restaure_bdd.jpg)
+![Linux Command](../../img/Restaure_bdd.jpg)

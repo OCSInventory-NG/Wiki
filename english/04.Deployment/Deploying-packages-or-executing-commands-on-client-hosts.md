@@ -136,11 +136,11 @@ User can't create packages themself. They need to use static group (and visible)
 
 ## Simplified diagram
 
-![Simplified Diagram](../img/EN_deploying_packages_1.png)
+![Simplified Diagram](../../img/EN_deploying_packages_1.png)
 
 ## Detailed diagram
 
-![Detailed Diagram](../img/EN_deploying_packages_2.png)
+![Detailed Diagram](../../img/EN_deploying_packages_2.png)
 
 ## Requirements
 
@@ -183,7 +183,7 @@ First of all, you must build your package.
 
 Point your mouse on **Deployment** menu and select **Build**.
 
-![Build access](../img/EN_deploying_packages_3.png)
+![Build access](../../img/EN_deploying_packages_3.png)
 
 Enter a name for your package.
 
@@ -207,7 +207,7 @@ fill in a informations on a dialog to terminate.
 Last, you can select your action in **Action** dropdown list. Here are some samples describing what
 kind of package you can build.
 
-![Package builder page empty](../img/EN_deploying_packages_4.png)
+![Package builder page empty](../../img/EN_deploying_packages_4.png)
 
 ### **Deploying package through “Launch” command**
 
@@ -226,7 +226,7 @@ You could define an interactivity with users.
 In our following example, we deploy a new release of OCS Inventory NG Agent for Windows, using silent
 installation with a .bat file:
 
-![Package builder page launch](../img/EN_deploying_packages_5.png)
+![Package builder page launch](../../img/EN_deploying_packages_5.png)
 
 Click **[ Send ]** button to upload package to Administration console.
 
@@ -235,14 +235,14 @@ parts. This will allow download resuming. If download of a fragment fails, only 
 be downloaded another time, not all the package. So choose fragment size according to your network
 capabilities.
 
-![New package build](../img/EN_deploying_packages_6.png)
+![New package build](../../img/EN_deploying_packages_6.png)
 
 Administration console will then split package in fragments and store them in a folder named as package
 timestamp in directory **download** of apache web server root directory. It will also create in the same
 directory the package information file named **info**, an XML file describing the package and action agent
 will have to launch.
 
-![dowload/package](../img/EN_deploying_packages_7.png)
+![dowload/package](../../img/EN_deploying_packages_7.png)
 
 ### **Deploying package through “Execute” command**
 
@@ -264,7 +264,7 @@ file only include file “software.msi” and the “Command” field contains:
 
     msiexec.exe /i software.msi /quiet
 
-![Package builder page execute](../img/EN_deploying_packages_8.png)
+![Package builder page execute](../../img/EN_deploying_packages_8.png)
 
 Click **[ Send ]** button to upload package to Administration console.
 
@@ -275,7 +275,7 @@ package timestamp in directory **download** of apache web server root directory.
 the same directory the package information file named **info**, an XML file describing the package and
 action agent will have to launch.
 
-![Package builder page execute](../img/EN_deploying_packages_9.png)
+![Package builder page execute](../../img/EN_deploying_packages_9.png)
 
 ### **Command through “Execute” command**
 
@@ -294,7 +294,7 @@ Windows. So the **Command** field contains:
 
     Proxycfg.exe /p 192.168.1.1
 
-![Proxycfg.exe /p 192.168.1.1](../img/EN_deploying_packages_10.png)
+![Proxycfg.exe /p 192.168.1.1](../../img/EN_deploying_packages_10.png)
 
 Click **[ Send ]** button to upload package to Administration console.
 
@@ -302,7 +302,7 @@ Administration console will only create, in a folder named as package timestamp 
 of apache web server root directory, the package information file named info, an XML file describing
 the package and action agent will have to launch.
 
-![info](../img/EN_deploying_packages_11.png)
+![info](../../img/EN_deploying_packages_11.png)
 
 ### **Stored package through “Store” command**
 
@@ -321,7 +321,7 @@ _Also, if provided folder path does not exist, it will be recursively created._
 
 In our following example, we deploy a file to store in folder “C:\My Folder”:
 
-![myFolder](../img/EN_deploying_packages_12.png)
+![myFolder](../../img/EN_deploying_packages_12.png)
 
 Click **[ Send ]** button to upload package to Administration console.
 
@@ -334,7 +334,7 @@ timestamp in directory **download** of apache web server root directory. It will
 same directory the package information file named **info**, an XML file describing the package and action
 agent will have to launch.
 
-![myFolder fragmented](../img/EN_deploying_packages_13.png)
+![myFolder fragmented](../../img/EN_deploying_packages_13.png)
 
 ## Activating package
 
@@ -357,7 +357,7 @@ each site. For this, you need to activate a package per site, and for each packa
 will be hosted on Communication server and fragment files on site web server. This will dramatically
 decrease intersite network bandwidth use.
 
-![Activate Access](../img/EN_deploying_packages_14.png)
+![Activate Access](../../img/EN_deploying_packages_14.png)
 
 Point your mouse on “Deployment” menu and select “Activate”. You will view here all built package,
 and also ALL activated package.
@@ -367,7 +367,7 @@ database and also delete information file and fragment files from Administration
 directory. So, deleted package will be unavailable for activation, all activated packages using
 this package will be deleted, and also unaffected from computers.
 
-![List packages](../img/EN_deploying_packages_15.png)
+![List packages](../../img/EN_deploying_packages_15.png)
 
 **Click “Active” button on the line corresponding to the package you want to activate.**
 
@@ -392,7 +392,7 @@ file and package fragments.
 
 So we have filled in in both fill something like “ocs-admin-srv.domain.tld/download”.
 
-![Package manual deployment](../img/EN_deploying_packages_16.png)
+![Package manual deployment](../../img/EN_deploying_packages_16.png)
 
 Click send button. Administration console will ensure that both information file and package fragment
 files are available on specified URLs.
@@ -421,18 +421,18 @@ In the following example, we will affect package we’ve created to all Windows 
 
 So first, we search for Windows XP computers.
 
-![Search Windows XP](../img/EN_deploying_packages_17.png)
+![Search Windows XP](../../img/EN_deploying_packages_17.png)
 
 This search returns computers whitch respond to the request.
 
-![List PC Windows XP](../img/EN_deploying_packages_18.png)
+![List PC Windows XP](../../img/EN_deploying_packages_18.png)
 
 Two possibilities available :
 
 1. Select with check-box computers where you want to deploy package
 2. Select nothing and click directly on **Deploy**
 
-![Deploy packages](../img/EN_deploying_packages_19.png)
+![Deploy packages](../../img/EN_deploying_packages_19.png)
 
 Click on **Affect** icon of package line to affect this package to all selected computers.
 
@@ -471,7 +471,7 @@ You can show deployement statics by clicking **Stats** icon for a package.
 Since you’ve affected package at least to one computer, you will have graphical stats showing
 deployment notification status.
 
-![Package's Stats](../img/EN_deploying_packages_20.png)
+![Package's Stats](../../img/EN_deploying_packages_20.png)
 
 Status may be once of the following:
 
@@ -1106,7 +1106,7 @@ computer into OCS Inventory Agent installation directory, under the name “cace
 
 ##Example: Deploying new version of Service agent for Windows
 
-![Build access](../img/EN_deploying_packages_14.png)
+![Build access](../../img/EN_deploying_packages_14.png)
 
 Create a ZIP “OCS-NG-Windows-Agent-2.0.zip” including file “OCS-NG-Windows-Agent-Setup.exe”.
 
@@ -1128,19 +1128,19 @@ server at address “my_ocs_server.domain.tld”).
 **`Note: Don’t forget /UPGRADE command line switch to allow upgrading an existing OCS Inventory NG agent
 installed as a service.`**
 
-![Package builder page launch](../img/EN_deploying_packages_5.png)
+![Package builder page launch](../../img/EN_deploying_packages_5.png)
 
 And validate by clicking **[ Send ]** button..
 
 Next choose fragment size and click **[ Send ]** button.
 
-![Choose Fragment Size](../img/EN_deploying_packages_6.png)
+![Choose Fragment Size](../../img/EN_deploying_packages_6.png)
 
 Now, deployement package is created. You have to activate it.
 
 Go to menu **Deployment / Activate**.
 
-![Choose Fragment Size](../img/EN_deploying_packages_15.png)
+![Choose Fragment Size](../../img/EN_deploying_packages_15.png)
 
 Click on button **Activate** in the corresponding line.
 
@@ -1149,19 +1149,19 @@ Click on button **Activate** in the corresponding line.
 
 And click **[ Send ]** button.
 
-![Package manual deployment](../img/EN_deploying_packages_16.png)
+![Package manual deployment](../../img/EN_deploying_packages_16.png)
 
 Now, package is ready to be affected to computers.
 
 Go to **Search** menu, search for computers having Operating System equals
 to “Windows (ALL)” and click **Search** button.
 
-![Search Windows(ALL)](../img/EN_deploying_packages_21.png)
+![Search Windows(ALL)](../../img/EN_deploying_packages_21.png)
 
 Next, click **Deploy** on **Mass processing** line.
 
-![Results Windows(ALL)](../img/EN_deploying_packages_22.png)
+![Results Windows(ALL)](../../img/EN_deploying_packages_22.png)
 
 To finish, click on Affect button in the corresponding line to the package you want.
 
-![Deployment of packages)](../img/EN_deploying_packages_19.png)
+![Deployment of packages)](../../img/EN_deploying_packages_19.png)
