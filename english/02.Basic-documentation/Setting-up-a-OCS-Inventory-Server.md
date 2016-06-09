@@ -55,7 +55,7 @@ if any are missing.`**
 ## Installing Communication server required PERL modules.
 
 The Web communication server requires Apache web server and Perl 5 scripting language and some additional modules for Perl 5
-(see [Requirements](Setting-up-a-management-server.md#requirements)).
+(see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 It acts as an Apache module which handles HTTP OCS Inventory agents' requests to a virtual directory _/ocsinventory_.
 
 
@@ -72,6 +72,7 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
     yum install perl-Apache-DBI
     yum install perl-Net-IP
     yum install perl-SOAP-Lite
+    yum install perl-Archive-Zip
 
 **On Debian like Linux**, you can use “apt-get” to set required modules up:
 
@@ -82,6 +83,7 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
     apt-get install libapache-dbi-perl
     apt-get install libnet-ip-perl
     apt-get install libsoap-lite-perl
+    apt-get install libarchive-zip-perl
     cpan -i XML::Entities
 
 **On Gentoo like Linux**, you can use "emerge" to get required modules set up:
@@ -117,7 +119,7 @@ For example:`**
 ## Installing Administration console required PHP modules
 
 The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
-for PHP (see [Requirements](Setting-up-a-management-server.md#requirements)).
+for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 
 On Fedora/Redhat like Linux, you can use “yum” to install PHP Zip support:
 
@@ -163,7 +165,7 @@ On Debian like Linux, you can use “apt-get” to set it up:
 
 ## Installing management server
 
-**You must have root privileges to set management server up.**
+**You must have root privileges to set OCS Inventory Server up.**
 
 **`Note: Ensure MySQL InnoDB engine is activated on your database server.
 Open my.cnf and ensure there is no line “skip-innodb” or this line is commented (begins with ‘#’).`**
@@ -267,7 +269,7 @@ Validate or enter directory path. If it does not exist, this directory will be c
 ![Location of the comunication's server directory](../../img/Where_server_com_directory.png)
 
 Next, setup will check for required PERL modules
-(cf [Requirements](Setting-up-a-management-server.md#requirements).):
+(cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
 
 * XML::Simple version 2.12 or higher
 * Compress::Zlib version 1.33 or higher
@@ -410,7 +412,7 @@ Setup will ask you to enter Apache root document directory, usually “/var/www/
 ![Location of apache's root directory](../../img/Where_apache_root_directory.png)
 
 Next, setup will check for required PERL modules
-(cf [Requirements](Setting-up-a-management-server.md#requirements).):
+(cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
 
 * XML::Simple version 2.12 or higher
 * DBI version 1.40 or higher
@@ -619,7 +621,7 @@ Choose installation directory, by default **C:\Program Files\OCS Inventory NG**.
 free hard disk space if XAMPP components are not installed, otherwise, only 10MB are required.
 
 **`Note: When upgrading, you must ensure that Setup detects the folder including XAMPP directory.
-See `[`Upgrading management server`](Setting-up-a-management-server.md#upgrading-management-server-1)`.`**
+See `[`Upgrading management server`](Setting-up-a-OCS-Inventory-Server.md#upgrading-management-server-1)`.`**
 
 ![Choose the components](../../img/EN_06_choose_components.gif)
 
@@ -628,7 +630,7 @@ components are already installed.
 
 **`Note: OCS Inventory NG Server Setup now use standard XAMPP setup. So, it may be able to upgrade existing
 XAMPP installation. However, by default, Setup will _not_ upgrade XAMPP components.
-See `[`Upgrading management server`](Setting-up-a-management-server.md#upgrading-management-server-1)`.`**
+See `[`Upgrading management server`](Setting-up-a-OCS-Inventory-Server.md#upgrading-management-server-1)`.`**
 
 ![Select the Start Menu folder](../../img/EN_07_start_menu.gif)
 
@@ -646,7 +648,7 @@ Last, Setup will install OCS Inventory NG Server files, configure XAMPP Apache a
 OCS Inventory NG Server, and automatically start MySQL and Apache server.
 
 At the end of the process, Setup will launch your default browser to start OCS Inventory NG Server configuration
-(see [Configuring management server](Setting-up-a-management-server.md#configuring-management-server-1)).
+(see [Configuring management server](Setting-up-a-OCS-Inventory-Server.md#configuring-management-server-1)).
 
 ![End of the installation](../../img/EN_12_completing.gif)
 
@@ -762,7 +764,7 @@ You can now reselect **[ Security ]** on left side menu to see that all started 
 
 To upgrade web communication server and administration console, you must follow instructions
 as described in the section
-[Installing management server](Setting-up-a-management-server.md#installing-management-server-1).
+[Installing management server](Setting-up-a-OCS-Inventory-Server.md#installing-management-server-1).
 Just ensure that setup detects old installation folder correctly.
 
 You don’t need to update XAMPP components. Setup, by default, will not select XAMPP components install.
@@ -773,7 +775,7 @@ See the section
 At the end of the process, Setup will launch your default browser to run the upgrade process to ensure
 that your database schema and default data are up to date. Upgrade process looks like configuration
 of management server as described in the section
-[Configuring management server](Setting-up-a-management-server.md#configuring_management_server).
+[Configuring management server](Setting-up-a-OCS-Inventory-Server.md#configuring_management_server).
 
 **`Note: You will see warning regarding max size of package you will be able to deploy.
 Please, see the section

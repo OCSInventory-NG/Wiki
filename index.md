@@ -1,4 +1,4 @@
-# OCS Inventory NG 2.x Documentation
+# OCS Inventory NG 2.2 Documentation
 
 ## English documentation
 
