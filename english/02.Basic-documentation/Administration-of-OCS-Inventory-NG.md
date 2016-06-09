@@ -14,9 +14,9 @@ the default "admin" user.`**
 Click on the toolbar config menu and then on users to display all configured OCS Inventory NG
 Administration server users.
 
-![Users access](../img/EN_Administration_OCS_19.png)
+![Users access](../../img/EN_Administration_OCS_19.png)
 
-![Users administration](../img/EN_Administration_OCS_1.png)
+![Users administration](../../img/EN_Administration_OCS_1.png)
 
 You can add new users by entering their name, password (user will be able to change it when logged in),
 and selecting their type. You can choose between:
