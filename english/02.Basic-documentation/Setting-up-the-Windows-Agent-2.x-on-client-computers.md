@@ -37,7 +37,7 @@ is older than the general option “FREQUENCY”, specified in days (see
 * **Discover the network**: Agent scans his IP subnet for active devices listening on the network,
 then sends these data using HTTP or HTTPS protocol to the server. The server ask this only if the
 computer is elected to run IPDISCOVERY (see
-[Using IP discovery feature](../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).)
+[Using IP discovery feature](../../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).)
 * **Deploy a package**: Agent contacts the deployment server using the HTTPS protocol to get the information file
 (file INFO which describes the package), downloads package fragments from the deployement server,
 rebuilds the package and launches it.
@@ -80,11 +80,11 @@ results to Communication server using HTTP or HTTPS.
 
 
 **`Note`**`: You must have Administrator privileges to set up OCS Inventory NG Agent as a service,
-or you may use OCS Inventory NG `[`Packager`](../06.OCS-Tools/OCS-Packager.md)
+or you may use OCS Inventory NG `[`Packager`](../../06.OCS-Tools/OCS-Packager.md)
 `to create an installer able to run even if user do not
 have Administrator privileges. Refer to`
 [`Uploading Agent for deployment through launcher “OcsLogon.exe”`](Administration-of-OCS-Inventory-NG.md#uploading-agent-for-deployment-through-launcher-ocslogonexe)
-`or OCS Inventory NG `[`Packager`](../06.OCS-Tools/OCS-Packager.md)` documentation.`
+`or OCS Inventory NG `[`Packager`](../../06.OCS-Tools/OCS-Packager.md)` documentation.`
 
 * OCS Inventory NG Agent “OCSInventory.exe” is launched by service “OcsService.exe” every **PROLOG_FREQ** hours.
 It keeps trace of the countdown in seconds in file “ocsinventory.ini” (value **TTO_WAIT**), so it is the time
@@ -113,15 +113,15 @@ In other words, we recommend using service version.
 
 Run “OCS-NG-Windows-Agent-Setup.exe” on client computer..
 
-![Icone installer Windows Agent](../img/Windows_Agent_2.0_Setup_0.png)
+![Icone installer Windows Agent](../../img/Windows_Agent_2.0_Setup_0.png)
 
 ..and click “Next” button
 
-![Start Installation](../img/Windows_Agent_2.0_Setup_1.png)
+![Start Installation](../../img/Windows_Agent_2.0_Setup_1.png)
 
 Validate license agreement by clicking “I agree” button.
 
-![Accept Licence](../img/Windows_Agent_2.0_Setup_2.png)
+![Accept Licence](../../img/Windows_Agent_2.0_Setup_2.png)
 
 Select the installation type you want:
 
@@ -131,7 +131,7 @@ Agent will be launched using either a Windows Service, or a Logon/GPO script.
 OCS Inventory NG Server. You can generate an inventory of this computer and save to file to be imported
 later on server (see chapter **Generating inventory of a non network connected Windows computer** below).
 
-![Choose components](../img/Windows_Agent_2.0_Setup_3.png)
+![Choose components](../../img/Windows_Agent_2.0_Setup_3.png)
 
 Fill in OCS Inventory NG Communication server URL, like
 [http://your_ocs_server_address:your_server_port/ocsinventory](http://your_ocs_server_address:your_server_port/ocsinventory)
@@ -148,13 +148,13 @@ you must specify path to Certificate Authority root certificate (default uses
 for communications. Also, if full path to certificate is not provided, agent will try to load the specified
 file from its data folder "%ProgramData%\OCS Inventory NG\Agent".`
 
-![Change properties](../img/Windows_Agent_2.0_Setup_4.png)
+![Change properties](../../img/Windows_Agent_2.0_Setup_4.png)
 
 If needed, select proxy type to use to connect to Communication Server, proxy address and port, and
 proxy credentials if required (these credentials will be encrypted to be stored into configuration file).
 Agent support HTTP, SOCKS 4 and SOCKS 5 proxies.
 
-![Proxy Properties](../img/Windows_Agent_2.0_Setup_5.png)
+![Proxy Properties](../../img/Windows_Agent_2.0_Setup_5.png)
 
 By default, OCS Inventory Agent write only few information in log files. You may increase
 this enabling “Verbose log”. You may also disable TAG question, or specify the TAG value. Last,
@@ -164,16 +164,16 @@ indicate which level of system integration you need:
 * Do not configure OCS Inventory NG Systray Applet to start automatically when user log in. This applet allows user to manually run agent, or to display inventory information. Disabling this option does not create shortcut link in "All users" startup menu.
 * Launch inventory just at the end of setup.
 
-![Windows Properties](../img/Windows_Agent_2.0_Setup_6.png)
+![Windows Properties](../../img/Windows_Agent_2.0_Setup_6.png)
 
 Choose destination folder, “C:\Program Files\OCS Inventory Agent” by default
 (“C:\Program Files (x86)\OCS Inventory Agent” under Windows 64 bits), and click “Install” button.
 
-![Install Location](../img/Windows_Agent_2.0_Setup_7.png)
+![Install Location](../../img/Windows_Agent_2.0_Setup_7.png)
 
 Click “Finish” button to close OCS inventory NG Agent Setup.
 
-![End of the installation](../img/Windows_Agent_2.0_Setup_8.png)
+![End of the installation](../../img/Windows_Agent_2.0_Setup_8.png)
 
 This is the interactive installation setup. However, this process requires that you launch it under
 all your computers. Hopefully, this installation can be scripted.
@@ -289,7 +289,7 @@ Open “Group Policy Manager” tool.
 
 Navigate in left pane to display “Group Policy objects” of your domain.
 
-![Group Policy objects](../img/GPO_Objects.png)
+![Group Policy objects](../../img/GPO_Objects.png)
 
 Create a new policy, or edit existing one.
 
@@ -299,23 +299,23 @@ or User policy will run at user login.
 **`Note`**`: In our example, we will use Computer policy and Startup script. Communication Server address
 is “ocs.mycompany.tld”, and we choose to set up Service Agent version using Packager all-in-one installer
 “ocspackage.exe” (See
-`[`Using OCS Packager to create an all-in-one installer to setup agent and server certificate`](../06.OCS-Tools/OCS-Packager.md)`
+`[`Using OCS Packager to create an all-in-one installer to setup agent and server certificate`](../../06.OCS-Tools/OCS-Packager.md)`
 ). If you choose to use Standalone Agent, it’s better to use User policy and startup script,
 to allow agent running each time a user log in.`
 
 Expand “Computer configuration” tree in left pane and navigate as shown below to “Windows settings”
 and “Scripts”.
 
-![Script start](../img/GPO_Computer_startup_script_1.png)
+![Script start](../../img/GPO_Computer_startup_script_1.png)
 
 Then double click on “Startup” on right pane.
 
-![Script start up](../img/GPO_Computer_startup_script_2.png)
+![Script start up](../../img/GPO_Computer_startup_script_2.png)
 
 Click on “Show files” button to display script and executable files usable by GPO and copy into this folder
 Launcher “Ocslogon.exe” and all-in-one installer “Ocspackage.exe” files.
 
-![Ocspackage.exe](../img/GPO_Computer_startup_script_3.png)
+![Ocspackage.exe](../../img/GPO_Computer_startup_script_3.png)
 
 Next close “Startup” folder and click “Add” script button, click “Browse” button to select launcher
 “OcsLogon.exe” , and fill in Launcher parameters, in our example :
@@ -326,16 +326,16 @@ Next close “Startup” folder and click “Add” script button, click “Brow
 * “/SERVER=http://ocs.mycompany.tld/ocsinventory" to use Communication Server URL
 [http://ocs.mycompany.tld/ocsinventory](http://ocs.mycompany.tld/ocsinventory).
 
-![Add script](../img/GPO_Computer_startup_script_4.png)
+![Add script](../../img/GPO_Computer_startup_script_4.png)
 
 Validate each window to activate Computer Startup script GPO.
 
-![Script OK](../img/GPO_Computer_startup_script_5.png)
+![Script OK](../../img/GPO_Computer_startup_script_5.png)
 
 Update if needed default GPO filters to meet your needs, for example to apply this GPO only
 to specified Active Directory or site.
 
-![Activate Filter](../img/GPO_Activate_Filter.png)
+![Activate Filter](../../img/GPO_Activate_Filter.png)
 
 When computer will start (or when user will login if using User policy), launcher will set up
 if needed OCS Inventory NG Agent as a service.
@@ -376,7 +376,7 @@ Finally, you have to link login script with every users registered in your Samba
 On Active Directory, you can do this using “Active Directory users and computers” tool, select “Profile”
 tab in user properties, and fill in “Session startup script”.
 
-![Logon Script](../img/AD_Users_and_commputers_User_logon_script.png)
+![Logon Script](../../img/AD_Users_and_commputers_User_logon_script.png)
 
 When user log in, launcher will set up and/or launch OCS Inventory NG Agent.
 
@@ -426,36 +426,36 @@ We assume that the agent setup file is called agentsetup.exe and it was placed o
 
 Run “OCS-NG-Windows-Agent-Setup.exe” on client computer, from an USB stick for example...
 
-![Icone installer Windows Agent](../img/Windows_Agent_2.0_Setup_0.png)
+![Icone installer Windows Agent](../../img/Windows_Agent_2.0_Setup_0.png)
 
 ..and click “Next” button.
 
-![Start Installation](../img/Windows_Agent_2.0_Setup_1.png)
+![Start Installation](../../img/Windows_Agent_2.0_Setup_1.png)
 
 Validate license agreement by clicking “I agree” button.
 
-![Accept Licence](../img/Windows_Agent_2.0_Setup_2.png)
+![Accept Licence](../../img/Windows_Agent_2.0_Setup_2.png)
 
 Select **Local inventory** installation type.
 
-![Choose components](../img/Windows_Agent_2.0_Setup_Local_1.png)
+![Choose components](../../img/Windows_Agent_2.0_Setup_Local_1.png)
 
 By default, OCS Inventory Agent writes only few lines in the log files. You may increase this enabling
 “Verbose log”. You may also specify the TAG value. Last, indicate the folder where you want to store
 generated inventory file, your usb stick for example:
 
-![Choose folder](../img/Windows_Agent_2.0_Setup_Local_2.png)
+![Choose folder](../../img/Windows_Agent_2.0_Setup_Local_2.png)
 
 In local inventory mode, Agent will be installed into a temporary folder
 (we recommend not changing this folder, it will be automatically deleted at the end of process),
 Click “Install” button to start process. Agent is installed into temporary folder, launched to generate
 a ".ocs" inventory file stored in the folder you've specified, and then removed from computer.
 
-![Install location](../img/Windows_Agent_2.0_Setup_Local_3.png)
+![Install location](../../img/Windows_Agent_2.0_Setup_Local_3.png)
 
 Click “Finish” button to close OCS inventory NG Agent Setup.
 
-![End of the installation](../img/Windows_Agent_2.0_Setup_8.png)
+![End of the installation](../../img/Windows_Agent_2.0_Setup_8.png)
 
 This is the interactive process, but it can be scripted using **/LOCAL=path_to_folder_where_to_store_ocs_file**
 command line switch.

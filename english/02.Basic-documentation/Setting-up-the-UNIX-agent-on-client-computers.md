@@ -112,11 +112,11 @@ of required component. You need to have access to Internet or local repositories
 
 Configuration begins. Choice to configure agent now or later.
 
-![Installation of Unix agent](../img/Unix_agent.jpg)
+![Installation of Unix agent](../../img/Unix_agent.jpg)
 
 Select the path of configuration file directory.
 
-![Installation of Unix agent](../img/Unix_agent_2.jpg)
+![Installation of Unix agent](../../img/Unix_agent_2.jpg)
 
 Validation to create the directory, and definition of OCS Inventory NG server address (IP address or hostname.domain)
 
@@ -144,27 +144,26 @@ Examples :
     ocsserver.domains.local:1234
     https://ocsserver.domains.local
 
-![Installation of Unix agent](../img/Unix_agent_3.jpg)
+![Installation of Unix agent](../../img/Unix_agent_3.jpg)
 
 Choice to use or not apache auth, and possibility to define an administrative tag.
 
-![Installation of Unix agent](../img/Unix_agent_4.jpg)
+![Installation of Unix agent](../../img/Unix_agent_4.jpg)
 
 Choice to create or not a cron task, definition and validation of agent files directory.
 
-![Installation of Unix agent](../img/Unix_agent_5.jpg)
+![Installation of Unix agent](../../img/Unix_agent_5.jpg)
 
 Choice to remove or not the old agent version.
 
-![Installation of Unix agent](../img/Unix_agent_6.jpg)
+![Installation of Unix agent](../../img/Unix_agent_6.jpg)
 
 Choice to use or not software deployment feature, SNMP scans feature and send an inventory.
 
-![Installation of Unix agent](../img/Unix_agent_7.jpg)
+![Installation of Unix agent](../../img/Unix_agent_7.jpg)
 
 If Accountinfo file doesn't exist, it will be created, and the inventory will be sent to the server.
 
-![Installation of Unix agent](../img/Unix_agent_8.jpg)
 
 Here is a sample configuration file for OCS Inventory NG Linux agent.
 

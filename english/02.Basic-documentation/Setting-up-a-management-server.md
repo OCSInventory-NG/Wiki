@@ -1,4 +1,4 @@
-# Setting up management server
+# Setting up OCS Inventory Server
 
 Management server is made up of 4 main components:
 
@@ -10,7 +10,7 @@ their favorite browser.
 
 These 4 components can be hosted on a single computer or on different computers to allow load balancing. Above 10000 inventoried computers, we recommend using at least 2 physical servers, one hosting database server + Communication server and the other one hosting a database replica + Administration server + Deployement server.
 
-![OCS Inventory Structure Diagram](../img/Architecture_OCS.jpg)
+![OCS Inventory Structure Diagram](../../img/Architecture_OCS.jpg)
 
 **Figure 1 : OCS Inventory NG communication architecture.**
 
@@ -183,7 +183,7 @@ For example, [y]/n means that “y” (yes) is the default choice, and “n” (
 **`Note: Installer writes a log file “ocs_server_setup.log” in the same directory.
 If you encounter any error, please refer to this log for detailed error message.`**
 
-![Sh Setup](../img/Setup_sh.png)
+![Sh Setup](../../img/Setup_sh.png)
 
 **`Warning: If you’re upgrading from OCS Inventory NG 1.01 and previous,
 you must first remove any Apache configuration file for Communication server.`**
@@ -191,14 +191,14 @@ you must first remove any Apache configuration file for Communication server.`**
 
 Type “y” or “enter” to validate and, then enter MySQL server host address, in most cases localhost.
 
-![Host's database server](../img/Host_database_server.png)
+![Host's database server](../../img/Host_database_server.png)
 
 Then, setup checks for MySQL client binary files version 4.1 or higher. If not present, you will be
 prompted to continue or abort setup.
 
 If all is OK, enter MySQL server port, generally 3306.
 
-![Port database server](../img/Port_database_server.png)
+![Port database server](../../img/Port_database_server.png)
 
 Enter or validate path to Apache daemon binary, generally “/usr/sbin/httpd”. It will be used to find
 Apache configuration files.
@@ -206,20 +206,20 @@ Apache configuration files.
 **`Note: If you’re not using system Apache daemon, but another one like XAMPP/LAMPP Apache server,
 you must enter full path to your Apache daemon, not the system one.`**
 
-![Location of apache's daemon binary](../img/Where_apache_daemon_binary.png)
+![Location of apache's daemon binary](../../img/Where_apache_daemon_binary.png)
 
 Enter or validate Apache main configuration file path, generally “/etc/apache/conf/apache.conf”
 or “/etc/httpd/conf/httpd.conf”.
 
-![Location of apache's configuration file](../img/Where_apache_configuration_file.png)
+![Location of apache's configuration file](../../img/Where_apache_configuration_file.png)
 
 Enter or validate Apache daemon running user account, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-![User which can run apache](../img/Which_user_apache_run.png)
+![User which can run apache](../../img/Which_user_apache_run.png)
 
 Enter or validate Apache daemon user group, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-![Group which can run apache](../img/Which_group_apache_run.png)
+![Group which can run apache](../../img/Which_group_apache_run.png)
 
 Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL interpreter.
 
@@ -227,13 +227,13 @@ Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL
 you must specify full path to this perl interpreter, not the default system one
 (/opt/lampp/bin/perl generally used in XAMPP/LAMPP).`**
 
-![Location of perl's interpreter binary](../img/Where_perl_interpreter_binary.png)
+![Location of perl's interpreter binary](../../img/Where_perl_interpreter_binary.png)
 
 Common information for setting up Communication server or Administration console is now collected.
 Setup prompts you if you wish to set Communication server up on this computer. Enter “y” or validate
 to set Communication server up, “n” to skip Communication server installation.
 
-![Setup of the communication's server](../img/Setup_server_com.png)
+![Setup of the communication's server](../../img/Setup_server_com.png)
 
 Setup will then try to find make utility. If it fails, setup will stop.
 
@@ -251,7 +251,7 @@ or
 If you are not using configuration directory, but having all configurations into Apache main configuration file,
 enter **no**.
 
-![Location of apache's configuration directory](../img/Where_apache_configuration_directory.png)
+![Location of apache's configuration directory](../../img/Where_apache_configuration_directory.png)
 
 Setup will next try to determine your Apache mod_perl version. If it is not able to determine mod_perl version,
 it will ask you to enter it.
@@ -264,7 +264,7 @@ it will ask you to enter it.
 Next, it will prompt you to enter log directory where Communication server will store debugging/tuning logs.
 Validate or enter directory path. If it does not exist, this directory will be created.
 
-![Location of the comunication's server directory](../img/Where_server_com_directory.png)
+![Location of the comunication's server directory](../../img/Where_server_com_directory.png)
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-management-server.md#requirements).):
@@ -279,7 +279,7 @@ Next, setup will check for required PERL modules
 
 **`Warning: If any of these modules is missing, setup will abort.`**
 
-![When installation is aborted](../img/Installation_aborted.png)
+![When installation is aborted](../../img/Installation_aborted.png)
 
 If all is OK, setup will install Communication server:
 
@@ -403,11 +403,11 @@ main configuration file, replacing existing configuration.`**
 Communication server installation is now finished. You will be prompted to set Administration console up.
 Enter “y” or validate to set Administration console up, enter “n” to skip Administration console installation.
 
-![Setup of admin's console](../img/Setup_admin_console.png)
+![Setup of admin's console](../../img/Setup_admin_console.png)
 
 Setup will ask you to enter Apache root document directory, usually “/var/www/html” or “/var/www-data”.
 
-![Location of apache's root directory](../img/Where_apache_root_directory.png)
+![Location of apache's root directory](../../img/Where_apache_root_directory.png)
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-management-server.md#requirements).):
@@ -426,10 +426,10 @@ If everything is OK, setup will install Administration console into the “ocsre
 * Copy files into /ocsreports directory.
 * Fix directories and files permissions to allow Apache daemon reading and writing to required directories
 (write access is required in /ocsreports, /ocsreports/ipd and /download, cf § 11.4 [Files and directories
-permissions under Linux](../08.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
+permissions under Linux](../../08.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
 * Configure PERL script ipdiscover-util.pl to access database and install it.
 
-![Restart Apache](../img/Restart_and_enjoy.png)
+![Restart Apache](../../img/Restart_and_enjoy.png)
 
 Now, you can restart Apache web server for changes to take effect (httpd is usually for apache2).
 
@@ -439,7 +439,7 @@ or
 
     /etc/init.d/apache restart
 
-![Apache restarted](../img/Apache_restart.png)
+![Apache restarted](../../img/Apache_restart.png)
 
 ## Configuring management server
 
@@ -464,10 +464,10 @@ Otherwise, you can rerun configuration process by browsing
 URL (this must be used when upgrading OCS Inventory management server).
 
 **`Note: You will see warning regarding max size of package you will be able to deploy. Please, see
-`[`Uploads size for package deployment`](../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
+`[`Uploads size for package deployment`](../../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
 to configure your server to match your need.`**
 
-![Installation's page of ocsreports](../img/Installation_ocsreports.png)
+![Installation's page of ocsreports](../../img/Installation_ocsreports.png)
 
 Fill in information to connect to MySQL database server with a user who has the ability to create
 database, tables, indexes, etc (usually root):
@@ -487,11 +487,11 @@ If you do not wish to use default MySQL user ocs with ocs password, you must upd
 dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login,
 and/or PSWD_BASE, which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
+Refer to `[`Secure your OCS Inventory NG Server`](../../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
 for all information about modifications of configuration files.`**
 
 To secure you server, refer to
-[Secure your OCS Inventory NG Server](../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
+[Secure your OCS Inventory NG Server](../../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 documentation.
 
 If you don't want to secure your OCS Inventory Server, you have to desactivate Warning message in user profile.
@@ -503,17 +503,17 @@ Finally, you may fill in a text describing the TAG, a string displayed at first 
 to enter the TAG Value. It's a generic data which allows you to sort the new computers
 (geographical site, first floor, john room....). If you don't want this functionality, just let it blank.
 
-![Installation of ocsreports](../img/Installation_ocsreports_2.jpg)
+![Installation of ocsreports](../../img/Installation_ocsreports_2.jpg)
 
 Configuration of Management server is now finished.
 
-![Installation of ocsreports](../img/Installation_ocsreports_3.jpg)
+![Installation of ocsreports](../../img/Installation_ocsreports_3.jpg)
 
 Just point your browser to the URL
 [http://administration_server/ocsreports](http://administration_server/ocsreports)
 and login in with **admin** as user and **admin** as password.
 
-![Ocsreports' homsecreen](../img/Homescreen_ocsreports.png)
+![Ocsreports' homsecreen](../../img/Homescreen_ocsreports.png)
 
 ## Upgrading management server
 
@@ -547,16 +547,16 @@ Upgrade process looks like configuration of management server as described in Co
 **`Note: You will see warning regarding max size of package you will be able to deploy. Please,
 see Uploads size for package deployment.) to configure your server to match your needs.`**
 
-![Installation's page of ocsreports](../img/Installation_ocsreports.png)
+![Installation's page of ocsreports](../../img/Installation_ocsreports.png)
 
 Fill in MySQL administrator name (usually root) and password, and MySQL database server address
 and click on **[ Send ]** button.
 
-![Installation of ocsreports](../img/Installation_ocsreports_2.jpg)
+![Installation of ocsreports](../../img/Installation_ocsreports_2.jpg)
 
 Finally, you may fill in a text describing the TAG if you wish to use it.
 
-![Installation of ocsreports](../img/Installation_ocsreports_3.jpg)
+![Installation of ocsreports](../../img/Installation_ocsreports_3.jpg)
 
 **`Note: Notice that installers says about how to log in to server after upgrade. Actually use
 your user/pass that you used before upgrade, especially if you removed/disabled user admin.`**
@@ -600,20 +600,20 @@ Windows 2000, Windows XP or Windows Server 2003.`**
 Download **[[OCSNG-Windows-Server-2.0.zip](http://launchpad.net/ocsinventory-windows-server/stable-2.0/2.0/+download/OCSNG-Windows-Server-2.0.zip)]**
 from OCS Inventory Web Site, unpack it and launch **OCSNG-Windows-Server-2.0.exe**.
 
-![Xampp Directory](../img/EN_02_xampp_directory.gif)
+![Xampp Directory](../../img/EN_02_xampp_directory.gif)
 
 If XAMPP components (server and perl addon) are not already installed, Setup will prompt you that you have
 to set them up. Otherwise, Setup will automatically install OCS Inventory Server into XAMPP directories.
 
-![Start Installation](../img/EN_03_welcome.gif)
+![Start Installation](../../img/EN_03_welcome.gif)
 
 Click **[ Next ]** button to start installation wizard.
 
-![Accept the licence](../img/EN_04_license.gif)
+![Accept the licence](../../img/EN_04_license.gif)
 
 Click **[ Next ]** button and accept License agreement.
 
-![Installation's location](../img/EN_05_install_location.gif)
+![Installation's location](../../img/EN_05_install_location.gif)
 
 Choose installation directory, by default **C:\Program Files\OCS Inventory NG**. You need 400 MB of
 free hard disk space if XAMPP components are not installed, otherwise, only 10MB are required.
@@ -621,7 +621,7 @@ free hard disk space if XAMPP components are not installed, otherwise, only 10MB
 **`Note: When upgrading, you must ensure that Setup detects the folder including XAMPP directory.
 See `[`Upgrading management server`](Setting-up-a-management-server.md#upgrading-management-server-1)`.`**
 
-![Choose the components](../img/EN_06_choose_components.gif)
+![Choose the components](../../img/EN_06_choose_components.gif)
 
 Then, you have to validate components to install. Only **OCS Inventory NG Server** is required, if XAMPP
 components are already installed.
@@ -630,7 +630,7 @@ components are already installed.
 XAMPP installation. However, by default, Setup will _not_ upgrade XAMPP components.
 See `[`Upgrading management server`](Setting-up-a-management-server.md#upgrading-management-server-1)`.`**
 
-![Select the Start Menu folder](../img/EN_07_start_menu.gif)
+![Select the Start Menu folder](../../img/EN_07_start_menu.gif)
 
 Next, you have to choose the program group name in start menu, where OCS Inventory NG icons
 will be created and then click on **[ Install ]** button to start installation.
@@ -648,7 +648,7 @@ OCS Inventory NG Server, and automatically start MySQL and Apache server.
 At the end of the process, Setup will launch your default browser to start OCS Inventory NG Server configuration
 (see [Configuring management server](Setting-up-a-management-server.md#configuring-management-server-1)).
 
-![End of the installation](../img/EN_12_completing.gif)
+![End of the installation](../../img/EN_12_completing.gif)
 
 Setup is now finished and you can click **[ Finished ]** button.
 
@@ -673,7 +673,7 @@ to create database, tables, indexes, etc:
 * MySQL user password (empty password by default)
 * MySQL hostname, localhost
 
-![Installation's page of ocsreports](../img/Installation_ocsreports.png)
+![Installation's page of ocsreports](../../img/Installation_ocsreports.png)
 
 Setup actions :
 
@@ -686,11 +686,11 @@ If you do not wish to use default MySQL user ocs with ocs password, you must upd
 in the file dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login, and/or PSWD_BASE,
 which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
+Refer to `[`Secure your OCS Inventory NG Server`](../../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
 for all information about modifications of configuration files.`**
 
 To secure you server, refer to
-[Secure your OCS Inventory NG Server](../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
+[Secure your OCS Inventory NG Server](../../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 documentation.
 
 If you don't want to secure your OCS Inventory Server, you have to deactivate the Warning message
@@ -704,11 +704,11 @@ Finally, you may fill in a text describing the TAG, a string displayed at first 
 user to enter the TAG Value. It's a generic data which allows you to sort the new computers
 (geographical site, first floor, john room....). If you don't want this functionality, just let it blank.
 
-![Installation of ocsreports](../img/Installation_ocsreports_2.jpg)
+![Installation of ocsreports](../../img/Installation_ocsreports_2.jpg)
 
 Configuration of Management server is now finished.
 
-![Ocsreports' homsecreen](../img/Homescreen_ocsreports.png)
+![Ocsreports' homsecreen](../../img/Homescreen_ocsreports.png)
 
 Default Administrator login is **admin** as user and **admin** as password.
 
@@ -727,7 +727,7 @@ Click on the language you want to access the XAMPP main configuration menu.
 Then, click **[ Security ]** on the left menu. As you will see, all is marked as unsecure or unknown
 for non started components.
 
-![Xampp](../img/Xampp.png)
+![Xampp](../../img/Xampp.png)
 
 You can change this by clicking the link
 [http://localhost/security/xamppsecurity.php](http://localhost/security/xamppsecurity.php).
@@ -744,7 +744,7 @@ configuration menu through a web browser.
 
 Validate your changes by clicking _[ Make safe the XAMPP directory ]_ button.
 
-![Xampp security's menu](../img/Xampp_security.png)
+![Xampp security's menu](../../img/Xampp_security.png)
 
 **`Note: Do not enable PHP safe mode, as you may encounter errors on Administration console.`**
 
@@ -756,7 +756,7 @@ click **[ Stop ]** button for Apache, then **[ Start ]** button and do the same 
 
 You can now reselect **[ Security ]** on left side menu to see that all started services are now secured.
 
-![Xampp security's status](../img/Xampp_security_status.png)
+![Xampp security's status](../../img/Xampp_security_status.png)
 
 ## Upgrading management server
 
@@ -768,7 +768,7 @@ Just ensure that setup detects old installation folder correctly.
 You don’t need to update XAMPP components. Setup, by default, will not select XAMPP components install.
 If you do so, **backup your databases and web sites if you want to also upgrade XAMPP components !**
 See the section
-[Backup/restore of OCS Inventory NG database](../08.Extras/Backup-restore-of-OCS-Inventory-NG-database.md).
+[Backup/restore of OCS Inventory NG database](../../08.Extras/Backup-restore-of-OCS-Inventory-NG-database.md).
 
 At the end of the process, Setup will launch your default browser to run the upgrade process to ensure
 that your database schema and default data are up to date. Upgrade process looks like configuration
@@ -777,5 +777,5 @@ of management server as described in the section
 
 **`Note: You will see warning regarding max size of package you will be able to deploy.
 Please, see the section
-`[`Uploads size for package deployment`](../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
+`[`Uploads size for package deployment`](../../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
 .) to configure your server to match your need.`**

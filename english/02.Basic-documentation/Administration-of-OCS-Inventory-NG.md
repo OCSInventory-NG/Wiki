@@ -39,9 +39,9 @@ on red cross at the end of the corresponding line.
 
 Click on the toolbar **Config** menu and then **config** to display all general options.
 
-![config access](../img/EN_Administration_OCS_19.png)
+![config access](../../img/EN_Administration_OCS_19.png)
 
-![OCS config](../img/EN_Administration_OCS_2.png)
+![OCS config](../../img/EN_Administration_OCS_2.png)
 
 ### List of configuration variables
 
@@ -133,7 +133,7 @@ One or both of the following 2 files must be uploaded to the server:
 * **OCS-NG-Windows-Agent-Setup.exe** file for Windows, to deploy the standalone Agent
 (not running as a Windows service). This file is included in package OCSNG-Windows-Agent-2.0.zip.
 * **ocspackage.exe** file, created using OCS Inventory NG
-[Packager](../06.OCS-Tools/OCS-Packager.md), to deploy the Windows
+[Packager](../../06.OCS-Tools/OCS-Packager.md), to deploy the Windows
 service version of the Agent, even if the connected user does not have Administrator privileges.
 
 **`Warning: A control is made on files name imported via GUI. You will not upload file having a
@@ -141,8 +141,8 @@ different name of ocsagent.exe and ocspackages.exe.`**
 
 
 To create the “ocspackage.exe” file, run the
-[OCS Inventory NG Packager](../06.OCS-Tools/OCS-Packager.md)
-[OCS Inventory NG Packager](../06.OCS-Tools/OCS-Packager.md)
+[OCS Inventory NG Packager](../../06.OCS-Tools/OCS-Packager.md)
+[OCS Inventory NG Packager](../../06.OCS-Tools/OCS-Packager.md)
 and fill in the following informations:
 
 * Path to file “OcsAgentSetup.exe”, the OCS Inventory NG service Agent installer, included in the package
@@ -173,11 +173,11 @@ HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices.
 This will create the file “ocspackage.exe” to upload into Administration console. Click on
 toolbar **Config** menu.
 
-![Toolbar Config Menu](../img/EN_Administration_OCS_3.png)
+![Toolbar Config Menu](../../img/EN_Administration_OCS_3.png)
 
 Click **[ Agent ]** toolbar menu, browse your hard drive to select agent file and click **[ Send ]** button.
 
-![Add agent](../img/EN_Administration_OCS_4.png)
+![Add agent](../../img/EN_Administration_OCS_4.png)
 
 **`Note: If you encounter error while uploading agent, refer to common errors § 11.2.3 PHP Requested
 content-length.`**
@@ -192,18 +192,18 @@ HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CURRENT_CONFIG (and HKEY_DYN_DATA for Windo
 
 You have to enable this feature in the general settings **REGISTRY**.
 
-![Registry config](../img/EN_Administration_OCS_5.png)
+![Registry config](../../img/EN_Administration_OCS_5.png)
 
 ### **Display/modify/delete an existant request**
 
 Click on the toolbar **Manage** menu then to **registry**.
 
-![Registry manage access](../img/EN_Administration_OCS_6.png)
+![Registry manage access](../../img/EN_Administration_OCS_6.png)
 
 You can display registry queries in central table. Clicking on pencil, you can modify a request.
 You can delete a request clicking on red cross.
 
-![Registry manage](../img/EN_Administration_OCS_7.png)
+![Registry manage](../../img/EN_Administration_OCS_7.png)
 
 ### **Create a new registry request**
 
@@ -217,7 +217,7 @@ registry key (SOFTWARE\PDFCreator\program) and the value name to query (Applicat
 values of key “HKLM\Software\Microsoft\Windows\CurrentVersion\Run” to know which process are automatically
 started for example).`**
 
-![Add Registry](../img/EN_Administration_OCS_8.png)
+![Add Registry](../../img/EN_Administration_OCS_8.png)
 
 After that, each time a Windows client will make an inventory, it will retrieve and store all the
 values corresponding to these keys.
@@ -234,9 +234,9 @@ thus a duplicate fake computer may be created).
 
 This page accessible by clicking **Manage** toolbar menu then **Duplicates** is used to solve this problem.
 
-![Access duplicates](../img/EN_Administration_OCS_9.png)
+![Access duplicates](../../img/EN_Administration_OCS_9.png)
 
-![Duplicates page](../img/EN_Administration_OCS_10.png)
+![Duplicates page](../../img/EN_Administration_OCS_10.png)
 
 You may choose the kind of comparison you want in the top right combo-box.
 
@@ -248,7 +248,7 @@ it only shows all computers that shares one parameter.
 
 Once computers are shown, it’s up to you to check whether several computers are redundant or not.
 
-![Duplicates Redundancy](../img/EN_Administration_OCS_11.png)
+![Duplicates Redundancy](../../img/EN_Administration_OCS_11.png)
 
 After that, you only have to select (checkbox) computers that look the same,
 and click “merge redundant computers”: all the data from checked computers will be merged.
@@ -270,9 +270,9 @@ For example, if the database is lost, all clients will come back with their admi
 You can define the administrative information you want for each computer by clicking
 **Manage** toolbar menu and then **Administrative Data**.
 
-![Access Administrative Data](../img/EN_Administration_OCS_17.png)
+![Access Administrative Data](../../img/EN_Administration_OCS_17.png)
 
-![Administrative Data](../img/EN_Administration_OCS_12.png)
+![Administrative Data](../../img/EN_Administration_OCS_12.png)
 
 You can add new administrative information definition by entering their name (space or special
 characters are not allowed) and selecting their type. You can choose type between:
@@ -289,11 +289,11 @@ characters are not allowed) and selecting their type. You can choose type betwee
 To delete an administrative information definition, just click on red cross at the end of the corresponding
 line. For example, we will add administrative information corresponding to the buy date of computer.
 
-![New Data](../img/EN_Administration_OCS_13.png)
+![New Data](../../img/EN_Administration_OCS_13.png)
 
 You can now browse all your computers to set the buy date for each.
 
-![Warranty begin](../img/EN_Administration_OCS_14.png)
+![Warranty begin](../../img/EN_Administration_OCS_14.png)
 
 ## Editing the label
 
@@ -305,12 +305,12 @@ a unit code, the name of one of your company’s section, a street number, etc).
 is generated during the server install, and may be edited by clicking on **Label** sub-menu of
 **Config** menu intoolbar.
 
-![Label Access](../img/EN_Administration_OCS_15.png)
+![Label Access](../../img/EN_Administration_OCS_15.png)
 
 If you submit a blank label, the label file will be deleted, and no window will be displayed
 anymore on client’s computer.
 
-![Label File Configuration](../img/EN_Administration_OCS_16.png)
+![Label File Configuration](../../img/EN_Administration_OCS_16.png)
 
 ## Importing inventory for non network connected computers
 
@@ -330,9 +330,9 @@ general options.`**
 Click **Manage** toolbar menu and then **local import**, browse your hard drive to select the ".ocs"
 file or ".xml" file created by agent release and click **[ Send ]** button.
 
-![Local Import](../img/EN_Administration_OCS_17.png)
+![Local Import](../../img/EN_Administration_OCS_17.png)
 
-![Local Import](../img/EN_Administration_OCS_18.png)
+![Local Import](../../img/EN_Administration_OCS_18.png)
 
 ### **With Communication server through a Perl script**
 
