@@ -675,7 +675,7 @@ to create database, tables, indexes, etc:
 * MySQL user password (empty password by default)
 * MySQL hostname, localhost
 
-![Installation's page of ocsreports](../../img/Installation_ocsreports.png)
+![Installation's page of ocsreports](../../img/ocs-installation-connexion.png)
 
 Setup actions :
 
@@ -702,13 +702,19 @@ in user profile. Procedure is in the same documentation page.
 **`Warning: We recommend you to read this documentation and follow the procedure.`**
 
 
-Finally, you may fill in a text describing the TAG, a string displayed at first launch of the agent to ask
-user to enter the TAG Value. It's a generic data which allows you to sort the new computers
-(geographical site, first floor, john room....). If you don't want this functionality, just let it blank.
+![Installation of ocsreports](../../img/ocs-installation-finish.png)
 
-![Installation of ocsreports](../../img/Installation_ocsreports_2.jpg)
+Click on the following link : "Click here to enter OCS-NG GUI"
 
-Configuration of Management server is now finished.
+![Update DB OCS Inventory](../../img/ocs-installation-update-db-2-2.png)
+
+Click on "Perform the update" button
+
+![Update DB OCS Inventory done](../../img/ocs-installation-update-db-2-2-finish.png)
+
+
+Configuration of OCS Inventory Server is now finished.
+
 
 ![Ocsreports' homsecreen](../../img/Homescreen_ocsreports.png)
 
