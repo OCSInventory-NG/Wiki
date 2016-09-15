@@ -28,7 +28,7 @@ Management server is made up of 4 main components:
 favorite browser (Apache, php)**
 4. **Deployment server, which stores all package deployment configuration (Apache, ssl)**
 
-![OCS Inventory Structure Diagram](../../img/Architecture_OCS.png)
+![OCS Inventory Structure Diagram](../../img/server/schema/architecture_ocs.png)
 
 ## Deployment tools of the solution
 

@@ -10,7 +10,7 @@ their favorite browser.
 
 These 4 components can be hosted on a single computer or on different computers to allow load balancing. Above 10000 inventoried computers, we recommend using at least 2 physical servers, one hosting database server + Communication server and the other one hosting a database replica + Administration server + Deployement server.
 
-![OCS Inventory Structure Diagram](../../img/Architecture_OCS.png)
+![OCS Inventory Structure Diagram](../../img/server/schema/architecture_OCS.png)
 
 **Figure 1 : OCS Inventory NG communication architecture.**
 
@@ -193,14 +193,14 @@ you must first remove any Apache configuration file for Communication server.`**
 
 Type “y” or “enter” to validate and, then enter MySQL server host address, in most cases localhost.
 
-![Host's database server](../../img/Host_database_server.png)
+![Host's database server](../../img/server/linux/setup_database_1.png)
 
 Then, setup checks for MySQL client binary files version 4.1 or higher. If not present, you will be
 prompted to continue or abort setup.
 
 If all is OK, enter MySQL server port, generally 3306.
 
-![Port database server](../../img/Port_database_server.png)
+![Port database server](../../img/server/linux/setup_database_2.png)
 
 Enter or validate path to Apache daemon binary, generally “/usr/sbin/httpd”. It will be used to find
 Apache configuration files.
@@ -208,20 +208,20 @@ Apache configuration files.
 **`Note: If you’re not using system Apache daemon, but another one like XAMPP/LAMPP Apache server,
 you must enter full path to your Apache daemon, not the system one.`**
 
-![Location of apache's daemon binary](../../img/Where_apache_daemon_binary.png)
+![Location of apache's daemon binary](../../img/server/linux/setup_apache_daemon.png)
 
 Enter or validate Apache main configuration file path, generally “/etc/apache/conf/apache.conf”
 or “/etc/httpd/conf/httpd.conf”.
 
-![Location of apache's configuration file](../../img/Where_apache_configuration_file.png)
+![Location of apache's configuration file](../../img/server/linux/setup_apache_config.png)
 
 Enter or validate Apache daemon running user account, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-![User which can run apache](../../img/Which_user_apache_run.png)
+![User which can run apache](../../img/server/linux/setup_apache_user.png)
 
 Enter or validate Apache daemon user group, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-![Group which can run apache](../../img/Which_group_apache_run.png)
+![Group which can run apache](../../img/server/linux/setup_apache_group.png)
 
 Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL interpreter.
 
@@ -229,13 +229,13 @@ Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL
 you must specify full path to this perl interpreter, not the default system one
 (/opt/lampp/bin/perl generally used in XAMPP/LAMPP).`**
 
-![Location of perl's interpreter binary](../../img/Where_perl_interpreter_binary.png)
+![Location of perl's interpreter binary](../../img/server/linux/setup_perl_binary.png)
 
 Common information for setting up Communication server or Administration console is now collected.
 Setup prompts you if you wish to set Communication server up on this computer. Enter “y” or validate
 to set Communication server up, “n” to skip Communication server installation.
 
-![Setup of the communication's server](../../img/Setup_server_com.png)
+![Setup of the communication's server](../../img/server/linux/setup_communication_server.png)
 
 Setup will then try to find make utility. If it fails, setup will stop.
 
@@ -253,7 +253,7 @@ or
 If you are not using configuration directory, but having all configurations into Apache main configuration file,
 enter **no**.
 
-![Location of apache's configuration directory](../../img/Where_apache_configuration_directory.png)
+![Location of apache's configuration directory](../../img/server/linux/setup_apache_config_directory.png)
 
 Setup will next try to determine your Apache mod_perl version. If it is not able to determine mod_perl version,
 it will ask you to enter it.
@@ -266,7 +266,7 @@ it will ask you to enter it.
 Next, it will prompt you to enter log directory where Communication server will store debugging/tuning logs.
 Validate or enter directory path. If it does not exist, this directory will be created.
 
-![Location of the comunication's server directory](../../img/Where_server_com_directory.png)
+![Location of the comunication's server directory](../../img/server/linux/setup_log.png)
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
@@ -281,7 +281,7 @@ Next, setup will check for required PERL modules
 
 **`Warning: If any of these modules is missing, setup will abort.`**
 
-![When installation is aborted](../../img/Installation_aborted.png)
+![When installation is aborted](../../img/server/linux/setup_cancel.png)
 
 If all is OK, setup will install Communication server:
 
@@ -405,11 +405,11 @@ main configuration file, replacing existing configuration.`**
 Communication server installation is now finished. You will be prompted to set Administration console up.
 Enter “y” or validate to set Administration console up, enter “n” to skip Administration console installation.
 
-![Setup of admin's console](../../img/Setup_admin_console.png)
+![Setup of admin's console](../../img/server/linux/setup_administration_console.png)
 
 Setup will ask you to enter Apache root document directory, usually “/var/www/html” or “/var/www-data”.
 
-![Location of apache's root directory](../../img/Where_apache_root_directory.png)
+![Location of apache's root directory](../../img/server/linux/setup_apache_document_root_directory.png)
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
@@ -431,7 +431,7 @@ If everything is OK, setup will install Administration console into the “ocsre
 permissions under Linux](../../08.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
 * Configure PERL script ipdiscover-util.pl to access database and install it.
 
-![Restart Apache](../../img/Restart_and_enjoy.png)
+![Restart Apache](../../img/server/linux/install_restart_apache.png)
 
 Now, you can restart Apache web server for changes to take effect (httpd is usually for apache2).
 
@@ -441,7 +441,7 @@ or
 
     /etc/init.d/apache restart
 
-![Apache restarted](../../img/Apache_restart.png)
+![Apache restarted](../../img/server/linux/install_restart_apache.png)
 
 ## Configuring management server
 
@@ -469,7 +469,7 @@ URL (this must be used when upgrading OCS Inventory management server).
 `[`Uploads size for package deployment`](../../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
 to configure your server to match your need.`**
 
-![Installation's page of ocsreports](../../img/ocs-installation-db-init.png)
+![Installation's page of ocsreports](../../img/server/reports/install/installation_ocsreports_1.png)
 
 Fill in information to connect to MySQL database server with a user who has the ability to create
 database, tables, indexes, etc (usually root):
@@ -502,11 +502,11 @@ Procedure is in the same documentation page.
 **`Warning: We recommend you to read this documentation and follow the procedure.`**
 
 
-![Installation of ocsreports](../../img/ocs-installation-finish.png)
+![Installation of ocsreports](../../img/server/reports/install/installation_ocsreports_6.png)
 
 Click on the following link : "Click here to enter OCS-NG GUI"
 
-![Update DB OCS Inventory](../../img/ocs-installation-update-db-2-2.png)
+![Update DB OCS Inventory](../../img/server/reports/install/installation_ocsreports_4.png)
 
 Click on "Perform the update" button
 
@@ -516,7 +516,7 @@ Just point your browser to the URL
 [http://administration_server/ocsreports](http://administration_server/ocsreports)
 and login in with **admin** as user and **admin** as password.
 
-![Ocsreports' homsecreen](../../img/Homescreen_ocsreports.png)
+![Ocsreports' homsecreen](../../img/server/reports/Homescreen_ocsreports.png)
 
 ## Upgrading management server
 
