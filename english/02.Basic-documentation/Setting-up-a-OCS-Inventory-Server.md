@@ -38,6 +38,7 @@ We assume that you have:
     * Mod_perl version 1.29 or higher.
     * Mod_php version 4.3.2 or higher.
 * PHP 4.3.2 or higher, with ZIP and GD support enabled.
+    * php_curl
 * PERL 5.6 or higher.
     * Perl module XML::Simple version 2.12 or higher.
     * Perl module Compress::Zlib version 1.33 or higher.
