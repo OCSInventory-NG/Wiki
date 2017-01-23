@@ -120,6 +120,13 @@ save logs to a file using “Save logs” button.
 ## Windows command line options
  Command Line Options:|Meaning:
 ---|---
+/S|Silent Mode
+/NOSPLASH|disable splash screen when installer starts
+/UPGRADE|to deploy new agent through OCS deployment feature. Because you upgrade agent using agent itself to run the upgrade, it is needed to notify the installer (which terminates agent's processes) to specify the result in order to send it back to the server next time agent will run
+/NO_SERVICE|to not register OCS Inventory NG Agent into Windows Service Manager. Agent can only be launched manually or through a script/GPO
+/NO_SYSTRAY|to not create a shortcut into "All Users" startup folder to start systray applet when user log in.
+/NOW|to launch inventory just after setup
+/NOSOFTWARE|to ignore software installed
 /work_dir="path to directory"|Agent have to use "path to directory" as working dir (this directory may included configuration file). Default is "%ALLUSERSPROFILE%\Application Data\OCS Inventory NG\Agent" or "%PROGRAMDATA%\OCS Inventory NG\Agent"
 /local[="path to folder"]|Agent do not contact communication server, and store inventory in xml compressed .ocs file into folder "path to folder". If no "path to folder" provided, agent assume folder as data folder
 /debug[=level]|Generate a very verbose log file "ocsinventory.log" into agent's install folder.0 => disable verbose logs (default),1 => enable default verbose logs (default when no level provided provided),2 => enable debuging logs
