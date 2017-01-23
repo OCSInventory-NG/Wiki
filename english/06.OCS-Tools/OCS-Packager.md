@@ -1,6 +1,6 @@
 # Use OCSPackager
 
-[Dowload page](http://www.ocsinventory-ng.org/en/#download-en)
+[Dowload page](https://github.com/OCSInventory-NG/Packager-for-Windows/releases)
 
 ## Introduction
 
@@ -50,7 +50,6 @@ Launch OcsPackager.exe and accept the License agreement.
 
 The following window will appear:
 
-![OCS Packager Parameters](../../img/Packager_2.jpg)
 
 **“Files and Options” group box:**
 
@@ -73,11 +72,9 @@ On a NT4 domain use the “domain\user” syntax.
 
 You should have something like this:
 
-![OCS Packager Parameters](../../img/Packager_3.jpg)
 
 Click the **[ Next ]** button.
 
-![OCS Packager Export File On](../../img/Packager_4.jpg)
 
 Select the destination folder and Click **[ OK ]**.
 
@@ -97,8 +94,6 @@ web server if you use the Ocslogon.exe **[/url:]** option.
 ### **Publishing on the communication server**
 
 Log on to the administration console and select the Configuration icon:
-
-![Agent Page](../../img/Packager_5.jpg)
 
 Then upload your **ocspackage.exe** file.
 
