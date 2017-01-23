@@ -133,7 +133,7 @@ save logs to a file using “Save logs” button.
 /hkcu|Search also for software under HKEY_CURRENT_USER registry hive (do not work with service as LocalSystem !)
 /uid|Agent have to generate a new unique device ID
 /server=http[s]://server.domain.tld[:port]/ocsinventory|Agent try to connect to Communication Server address and port Listening on http[s]://server.domain.tld[:port]/ocsinventory
-/ssl=0|1|When usng SSL connections: 0 => SSL without certificate validation, 1 => SSL with server certificate validation required (needs CA certificate)
+/ssl=0,1|When usng SSL connections: 0 => SSL without certificate validation, 1 => SSL with server certificate validation required (needs CA certificate)
 /ca="path_to_cabundle.pem"|Path to CA certificate chain file in PEM format, for server certificate validation 
 /user=username /pwd=password|Communication Server authentication credentials 
 /proxy_type=0,1,2,3|Agent proxy use 0 => no,1 => HTTP proxy,2 => Socks 4 proxy,3 => Socks 5 proxy)
