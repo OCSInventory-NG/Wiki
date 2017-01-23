@@ -18,35 +18,28 @@ To install OCS Inventory NG Agent Deployment Tool, download zip archive from
 
 Uncompress the zip file and run **OCS-NG-Agent-Deployment-Tool-Setup.exe** on a Windows Computer.
 
-![Windows Deployment Tool Icon](../../img/OCS-NG-Deploy-Tool-Setup_1.png)
 
 Click **[ Next ]** button
 
-![Windows Deployment Tool Welcome](../../img/OCS-NG-Deploy-Tool-Setup_2.png)
 
 Validate license agreement by clicking **[ I agree ]** button
 
-![Windows Deployment Tool License Agreement](../../img/OCS-NG-Deploy-Tool-Setup_3.png)
 
 Choose destination folder, _C:\Program Files\OCS Inventory Agent Deployement Tool” by default
 (“C:\Program Files (x86)\OCS Inventory Agent Deployment tool_ under Windows 64 bits),
 and click **[ Next ]** button
 
-![Windows Deployment Tool Choose Location](../../img/OCS-NG-Deploy-Tool-Setup_4.png)
 
 Choose start menu folder, _OCS Inventory NG\Agent Deployement Tool_ by default,
 and click **[ Install ]** button.
 
-![Windows Deployment Tool Menu Folder](../../img/OCS-NG-Deploy-Tool-Setup_5.png)
 
 Click **[ Finish ]** button to close OCS inventory NG Agent Deployment Tool Setup.
 Setup can start the tool for you if you the box Start OCS Inventory NG Agent Deplyment Tool is checked
 
-![Windows Deployment Tool End of Installation](../../img/OCS-NG-Deploy-Tool-Setup_6.png)
 
 Click on **[ Options ]** button of Agent Deployment Tool main window to display settings.
 
-![Windows Deployment Tool Options](../../img/OCS-NG-Deploy-Tool-Config_1.png)
 
 You must provide path to:
 
@@ -57,7 +50,6 @@ and donwload tools from here).
 
 Click **[ OK ]** button to save changes.
 
-![Windows Deployment Tool Options Path](../../img/OCS-NG-Deploy-Tool-Config_2.png)
 
 ## Pushing OCS Inventory NG agent for Windows setup
 
@@ -75,7 +67,6 @@ or import them from a file (file must contain one IP or computer name by line)
 
 Click **[ Next ]** button.
 
-![Windows Deployment Tool IP](../../img/OCS-NG-Deploy-Tool-Deploy-Win_1.png)
 
 * Select Windows Agent installer file to push,
 * Select optional plugin files to copy into plugins directory of the agent,
@@ -97,7 +88,6 @@ or [https://your_ocs_server:ip_port/ocsinventory](https://your_ocs_server:ip_por
 
 and click **[ Next ]** button
 
-![Windows Deployment Tool Windows Properties](../../img/OCS-NG-Deploy-Tool-Deploy-Win_2.png)
 
 Provide credentials of an Administrator account on remote computers with associated
 password and click **[ Next ]** button.
@@ -105,7 +95,6 @@ password and click **[ Next ]** button.
 **`Note: If computers are in an Active Directory or Samba Domain, you must specify account
 like DOMAIN_NAME\Administrator. Otherwise, only the account name without domain name is enough.`**
 
-![Windows Deployment Tool Authentification](../../img/OCS-NG-Deploy-Tool-Deploy-Win_3.png)
 
 You are now ready to process. Choose the number of computers to push installation simultaneously
 (up to 10 computers) using the slider and click **[ Start ]** button.
@@ -117,13 +106,11 @@ Agent Deployment Tool will first check if remote computer is up and running Wind
 copy installation files to remote computer through administratibe shares,
 uses PSEXEC to execute installation on remote computer and display logs into listbox.
 
-![Windows Deployment Tool Execution](../../img/OCS-NG-Deploy-Tool-Deploy-Win_4.png)
 
 If Agent Deployment Tool encounter errors on one or more computers, it will prompt you to save
 the list of failed computers into a CSV file, and you will be able to import this file later to restart
 installation process on these computers.
 
-![Windows Deployment Tool Error CSV](../../img/OCS-NG-Deploy-Tool-Deploy-Win_5.png)
 
 You can stop at any time the process using “Stop” button and also, when deployment is finished,
 save logs to a file using “Save logs” button.
