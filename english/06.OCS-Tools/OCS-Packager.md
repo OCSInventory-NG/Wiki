@@ -1,6 +1,6 @@
 # Use OCSPackager
 
-[Dowload page](https://github.com/OCSInventory-NG/Packager-for-Windows/releases)
+[Dowload page](http://www.ocsinventory-ng.org/en/download-en/)
 
 ## Introduction
 
