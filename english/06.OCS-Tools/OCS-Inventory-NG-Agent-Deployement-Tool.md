@@ -18,37 +18,30 @@ To install OCS Inventory NG Agent Deployment Tool, download zip archive from
 
 Uncompress the zip file and run **OCS-NG-Agent-Deployment-Tool-Setup.exe** on a Windows Computer.
 
-![Windows Deployment Tool Icon](../../img/OCS-NG-Deploy-Tool-Setup_1.png)
 
 Click **[ Next ]** button
 
-![Windows Deployment Tool Welcome](../../img/OCS-NG-Deploy-Tool-Setup_2.png)
 
 Validate license agreement by clicking **[ I agree ]** button
 
-![Windows Deployment Tool License Agreement](../../img/OCS-NG-Deploy-Tool-Setup_3.png)
 
 Choose destination folder, _C:\Program Files\OCS Inventory Agent Deployement Tool” by default
 (“C:\Program Files (x86)\OCS Inventory Agent Deployment tool_ under Windows 64 bits),
 and click **[ Next ]** button
 
-![Windows Deployment Tool Choose Location](../../img/OCS-NG-Deploy-Tool-Setup_4.png)
 
 Choose start menu folder, _OCS Inventory NG\Agent Deployement Tool_ by default,
 and click **[ Install ]** button.
 
-![Windows Deployment Tool Menu Folder](../../img/OCS-NG-Deploy-Tool-Setup_5.png)
 
 Click **[ Finish ]** button to close OCS inventory NG Agent Deployment Tool Setup.
 Setup can start the tool for you if you the box Start OCS Inventory NG Agent Deplyment Tool is checked
 
-![Windows Deployment Tool End of Installation](../../img/OCS-NG-Deploy-Tool-Setup_6.png)
 
 Click on **[ Options ]** button of Agent Deployment Tool main window to display settings.
 
-![Windows Deployment Tool Options](../../img/OCS-NG-Deploy-Tool-Config_1.png)
 
-You must provide path to:
+You have to provide path to:
 
 * Microsoft SysInternals **PsExec.exe** tool (click on the link to open your browser with SysInternals
 Home page and download PsTools suite from here).
@@ -57,11 +50,10 @@ and donwload tools from here).
 
 Click **[ OK ]** button to save changes.
 
-![Windows Deployment Tool Options Path](../../img/OCS-NG-Deploy-Tool-Config_2.png)
 
 ## Pushing OCS Inventory NG agent for Windows setup
 
-**`Note: To push setup, administrative shares must be enabled on remote computer. Moreover, on computers
+**`Note: To push setup, administrative shares have to be enabled on remote computer. Moreover, on computers
 not members of a Windows domain, you have to disable “Using simple share (recommended)”
 using “Folders options”.`**
 
@@ -71,11 +63,10 @@ Click on **[ Windows Agent ]** button of Agent Deployment Tool main window to st
 * a list of manually selected computers: select them in the network neighborhood using button
 "_Browse Network_", or specify them using UNC notation (_\\Computer_name or \\IP_Address_) or
 select multiple computers into Active Directory using button "_Browse AD_",
-or import them from a file (file must contain one IP or computer name by line)
+or import them from a file (file have to contain one IP or computer name by line)
 
 Click **[ Next ]** button.
 
-![Windows Deployment Tool IP](../../img/OCS-NG-Deploy-Tool-Deploy-Win_1.png)
 
 * Select Windows Agent installer file to push,
 * Select optional plugin files to copy into plugins directory of the agent,
@@ -94,18 +85,17 @@ or [https://your_ocs_server:ip_port/ocsinventory](https://your_ocs_server:ip_por
 (beware to OCS server load if you install a lot of computers at the same time !)
 * Enter additional parameters in Other options for Agent (/HKCU for example)
 * Check _Change Agent setup directory_ to modify OCS Inventory agent installation directory
+* Other Commandline options will also work, for all Options see below.
 
 and click **[ Next ]** button
 
-![Windows Deployment Tool Windows Properties](../../img/OCS-NG-Deploy-Tool-Deploy-Win_2.png)
 
 Provide credentials of an Administrator account on remote computers with associated
 password and click **[ Next ]** button.
 
-**`Note: If computers are in an Active Directory or Samba Domain, you must specify account
+**`Note: If computers are in an Active Directory or Samba Domain, you have to specify account
 like DOMAIN_NAME\Administrator. Otherwise, only the account name without domain name is enough.`**
 
-![Windows Deployment Tool Authentification](../../img/OCS-NG-Deploy-Tool-Deploy-Win_3.png)
 
 You are now ready to process. Choose the number of computers to push installation simultaneously
 (up to 10 computers) using the slider and click **[ Start ]** button.
@@ -117,13 +107,44 @@ Agent Deployment Tool will first check if remote computer is up and running Wind
 copy installation files to remote computer through administratibe shares,
 uses PSEXEC to execute installation on remote computer and display logs into listbox.
 
-![Windows Deployment Tool Execution](../../img/OCS-NG-Deploy-Tool-Deploy-Win_4.png)
 
 If Agent Deployment Tool encounter errors on one or more computers, it will prompt you to save
 the list of failed computers into a CSV file, and you will be able to import this file later to restart
 installation process on these computers.
 
-![Windows Deployment Tool Error CSV](../../img/OCS-NG-Deploy-Tool-Deploy-Win_5.png)
 
 You can stop at any time the process using “Stop” button and also, when deployment is finished,
 save logs to a file using “Save logs” button.
+
+
+## Windows command line options
+ Command Line Options:|Meaning:
+---|---
+/S|Silent Mode
+/NOSPLASH|disable splash screen when installer starts
+/UPGRADE|to deploy new agent through OCS deployment feature. Because you upgrade agent using agent itself to run the upgrade, it is needed to notify the installer (which terminates agent's processes) to specify the result in order to send it back to the server next time agent will run
+/NO_SERVICE|to not register OCS Inventory NG Agent into Windows Service Manager. Agent can only be launched manually or through a script/GPO
+/NO_SYSTRAY|to not create a shortcut into "All Users" startup folder to start systray applet when user log in.
+/NOW|to launch inventory just after setup
+/NOSOFTWARE|to ignore software installed
+/work_dir="path to directory"|Agent have to use "path to directory" as working dir (this directory may included configuration file). Default is "%ALLUSERSPROFILE%\Application Data\OCS Inventory NG\Agent" or "%PROGRAMDATA%\OCS Inventory NG\Agent"
+/local[="path to folder"]|Agent do not contact communication server, and store inventory in xml compressed .ocs file into folder "path to folder". If no "path to folder" provided, agent assume folder as data folder
+/debug[=level]|Generate a very verbose log file "ocsinventory.log" into agent's install folder.0 => disable verbose logs (default),1 => enable default verbose logs (default when no level provided provided),2 => enable debuging logs
+/notag|Agent must NOT prompt user for TAG in any case
+/tag="my value"|Agent have to set "my value" as TAG value
+/xml=["path to folder"]|Agent have to store inventory in uncompressed xml format into folder "path to folder". If no "path to folder" provided, agent assume folder as data folder
+/force|Always send inventory, even if server do not ask for it (use only for debugging purpose !) 
+/ipdisc="network number"|Agent have to launch IP discovery on network "network number" (use only for debugging purpose !) 
+/ipdisc_lat="number of milliseconds"|Set latency between 2 IP Discover requests to "number of milliseconds" 
+/fastip|Never wait for latency between 2 IP Discover requests (use only for debugging purpose !)
+/hkcu|Search also for software under HKEY_CURRENT_USER registry hive (do not work with service as LocalSystem !)
+/uid|Agent have to generate a new unique device ID
+/server=http[s]://server.domain.tld[:port]/ocsinventory|Agent try to connect to Communication Server address and port Listening on http[s]://server.domain.tld[:port]/ocsinventory
+/ssl=0,1|When usng SSL connections: 0 => SSL without certificate validation, 1 => SSL with server certificate validation required (needs CA certificate)
+/ca="path_to_cabundle.pem"|Path to CA certificate chain file in PEM format, for server certificate validation 
+/user=username /pwd=password|Communication Server authentication credentials 
+/proxy_type=0,1,2,3|Agent proxy use 0 => no,1 => HTTP proxy,2 => Socks 4 proxy,3 => Socks 5 proxy)
+/proxy=proxy_address|Proxy server address (without protocol !) 
+/proxy_port=port|Proxy server port
+/proxy_user=username /proxy_pwd=password|Proxy authentication credentials 
+/D=< directory installation>|specify the directory where your want to install ocsinventory agent (default %PROGRAMFILES%\ocs inventory agent) 
