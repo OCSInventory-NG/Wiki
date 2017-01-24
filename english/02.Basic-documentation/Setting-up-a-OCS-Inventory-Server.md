@@ -10,7 +10,6 @@ their favorite browser.
 
 These 4 components can be hosted on a single computer or on different computers to allow load balancing. Above 10000 inventoried computers, we recommend using at least 2 physical servers, one hosting database server + Communication server and the other one hosting a database replica + Administration server + Deployement server.
 
-![OCS Inventory Structure Diagram](../../img/server/schema/architecture_OCS.png)
 
 **Figure 1 : OCS Inventory NG communication architecture.**
 
@@ -38,6 +37,7 @@ We assume that you have:
     * Mod_perl version 1.29 or higher.
     * Mod_php version 4.3.2 or higher.
 * PHP 4.3.2 or higher, with ZIP and GD support enabled.
+    * php_curl
 * PERL 5.6 or higher.
     * Perl module XML::Simple version 2.12 or higher.
     * Perl module Compress::Zlib version 1.33 or higher.
@@ -185,7 +185,6 @@ For example, [y]/n means that “y” (yes) is the default choice, and “n” (
 **`Note: Installer writes a log file “ocs_server_setup.log” in the same directory.
 If you encounter any error, please refer to this log for detailed error message.`**
 
-![Sh Setup](../../img/Setup_sh.png)
 
 **`Warning: If you’re upgrading from OCS Inventory NG 1.01 and previous,
 you must first remove any Apache configuration file for Communication server.`**
@@ -193,14 +192,12 @@ you must first remove any Apache configuration file for Communication server.`**
 
 Type “y” or “enter” to validate and, then enter MySQL server host address, in most cases localhost.
 
-![Host's database server](../../img/server/linux/setup_database_1.png)
 
 Then, setup checks for MySQL client binary files version 4.1 or higher. If not present, you will be
 prompted to continue or abort setup.
 
 If all is OK, enter MySQL server port, generally 3306.
 
-![Port database server](../../img/server/linux/setup_database_2.png)
 
 Enter or validate path to Apache daemon binary, generally “/usr/sbin/httpd”. It will be used to find
 Apache configuration files.
@@ -208,20 +205,16 @@ Apache configuration files.
 **`Note: If you’re not using system Apache daemon, but another one like XAMPP/LAMPP Apache server,
 you must enter full path to your Apache daemon, not the system one.`**
 
-![Location of apache's daemon binary](../../img/server/linux/setup_apache_daemon.png)
 
 Enter or validate Apache main configuration file path, generally “/etc/apache/conf/apache.conf”
 or “/etc/httpd/conf/httpd.conf”.
 
-![Location of apache's configuration file](../../img/server/linux/setup_apache_config.png)
 
 Enter or validate Apache daemon running user account, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-![User which can run apache](../../img/server/linux/setup_apache_user.png)
 
 Enter or validate Apache daemon user group, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-![Group which can run apache](../../img/server/linux/setup_apache_group.png)
 
 Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL interpreter.
 
@@ -229,13 +222,11 @@ Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL
 you must specify full path to this perl interpreter, not the default system one
 (/opt/lampp/bin/perl generally used in XAMPP/LAMPP).`**
 
-![Location of perl's interpreter binary](../../img/server/linux/setup_perl_binary.png)
 
 Common information for setting up Communication server or Administration console is now collected.
 Setup prompts you if you wish to set Communication server up on this computer. Enter “y” or validate
 to set Communication server up, “n” to skip Communication server installation.
 
-![Setup of the communication's server](../../img/server/linux/setup_communication_server.png)
 
 Setup will then try to find make utility. If it fails, setup will stop.
 
@@ -247,13 +238,12 @@ configuration for specific modules. Generally, this directory is
 or
 
     /etc/apache/conf.d
-
+    
 
 
 If you are not using configuration directory, but having all configurations into Apache main configuration file,
 enter **no**.
 
-![Location of apache's configuration directory](../../img/server/linux/setup_apache_config_directory.png)
 
 Setup will next try to determine your Apache mod_perl version. If it is not able to determine mod_perl version,
 it will ask you to enter it.
@@ -266,7 +256,6 @@ it will ask you to enter it.
 Next, it will prompt you to enter log directory where Communication server will store debugging/tuning logs.
 Validate or enter directory path. If it does not exist, this directory will be created.
 
-![Location of the comunication's server directory](../../img/server/linux/setup_log.png)
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
@@ -281,7 +270,6 @@ Next, setup will check for required PERL modules
 
 **`Warning: If any of these modules is missing, setup will abort.`**
 
-![When installation is aborted](../../img/server/linux/setup_cancel.png)
 
 If all is OK, setup will install Communication server:
 
@@ -405,11 +393,9 @@ main configuration file, replacing existing configuration.`**
 Communication server installation is now finished. You will be prompted to set Administration console up.
 Enter “y” or validate to set Administration console up, enter “n” to skip Administration console installation.
 
-![Setup of admin's console](../../img/server/linux/setup_administration_console.png)
 
 Setup will ask you to enter Apache root document directory, usually “/var/www/html” or “/var/www-data”.
 
-![Location of apache's root directory](../../img/server/linux/setup_apache_document_root_directory.png)
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
@@ -431,17 +417,16 @@ If everything is OK, setup will install Administration console into the “ocsre
 permissions under Linux](../../08.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
 * Configure PERL script ipdiscover-util.pl to access database and install it.
 
-![Restart Apache](../../img/server/linux/install_restart_apache.png)
 
-Now, you can restart Apache web server for changes to take effect (httpd is usually for apache2).
+Now, you can restart Apache web server for changes to take effect.
 
-    /etc/init.d/httpd restart
+    service apache2 restart
 
 or
 
     /etc/init.d/apache restart
-
-![Apache restarted](../../img/server/linux/install_restart_apache.png)
+    
+   
 
 ## Configuring management server
 
@@ -609,20 +594,16 @@ Windows 2000, Windows XP or Windows Server 2003.`**
 Download **[[OCSNG-Windows-Server-2.0.zip](http://launchpad.net/ocsinventory-windows-server/stable-2.0/2.0/+download/OCSNG-Windows-Server-2.0.zip)]**
 from OCS Inventory Web Site, unpack it and launch **OCSNG-Windows-Server-2.0.exe**.
 
-![Xampp Directory](../../img/EN_02_xampp_directory.gif)
 
 If XAMPP components (server and perl addon) are not already installed, Setup will prompt you that you have
 to set them up. Otherwise, Setup will automatically install OCS Inventory Server into XAMPP directories.
 
-![Start Installation](../../img/EN_03_welcome.gif)
 
 Click **[ Next ]** button to start installation wizard.
 
-![Accept the licence](../../img/EN_04_license.gif)
 
 Click **[ Next ]** button and accept License agreement.
 
-![Installation's location](../../img/EN_05_install_location.gif)
 
 Choose installation directory, by default **C:\Program Files\OCS Inventory NG**. You need 400 MB of
 free hard disk space if XAMPP components are not installed, otherwise, only 10MB are required.
@@ -630,7 +611,6 @@ free hard disk space if XAMPP components are not installed, otherwise, only 10MB
 **`Note: When upgrading, you must ensure that Setup detects the folder including XAMPP directory.
 See `[`Upgrading management server`](Setting-up-a-OCS-Inventory-Server.md#upgrading-management-server-1)`.`**
 
-![Choose the components](../../img/EN_06_choose_components.gif)
 
 Then, you have to validate components to install. Only **OCS Inventory NG Server** is required, if XAMPP
 components are already installed.
@@ -639,7 +619,6 @@ components are already installed.
 XAMPP installation. However, by default, Setup will _not_ upgrade XAMPP components.
 See `[`Upgrading management server`](Setting-up-a-OCS-Inventory-Server.md#upgrading-management-server-1)`.`**
 
-![Select the Start Menu folder](../../img/EN_07_start_menu.gif)
 
 Next, you have to choose the program group name in start menu, where OCS Inventory NG icons
 will be created and then click on **[ Install ]** button to start installation.
@@ -657,7 +636,6 @@ OCS Inventory NG Server, and automatically start MySQL and Apache server.
 At the end of the process, Setup will launch your default browser to start OCS Inventory NG Server configuration
 (see [Configuring management server](Setting-up-a-OCS-Inventory-Server.md#configuring-management-server-1)).
 
-![End of the installation](../../img/EN_12_completing.gif)
 
 Setup is now finished and you can click **[ Finished ]** button.
 
@@ -682,7 +660,6 @@ to create database, tables, indexes, etc:
 * MySQL user password (empty password by default)
 * MySQL hostname, localhost
 
-![Installation's page of ocsreports](../../img/ocs-installation-db-init.png)
 
 Setup actions :
 
@@ -709,21 +686,15 @@ in user profile. Procedure is in the same documentation page.
 **`Warning: We recommend you to read this documentation and follow the procedure.`**
 
 
-![Installation of ocsreports](../../img/ocs-installation-finish.png)
 
 Click on the following link : "Click here to enter OCS-NG GUI"
 
-![Update DB OCS Inventory](../../img/ocs-installation-update-db-2-2.png)
 
 Click on "Perform the update" button
-
-![Update DB OCS Inventory done](../../img/ocs-installation-update-db-2-2-finish.png)
 
 
 Configuration of OCS Inventory Server is now finished.
 
-
-![Ocsreports' homsecreen](../../img/Homescreen_ocsreports.png)
 
 Default Administrator login is **admin** as user and **admin** as password.
 
@@ -742,7 +713,6 @@ Click on the language you want to access the XAMPP main configuration menu.
 Then, click **[ Security ]** on the left menu. As you will see, all is marked as unsecure or unknown
 for non started components.
 
-![Xampp](../../img/Xampp.png)
 
 You can change this by clicking the link
 [http://localhost/security/xamppsecurity.php](http://localhost/security/xamppsecurity.php).
@@ -759,7 +729,6 @@ configuration menu through a web browser.
 
 Validate your changes by clicking _[ Make safe the XAMPP directory ]_ button.
 
-![Xampp security's menu](../../img/Xampp_security.png)
 
 **`Note: Do not enable PHP safe mode, as you may encounter errors on Administration console.`**
 
@@ -771,7 +740,6 @@ click **[ Stop ]** button for Apache, then **[ Start ]** button and do the same 
 
 You can now reselect **[ Security ]** on left side menu to see that all started services are now secured.
 
-![Xampp security's status](../../img/Xampp_security_status.png)
 
 ## Upgrading management server
 
