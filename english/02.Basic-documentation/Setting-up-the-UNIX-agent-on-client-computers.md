@@ -48,11 +48,11 @@ to your system or download each package individually from the repository_
 
 _**On Debian like Linux**, you can use “apt-get” tool to set required modules up:_
 
-    apt-get install dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl libnet-ssleay-perl
+   apt-get install dmidecode libxml-simple-perl libio-compress-perl libnet-ip-perl libwww-perl libdigest-md5-perl libnet-ssleay-perl
 
 _Optional modules:_
 
-    apt-get install libcrypt-ssleay-perl (to use SSL) libnet-snmp-perl (to use SNMP feature) libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
+    apt-get install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
 **Unix agent 2.x is now installed without script “setup.sh”. During compilation, information about
 configuration and dependencies are returned. However, it will never upgrade an installed module.
