@@ -48,11 +48,11 @@ to your system or download each package individually from the repository_
 
 _**On Debian like Linux**, you can use “apt-get” tool to set required modules up:_
 
-    apt-get install dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl libnet-ssleay-perl
+   apt-get install dmidecode libxml-simple-perl libio-compress-perl libnet-ip-perl libwww-perl libdigest-md5-perl libnet-ssleay-perl
 
 _Optional modules:_
 
-    apt-get install libcrypt-ssleay-perl (to use SSL) libnet-snmp-perl (to use SNMP feature) libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
+    apt-get install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
 **Unix agent 2.x is now installed without script “setup.sh”. During compilation, information about
 configuration and dependencies are returned. However, it will never upgrade an installed module.
@@ -110,20 +110,80 @@ Setup will check for:
 If not found, it will ask you if you wish to install it. Enter “y” or validate to enable install
 of required component. You need to have access to Internet or local repositories. If you enter “n”, setup will stop here.
 
-Configuration begins. Choice to configure agent now or later.
+**Configuration begins. You answer with y for yes n for no or specify link or location. Letter in brackets [] is choosen if you press enter.**
 
-![Installation of Unix agent](../../img/Unix_agent.jpg)
+    Do you want to configure the agent
+    Please enter 'y' or 'n'?> [y] y
 
-Select the path of configuration file directory.
+    Where do you want to write the configuration file?
+    0 -> /etc/ocsinventory
+    1 -> /usr/local/etc/ocsinventory
+    2 -> /etc/ocsinventory-agent
+    ?>  2
 
-![Installation of Unix agent](../../img/Unix_agent_2.jpg)
+    Do you want to create the directory /etc/ocsinventory-agent?
+    Please enter 'y' or 'n'?> [y] y
 
-Validation to create the directory, and definition of OCS Inventory NG server address (IP address or hostname.domain)
+    Should the old unix_agent settings be imported ?
+    Please enter 'y' or 'n'?> [y] y
 
-You will then have to choose between 3 methods for generating inventory:
+    [info] The config file will be written in /etc/ocsinventory-agent/ocsinventory-agent.cfg,
+    
+    What is the address of your ocs server?>  https://ocs/ocsinventory
+    
+    Do you need credential for the server? (You probably don't)
+    Please enter 'y' or 'n'?> [n]
+    
+    Do you want to apply an administrative tag on this machine
+    Please enter 'y' or 'n'?> [y]
+    tag?>  Server
+    
+    Do yo want to install the cron task in /etc/cron.d
+    Please enter 'y' or 'n'?> [y]
+    
+    Where do you want the agent to store its files? (You probably don't need to change it)?> [/var/lib/ocsinventory-agent]
+    
+    Should I remove the old unix_agent
+    Please enter 'y' or 'n'?> [n]
+
+    Do you want to activate debug configuration option ?
+    Please enter 'y' or 'n'?> [y] n
+
+    Do you want to use OCS Inventory NG UNix Unified agent log file ?
+    Please enter 'y' or 'n'?> [y]
+
+    Specify log file path you want to use?>  /var/log/ocs_agent.log
+    
+    Do you want disable SSL CA verification configuration option (not recommended) ?
+    Please enter 'y' or 'n'?> [n]
+    
+    Do you want to set CA certificate chain file path ?
+    Please enter 'y' or 'n'?> [y] y
+    
+    Specify CA certificate chain file path?>  /etc/ocsinventory-agent/cacert.pem
+    
+    Do you want to use OCS-Inventory software deployment feature?
+    Please enter 'y' or 'n'?> [y]
+    
+    Do you want to use OCS-Inventory SNMP scans feature?
+    Please enter 'y' or 'n'?> [y]
+    
+    Do you want to send an inventory of this machine?
+    Please enter 'y' or 'n'?> [y]
+
+
+Here is a sample configuration file for OCS Inventory NG Linux agent.
+
+    <CONF>
+        <DEVICEID>computer.domain.tld-2006-02-27-13-59-47</DEVICEID>
+        <DMIVERSION>2.2</DMIVERSION>
+        <IPDISCOVER_VERSION>3</IPDISCOVER_VERSION>
+        <OCSFSERVER>my_ocs_com_server.domain.tld:80</OCSFSERVER>
+    </CONF>
+You can choose between 3 methods for sending inventory:     
 
 1. http: computer is connected to the network and is able to reach the Communication server with
-HTTP protocol **USED BY DEFAULT**.
+HTTP protocol *USED BY DEFAULT*.
 
 2. https: computer is connected to the network and is able to reach the Communication server with
 HTTPS protocol. You have to configure SSL on your OCS Server and copy the SSL certificate
@@ -142,38 +202,7 @@ Examples :
     ocsserver.domains.local
     https://w.x.y.z
     ocsserver.domains.local:1234
-    https://ocsserver.domains.local
-
-![Installation of Unix agent](../../img/Unix_agent_3.jpg)
-
-Choice to use or not apache auth, and possibility to define an administrative tag.
-
-![Installation of Unix agent](../../img/Unix_agent_4.jpg)
-
-Choice to create or not a cron task, definition and validation of agent files directory.
-
-![Installation of Unix agent](../../img/Unix_agent_5.jpg)
-
-Choice to remove or not the old agent version.
-
-![Installation of Unix agent](../../img/Unix_agent_6.jpg)
-
-Choice to use or not software deployment feature, SNMP scans feature and send an inventory.
-
-![Installation of Unix agent](../../img/Unix_agent_7.jpg)
-
-If Accountinfo file doesn't exist, it will be created, and the inventory will be sent to the server.
-
--![Installation of Unix agent](../../img/Unix_agent_8.jpg)
-
-Here is a sample configuration file for OCS Inventory NG Linux agent.
-
-    <CONF>
-        <DEVICEID>computer.domain.tld-2006-02-27-13-59-47</DEVICEID>
-        <DMIVERSION>2.2</DMIVERSION>
-        <IPDISCOVER_VERSION>3</IPDISCOVER_VERSION>
-        <OCSFSERVER>my_ocs_com_server.domain.tld:80</OCSFSERVER>
-    </CONF>
+    https://ocsserver.domains.local    
 
 **Figure 5 : Sample agent’s configuration file ocsinv.conf for a network connected computer.**
 
