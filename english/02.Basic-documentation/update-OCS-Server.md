@@ -3,12 +3,17 @@ The procces is mainly backup your configuration download the new version of OCS-
 
 
 ### Backup existing configuration
-##### You need to backup the following configuration files:
+You need to backup the following configuration files:
 1. Apache files:    
-*  ~/apache2/conf-available/z-ocsinventory-serve.conf
+* ~/apache2/conf-available/z-ocsinventory-serve.conf
 *  ~/apache2/conf-available/ocsinventory-resports.conf
 2. OCS configuration:
 * /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php
+
+If your scared about losing data then better backup your database, but theoretical this is not necessary.
+```
+mysqldump -u ocs -p --all-databases > ocsdbbackup.sql
+```
 
 ### update the existing installation
 Download the last release of OCS from the [Website](https://www.ocsinventory-ng.org/en/download-en/) or here from github.    
@@ -35,4 +40,4 @@ service apache2 restart
 sometimes is it required to update the database via the webconsole 
 
 
-That´s all!
+## That´s all!
