@@ -1,5 +1,5 @@
 ## Update an existing OCS Server installation
-The procces is mainly backup your configuration download the new version of OCS-Server use the setup.sh and restore the backed up configuration.
+The process is mainly backup your configuration download the new version of OCS-Server use the setup.sh and restore the backed up configuration.
 
 
 ### Backup existing configuration
@@ -15,7 +15,7 @@ If your scared about losing data then better backup your database, but theoretic
 mysqldump -u ocs -p --all-databases > ocsdbbackup.sql
 ```
 
-### update the existing installation
+### Update the existing installation
 Download the last release of OCS from the [Website](https://www.ocsinventory-ng.org/en/download-en/) or here from github.    
 Unpack it
 ```
@@ -29,7 +29,7 @@ sh setup.sh
 *Note: Installer writes a log file “ocs_server_setup.log” in the same directory. If you encounter any error, please refer to this log for detailed error message.*
 
 
-### restore backed up configuration and start
+### Restore backed up configuration and start
 restore the backed up files from above 
 
 restart apache webserver
