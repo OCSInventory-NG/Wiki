@@ -3,6 +3,10 @@ The process is mainly backup your configuration download the new version of OCS-
 
 
 ### Backup existing configuration
+Before you start it´s better to stop the webserver that nobody could do changes after you backed up the files.
+```
+service apache2 stop
+```
 You need to backup the following configuration files:
 1. Apache files:    
 * ~/apache2/conf-available/z-ocsinventory-serve.conf
@@ -10,9 +14,17 @@ You need to backup the following configuration files:
 2. OCS configuration:
 * /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php
 
+it´s recommended to create a folder where you store all backed up files
+```
+mkdir /home/backup_ocs
+```
+then copy the files to the backup folder
+```
+cp /etc/apache2/conf-available/z-ocsinventory-server.conf /etc/apache2/conf-available/ocsinventory-reports.conf /home/backup_ocs/ && cp /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php /home/backup_ocs/
+```
 If your scared about losing data then better backup your database, but theoretical this is not necessary.
 ```
-mysqldump -u ocs -p --all-databases > ocsdbbackup.sql
+mysqldump -u ocs -p --all-databases > /home/backup_ocs/ocsdbbackup.sql
 ```
 
 ### Update the existing installation
@@ -31,13 +43,20 @@ sh setup.sh
 
 ### Restore backed up configuration and start
 restore the backed up files from above 
-
-restart apache webserver
 ```
-service apache2 restart
+cd /home/backup_ocs
+cp ocsinventory-reports.conf z-ocsinventory-server.conf /etc/apache2/conf-available/ && cp dbconfig.inc.php /usr/share/ocsinventory-reports/ocsreports/
+```
+don´t forget to delete the install.php in the install dir
+```
+rm /usr/share/ocsinventory-reports/ocsreports/install.php
+```
+start apache webserver
+```
+service apache2 start
 ```
 
-sometimes is it required to update the database via the webconsole 
+sometimes is it required to update the database via the webconsole, simply click update on the webconsole.
 
 
 ## That´s all!
