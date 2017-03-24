@@ -2,8 +2,14 @@
 The process is mainly backup your configuration download the new version of OCS-Server use the setup.sh and restore the backed up configuration.
 
 
+### Delete extisting plugins
+If you have plugins installed delete this plugins prior the update otherwise you might have problems with or after reinstall them.
+Go to the plugin manager and delete them you may also need delete the configuration in:    
+_/etc/ocsinventory-server/plugins_
+
 ### Backup existing configuration
 Before you start it´s better to stop the webserver that nobody could do changes after you backed up the files.
+
 ```
 service apache2 stop
 ```
