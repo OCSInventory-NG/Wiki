@@ -73,7 +73,7 @@ and to store data in database.
         * C:\Documents and Settings\All Users\Application Data\OCS Inventory NG\Agent for Windows 2000, XP et 2003.
         * C:\ProgramData\OCS Inventory NG\Agent for Windows Vista, 2008, Seven et 2008 R2.
 You have first to stop OCS service if OCS is installed as a service. Then, set Debug=2 to obtain the higher
- og level and save. Finally, restart OCS service, and send a new inventory.
+ log level and save. Finally, restart OCS service, and send a new inventory.
     * Unix/Linux : Use **--debug** and **--logfile** parameters to obtain a detailed log.
 Launch inventory with these options : _ocsinventory-agent --debug --logfile=/mon/path/log.txt_
 * Using server log :
