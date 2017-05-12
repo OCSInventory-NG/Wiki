@@ -34,7 +34,7 @@ favorite browser (Apache, php)**
 
 ### **Simplified installation of server**
 * Preconfigured XAMPP package for Windows
-* Parckage tar.gz with automatic install script
+* tar.gz package with automatic install script
 
 ### **Deployment tools of agents by the network**
 * [OCS Deployment Tool](../06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md) based on psexec
