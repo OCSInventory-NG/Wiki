@@ -1,5 +1,5 @@
-#Newbie documentation - What you should know
-##OCS Inventory NG in 5 lines, what is it ?
+# Newbie documentation - What you should know
+## OCS Inventory NG in 5 lines, what is it ?
 
 OCS Inventory NG or **Open Computer and Software Inventory Next Generation** is free software that enables
 users to automatically inventory their IT assets. OCS-NG collects information about the hardware and software
