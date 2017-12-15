@@ -1,7 +1,7 @@
 ## Update an existing OCS Server installation
 The process is mainly backup your configuration download the new version of OCS-Server use the setup.sh and restore the backed up configuration.
 
-[OCS update to 2.4 notes](https://github.com/scifire91/Wiki/blob/master/english/02.Basic-documentation/update-OCS-Server.md#OCS-Server-update-to-2-4)
+[OCS update to 2.4 notes](https://github.com/scifire91/Wiki/blob/update-how/english/02.Basic-documentation/update-OCS-Server.md#ocs-server-update-to-24)
 
 ### Delete extisting plugins
 If you have plugins installed delete this plugins prior the update otherwise you might have problems with or after reinstall them.
