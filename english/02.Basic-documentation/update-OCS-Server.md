@@ -1,6 +1,7 @@
 ## Update an existing OCS Server installation
 The process is mainly backup your configuration download the new version of OCS-Server use the setup.sh and restore the backed up configuration.
 
+[OCS update to 2.4 notes](https://github.com/scifire91/Wiki/blob/master/english/02.Basic-documentation/update-OCS-Server.md#OCS-Server-update-to-2-4)
 
 ### Delete extisting plugins
 If you have plugins installed delete this plugins prior the update otherwise you might have problems with or after reinstall them.
@@ -66,3 +67,20 @@ sometimes is it required to update the database via the webconsole, simply click
 
 
 ## That´s all!
+
+
+#### OCS Server update to 2.4
+
+For the new API feature we need the follwoing new Perl modules:
+* PERL module Mojolicious::Lite 
+* PERL module Switch 
+* PERL module Plack::Handler
+
+It´s better to install them before you update the server core     
+on Ubuntu you can install them via
+```
+sudo apt-get install libswitch-perl
+Cpan -i Mojolicious::Lite
+Cpan -i Plack::Handler
+```
+
