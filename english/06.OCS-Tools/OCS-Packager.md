@@ -57,7 +57,7 @@ The following window will appear:
 This entry is required !
 * On the **Certificate file** line, select your **cacert.pem** file.
 * The **other files** line allows additional files to be specified which will be copied to your install folder.
-* On **Command line options** line you should enter all the needed options for the Ocs Agent setup
+* On **![Command line options](../../english/06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md#windows-command-line-options)** line you should enter all the needed options for the Ocs Agent setup
 program (e.g. /server=http[s]://my_server/ocsinventory:8181 **/S**). Do not forget to specify the
 **/S** option for a silent installation.
 * The **Label** line will create a **label** file containing your user prompt. The first time
