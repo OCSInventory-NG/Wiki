@@ -45,20 +45,20 @@ We have to change two files: In the first (auth.php) we set the authentication m
 ### Changes of ~/backend/AUTH/auth.php
 We need to change the login option from local to ldap by comment this line out 
 
-`$list_methode=array(0=>"local.php");`
+`$list_methode=array(0=>"local.php");`       
 and the line below in        
-`$list_methode=array(0=>"ldap.php");`
+`$list_methode=array(0=>"ldap.php");`      
 
-It is also possible to use both, ldap and local authentication:            
-`$list_methode=array(0=>"ldap.php",1=>"local.php");`
+It is also possible to use both, ldap and local authentication:                
+`$list_methode=array(0=>"ldap.php",1=>"local.php");`    
 
 
 ### Changes of ~/backend/identity/identity.php
 We need to delegate the rights of the account also to ldap by commenting this line out
 
-`$list_methode=array(0=>"local.php");`
-and this line below in     
-`$list_methode=array(0=>"ldap.php");`
+`$list_methode=array(0=>"local.php");`      
+and this line below in      
+`$list_methode=array(0=>"ldap.php");`     
 
 If you use local and ldap authentication you need to use this line:
 
