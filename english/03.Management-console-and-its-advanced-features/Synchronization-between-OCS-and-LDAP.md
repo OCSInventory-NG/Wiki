@@ -24,7 +24,7 @@ Open the dropdown "Config" choose "Config" and then click on "LDAP configuration
 
 Here we have varius files to fill:
 + **CONEX_LDAP_SERVEUR:** Is the LDAP Server (ex .127.0.0.1 or ldpa.acme.com)
-+ **CONEX_ROOT_DN:** Is the user which is used to check login ?????
++ **CONEX_ROOT_DN:** Is the user which is used to check logins (attribute: ...)
 + **CONEX_ROOT_PW:** Password if the user above
 + **CONEX_LDAP_PORT:** LDAP conection Port (389 or 686 for SSL)
 + **CONEX_DN_BASE_LDAP:** Is the Base DN where Users which are able to login could be found
