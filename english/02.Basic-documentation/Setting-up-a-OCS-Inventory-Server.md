@@ -105,6 +105,12 @@ For example:`**
 
     /opt/lampp/bin/perl Makefile.PL
 
+**`Note: If you want to use IpDiscover and snmp features you need to install them package.`**
+
+**On Debian Stretch**
+
+   apt install nmap snmp
+
 ## Installing Administration console required PHP modules
 
 The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
@@ -227,7 +233,7 @@ configuration for specific modules. Generally, this directory is
 or
 
     /etc/apache/conf.d
-    
+
 
 
 If you are not using configuration directory, but having all configurations into Apache main configuration file,
@@ -393,6 +399,10 @@ Next, setup will check for required PERL modules
 * DBI version 1.40 or higher
 * DBD::Mysql version 2.9004 or higher
 * Net::IP version 1.21 or higher
+* Apache::DBI
+* Compress::Zlib
+* SOAP::Lite
+* Archive::Zip
 
 **`Warning: If any of these modules is missing, setup will abort.`**
 
@@ -414,8 +424,8 @@ Now, you can restart Apache web server for changes to take effect.
 or
 
     /etc/init.d/apache restart
-    
-   
+
+
 
 ## Configuring management server
 
@@ -543,211 +553,3 @@ Click on "Perform the update" button
 
 **`Note: Notice that installers says about how to log in to server after upgrade. Actually use
 your user/pass that you used before upgrade, especially if you removed/disabled user admin.`**
-
-# Under Windows Operating System
-
-We have chosen to package OCS inventory NG server for Windows as an integrated package containing
-all required components. As is, the 3 main components of Management server (database server,
-web communication server and web administration server) are installed on the same computer.
-
-OCS Inventory NG server 1.0 for Windows is based on ApacheFriends XAMPP version 1.7.7
-([ApacheFriends](http://www.apachefriends.org/index-en.html))
-which sets the following components up on a single computer:
-
-* Apache 2.2.17
-* MySQL 5.5.8 + PBXT engine(currently disabled)
-* PHP 5.3.5 + PEAR
-* XAMPP Control Panel 2.5.8
-* SQLite 2.8.17
-* SQLite 3.6.20
-* OpenSSL 0.9.8l
-* phpMyAdmin 3.3.9
-* ADOdb 5.11
-* Mercury Mail Transport System v4.72
-* FileZilla FTP Serveur 0.9.37
-* Webalizer 2.21-02
-* Perl 5.10.1
-* mod_perl 2.0.4
-* Xdebug 2.1.0rc1
-* Tomcat 7.0.3 (with mod_proxy_ajp as connector)
-
-**`Note: Even if all these components are installed, you will be able to choose the components
-you want to automatically start.`**
-
-## Installing management server
-
-**`Warning: You must have Administrator privileges to set OCS Inventory NG server up under Windows NT4,
-Windows 2000, Windows XP or Windows Server 2003.`**
-
-
-Download **[[OCSNG-Windows-Server-2.0.zip](http://launchpad.net/ocsinventory-windows-server/stable-2.0/2.0/+download/OCSNG-Windows-Server-2.0.zip)]**
-from OCS Inventory Web Site, unpack it and launch **OCSNG-Windows-Server-2.0.exe**.
-
-
-If XAMPP components (server and perl addon) are not already installed, Setup will prompt you that you have
-to set them up. Otherwise, Setup will automatically install OCS Inventory Server into XAMPP directories.
-
-
-Click **[ Next ]** button to start installation wizard.
-
-
-Click **[ Next ]** button and accept License agreement.
-
-
-Choose installation directory, by default **C:\Program Files\OCS Inventory NG**. You need 400 MB of
-free hard disk space if XAMPP components are not installed, otherwise, only 10MB are required.
-
-**`Note: When upgrading, you must ensure that Setup detects the folder including XAMPP directory.
-See `[`Upgrading management server`](Setting-up-a-OCS-Inventory-Server.md#upgrading-management-server-1)`.`**
-
-
-Then, you have to validate components to install. Only **OCS Inventory NG Server** is required, if XAMPP
-components are already installed.
-
-**`Note: OCS Inventory NG Server Setup now use standard XAMPP setup. So, it may be able to upgrade existing
-XAMPP installation. However, by default, Setup will _not_ upgrade XAMPP components.
-See `[`Upgrading management server`](Setting-up-a-OCS-Inventory-Server.md#upgrading-management-server-1)`.`**
-
-
-Next, you have to choose the program group name in start menu, where OCS Inventory NG icons
-will be created and then click on **[ Install ]** button to start installation.
-
-If XAMPP setup selected, Setup will first launch XAMPP 1.7.7 setup in silent mode. This will create
-a folder _xampp_ under destination folder, and a program group _Apache Friends_ in start menu.
-
-You will be prompted to start XAMPP Control Panel. Please, answer **No**.
-
-Then, it will launch XAMPP perl addon setup in silent mode.
-
-Last, Setup will install OCS Inventory NG Server files, configure XAMPP Apache and MySQL servers for
-OCS Inventory NG Server, and automatically start MySQL and Apache server.
-
-At the end of the process, Setup will launch your default browser to start OCS Inventory NG Server configuration
-(see [Configuring management server](Setting-up-a-OCS-Inventory-Server.md#configuring-management-server-1)).
-
-
-Setup is now finished and you can click **[ Finished ]** button.
-
-**`Note: OCS Inventory NG setup for Windows has installed XAMPP components under xampp subfolder of
-selected installation directory. Apache web server document root directory is located in the
-htdocs sub directory of XAMPP. This is here that ocsreports administration console files are installed.`**
-
-_Communication server files are now located into PERL standard libraries._
-
-_Apache logs (access.log, error.log, phperror.log) and communication server logs_
-(ocsinventory-NG.log) _are located in the sub-directory_ Apache\Logs”.
-
-## Configuring management server
-
-Open your favorite web browser on the server and point it on URL
-[http://localhost/ocsreports](http://localhost/ocsreports) to connect the Administration server.
-
-You will be prompted for information to connect to MySQL database server with a user who has the ability
-to create database, tables, indexes, etc:
-
-* MySQL user name, root by default
-* MySQL user password (empty password by default)
-* MySQL hostname, localhost
-
-
-Setup actions :
-
-* Create **ocsweb** database, and will add MySQL user **ocs** with password **ocs**.
-* Grant to user **ocs** privileges _Select | Insert | Update | Delete | Create | Drop | References | Index
-| Alter | Create temp | Lock_ on database **ocsweb**.
-
-**`Note: This user will be used by Administration server and Communication server to connect to the database.
-If you do not wish to use default MySQL user ocs with ocs password, you must update
-in the file dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login, and/or PSWD_BASE,
-which MySQL user password.
-Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](../../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
-for all information about modifications of configuration files.`**
-
-To secure you server, refer to
-[Secure your OCS Inventory NG Server](../../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
-documentation.
-
-If you don't want to secure your OCS Inventory Server, you have to deactivate the Warning message
-in user profile. Procedure is in the same documentation page.
-
-
-**`Warning: We recommend you to read this documentation and follow the procedure.`**
-
-
-
-Click on the following link : "Click here to enter OCS-NG GUI"
-
-
-Click on "Perform the update" button
-
-
-Configuration of OCS Inventory Server is now finished.
-
-
-Default Administrator login is **admin** as user and **admin** as password.
-
-## Updating security of XAMPP components.
-
-**`Warning: By default, XAMPP is set up without security. MySQL root account do not have password, XAMPP
-web configuration interface is accessible by everybody without authentication… You must update this.`**
-
-
-Open your favorite web browser on the server and point it on URL
-[http://localhost/xampp/splash.php](http://localhost/xampp/splash.php)
-to connect the XAMPP configuration GUI.
-
-Click on the language you want to access the XAMPP main configuration menu.
-
-Then, click **[ Security ]** on the left menu. As you will see, all is marked as unsecure or unknown
-for non started components.
-
-
-You can change this by clicking the link
-[http://localhost/security/xamppsecurity.php](http://localhost/security/xamppsecurity.php).
-
-First of all, you must fill in MySQL root password and select phpMyAdmin authentication method.
-
-**`Note: You can change this at any time by visiting the security web page of XAMPP server.`**
-
-Validate your changes by clicking **[ Password changing ]** button.
-
-You can then protect the access to XAMPP configuration menu by filling in user and password for
-XAMPP DIRECTORY PROTECTION. As is, this user and password will be asked to connect to XAMPP
-configuration menu through a web browser.
-
-Validate your changes by clicking _[ Make safe the XAMPP directory ]_ button.
-
-
-**`Note: Do not enable PHP safe mode, as you may encounter errors on Administration console.`**
-
-
-Finally, you must restart Apache and MySQL services for changes to take effect.
-
-Open XAMPP Control Panel from system tray or from OCS Inventory NG start menu folder,
-click **[ Stop ]** button for Apache, then **[ Start ]** button and do the same for MySQL.
-
-You can now reselect **[ Security ]** on left side menu to see that all started services are now secured.
-
-
-## Upgrading management server
-
-To upgrade web communication server and administration console, you must follow instructions
-as described in the section
-[Installing management server](Setting-up-a-OCS-Inventory-Server.md#installing-management-server-1).
-Just ensure that setup detects old installation folder correctly.
-
-You don’t need to update XAMPP components. Setup, by default, will not select XAMPP components install.
-If you do so, **backup your databases and web sites if you want to also upgrade XAMPP components !**
-See the section
-[Backup/restore of OCS Inventory NG database](../../08.Extras/Backup-restore-of-OCS-Inventory-NG-database.md).
-
-At the end of the process, Setup will launch your default browser to run the upgrade process to ensure
-that your database schema and default data are up to date. Upgrade process looks like configuration
-of management server as described in the section
-[Configuring management server](Setting-up-a-OCS-Inventory-Server.md#configuring_management_server).
-
-**`Note: You will see warning regarding max size of package you will be able to deploy.
-Please, see the section
-`[`Uploads size for package deployment`](../../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
-.) to configure your server to match your need.`**
