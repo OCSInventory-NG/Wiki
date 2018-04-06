@@ -351,7 +351,7 @@ main configuration file, replacing existing configuration.`**
 
 # Be careful: you must restart apache to make settings taking effects
 
-  # Configure engine to use the settings from this file  
+  # Configure engine to use the settings from this file
   PerlSetEnv OCS_OPT_OPTIONS_NOT_OVERLOADED 0
 
   # Try to use other compress algorithm than raw zlib
@@ -384,7 +384,7 @@ main configuration file, replacing existing configuration.`**
 # ===== INVENTORY SETTINGS =====
 
   # Specify the validity of inventory data
-  PerlSetEnv OCS_OPT_FREQUENCY 0  
+  PerlSetEnv OCS_OPT_FREQUENCY 0
   # Configure engine to update inventory regarding to CHECKSUM agent value (lower DB backend load)
   PerlSetEnv OCS_OPT_INVENTORY_DIFF 1
   # Make engine consider an inventory as a transaction (lower concurency, better disk usage)
