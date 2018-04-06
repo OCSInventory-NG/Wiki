@@ -281,19 +281,20 @@ to the end of Apache main configuration file.
 You must manually copy content of the ocsinventory.conf.local file created by setup into apache
 main configuration file, replacing existing configuration.`**
 
-################################################################################
-#
-# OCS Inventory NG Communication Server Perl Module Setup
-#
-# Copyleft 2006 Pascal DANEK
-# Web: http://www.ocsinventory-ng.org
-#
-# This code is open source and may be copied and modified as long as the source
-# code is always made freely available.
-# Please refer to the General Public Licence http://www.gnu.org/ or Licence.txt
-################################################################################
+```
+  ################################################################################
+  #
+  # OCS Inventory NG Communication Server Perl Module Setup
+  #
+  # Copyleft 2006 Pascal DANEK
+  # Web: http://www.ocsinventory-ng.org
+  #
+  # This code is open source and may be copied and modified as long as the source
+  # code is always made freely available.
+  # Please refer to the General Public Licence http://www.gnu.org/ or Licence.txt
+  ################################################################################
 
-<IfModule mod_perl.c>
+  <IfModule mod_perl.c>
 
   # Which version of mod_perl we are using
   # For mod_perl <= 1.999_21, replace 2 by 1
@@ -343,13 +344,13 @@ main configuration file, replacing existing configuration.`**
   PerlAddVar OCS_OPT_TRUSTED_IP 127.0.0.1
   #PerlAddVar OCS_OPT_TRUSTED_IP XXX.XXX.XXX.XXX
 
-# ===== WEB SERVICE (SOAP) SETTINGS =====
+  # ===== WEB SERVICE (SOAP) SETTINGS =====
 
   PerlSetEnv OCS_OPT_WEB_SERVICE_ENABLED 0
   PerlSetEnv OCS_OPT_WEB_SERVICE_RESULTS_LIMIT 100
   # PerlSetEnv OCS_OPT_WEB_SERVICE_PRIV_MODS_CONF "WEBSERV_PRIV_MOD_CONF_FILE"
 
-# Be careful: you must restart apache to make settings taking effects
+  # Be careful: you must restart apache to make settings taking effects
 
   # Configure engine to use the settings from this file
   PerlSetEnv OCS_OPT_OPTIONS_NOT_OVERLOADED 0
@@ -358,13 +359,13 @@ main configuration file, replacing existing configuration.`**
   # GUNZIP and clear XML are supported
   PerlSetEnv OCS_OPT_COMPRESS_TRY_OTHERS 1
 
-##############################################################
-# ===== OPTIONS BELOW ARE OVERLOADED IF YOU USE OCS GUI =====#
-##############################################################
+  ##############################################################
+  # ===== OPTIONS BELOW ARE OVERLOADED IF YOU USE OCS GUI =====#
+  ##############################################################
 
-# NOTE: IF YOU WANT TO USE THIS CONFIG FILE INSTEAD, set OCS_OPT_OPTIONS_NOT_OVERLOADED to '1'
+  # NOTE: IF YOU WANT TO USE THIS CONFIG FILE INSTEAD, set OCS_OPT_OPTIONS_NOT_OVERLOADED to '1'
 
-# ===== MAIN SETTINGS =====
+  # ===== MAIN SETTINGS =====
 
   # Enable engine logs (see LOGPATH setting)
   PerlSetEnv OCS_OPT_LOGLEVEL 0
@@ -381,7 +382,7 @@ main configuration file, replacing existing configuration.`**
   # Enable the history tracking system (useful for external data synchronisation
   PerlSetEnv OCS_OPT_TRACE_DELETED 0
 
-# ===== INVENTORY SETTINGS =====
+  # ===== INVENTORY SETTINGS =====
 
   # Specify the validity of inventory data
   PerlSetEnv OCS_OPT_FREQUENCY 0
@@ -398,7 +399,7 @@ main configuration file, replacing existing configuration.`**
   # Enable you to keep trace of every elements encountered in db life
   PerlSetEnv OCS_OPT_INVENTORY_CACHE_KEEP 1
 
-# ===== SOFTWARES DEPLOYMENT SETTINGS =====
+  # ===== SOFTWARES DEPLOYMENT SETTINGS =====
 
   # Enable this feature
   PerlSetEnv OCS_OPT_DOWNLOAD 0
@@ -421,7 +422,7 @@ main configuration file, replacing existing configuration.`**
   PerlSetEnv OCS_OPT_DEPLOY 0
   # Enable the softwares deployment capacity (bandwidth control)
 
-# ===== GROUPS SETTINGS =====
+  # ===== GROUPS SETTINGS =====
 
   # Enable the computer\s groups feature
   PerlSetEnv OCS_OPT_ENABLE_GROUPS 1
@@ -430,7 +431,7 @@ main configuration file, replacing existing configuration.`**
   # Specify the validity of computer's groups (default: compute it once a day - see offset)
   PerlSetEnv OCS_OPT_GROUPS_CACHE_REVALIDATE 43200
 
-# ===== IPDISCOVER SETTINGS =====
+  # ===== IPDISCOVER SETTINGS =====
 
   # Specify how much agent per LAN will discovered connected peripherals (0 to disable)
   PerlSetEnv OCS_OPT_IPDISCOVER 2
@@ -445,7 +446,7 @@ main configuration file, replacing existing configuration.`**
   # Enable groups for ipdiscover (for example, you might want to prevent some groups to be ipdiscover agents)
   PerlSetEnv OCS_OPT_IPDISCOVER_USE_GROUPS 1
 
-# ===== INVENTORY FILES MAPPING SETTINGS =====
+  # ===== INVENTORY FILES MAPPING SETTINGS =====
 
   # Use with ocsinventory-injector, enable the multi entities feature
   PerlSetEnv OCS_OPT_GENERATE_OCS_FILES 0
@@ -456,7 +457,7 @@ main configuration file, replacing existing configuration.`**
   # Path to ocs files directory (must be writeable)
   PerlSetEnv OCS_OPT_OCS_FILES_PATH /tmp
 
-# ===== FILTER SETTINGS =====
+  # ===== FILTER SETTINGS =====
 
   # Enable prolog filter stack
   PerlSetEnv OCS_OPT_PROLOG_FILTER_ON 0
@@ -469,7 +470,7 @@ main configuration file, replacing existing configuration.`**
   # Enable inventory filter stack
   PerlSetEnv OCS_OPT_INVENTORY_FILTER_ON 0
 
-# ===== DATA FILTER =====
+  # ===== DATA FILTER =====
 
   #Enable the dat filtering capacity
   PerlSetEnv OCS_OPT_DATA_FILTER 0
@@ -479,12 +480,12 @@ main configuration file, replacing existing configuration.`**
   #PerlAddVar OCS_OPT_DATA_TO_FILTER USERID
 
 
-# ===== REGISTRY SETTINGS =====
+  # ===== REGISTRY SETTINGS =====
 
   # Enable the registry capacity
   PerlSetEnv OCS_OPT_REGISTRY 1
 
-# ===== SNMP SETTINGS =====
+  # ===== SNMP SETTINGS =====
 
   # Enable the SNMP capacity
   PerlSetEnv OCS_OPT_SNMP 0
@@ -493,8 +494,8 @@ main configuration file, replacing existing configuration.`**
   # Display error message about agent https communication in logfile
   PerlSetEnv OCS_OPT_SNMP_PRINT_HTTPS_ERROR 1
 
-# ===== SESSION SETTINGS =====
-# Not yet in GUI
+  # ===== SESSION SETTINGS =====
+  # Not yet in GUI
 
   # Validity of a session (prolog=>postinventory)
   PerlSetEnv OCS_OPT_SESSION_VALIDITY_TIME 600
@@ -504,31 +505,31 @@ main configuration file, replacing existing configuration.`**
   #( Refuse "forced" inventory)
   PerlSetEnv OCS_OPT_INVENTORY_SESSION_ONLY 0
 
-# ===== TAG =====
+  # ===== TAG =====
 
   # The default behavior of the server is to ignore TAG changes from the
   # agent.
   PerlSetEnv OCS_OPT_ACCEPT_TAG_UPDATE_FROM_CLIENT 0
 
-# ===== EXTERNAL USERAGENTS =====
+  # ===== EXTERNAL USERAGENTS =====
 
   #Path for external useragents reference file
   #!! WARNING !! : external agents may not be supported by OCS NG Community !
   #PerlSetEnv OCS_OPT_EXT_USERAGENTS_FILE_PATH /tmp/yourfile.txt
 
-# ===== PLUGINS =====
+  # ===== PLUGINS =====
 
   PerlSetEnv OCS_PLUGINS_PERL_DIR "/etc/ocsinventory-server/perl"
   PerlSetEnv OCS_PLUGINS_CONF_DIR "/etc/ocsinventory-server/plugins"
 
-# ===== DEPRECATED =====
+  # ===== DEPRECATED =====
 
   # Set the proxy cache validity in http headers when sending a file
   PerlSetEnv OCS_OPT_PROXY_REVALIDATE_DELAY 3600
   # Deprecated
   PerlSetEnv OCS_OPT_UPDATE 0
 
-############ DO NOT MODIFY BELOW ! #######################
+  ############ DO NOT MODIFY BELOW ! #######################
 
   # External modules
   PerlModule Apache::DBI
@@ -638,7 +639,7 @@ main configuration file, replacing existing configuration.`**
 	    </IfModule>
   </location>
 </IfModule>
-
+```
 **Figure 2: Apache configuration sample file**
 
 Communication server installation is now finished. You will be prompted to set Administration console up.
