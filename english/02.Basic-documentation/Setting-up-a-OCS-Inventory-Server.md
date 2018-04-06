@@ -38,6 +38,9 @@ We assume that you have:
     * Mod_php version 4.3.2 or higher.
 * PHP 4.3.2 or higher, with ZIP and GD support enabled.
     * php_curl
+    * php_mbstring
+    * php_soap
+    * php_xml
 * PERL 5.6 or higher.
     * Perl module XML::Simple version 2.12 or higher.
     * Perl module Compress::Zlib version 1.33 or higher.
@@ -46,6 +49,10 @@ We assume that you have:
     * Perl module Apache::DBI version 0.93 or higher.
     * Perl module Net::IP version 1.21 or higher.
     * Perl module SOAP::Lite version 0.66 or higher (optional)
+    * Perl module Mojolicious::Lite
+    * Perl module Plack::Handler
+    * Perl module Archive::Zip
+    * Perl module YAML
 * MySQL version 4.1.0 or higher with InnoDB engine active.
 * Make utility such as GNU make.
 
@@ -65,36 +72,18 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
 
 **On Fedora/Redhat like Linux**, you can use “yum” to set required modules up:
 
-    yum install perl-XML-Simple
-    yum install perl-Compress-Zlib
-    yum install perl-DBI
-    yum install perl-DBD-MySQL
-    yum install perl-Apache-DBI
-    yum install perl-Net-IP
-    yum install perl-SOAP-Lite
-    yum install perl-Archive-Zip
+    yum install perl-XML-Simple perl-Compress-Zlib perl-DBI perl-DBD-MySQL perl-Apache-DBI perl-Net-IP perl-SOAP-Lite perl-Archive-ZIp
 
-**On Debian like Linux**, you can use “apt-get” to set required modules up:
+**On Debian Stretch like Linux**, you can use “apt” to set required modules up:
 
-    apt-get install libxml-simple-perl
-    apt-get install libcompress-zlib-perl
-    apt-get install libdbi-perl
-    apt-get install libdbd-mysql-perl
-    apt-get install libapache-dbi-perl
-    apt-get install libnet-ip-perl
-    apt-get install libsoap-lite-perl
-    apt-get install libarchive-zip-perl
-    cpan -i XML::Entities
+    apt install libxml-simple-perl libcompress-zlib-perl libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl
+    cpan install XML::Entities
 
 **On Gentoo like Linux**, you can use "emerge" to get required modules set up:
 
-    emerge dev-perl/XML-Simple
-    emerge perl-core/IO-Compress
-    emerge dev-perl/Apache-DBI
-    emerge dev-perl/Net-IP
-    emerge dev-perl/SOAP-Lite
-    emerge app-portage/g-cpan
+    emerge dev-perl/XML-Simple perl-core/IO-Compress dev-perl/Apache-DBI dev-perl/Net-IP dev-perl/SOAP-Lite app-portage/g-cpan
     g-cpan -i XML::Entities
+
 
 If a precompiled package is not available for your distribution, you can download the package source
 from http://search.cpan.org and build it on your system (make and C compiler must be available). For example:
@@ -129,9 +118,9 @@ For later Fedora installations 7.x+ :
 
     yum install php-common
 
-On Debian like Linux, you can use “apt-get” to set it up:
+On Debian Stretch like Linux, you can use “apt” to set it up:
 
-    apt-get install libphp-pclzip
+    apt install libphp-pclzip
 
 Otherwise, the best way to do this is to use PHP PECL ZIP package. You must have PHP development libraries
 (php-devel package under RedHat or Fedora Core, under Linux Debian or Ubuntu) in order to have **phpize** command.
@@ -159,9 +148,9 @@ On Fedora/Redhat like Linux, you can use “yum” to set it up:
 
     yum install php-gd
 
-On Debian like Linux, you can use “apt-get” to set it up:
+On Debian Stretch like Linux, you can use “apt” to set it up:
 
-    apt-get install php5-gd
+    apt install php5-gd
 
 ## Installing management server
 
@@ -170,12 +159,12 @@ On Debian like Linux, you can use “apt-get” to set it up:
 **`Note: Ensure MySQL InnoDB engine is activated on your database server.
 Open my.cnf and ensure there is no line “skip-innodb” or this line is commented (begins with ‘#’).`**
 
-Download latest version of server tarball “OCSNG_UNIX_SERVER-2.1.x.tar.gz” from OCS Inventory Web Site.
+Download latest version of server tarball “OCSNG_UNIX_SERVER-2.4.x.tar.gz” from OCS Inventory Web Site.
 
 Unpack it.
 
-    tar –xvzf OCSNG_UNIX_SERVER-2.1.x.tar.gz
-    cd OCSNG_UNIX_SERVER-2.1.x
+    tar –xvzf OCSNG_UNIX_SERVER-2.4.x.tar.gz
+    cd OCSNG_UNIX_SERVER-2.4.x
 
 Run “setup.sh” installer. During the installer, default choice is presented between [].
 For example, [y]/n means that “y” (yes) is the default choice, and “n” (no) is the other choice.
