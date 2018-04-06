@@ -8,58 +8,68 @@ see how to delegate the connection to the OCSInventory NG GUI to LDAP.
 `[`http://doc.ubuntu-fr.org/openldap-server`](http://doc.ubuntu-fr.org/openldap-server)`
 and we kept the default configuration.`**
 
-## Connection to OCS Inventory NG management console with administrator account
+## Preperations
+For the LDAP connection we need the php_ldap module:
+``` 
+apt install php-ldap
+```
+For debian based unix
 
-Click on **LDAP configuration** tab.
+Of course we need a administrator account to configure stuff.
 
-![LDAP configuration tab](../../img/server/reports/ldap_1.png)
+**_Important: You have to do the configuration in the web gui before you do the changes in the config files!_**
 
-First configuration fields concern the way to connect to the LDAP.
+## Configuration options in web gui
+Open the dropdown "Config" choose "Config" and then click on "LDAP configuration".
 
-![LDAP connection](../../img/server/reports/ldap_2.png)
+Here we have varius files to fill:
++ **CONEX_LDAP_SERVEUR:** Is the LDAP Server (ex .127.0.0.1 or ldpa.acme.com)
++ **CONEX_ROOT_DN:** Is the user which is used to check logins (attribute: ...)
++ **CONEX_ROOT_PW:** Password if the user above
++ **CONEX_LDAP_PORT:** LDAP conection Port (389 or 686 for SSL)
++ **CONEX_DN_BASE_LDAP:** Is the Base DN where Users which are able to login could be found
++ **CONEX_LOGIN_FIELD:** The attribute with which a user logs in (ex. sAMAccountName or uid)
++ **CONEX_LDAP_PROTOCOL_VERSION:** Protocol version number (3 for Active Directory)
++ **CONEX_LDAP_CHECK_DEFAULT_ROLE:** Choose a default role from dropdown which all users have expect the one from Field check
 
-For our exemple :
+Currently we can seperate users authenticated with ldap through three options: Field1, Field2 and default role. With the options below we can use an attribute to assigen the users to a differnt group than the default group.
++ **CONEX_LDAP_CHECK_FIELD1_NAME:** An attribute which has every user (ex. department)
++ **CONEX_LDAP_CHECK_FIELD1_VALUE:** A value of the attribute above 
++ **CONEX_LDAP_CHECK_FIELD1_ROLE:** Choose a role from dropdown
 
-* database is on local
-* administrator account is **admin**
-* password admin is **secret**
-* database listen on defaut port
-* login connection will be based on the uid field
 
-The remaining configuration fields concern rights of the user on administration console of OCS Inventory NG.
+## Modification of configurations in file system
+Typical the files are stored under: ```/usr/share/ocsinventory-reports/ocsreports/```
+We have to change two files: In the first (auth.php) we set the authentication method and in the other (identity.php) we define that the user rights (role) are also synchronised with ldap.
 
-![User's rights](../../img/server/reports/ldap_3.png)
+### Changes of ~/backend/AUTH/auth.php
+We need to change the login option from local to ldap by comment this line out 
 
-For our exemple :
+`$list_methode=array(0=>"local.php");`       
+and the line below in        
+`$list_methode=array(0=>"ldap.php");`      
 
-* if the user whitch connects through the LDAP to title fiels to System Administrator,
-it will automatically Super Administrator rights profile.
-* if the value of this field is Employee, it has the rights of the Local Administrator profile.
-* in other cases, LDAP users will have no OCS profile assigned
+It is also possible to use both, ldap and local authentication:                
+`$list_methode=array(0=>"ldap.php",1=>"local.php");`    
 
-It only remains to modify the connection method to the administration console of OCS Inventory NG.
-To do this, you will have to edit two files in the directory / ocsreports.
 
-## Modification of /backend/AUTH/auth.php file
+### Changes of ~/backend/identity/identity.php
+We need to delegate the rights of the account also to ldap by commenting this line out
 
-![auth.php](../../img/server/reports/ldap_4.jpg)
+`$list_methode=array(0=>"local.php");`      
+and this line below in      
+`$list_methode=array(0=>"ldap.php");`     
 
-For this file, several options :
+If you use local and ldap authentication you need to use this line:
 
-Modify the connection type to have only LDAP authentication. For this, comment the line :
+`$list_methode=array(0=>"ldap.php",1=>"local.php");`
 
-    $list_methode=array(0=>"local.php");
+In this case, rights will be retrieve in the LDAP, and will be completed by those found locally.
 
-and uncomment bottom line
-
-    $list_methode=array(0=>"ldap.php");
-
-By cons, if you want to couple the LDAP connection to standard connection (mysql database ocsweb),
-you have to modify the line as this :
-
-    $list_methode=array(0=>"ldap.php",1=>"local.php");
 
 ## Modification of connection form
+Changes need to be done in ~/backend/AUTH/auth.php
+It is possble to change the connction form from the classic html site to a browser query
 
 If you don't modify the line
 
@@ -80,45 +90,3 @@ the request for _username / password_ will be in this form
 **`Note: In this case, the choice of language will no longer directly available.
 You will need to choose it and freeze it in the var.php file.`**
 
-## Modification of backend/identity/identity.php file
-
-![modification of auth.php](../../img/server/reports/ldap_7.jpg)
-
-This file allow to define rights that the account logged will have into the administration console of
-OCS Inventory NG. In order to delegate those rights to a schedule base, in our case an LDAP,
-you have to change the line
-
-    $list_methode=array(0=>"local.php");
-
-by
-
-    $list_methode=array(0=>"ldap.php");
-
-It is also possible to keep the 2 ways to connect to the administration console by changing the line
-
-    $list_methode=array(0=>"ldap.php",1=>"local.php");
-
-In this case, rights will be retrieve in the LDAP, and will be completed by those found locally.
-
-## Exemple & practice
-
-Based on the LDAP database created at the beginning, and having made changes outlined in
-preceding paragraphs, so we can connect with the user **john/password**.
-
-![john connection](../../img/server/reports/ldap_8.png)
-
-On connection, he will have automatically rights of **Super administrator** profile.
-
-His account will be created directly in the _ocsweb_ database LDAP information. His Password will
-not be stored.
-
-![users](../../img/server/reports/ldap_9.png)
-
-However, the user **georgess**, may well identify but can not connect directly. Indeed, we have assigned by
-default a **Local Administrator** profile, which has a limited view of the park of machines.
-So, after the connection of that user, it will have the following message:
-
-![users](../../img/server/reports/ldap_9.png)
-
-For that user can access the administration console of OCS Inventory NG, it will wait a
-**Super Administrator** gives it access to TAG witch interested it.
