@@ -670,7 +670,7 @@ If everything is OK, setup will install Administration console into the “ocsre
 * Copy files into /ocsreports directory.
 * Fix directories and files permissions to allow Apache daemon reading and writing to required directories
 (write access is required in /ocsreports, /ocsreports/ipd and /download, cf § 11.4 [Files and directories
-permissions under Linux](../../08.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
+permissions under Linux](../../english/08.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
 * Configure PERL script ipdiscover-util.pl to access database and install it.
 
 
@@ -707,7 +707,7 @@ Otherwise, you can rerun configuration process by browsing
 URL (this must be used when upgrading OCS Inventory management server).
 
 **`Note: You will see warning regarding max size of package you will be able to deploy. Please, see
-`[`Uploads size for package deployment`](../../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
+`[`Uploads size for package deployment`](../../english/08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
 to configure your server to match your need.`**
 
 ![Installation's page of ocsreports](../../img/server/reports/install/installation_ocsreports_1.png)
@@ -730,11 +730,11 @@ If you do not wish to use default MySQL user ocs with ocs password, you must upd
 dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login,
 and/or PSWD_BASE, which MySQL user password.
 Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](../../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
+Refer to `[`Secure your OCS Inventory NG Server`](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
 for all information about modifications of configuration files.`**
 
 To secure you server, refer to
-[Secure your OCS Inventory NG Server](../../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
+[Secure your OCS Inventory NG Server](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 documentation.
 
 If you don't want to secure your OCS Inventory Server, you have to desactivate Warning message in user profile.
