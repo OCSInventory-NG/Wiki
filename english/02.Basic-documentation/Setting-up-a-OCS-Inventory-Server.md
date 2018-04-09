@@ -751,8 +751,6 @@ Click on the following link : "Click here to enter OCS-NG GUI"
 
 Click on "Perform the update" button
 
-![Update DB OCS Inventory done](../../img/ocs-installation-update-db-2-2-finish.png)
-
 Just point your browser to the URL
 [http://administration_server/ocsreports](http://administration_server/ocsreports)
 and login in with **admin** as user and **admin** as password.
