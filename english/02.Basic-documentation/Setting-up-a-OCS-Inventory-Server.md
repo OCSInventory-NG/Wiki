@@ -791,22 +791,12 @@ Upgrade process looks like configuration of management server as described in Co
 **`Note: You will see warning regarding max size of package you will be able to deploy. Please,
 see Uploads size for package deployment.) to configure your server to match your needs.`**
 
-![Installation's page of ocsreports](../../img/ocs-installation-db-init.png)
-
 Fill in MySQL administrator name (usually root) and password, and MySQL database server address
 and click on **[ Send ]** button.
 
-
-![Installation of ocsreports](../../img/ocs-installation-finish.png)
-
 Click on the following link : "Click here to enter OCS-NG GUI"
 
-![Update DB OCS Inventory](../../img/ocs-installation-update-db-2-2.png)
-
 Click on "Perform the update" button
-
-![Update DB OCS Inventory done](../../img/ocs-installation-update-db-2-2-finish.png)
-
 
 **`Note: Notice that installers says about how to log in to server after upgrade. Actually use
 your user/pass that you used before upgrade, especially if you removed/disabled user admin.`**
