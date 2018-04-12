@@ -53,6 +53,7 @@ We assume that you have:
     * Perl module Plack::Handler
     * Perl module Archive::Zip
     * Perl module YAML
+    * Perl module XML::Entities
 * MySQL version 4.1.0 or higher with InnoDB engine active.
 * Make utility such as GNU make.
 
@@ -70,9 +71,16 @@ It acts as an Apache module which handles HTTP OCS Inventory agents' requests to
 It is better for system integrity to use your distribution's precompiled packages when they are available.
 Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`.`**
 
-**On Fedora/Redhat like Linux**, you can use “yum” to set required modules up:
+**`Note: On Fedore/Redhat/Centos 7 the package " Apache DBI "wasn't in the repo EPEL you can find the rpm `[`here`](https://centos.pkgs.org/7/epmel-x86_64/perl-Apache-DBI-1.12-2.el7.noarch.rpm.html)`.`**
 
-    yum install perl-XML-Simple perl-Compress-Zlib perl-DBI perl-DBD-MySQL perl-Apache-DBI perl-Net-IP perl-SOAP-Lite perl-Archive-ZIp
+**On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to set required modules up:
+
+    yum install mod_perl mod_php
+    yum install php-mbstring php-soap php-xml
+    yum install perl-XML-Simple perl-IO-Compress perl-DBI perl-DBD-MySQL perl-Net-IP perl-SOAP-Lite perl-Archive-Zip perl-YAML perl-Plack perl-Mojolicious perl-XML-Entities perl-Switch
+    yum install CPAN
+    cpan install Mojolicious::Lite
+
 
 **On Debian Stretch like Linux**, you can use “apt” to set required modules up:
 
@@ -107,16 +115,21 @@ For example:`**
 
 **`Note: If you want to use IpDiscover and snmp features you need to install them package.`**
 
+**On Fedora/Redhat/Centos 7**
+
+    yum install net-snmp net-snmp-utils
+    yum install nmap
+
 **On Debian Stretch**
 
-   apt install nmap snmp
+    apt install nmap snmp
 
 ## Installing Administration console required PHP modules
 
 The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
 for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 
-On Fedora/Redhat like Linux, you can use “yum” to install PHP Zip support:
+On Fedora/Redhat/Centos like Linux, you can use “yum” to install PHP Zip support:
 
     yum install php-pecl-zip
 
@@ -150,7 +163,7 @@ Install it (php devel package is required):
 
 **You also need to install GD support for PHP.**
 
-On Fedora/Redhat like Linux, you can use “yum” to set it up:
+On Fedora/Redhat/Centos 7 like Linux, you can use “yum” to set it up:
 
     yum install php-gd
 
