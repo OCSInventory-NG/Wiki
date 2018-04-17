@@ -46,13 +46,13 @@ to your system or download each package individually from the repository_
 
     yum install perl-Crypt-SSLeay perl-Net-SNMP perl-Proc-Daemon perl-Proc-PID-File perl-Sys-Syslog pciutils smartmontools monitor-edid
 
-_**On Debian like Linux**, you can use “apt-get” tool to set required modules up:_
+_**On Debian Stretch like Linux**, you can use “apt” tool to set required modules up:_
 
-   apt-get install dmidecode libxml-simple-perl libio-compress-perl libnet-ip-perl libwww-perl libdigest-md5-perl libnet-ssleay-perl
+    apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl
 
-_Optional modules:_
+_Optional modules: but Hightly recommanded_
 
-    apt-get install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
+    apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
 **Unix agent 2.x is now installed without script “setup.sh”. During compilation, information about
 configuration and dependencies are returned. However, it will never upgrade an installed module.
@@ -71,7 +71,7 @@ Download “Ocsinventory-Agent-2.x.y.tar.gz” from OCS Inventory Web Site
 ([http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en)).
 
 1. Unpack it.
-      
+
         tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
         cd Ocsinventory-Agent-2.x.y
 
@@ -128,21 +128,21 @@ of required component. You need to have access to Internet or local repositories
     Please enter 'y' or 'n'?> [y] y
 
     [info] The config file will be written in /etc/ocsinventory-agent/ocsinventory-agent.cfg,
-    
+
     What is the address of your ocs server?>  https://ocs/ocsinventory
-    
+
     Do you need credential for the server? (You probably don't)
     Please enter 'y' or 'n'?> [n]
-    
+
     Do you want to apply an administrative tag on this machine
     Please enter 'y' or 'n'?> [y]
     tag?>  Server
-    
+
     Do yo want to install the cron task in /etc/cron.d
     Please enter 'y' or 'n'?> [y]
-    
+
     Where do you want the agent to store its files? (You probably don't need to change it)?> [/var/lib/ocsinventory-agent]
-    
+
     Should I remove the old unix_agent
     Please enter 'y' or 'n'?> [n]
 
@@ -153,21 +153,21 @@ of required component. You need to have access to Internet or local repositories
     Please enter 'y' or 'n'?> [y]
 
     Specify log file path you want to use?>  /var/log/ocs_agent.log
-    
+
     Do you want disable SSL CA verification configuration option (not recommended) ?
     Please enter 'y' or 'n'?> [n]
-    
+
     Do you want to set CA certificate chain file path ?
     Please enter 'y' or 'n'?> [y] y
-    
+
     Specify CA certificate chain file path?>  /etc/ocsinventory-agent/cacert.pem
-    
+
     Do you want to use OCS-Inventory software deployment feature?
     Please enter 'y' or 'n'?> [y]
-    
+
     Do you want to use OCS-Inventory SNMP scans feature?
     Please enter 'y' or 'n'?> [y]
-    
+
     Do you want to send an inventory of this machine?
     Please enter 'y' or 'n'?> [y]
 
@@ -180,7 +180,7 @@ Here is a sample configuration file for OCS Inventory NG Linux agent.
         <IPDISCOVER_VERSION>3</IPDISCOVER_VERSION>
         <OCSFSERVER>my_ocs_com_server.domain.tld:80</OCSFSERVER>
     </CONF>
-You can choose between 3 methods for sending inventory:     
+You can choose between 3 methods for sending inventory:
 
 1. http: computer is connected to the network and is able to reach the Communication server with
 HTTP protocol *USED BY DEFAULT*.
@@ -202,7 +202,7 @@ Examples :
     ocsserver.domains.local
     https://w.x.y.z
     ocsserver.domains.local:1234
-    https://ocsserver.domains.local    
+    https://ocsserver.domains.local
 
 **Figure 5 : Sample agent’s configuration file ocsinv.conf for a network connected computer.**
 
