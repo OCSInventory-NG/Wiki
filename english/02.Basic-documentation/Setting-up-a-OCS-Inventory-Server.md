@@ -178,6 +178,13 @@ On Debian Stretch like Linux, you can use “apt” to set it up:
 **`Note: Ensure MySQL InnoDB engine is activated on your database server.
 Open my.cnf and ensure there is no line “skip-innodb” or this line is commented (begins with ‘#’).`**
 
+**`Note: On Redhat/Fedora/Centos7 you can use the repo `[`OCS`](http://rpm.ocsinventory-ng.org/enterprise/7/x86_64/)`to install the server.`**
+
+You can install the repo with this command :
+
+    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
+    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm
+
 Download latest version of server tarball “OCSNG_UNIX_SERVER-2.4.x.tar.gz” from OCS Inventory Web Site.
 
 Unpack it.
