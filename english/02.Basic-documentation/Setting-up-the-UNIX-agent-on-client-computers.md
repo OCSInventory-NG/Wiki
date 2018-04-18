@@ -37,20 +37,20 @@ Optional modules:
 **`Note: it’s better for system integrity to use the precompiled packages for your distribution
 if they are available.`**
 
-_**On Fedora/Redhat like Linux**, you can use “yum” tool to set required modules up like following:_
+**On Fedora/Redhat/Centos7 like Linux**, you can use “yum” tool to set required modules up like following:
 
-    yum install perl-XML-Simple perl-Compress-Zlib perl-Net-IP perl-LWP perl-Digest-MD5 perl-Net-SSLeay
+    yum install perl-XML-Simple perl-devel perl-Compress-Zlib perl-Net-IP perl-LWP perl-Digest-MD5 perl-Net-SSLeay
 
-_Optional modules: these modules are available on EPEL repository. Don't forget to add this repository
-to your system or download each package individually from the repository_
+Optional modules: these modules are available on [`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse) repository. Don't forget to add this repository
+to your system or download each package individually from the repository
 
     yum install perl-Crypt-SSLeay perl-Net-SNMP perl-Proc-Daemon perl-Proc-PID-File perl-Sys-Syslog pciutils smartmontools monitor-edid
 
-_**On Debian Stretch like Linux**, you can use “apt” tool to set required modules up:_
+**On Debian Stretch like Linux**, you can use “apt” tool to set required modules up:
 
     apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl
 
-_Optional modules: but Hightly recommanded_
+Optional modules: but Hightly recommanded
 
     apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
@@ -67,8 +67,14 @@ please refer to this file to have detailed error messages.**
 
 ## Installing the agent non-interactively
 
-Download “Ocsinventory-Agent-2.x.y.tar.gz” from OCS Inventory Web Site
-([http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en)).
+Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
+
+**`Note: On Redhat/Fedora/Centos7 you can use the repo `[`OCS`](http://rpm.ocsinventory-ng.org/enterprise/7/x86_64/)`to install the unix agent.`**
+
+You can install the repo with this command :
+
+    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
+    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm
 
 1. Unpack it.
 
