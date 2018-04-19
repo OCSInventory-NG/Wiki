@@ -28,22 +28,31 @@ Have a device under Android 2.1 or higher.
 : Download and uncompress the lastestversion of Android Agent from download page of our website.
 This package contains file :
 
-**`OCSInventoryAgent-0.9.0.apk: install Android agent, without any specific configuration.`**
+**`OCSInventoryAgent-2.1.6c.apk: install Android agent, without any specific configuration.`**
 
 Place this file on SDCARD and launch it.
 
-* From Android Market : Download application and launch installation.
+* From PlayStore : Download application and launch installation.
 
-When you launch installation, you authorize the application to access to different information and data
-of your device. You can list its before clicking on **Install**.
+![Download of android agent](../../img/agent/android/android_agent_download.png)
+
+
+
+**`Note: Under android v6.0 only : When you launch installation, you authorize the application to access to the different information and data
+on your device. You can list its before clicking on Install.`**
 
 ![Installation of android agent](../../img/Install_android_agent_1_en.png)
 
 At the end of installation, icon is created on desktop, and a message prevents you application was installed
-correctly. Click on **OK** to quit installer, or on **Open** to quit installer and launch application.
+correctly. Click on **Open** to quit the playstore and launch application.
 
-![Windows agent installed](../../img/Install_android_agent_2_en.png)
+![Windows agent installed](../../img/agent/android/android_agent_install_down.png)
 
+**`Note: On android v6.0 and more when you launch the app you can authorize the application to acces to the different information and data on your device`**
+
+![Authorize appli to acces ](../../img/agent/android/android_agent_acces_1.png)
+![Authorize appli to acces ](../../img/agent/android/android_agent_acces_2.png)
+![Authorize appli to acces ](../../img/agent/android/android_agent_acces_3.png)
 
 Now you see the main screen of the application, which allows you to:
 
@@ -52,7 +61,7 @@ Now you see the main screen of the application, which allows you to:
 * store inventory on your SDCARD (/mnt/sdcard/ocs/inventory.xml)
 * edit the configuration, using configuration standard menu of Android
 
-![Homescreen of android agent](../../img/Install_android_agent_3_en.png)
+![Homescreen of android agent](../../img/agent/android/android_agent_homepage.png)
 
 ## Configuration of Agent
 
@@ -64,23 +73,26 @@ By clicking on configuration standard button of Android (different depending on 
 * **Import configuration** : Import a configuration file if present in directory ocs
 * **Export configuration** : Export the configuration to backup or using on others devices
 
-![Options of android agent](../../img/Config_android_agent_en.png)
+![Options of android agent](../../img/agent/android/android_agent_homepage_settings.png)
 
 ### **General Configuration of agent**
 
-![General configuration of android agent](../../img/Config_android_agent_1_en.png)
+![General configuration of android agent](../../img/agent/android/android_agent_config_1.png)
 
 * **TAG** : Cathegory TAG in OCS
 * **DEBUG** : possible to generate a trace file in the **ocslog.txt** agent directory
 * **AUTOMATIC** : define if agent works as a service or a standalone application
-* INVENTORY FREQUENCY : define frequency between 2 inventories (in hours)
-* WAKE FREQUENCY : define time between 2 verifications of time since last inventory
+* **DEPENDING ON NETWORK STATUS** : Define using mobile internet connection or Wifi
+* **INVENTORY FREQUENCY** : define frequency between 2 inventories (in hours)
+* **WAKE FREQUENCY** : define time between 2 verifications of time since last inventory
 * **CACHE** : possible to recordd inventory cache on device
-* CACHE LIFETIME : define cache timelife (in minutes)
-
+* **CACHE LIFETIME** : define cache timelife (in minutes)
+* **SYSTEM SOFTWARE** : Exclude or include software like clock
+* **USERAGENT COMPATIBILITY** : Active this option for old OCS Inventory Server under 2.X
+* **HIDE NOTIFICATION** : Show off or on the notification from OCS android agent
 ### **Configuration concerning server**
 
-![Server's configuration of android agent](../../img/Config_android_agent_2_en.png)
+![Server's configuration of android agent](../../img/agent/android/android_agent_config_2.png)
 
 * **SERVER URL** : define URL address of OCS Inventory NG server(By default:
 [http://ocsinventory-ng/ocsinventory](http://ocsinventory-ng/ocsinventory)).
@@ -89,7 +101,7 @@ By clicking on configuration standard button of Android (different depending on 
     Example :`[`https://ocsinventory-ng:4443/ocsinventory`](https://ocsinventory-ng:4443/ocsinventory)**
 
 * **SSL CONTROL** : possible to active and desactive SSL control.
-* **AUTHENTIFICATION** : define if server needs authentification. If yes, you have to define
+* **BASIC AUTHENTIFICATION** : define if server needs authentification. If yes, you have to define
 **Login** and **Password**.
 * **HTTP PROXY** : define if agent use a proxy. If yes, you have to define **Address** and
 **port** of proxy server.
