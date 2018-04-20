@@ -426,36 +426,36 @@ We assume that the agent setup file is called agentsetup.exe and it was placed o
 
 Run “OCS-NG-Windows-Agent-Setup.exe” on client computer, from an USB stick for example...
 
-![Icone installer Windows Agent](../../img/Windows_Agent_2.0_Setup_0.png)
+![Icone installer Windows Agent](../../img/agent/windows/setup_1.png)
 
 ..and click “Next” button.
 
-![Start Installation](../../img/Windows_Agent_2.0_Setup_1.png)
+![Start Installation](../../img/agent/windows/setup_2.png)
 
 Validate license agreement by clicking “I agree” button.
 
-![Accept Licence](../../img/Windows_Agent_2.0_Setup_2.png)
+![Accept Licence](../../img/agent/windows/setup_3.png)
 
 Select **Local inventory** installation type.
 
-![Choose components](../../img/Windows_Agent_2.0_Setup_Local_1.png)
+![Choose components](../../img/agent/windows/setup_local_1.png)
 
 By default, OCS Inventory Agent writes only few lines in the log files. You may increase this enabling
 “Verbose log”. You may also specify the TAG value. Last, indicate the folder where you want to store
 generated inventory file, your usb stick for example:
 
-![Choose folder](../../img/Windows_Agent_2.0_Setup_Local_2.png)
+![Choose folder](../../img/agent/windows/setup_local_2.png)
 
 In local inventory mode, Agent will be installed into a temporary folder
 (we recommend not changing this folder, it will be automatically deleted at the end of process),
 Click “Install” button to start process. Agent is installed into temporary folder, launched to generate
 a ".ocs" inventory file stored in the folder you've specified, and then removed from computer.
 
-![Install location](../../img/Windows_Agent_2.0_Setup_Local_3.png)
+![Install location](../../img/agent/windows/setup_local_3.png)
 
 Click “Finish” button to close OCS inventory NG Agent Setup.
 
-![End of the installation](../../img/Windows_Agent_2.0_Setup_8.png)
+![End of the installation](../../img/agent/windows/setup_9.png)
 
 This is the interactive process, but it can be scripted using **/LOCAL=path_to_folder_where_to_store_ocs_file**
 command line switch.
