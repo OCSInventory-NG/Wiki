@@ -166,63 +166,68 @@ For example, [y]/n means that “y” (yes) is the default choice, and “n” (
 If you encounter any error, please refer to this log for detailed error message.`**
 
 
-**`Warning: If you’re upgrading from OCS Inventory NG 1.01 and previous,
+**`Warning: If you’re upgrading from OCS Inventory NG 1.01 RC2 and previous,
 you must first remove any Apache configuration file for Communication server.`**
 
 
+<p style="background-color: black;">Do you wish to continue ([y]/n)?
+</p>
+Type "y" or "enter" to continue the installation
+
+<p style="background-color: black;"> Which host is running database server [localhost] ?
+
+</p>
 Type “y” or “enter” to validate and, then enter MySQL server host address, in most cases localhost.
 
 
 Then, setup checks for MySQL client binary files version 4.1 or higher. If not present, you will be
 prompted to continue or abort setup.
 
+<p style="background-color: black;">On which port is running database server [3306] ?
+
+</p>
+
 If all is OK, enter MySQL server port, generally 3306.
 
+<p style="background-color: black;">Where is Apache daemon binary [/usr/sbin/apache2ctl] ?
 
-Enter or validate path to Apache daemon binary, generally “/usr/sbin/httpd”. It will be used to find
+</p>
+Enter or validate path to Apache daemon binary, generally “/usr/sbin/apache2ctl”. It will be used to find
 Apache configuration files.
 
 **`Note: If you’re not using system Apache daemon, but another one like XAMPP/LAMPP Apache server,
 you must enter full path to your Apache daemon, not the system one.`**
 
-
-Enter or validate Apache main configuration file path, generally “/etc/apache/conf/apache.conf”
+<p style="background-color: black;">Where is Apache main configuration file [/etc/apache2/apache2.conf] ?
+</p>
+Enter or validate Apache main configuration file path, generally “/etc/apache2/conf/apache2.conf”
 or “/etc/httpd/conf/httpd.conf”.
 
-
+<p style="background-color: black;">Which user account is running Apache web server [www-data] ?
+</p>
 Enter or validate Apache daemon running user account, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
+<p style="background-color: black;">Which user group is running Apache web server [www-data] ?
+</p>
 
 Enter or validate Apache daemon user group, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-
+<p style="background-color: black;">Where is PERL interpreter binary [/usr/bin/perl] ?
+</p>
 Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL interpreter.
 
 **`Note: If you’re not using system perl interpreter, but another one like XAMPP/LAMPP perl interpreter,
 you must specify full path to this perl interpreter, not the default system one
 (/opt/lampp/bin/perl generally used in XAMPP/LAMPP).`**
 
-
+<p style="background-color: black;">Do you wish to setup Communication server on this computer ([y]/n)?
+</p>
 Common information for setting up Communication server or Administration console is now collected.
 Setup prompts you if you wish to set Communication server up on this computer. Enter “y” or validate
 to set Communication server up, “n” to skip Communication server installation.
 
 
 Setup will then try to find make utility. If it fails, setup will stop.
-
-Enter or validate path to Apache include configuration directory. This is the directory where is stored Apache
-configuration for specific modules. Generally, this directory is
-
-    /etc/httpd/conf.d
-
-or
-
-    /etc/apache/conf.d
-
-
-
-If you are not using configuration directory, but having all configurations into Apache main configuration file,
-enter **no**.
 
 
 Setup will next try to determine your Apache mod_perl version. If it is not able to determine mod_perl version,
@@ -233,9 +238,23 @@ it will ask you to enter it.
 * `Under RPM enabled Linux distribution (RedHat/Fedora, Mandriva…), `**`run rpm –q mod_perl`**`.`
 * `Under DPKG enabled Linux distribution (Debian, Ubuntu…), run dpkg –l `**`libapache*-mod-perl*`**`.`
 
-Next, it will prompt you to enter log directory where Communication server will store debugging/tuning logs.
-Validate or enter directory path. If it does not exist, this directory will be created.
+Communication server can create detailed logs. This logs can be enabled
+by setting integer value of LOGLEVEL to 1 in Administration console
+menu Configuration.
 
+<p style="background-color: black;">Where to put Communication server log directory [/var/log/ocsinventory-server] ?
+
+</p>
+
+Communication server need a directory for plugins configuration files.
+<p style="background-color: black;">Where to put Communication server plugins configuration files [/etc/ocsinventory-server/plugins] ?
+
+</p>
+
+Communication server need a directory for plugins Perl modules files.
+
+<p style="background-color: black;">Where to put Communication server plugins Perl modules files [/etc/ocsinventory-server/perl] ?
+</p>
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
@@ -250,17 +269,37 @@ Next, setup will check for required PERL modules
 
 **`Warning: If any of these modules is missing, setup will abort.`**
 
+the setup will ask you if you want to install the rest API
+
+<p style="background-color: black;">Do you wish to setup Rest API server on this computer ([y]/n)?
+</p>
+
+asking you for where you want store API code
+
+<p style="background-color: black;">Where do you want the API code to be store [/usr/local/share/perl/5.24.1] ?
+</p>
 
 If all is OK, setup will install Communication server:
 
 * Configure Communication server PERL module.
 * Build Communication server PERL module.
 * Install Communication server PERL module into PERL standard library directories.
-* Create Communication server log directory (/var/log/ocsinventory-NG by default).
-* Configure daily log rotation for Communication server (file /etc/logrotate.d/ocsinventory-NG by default)
-* Create Apache configuration file (ocsinventory.conf). If you are using Apache configuration directory,
+* Create Communication server log directory (/var/log/ocsinventory-server by default).
+* Configure daily log rotation for Communication server (file /etc/logrotate.d/ocsinventory-server by default)
+* Creating Communication server plugins configuration directory (/etc/ocsinventory-server/plugins).
+* Creating Communication server plugins Perl directory (/etc/ocsinventory-server/perl).
+
+* Create Apache configuration file (ocsinventory-server.conf). If you are using Apache configuration directory,
 this file will be copied under this directory. Otherwise, you will be prompted to add content of this file
 to the end of Apache main configuration file.
+
+To ensure Apache loads mod_perl before OCS Inventory NG Communication Server,
+Setup can name Communication Server Apache configuration file
+'z-ocsinventory-server.conf' instead of 'ocsinventory-server.conf'.
+
+<p style="background-color: black;">Do you allow Setup renaming Communication Server Apache configuration file
+to 'z-ocsinventory-server.conf' ([y]/n) ?
+</p>
 
 **`Warning: Do not add content to apache main configuration file if it is not a fresh install!
 You must manually copy content of the ocsinventory.conf.local file created by setup into apache
@@ -630,9 +669,32 @@ main configuration file, replacing existing configuration.`**
 Communication server installation is now finished. You will be prompted to set Administration console up.
 Enter “y” or validate to set Administration console up, enter “n” to skip Administration console installation.
 
+<p style="background-color: black;">Do you wish to setup Administration Server (Web Administration Console)
+on this computer ([y]/n)?
+</p>
 
-Setup will ask you to enter Apache root document directory, usually “/var/www/html” or “/var/www-data”.
+**`CAUTION: Setup now install files in accordance with Filesystem Hierarchy
+Standard. So, no file is installed under Apache root document directory
+(Refer to Apache configuration files to locate it).
+If you're upgrading from OCS Inventory NG Server 1.01 and previous, YOU
+MUST REMOVE (or move) directories 'ocsreports' and 'download' from Apache
+root document directory.
+If you choose to move directory, YOU MUST MOVE 'download' directory to
+Administration Server writable/cache directory (by default
+/var/lib/ocsinventory-reports), especially if you use deployment feature.`**
 
+Setup asking you to copy Administration Server static files for PHP Web Console
+
+<p style="background-color: black;">Where to copy Administration Server static files for PHP Web Console
+[/usr/share/ocsinventory-reports] ?
+</p>
+
+Setup asking you to create writable/cache directories for deployment packages,
+administration console logs, IPDiscover and SNMP
+
+<p style="background-color: black;">Where to create writable/cache directories for deployment packages,
+administration console logs, IPDiscover and SNMP [/var/lib/ocsinventory-reports] ?
+</p>
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
@@ -650,9 +712,15 @@ Next, setup will check for required PERL modules
 
 If everything is OK, setup will install Administration console into the “ocsreports” subdirectory:
 
-* Create /ocsreports directory structure.
-* Create /download directory structure.
-* Copy files into /ocsreports directory.
+* Creating PHP directory /usr/share/ocsinventory-reports/ocsreports.
+* Creating database configuration file /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php.
+* Creating IPDiscover directory /var/lib/ocsinventory-reports/ipd.
+* Creating packages directory /var/lib/ocsinventory-reports/download.
+* Creating snmp mibs directory /var/lib/ocsinventory-reports/snmp.
+* Creating Administration server log files directory /var/lib/ocsinventory-reports/logs.
+* Creating Administration server scripts log files directory /var/lib/ocsinventory-reports/scripts.
+* Configuring / Installing IPDISCOVER-UTIL Perl script.
+* Writing Administration server configuration to file /etc/apache2/conf-available/ocsinventory-reports.conf
 * Fix directories and files permissions to allow Apache daemon reading and writing to required directories
 (write access is required in /ocsreports, /ocsreports/ipd and /download, cf § 11.4 [Files and directories
 permissions under Linux](../../english/08.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
