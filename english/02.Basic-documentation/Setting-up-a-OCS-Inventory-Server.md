@@ -62,10 +62,20 @@ if any are missing.`**
 
 ## Installing Communication server required PERL modules.
 
-The Web communication server requires Apache web server and Perl 5 scripting language and some additional modules for Perl 5
+The web communication server requires [`Apache web server`](../../english/02.Basic-documentation/Setting-up-apache-server.md) and Perl 5 scripting language and some additional modules for Perl 5
 (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 It acts as an Apache module which handles HTTP OCS Inventory agents' requests to a virtual directory _/ocsinventory_.
+Already the web communication server requires mysql dependancies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
 
+**On Fedora/Redhat/Centos 7 like Linux**
+
+    yum install httpd
+    yum install mariadb-client
+
+**On Debian 9 Stretch like Linux**
+
+    apt install apache2
+    apt install mysql-client
 
 **`Warning: You must have root privileges to set required perl modules up.
 It is better for system integrity to use your distribution's precompiled packages when they are available.
@@ -75,16 +85,11 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
 
 **On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to set required modules up:
 
-    yum install mod_perl mod_php
-    yum install php-mbstring php-soap php-xml
-    yum install perl-XML-Simple perl-IO-Compress perl-DBI perl-DBD-MySQL perl-Net-IP perl-SOAP-Lite perl-Archive-Zip perl-YAML perl-Plack perl-Mojolicious perl-XML-Entities perl-Switch
-    yum install CPAN
-    cpan install Mojolicious::Lite
-
+    yum install perl-XML-Simple perl-Compress-Zlib perl-DBI perl-DBD-MySQL perl-Net-IP perl-SOAP-Lite perl-Archive-Zip perl-Mojolicious perl-Plack perl-XML-Entities perl-Switch
 
 **On Debian 9 Stretch like Linux**, you can use “apt” to set required modules up:
 
-    apt install libxml-simple-perl libcompress-zlib-perl libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl
+    apt install libxml-simple-perl libcompress-zlib-perl libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl make build-essentials
     cpan install XML::Entities
 
 **On Gentoo like Linux**, you can use "emerge" to get required modules set up:
@@ -95,20 +100,24 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
 
 ## Installing Administration console required PHP modules
 
-The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
+The Web Administration console requires [`Apache web server`](../../english/02.Basic-documentation/Setting-up-apache-server.md) and PHP 4 scripting language and some additional modules
 for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
+Already the web communication server requires mysql dependancies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
 
-**On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to install PHP Zip support:
+**On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to install PHP Zip support and dependacies:
 
     yum install php-pecl-zip
+    yum install perl-XML-Simple perl-DBI perl-DBD-MySQL perl-Net-IP
 
 **For later Fedora installations 7.x+ :**
 
     yum install php-common
 
-**On Debian Stretch like Linux**, you can use “apt” to set it up:
+**On Debian 9 Stretch like Linux**, you can use “apt” to set it up:
 
-    apt install libphp-pclzip
+    apt install php-plczip
+    apt install make build-essentials
+    cpan -i DBI DBD::mysql XML::Simple Net::IP
 
 Otherwise, the best way to do this is to use PHP PECL ZIP package. You must have PHP development libraries
 (php-devel package under RedHat or Fedora Core, under Linux Debian or Ubuntu) in order to have **phpize** command.
@@ -138,7 +147,7 @@ Install it (php devel package is required):
 
 **On Debian 9 Stretch like Linux**, you can use “apt” to set it up:
 
-    apt install php5-gd
+    apt install php7.0-gd
 
 ## Installing management server
 
