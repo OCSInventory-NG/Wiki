@@ -10,12 +10,12 @@ their favorite browser.
 
 These 4 components can be hosted on a single computer or on different computers to allow load balancing. Above 10000 inventoried computers, we recommend using at least 2 physical servers, one hosting database server + Communication server and the other one hosting a database replica + Administration server + Deployement server.
 
+![Ocs Inventory NG communication architecture](../../img/server/schema/architecture_ocs.png)
 
 **Figure 1 : OCS Inventory NG communication architecture.**
 
 **`Note: If you want to use multiple computers to host OCS inventory NG management server,
-we recommend that you set it up on Linux servers. OCS Inventory NG server for Windows comes as an integrated package
-including all required components (apache, perl, php, mod_perl, mysql…).`**
+we recommend that you set it up on Linux servers.`**
 
 **Database** server currently can only be MySQL 4.1 or higher with InnoDB engine active.
 **Communication server** needs Apache Web Server 1.3.X/2.X and is written in PERL as an Apache module. Why? Because PERL scripts are compiled when Apache starts, and not at each request. This is better performance-wise. Communication server may require some additional PERL modules, according to your distribution.
@@ -71,7 +71,7 @@ It acts as an Apache module which handles HTTP OCS Inventory agents' requests to
 It is better for system integrity to use your distribution's precompiled packages when they are available.
 Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`.`**
 
-**`Note: On Fedore/Redhat/Centos 7 the package " Apache DBI "wasn't in the repo EPEL you can find the rpm `[`here`](https://centos.pkgs.org/7/epmel-x86_64/perl-Apache-DBI-1.12-2.el7.noarch.rpm.html)`.`**
+**`Note: On Fedore/Redhat/Centos 7 the package " Apache DBI " wasn't in the repo EPEL you can find the rpm `[`here`](https://centos.pkgs.org/7/epmel-x86_64/perl-Apache-DBI-1.12-2.el7.noarch.rpm.html)`.`**
 
 **On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to set required modules up:
 
@@ -82,7 +82,7 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
     cpan install Mojolicious::Lite
 
 
-**On Debian Stretch like Linux**, you can use “apt” to set required modules up:
+**On Debian 9 Stretch like Linux**, you can use “apt” to set required modules up:
 
     apt install libxml-simple-perl libcompress-zlib-perl libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl
     cpan install XML::Entities
@@ -93,51 +93,20 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
     g-cpan -i XML::Entities
 
 
-If a precompiled package is not available for your distribution, you can download the package source
-from http://search.cpan.org and build it on your system (make and C compiler must be available). For example:
-
-    tar –xvzf package_name.tar.gz
-    cd package_name
-    perl Makefile.PL
-    make
-    make test
-    make install
-
-You can also install the missing modules using the cpan script. i.e.
-
-    cpan -i Compress::Zlib
-
-**`Note: If you are not using system perl interpreter, but another one such as the XAMPP/LAMPP perl interpreter,
-you must call this perl interpreter, not the system one, by specifying full path to your perl interpreter.
-For example:`**
-
-    /opt/lampp/bin/perl Makefile.PL
-
-**`Note: If you want to use IpDiscover and snmp features you need to install them package.`**
-
-**On Fedora/Redhat/Centos 7**
-
-    yum install net-snmp net-snmp-utils
-    yum install nmap
-
-**On Debian Stretch**
-
-    apt install nmap snmp
-
 ## Installing Administration console required PHP modules
 
 The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
 for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 
-On Fedora/Redhat/Centos like Linux, you can use “yum” to install PHP Zip support:
+**On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to install PHP Zip support:
 
     yum install php-pecl-zip
 
-For later Fedora installations 7.x+ :
+**For later Fedora installations 7.x+ :**
 
     yum install php-common
 
-On Debian Stretch like Linux, you can use “apt” to set it up:
+**On Debian Stretch like Linux**, you can use “apt” to set it up:
 
     apt install libphp-pclzip
 
@@ -163,11 +132,11 @@ Install it (php devel package is required):
 
 **You also need to install GD support for PHP.**
 
-On Fedora/Redhat/Centos 7 like Linux, you can use “yum” to set it up:
+**On Fedora/Redhat/Centos 7 like Linux**
 
     yum install php-gd
 
-On Debian Stretch like Linux, you can use “apt” to set it up:
+**On Debian 9 Stretch like Linux**, you can use “apt” to set it up:
 
     apt install php5-gd
 
@@ -696,12 +665,7 @@ permissions under Linux](../../english/08.Extras/Common-errors.md#files-and-dire
 
 Now, you can restart Apache web server for changes to take effect.
 
-    service apache2 restart
-
-or
-
-    /etc/init.d/apache restart
-
+    systemctl restart apache2
 
 
 ## Configuring management server
