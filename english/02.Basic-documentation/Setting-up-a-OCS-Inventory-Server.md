@@ -795,10 +795,6 @@ Procedure is in the same documentation page.
 
 Click on the following link : "Click here to enter OCS-NG GUI"
 
-![Update DB OCS Inventory](../../img/server/reports/install/installation_ocsreports_4.png)
-
-Click on "Perform the update" button
-
 Just point your browser to the URL
 [http://administration_server/ocsreports](http://administration_server/ocsreports)
 and login in with **admin** as user and **admin** as password.
