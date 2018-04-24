@@ -104,7 +104,19 @@ The Web Administration console requires [`Apache web server`](../../english/02.B
 for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 Already the web communication server requires mysql dependancies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
 
-**On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to install PHP Zip support and dependacies:
+**On Fedora/Redhat/Centos 7 like Linux**
+
+    yum install httpd
+    yum install mariadb-client
+
+**On Debian 9 Stretch like Linux**
+
+    apt install apache2
+    apt install mysql-client
+
+**install PHP Zip support and dependacies**
+
+**On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to set it up:
 
     yum install php-pecl-zip
     yum install perl-XML-Simple perl-DBI perl-DBD-MySQL perl-Net-IP
@@ -119,25 +131,6 @@ Already the web communication server requires mysql dependancies if you choose t
     apt install make build-essentials
     cpan -i DBI DBD::mysql XML::Simple Net::IP
 
-Otherwise, the best way to do this is to use PHP PECL ZIP package. You must have PHP development libraries
-(php-devel package under RedHat or Fedora Core, under Linux Debian or Ubuntu) in order to have **phpize** command.
-
-Then, if you have pear installed, just type
-
-    pear install zip
-
-If you don’t have pear installed, or no connection to Internet, download package “zip-1.3.1.tgz”
-from [http://pecl.php.net/package/zip](https://pecl.php.net/package/zip). In Debian/Ubuntu like systems, be sure to have installed libpcre3
-and libpcre3-dev packages before install PECL_ZIP.
-
-Install it (php devel package is required):
-
-    tar –xvzf zip-1.3.1.tgz
-    cd zip-1.3.1
-    phpize
-    ./configure
-    make
-    make install
 
 **You also need to install GD support for PHP.**
 
@@ -156,12 +149,6 @@ Install it (php devel package is required):
 **`Note: Ensure MySQL InnoDB engine is activated on your database server.
 Open my.cnf and ensure there is no line “skip-innodb” or this line is commented (begins with ‘#’).`**
 
-**`Note: On Redhat/Fedora/Centos7 you can use the repo `[`OCS`](http://rpm.ocsinventory-ng.org/enterprise/7/x86_64/)`to install the server.`**
-
-You can install the repo with this command :
-
-    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
-    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm
 
 Download latest version of server tarball “OCSNG_UNIX_SERVER-2.4.x.tar.gz” from OCS Inventory Web Site.
 
@@ -749,45 +736,3 @@ Just point your browser to the URL
 and login in with **admin** as user and **admin** as password.
 
 ![Ocsreports' homsecreen](../../img/server/reports/Homescreen_ocsreports.png)
-
-## Upgrading management server
-
-When new versions of web communication server or web administration console are released,
-you must upgrade your installation.
-
-**`Note: Ensure MySQL InnoDB engine is activated on your database server. Open my.cnf and ensure there is
-no line with skip-innodb or this line is commented out(begins with ‘#’).`**
-
-**`Warning: Backup your database before upgrading! If you encounter any errors while upgrading, restore your database,
-then upgrade MySQL server to version 4.1.20 or higher. Then, rerun upgrade procedure.`**
-
-**`Warning: Notice that many package removers are asking if you want to also remove database - you should
-not do this, because you want to upgrade, and not install from scratch.`**
-
-**`Warning: Make sure you set max_execution_time limit in php.ini to zero (unlimited).
-Database upgrade can take a long time.`**
-
-**`Warning: We recommend you to migrate your OCS database to UTF8. Refer to`
-[`Migrate your OCS database to UTF8`](http://wiki.ocsinventory-ng.org/index.php/Howtos:Migrate_your_OCS_database_to_UTF8)`
-HowTo. You have to do this migration ONLY AFTER update.`**
-
-To upgrade web communication server and administration console, you must follow instructions as described in
-Installing management server. You don’t need to update Perl modules if not required in the release notes.
-
-Then, just point your favorite browser to URL
-[http://administration_server/ocsreports](http://administration_server/ocsreports)
-and it will run the upgrade process to ensure that your database schema and default data are up to date.
-Upgrade process looks like configuration of management server as described in Configuring management server.
-
-**`Note: You will see warning regarding max size of package you will be able to deploy. Please,
-see Uploads size for package deployment.) to configure your server to match your needs.`**
-
-Fill in MySQL administrator name (usually root) and password, and MySQL database server address
-and click on **[ Send ]** button.
-
-Click on the following link : "Click here to enter OCS-NG GUI"
-
-Click on "Perform the update" button
-
-**`Note: Notice that installers says about how to log in to server after upgrade. Actually use
-your user/pass that you used before upgrade, especially if you removed/disabled user admin.`**
