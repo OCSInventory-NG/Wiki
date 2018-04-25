@@ -95,6 +95,10 @@ Restart your apache service to activate the conf
 
     systemctl restart apache2
 
+**On your Communication server/Administration console server** : You need to change the host of the database in the file /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php
+
+    $_SESSION["SERVEUR_SQL"]="YourDatabaseServerIP";
+
 **`Note: This user will be used by Administration server and Communication server to connect to the database.
 If you do not wish to use default MySQL user ocs with ocs password, you must update in the file
 /etc/apache2/conf-avaible/z-ocsinventory-server.conf.
