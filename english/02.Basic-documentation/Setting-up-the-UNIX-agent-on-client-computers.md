@@ -65,16 +65,30 @@ setup will also fail.`
 **Also, a log file is generated. If you encounter any error while installing OCS Inventory NG agent,
 please refer to this file to have detailed error messages.**
 
+## Installing UNIX Agent with RPM
+
+**On Fedora/Redhat/Centos 7** you can install the unix agent with RPM
+
+You need to have "wget" to download the repo of EPEL and OCS
+
+    wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
+
+You can install the repo with "yum"
+
+    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm
+
+To install the unix agent and requierement use this command :
+
+    yum install ocsinventory-agent
+
+**`Note : The unix agent gonna be installed with default settings.`**
+
+
 ## Installing the agent non-interactively
 
 Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
 
-**`Note: On Redhat/Fedora/Centos7 you can use the repo `[`OCS`](http://rpm.ocsinventory-ng.org/enterprise/7/x86_64/)`to install the unix agent.`**
-
-You can install the repo with this command :
-
-    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
-    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm
 
 1. Unpack it.
 
