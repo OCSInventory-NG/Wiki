@@ -142,6 +142,25 @@ Already the web communication server requires mysql dependancies if you choose t
 
     apt install php7.0-gd
 
+## Installing OCS Iventory Server with RPM
+
+**On Fedora/Redhat/Centos 7** you can install the ocs server with RPM
+
+You need to have "wget" to download the repo of EPEL and OCS
+
+    wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
+
+You can install the repo with "yum"
+
+    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm
+
+To install the OCS inventory server and requierement use this command :
+
+    yum install ocsinventory-server
+
+**`Note : The server gonna be installed by default settings like using the setup.sh`**
+
 ## Installing management server
 
 **You must have root privileges to set OCS Inventory Server up.**
