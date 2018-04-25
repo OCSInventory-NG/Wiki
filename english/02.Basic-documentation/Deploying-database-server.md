@@ -53,11 +53,11 @@ Don't forget to apply parameters :
 
 **`Note: This user will be used by Administration server and Communication server to connect to the database.
 If you do not wish to use default MySQL user ocs with ocs password, you must update in the file
-dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login,
-and/or PSWD_BASE, which MySQL user password.
-Don’t forget to also update Communication server configuration, especially in apache configuration file.
+/etc/apache2/conf-avaible/z-ocsinventory-server.conf.
+Don’t forget to also enable your conf and restart apache.
 Refer to `[`Secure your OCS Inventory NG Server`](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
 for all information about modifications of configuration files.`**
+
 
 ## Configuring database server for separated OCS Server
 
@@ -83,10 +83,21 @@ Don't forget to apply parameters :
 
     FLUSH PRIVILEGES;
 
+**On your Communication server/Administration console server** : You need to change the host of the database in the file /etc/apache2/conf-avaible/z-ocsinventory-server.conf
+
+    PerlSetEnv OCS_DB_HOST YourDatabaseServerIP
+
+Don't forget to activate your conf with the following command
+
+    a2enmod z-ocsinventory-server.conf
+
+Restart your apache service to activate the conf
+
+    systemctl restart apache2
+
 **`Note: This user will be used by Administration server and Communication server to connect to the database.
 If you do not wish to use default MySQL user ocs with ocs password, you must update in the file
-dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login,
-and/or PSWD_BASE, which MySQL user password.
-Don’t forget to also update Communication server configuration, especially in apache configuration file.
+/etc/apache2/conf-avaible/z-ocsinventory-server.conf.
+Don’t forget to also enable your conf and restart apache.
 Refer to `[`Secure your OCS Inventory NG Server`](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
 for all information about modifications of configuration files.`**
