@@ -130,6 +130,51 @@ Setup will check for:
 If not found, it will ask you if you wish to install it. Enter “y” or validate to enable install
 of required component. You need to have access to Internet or local repositories. If you enter “n”, setup will stop here.
 
+## Installing the agent interactively
+
+Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
+
+
+1. Unpack it.
+
+        tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
+        cd Ocsinventory-Agent-2.x.y
+
+2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
+libraries ... and it generates the Makefile.
+        perl Makefile.PL
+
+    Exemple :
+
+       Please install Crypt::SSLeay if you want to use SSL.
+       Please install nmap or ipdiscover if you want to use the network discover feature.
+       Please install Proc::Daemon and Proc::PID::File if you want to use the daemon monde.
+
+3. Compilation
+
+        make
+        make install
+
+**`Note: Installer writes a log file “ocs_agent_setup.log” in the same directory. If you encounter any errors,
+please refer to this log for the detailed error message.`**
+
+A check for PERL interpreter binary, C/C++ compiler and make utility is made during installation.
+If one of these components is not found, setup will stop.
+
+Setup will check for:
+
+* dmidecode binary.
+* Compress::Zlib PERL module
+* XML::Simple PERL module
+* Net::IP PERL module
+* LWP::UserAgent PERL module
+* Digest::MD5 PERL module
+* Net::SSLeay PERL module
+
+If not found, it will ask you if you wish to install it. Enter “y” or validate to enable install
+of required component. You need to have access to Internet or local repositories. If you enter “n”, setup will stop here.
+
+
 **Configuration begins. You answer with y for yes n for no or specify link or location. Letter in brackets [] is choosen if you press enter.**
 
     Do you want to configure the agent
