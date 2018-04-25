@@ -767,19 +767,7 @@ database, tables, indexes, etc (usually root):
 * MySQL user password
 * MySQL hostname
 
-Setup actions :
-
-* Create **ocsweb** database, and will add MySQL user **ocs** with password **ocs**.
-* Grant to user **ocs** privileges _Select | Insert | Update | Delete | Create | Drop | References | Index | Alter
-| Create temp | Lock_ on database **ocsweb**.
-
-**`Note: This user will be used by Administration server and Communication server to connect to the database.
-If you do not wish to use default MySQL user ocs with ocs password, you must update in the file
-dbconfig.inc.php PHP constants COMPTE_BASE, which is MySQL user login,
-and/or PSWD_BASE, which MySQL user password.
-Don’t forget to also update Communication server configuration, especially in apache configuration file.
-Refer to `[`Secure your OCS Inventory NG Server`](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
-for all information about modifications of configuration files.`**
+Setup actions : refer to [Deploying Database Server](../../english/02.Basic-documentation/Deploying-database-server.md)
 
 To secure you server, refer to
 [Secure your OCS Inventory NG Server](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
