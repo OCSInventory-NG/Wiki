@@ -70,7 +70,7 @@ Already the web communication server requires mysql dependancies if you choose t
 **On Fedora/Redhat/Centos 7 like Linux**
 
     yum install httpd
-    yum install mariadb-client
+    yum install mariadb
 
 **On Debian 9 Stretch like Linux**
 
