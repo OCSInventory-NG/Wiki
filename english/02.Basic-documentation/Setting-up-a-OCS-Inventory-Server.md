@@ -62,7 +62,7 @@ if any are missing.`**
 
 ## Installing Communication server required PERL modules.
 
-The web communication server requires [`Apache web server`](../../english/02.Basic-documentation/Setting-up-apache-server.md) and Perl 5 scripting language and some additional modules for Perl 5
+The web communication server requires Apache web server and Perl 5 scripting language and some additional modules for Perl 5
 (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 It acts as an Apache module which handles HTTP OCS Inventory agents' requests to a virtual directory _/ocsinventory_.
 Already the web communication server requires mysql dependancies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
@@ -100,7 +100,7 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
 
 ## Installing Administration console required PHP modules
 
-The Web Administration console requires [`Apache web server`](../../english/02.Basic-documentation/Setting-up-apache-server.md) and PHP 4 scripting language and some additional modules
+The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
 for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 Already the web communication server requires mysql dependancies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
 
