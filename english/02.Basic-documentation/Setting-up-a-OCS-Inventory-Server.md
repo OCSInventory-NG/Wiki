@@ -142,7 +142,7 @@ Already the web communication server requires mysql dependancies if you choose t
 
     apt install php7.0-gd
 
-## Installing OCS Iventory Server with RPM
+## Installing OCS Inventory Server with RPM
 
 **On Fedora/Redhat/Centos 7** you can install the ocs server with RPM
 
@@ -188,59 +188,53 @@ If you encounter any error, please refer to this log for detailed error message.
 **`Warning: If you’re upgrading from OCS Inventory NG 1.01 RC2 and previous,
 you must first remove any Apache configuration file for Communication server.`**
 
+```Do you wish to continue ([y]/n)?```
 
-<p style="background-color: black;">Do you wish to continue ([y]/n)?
-</p>
 Type "y" or "enter" to continue the installation
 
-<p style="background-color: black;"> Which host is running database server [localhost] ?
+```Which host is running database server [localhost] ?```
 
-</p>
 Type “y” or “enter” to validate and, then enter MySQL server host address, in most cases localhost.
 
 
 Then, setup checks for MySQL client binary files version 4.1 or higher. If not present, you will be
 prompted to continue or abort setup.
 
-<p style="background-color: black;">On which port is running database server [3306] ?
-
-</p>
+```On which port is running database server [3306] ?```
 
 If all is OK, enter MySQL server port, generally 3306.
 
-<p style="background-color: black;">Where is Apache daemon binary [/usr/sbin/apache2ctl] ?
+```Where is Apache daemon binary [/usr/sbin/apache2ctl] ?```
 
-</p>
 Enter or validate path to Apache daemon binary, generally “/usr/sbin/apache2ctl”. It will be used to find
 Apache configuration files.
 
 **`Note: If you’re not using system Apache daemon, but another one like XAMPP/LAMPP Apache server,
 you must enter full path to your Apache daemon, not the system one.`**
 
-<p style="background-color: black;">Where is Apache main configuration file [/etc/apache2/apache2.conf] ?
-</p>
+```Where is Apache main configuration file [/etc/apache2/apache2.conf] ?```
+
 Enter or validate Apache main configuration file path, generally “/etc/apache2/conf/apache2.conf”
 or “/etc/httpd/conf/httpd.conf”.
 
-<p style="background-color: black;">Which user account is running Apache web server [www-data] ?
-</p>
+```Which user account is running Apache web server [www-data] ?```
+
 Enter or validate Apache daemon running user account, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-<p style="background-color: black;">Which user group is running Apache web server [www-data] ?
-</p>
+```Which user group is running Apache web server [www-data] ?```
 
 Enter or validate Apache daemon user group, generally “apache” or “www” (under Debian/Ubuntu is “www-data”).
 
-<p style="background-color: black;">Where is PERL interpreter binary [/usr/bin/perl] ?
-</p>
+```Where is PERL interpreter binary [/usr/bin/perl] ?```
+
 Next, setup checks for PERL interpreter binaries. Enter or validate path to PERL interpreter.
 
 **`Note: If you’re not using system perl interpreter, but another one like XAMPP/LAMPP perl interpreter,
 you must specify full path to this perl interpreter, not the default system one
 (/opt/lampp/bin/perl generally used in XAMPP/LAMPP).`**
 
-<p style="background-color: black;">Do you wish to setup Communication server on this computer ([y]/n)?
-</p>
+```Do you wish to setup Communication server on this computer ([y]/n)?```
+
 Common information for setting up Communication server or Administration console is now collected.
 Setup prompts you if you wish to set Communication server up on this computer. Enter “y” or validate
 to set Communication server up, “n” to skip Communication server installation.
@@ -261,19 +255,15 @@ Communication server can create detailed logs. This logs can be enabled
 by setting integer value of LOGLEVEL to 1 in Administration console
 menu Configuration.
 
-<p style="background-color: black;">Where to put Communication server log directory [/var/log/ocsinventory-server] ?
-
-</p>
+```Where to put Communication server log directory [/var/log/ocsinventory-server] ?```
 
 Communication server need a directory for plugins configuration files.
-<p style="background-color: black;">Where to put Communication server plugins configuration files [/etc/ocsinventory-server/plugins] ?
 
-</p>
+```Where to put Communication server plugins configuration files [/etc/ocsinventory-server/plugins] ?```
 
 Communication server need a directory for plugins Perl modules files.
 
-<p style="background-color: black;">Where to put Communication server plugins Perl modules files [/etc/ocsinventory-server/perl] ?
-</p>
+```Where to put Communication server plugins Perl modules files [/etc/ocsinventory-server/perl] ?```
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
@@ -290,13 +280,11 @@ Next, setup will check for required PERL modules
 
 the setup will ask you if you want to install the rest API
 
-<p style="background-color: black;">Do you wish to setup Rest API server on this computer ([y]/n)?
-</p>
+```Do you wish to setup Rest API server on this computer ([y]/n)?```
 
 asking you for where you want store API code
 
-<p style="background-color: black;">Where do you want the API code to be store [/usr/local/share/perl/5.24.1] ?
-</p>
+```Where do you want the API code to be store [/usr/local/share/perl/5.24.1] ?```
 
 If all is OK, setup will install Communication server:
 
@@ -316,9 +304,8 @@ To ensure Apache loads mod_perl before OCS Inventory NG Communication Server,
 Setup can name Communication Server Apache configuration file
 'z-ocsinventory-server.conf' instead of 'ocsinventory-server.conf'.
 
-<p style="background-color: black;">Do you allow Setup renaming Communication Server Apache configuration file
-to 'z-ocsinventory-server.conf' ([y]/n) ?
-</p>
+```Do you allow Setup renaming Communication Server Apache configuration file
+to 'z-ocsinventory-server.conf' ([y]/n) ?```
 
 **`Warning: Do not add content to apache main configuration file if it is not a fresh install!
 You must manually copy content of the ocsinventory.conf.local file created by setup into apache
@@ -688,9 +675,8 @@ main configuration file, replacing existing configuration.`**
 Communication server installation is now finished. You will be prompted to set Administration console up.
 Enter “y” or validate to set Administration console up, enter “n” to skip Administration console installation.
 
-<p style="background-color: black;">Do you wish to setup Administration Server (Web Administration Console)
-on this computer ([y]/n)?
-</p>
+```Do you wish to setup Administration Server (Web Administration Console)
+on this computer ([y]/n)?```
 
 **`CAUTION: Setup now install files in accordance with Filesystem Hierarchy
 Standard. So, no file is installed under Apache root document directory
@@ -704,16 +690,14 @@ Administration Server writable/cache directory (by default
 
 Setup asking you to copy Administration Server static files for PHP Web Console
 
-<p style="background-color: black;">Where to copy Administration Server static files for PHP Web Console
-[/usr/share/ocsinventory-reports] ?
-</p>
+```Where to copy Administration Server static files for PHP Web Console
+[/usr/share/ocsinventory-reports] ?```
 
 Setup asking you to create writable/cache directories for deployment packages,
 administration console logs, IPDiscover and SNMP
 
-<p style="background-color: black;">Where to create writable/cache directories for deployment packages,
-administration console logs, IPDiscover and SNMP [/var/lib/ocsinventory-reports] ?
-</p>
+```Where to create writable/cache directories for deployment packages,
+administration console logs, IPDiscover and SNMP [/var/lib/ocsinventory-reports] ?```
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
