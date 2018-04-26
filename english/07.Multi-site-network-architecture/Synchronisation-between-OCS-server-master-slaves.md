@@ -13,7 +13,7 @@ impossible to deploy packages from the highest server.`**
 
 ## Simplified Diagram
 
-![Simplified Diagram](../../img/Injector.jpg)
+![Simplified Diagram](../../img/server/schema/injector.jpg)
 
 ## Prerequires
 
@@ -23,11 +23,11 @@ If you want to automate this synchronisation, you have to create a cronjob.
 
 ## Configuration of management console
 
-![Inventory Files Acces](../../img/EN_ocs_master_slave_1.jpg)
+![Inventory Files Acces](../../img/server/reports/master_slave_1.jpg)
 
 To configure this feature, click on _Config_, and _Config_. Then, click on _Inventory Files_ tab.
 
-![Inventory Files Tab](../../img/EN_ocs_master_slave_2.jpg)
+![Inventory Files Tab](../../img/server/reports/master_slave_2.jpg)
 
 **`Warning: Don't forget to create the directory with writable rights.`**
 

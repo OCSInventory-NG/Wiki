@@ -18,7 +18,7 @@ agents to download this bad package.
 
 ## Architecture
 
-![Proxy diagramm](../../img/Proxy_cache_deploy.jpg)
+![Proxy diagramm](../../img/server/schema/proxy_cache_deploy.jpg)
 
 ## Prerequires
 
