@@ -48,12 +48,12 @@ Web Interface too.
 
 ### **General options**
 
-![Access Config](../../img/EN_snmp_scan_feature_1.png)
+![Access Config](../../img/server/reports/snmp_scan_feature_1.png)
 
 To manage SNMP general options in Web Interface, go to Config menu, click on _Config_ and
 go to the _SNMP_ tab.
 
-![SNMP tab](../../img/EN_snmp_scan_feature_2.png)
+![SNMP tab](../../img/server/reports/snmp_scan_feature_2.png)
 
 This is the SNMP configuration options available:
 
@@ -81,16 +81,16 @@ configuration. OCS agent will received informations about this communities and w
 devices using every SNMP communities you set in administration console. SNMP communites informations
 are directly added in database.
 
-![Manage SNMP communities access](../../img/EN_snmp_scan_feature_3.png)
+![Manage SNMP communities access](../../img/server/reports/snmp_scan_feature_3.png)
 
 To manage SNMP communities in Web Interface, go to _Network(s)_ menu, click on _Administer_ and go to
 the _Manage SNMP communites_ tab.
 
-![Manage SNMP communities](../../img/EN_snmp_scan_feature_4.png)
+![Manage SNMP communities](../../img/server/reports/snmp_scan_feature_4.png)
 
 You can now add a new SNMP communities using the _Add_ button. A new screen is displayed:
 
-![Add SNMP communities](../../img/EN_snmp_scan_feature_5.png)
+![Add SNMP communities](../../img/server/reports/snmp_scan_feature_5.png)
 
 You have to set a community name and a SNMP version (using the drop list)
 
@@ -108,11 +108,11 @@ you may have to set its custom parameters at computer side or at groups side.
 To make a single OCS agent to scan its network using SNMP, you have to set it in its custom parameters.
 First, go to its _Configuration_'s page and click on the _pencil_. Then, click on the _Networks scans_ tab.
 
-![Computer Pencil](../../img/EN_snmp_scan_feature_7.png)
+![Computer Pencil](../../img/server/reports/snmp_scan_feature_7.png)
 
 **`Note: Since OCS Inventory NG 2.1, you can scan remote networks (others that where the agent is located)`**
 
-![Networks scans tab](../../img/EN_snmp_scan_feature_6.png)
+![Networks scans tab](../../img/server/reports/snmp_scan_feature_6.png)
 
 * If no network address appears in **IPDISCOVER** option, you have to set it manually using the drop list
 * You can enable/disable a computer to make SNMP scans using **SNMP_SWITCH** option. By default,
@@ -126,12 +126,12 @@ To make a single OCS agent to scan its network using SNMP, you have to set it in
 First, go to the _groups_ page in _Inventory_, click on _Customization_, and then click on the _pencil_.
 Then, click on the _Networks scans_ tab.
 
-![Groups Pencil](../../img/EN_snmp_scan_feature_8.png)
+![Groups Pencil](../../img/server/reports/snmp_scan_feature_8.png)
 
 For more informations about groups page, click
 [here](../../03.Management-console-and-its-advanced-features/Using-computers-groups.md)
 
-![Networks scans tab](../../img/EN_snmp_scan_feature_6.png)
+![Networks scans tab](../../img/server/reports/snmp_scan_feature_6.png)
 
 * If no network address appears in **IPDISCOVER** option, you have to set it manually using the drop list
 * You can enable/disable a computer to make SNMP scans using **SNMP_SWITCH** option. By default,
@@ -270,13 +270,13 @@ To query SNMP inventory results in Web Interface, go to in _Network(s)_ menu, an
 
 You will see table containing all the SNMP devices scanned by OCS agents.
 
-![Networks scans tab](../../img/EN_snmp_scan_feature_9.png)
+![Networks scans tab](../../img/server/reports/snmp_scan_feature_9.png)
 
 ### **Show SNMP device inventory**
 
 To have more informations about a SNMP device, just click on its name to display its inventory page.
 
-![Networks scans tab](../../img/EN_snmp_scan_feature_10.png)
+![Networks scans tab](../../img/server/reports/snmp_scan_feature_10.png)
 
 * At the bottom of the page, you have a grey frame corresponding to general information about SNMP device:
 IP address, MAC address, Name, Description etc...
