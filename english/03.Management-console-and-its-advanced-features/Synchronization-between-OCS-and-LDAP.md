@@ -10,9 +10,7 @@ and we kept the default configuration.`**
 
 ## Connection to OCS Inventory NG management console with administrator account
 
-Click on **LDAP configuration** tab.
-
-![LDAP configuration tab](../../img/server/reports/ldap_1.png)
+Click Config, config and on LDAP configuration tab.
 
 First configuration fields concern the way to connect to the LDAP.
 
