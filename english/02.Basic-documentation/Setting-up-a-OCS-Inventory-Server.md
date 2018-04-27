@@ -17,7 +17,7 @@ These 4 components can be hosted on a single computer or on different computers 
 **`Note: If you want to use multiple computers to host OCS inventory NG management server,
 we recommend that you set it up on Linux servers.`**
 
-**Database** server currently can only be MySQL 4.1 or higher with InnoDB engine active.
+**Database** server currently can only be MySQL 4.1 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
 **Communication server** needs Apache Web Server 1.3.X/2.X and is written in PERL as an Apache module. Why? Because PERL scripts are compiled when Apache starts, and not at each request. This is better performance-wise. Communication server may require some additional PERL modules, according to your distribution.
 **Deployment server** needs any Web Server with SSL enabled.
 **Administration console** is written in PHP 4.1 (or higher) and runs under Apache Web Server 1.3.X/2.X. Administration console requires ZIP and GD support enabled in PHP in order to use package deployment.
@@ -57,6 +57,9 @@ We assume that you have:
 * MySQL version 4.1.0 or higher with InnoDB engine active.
 * Make utility such as GNU make.
 
+**`Note : Mysql version upper than 5.5 are not supported but may work. We hightly recommand to use mariaDB`**
+
+
 **`Note: OCS Inventory NG Server Setup will check for all these components and will exit
 if any are missing.`**
 
@@ -75,7 +78,7 @@ Already the web communication server requires mysql dependancies if you choose t
 **On Debian 9 Stretch like Linux**
 
     apt install apache2
-    apt install mysql-client
+    apt install mariadb-client
 
 **`Warning: You must have root privileges to set required perl modules up.
 It is better for system integrity to use your distribution's precompiled packages when they are available.

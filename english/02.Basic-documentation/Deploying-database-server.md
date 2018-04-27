@@ -6,6 +6,9 @@ OCS Inventory server need a database to storage information from inventory
 
 **Database** server currently can only be MySQL 4.1 or higher with InnoDB engine active.
 
+**`Note : Mysql version upper than 5.5 are not supported but may work. We hightly recommand to use mariaDB`**
+
+
 **`Note : On Fedora/Redhat/Centos 7 mariadb is avalaible on`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`. you need to install this repo to install database server.`**
 
 **On Fedora/Redhat/Centos 7** you can use "yum" to install mariadb
