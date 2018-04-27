@@ -26,17 +26,16 @@ we recommend that you set it up on Linux servers.`**
 
 We assume that you have:
 
-1. MySQL database server running somewhere and listening on default port 3306 with TCP/IP communication enabled.
+1. MySQL or MariaDB database server running somewhere and listening on default port 3306 with TCP/IP communication enabled.
 2. Apache Web server installed and running for Communication server and Administration server.
 3. PHP and Perl installed and usable by Apache Web server for the Administration console.
 4. Perl and mod_perl installed and usable by Apache Web server for the Communication server.
 
 ## Requirements
 
-* Apache version 1.3.33 or higher / Apache version 2.0.46 or higher.
+* Apache version 2.2 or higher.
     * Mod_perl version 1.29 or higher.
-    * Mod_php version 4.3.2 or higher.
-* PHP 4.3.2 or higher, with ZIP and GD support enabled.
+* PHP 5.4 or higher, with ZIP and GD support enabled.
     * php_curl
     * php_mbstring
     * php_soap
@@ -54,7 +53,7 @@ We assume that you have:
     * Perl module Archive::Zip
     * Perl module YAML
     * Perl module XML::Entities
-* MySQL version 4.1.0 or higher with InnoDB engine active.
+* MySQL or MariaDB version 4.1.0 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
 * Make utility such as GNU make.
 
 **`Note: OCS Inventory NG Server Setup will check for all these components and will exit
