@@ -28,7 +28,6 @@ the beginning of line are those which have specific customized options.
 
 Just click on a computer name to display its properties in a new browser window.
 
-* Top banner - Display general informations for the current device
 
 ![Top banner](../../img/server/reports/querying_ir_4.png)
 
@@ -39,7 +38,6 @@ Just click on a computer name to display its properties in a new browser window.
 * Special section Administrative data – Use this section to display the device's administrative data.
 This page fits with your settings in “admininfo” tab. Use the “update” button to change values.
 
-![Special section Administrative data](../../img/server/reports/querying_ir_6.png)
 
 * Special section Customization – Use this section to customize configuration option for individual computer.
 You can also select here package to deploy on a particular computer.
