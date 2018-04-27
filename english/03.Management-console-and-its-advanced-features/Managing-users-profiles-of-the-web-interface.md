@@ -20,7 +20,7 @@ and modify options
 
 ### **Create a profile**
 
-Click on Create Profile at the left of the page, enter your informations and click on OK.
+Click on Config, Users and Create Profile at the left of the page, enter your informations and click on OK.
 
 ![Profile's Creation](../../img/server/reports/users_profiles_9.png)
 
@@ -118,7 +118,6 @@ to create or delete users groups of teledeploy workflow.
 
 Description of pages :
 
-* about :
 * account_config :
 * activity_stats : jpgraph chart in the statistics section
 * add_key :
@@ -144,6 +143,8 @@ Description of pages :
 * admin_user_details :
 * admin_values :
 * ask :
+* asset_cat :
+* asset_cat_list :
 * components :
 * compress : page allows to retrieve package fragments
 * computer : main page of machine details
@@ -152,7 +153,6 @@ Description of pages :
 * export_csv : csv export page of data tables
 * export_ocs :
 * export_soft :
-* forums :
 * group_show :
 * groups_search :
 * help : Help page
@@ -177,6 +177,7 @@ Description of pages :
 * show_ipdiscover :
 * snmp : page of devices detected by SNMP
 * snmp_detail : main page of SNMP devices details
+* soft_cat :
 * stat_speed : main display page of teledeployment speed
 * stats : statistics page
 * stats_connexion :
