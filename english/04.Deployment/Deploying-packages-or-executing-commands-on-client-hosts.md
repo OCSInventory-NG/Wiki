@@ -208,6 +208,7 @@ Last, you can select your action in **Action** dropdown list. Here are some samp
 kind of package you can build.
 
 ![Package builder page empty](../../img/server/reports/deploying_packages_4.png)
+![Package builder page empty2](../../img/server/reports/deploying_packages_23.png)
 
 ### **Deploying package through “Launch” command**
 
@@ -322,6 +323,7 @@ _Also, if provided folder path does not exist, it will be recursively created._
 In our following example, we deploy a file to store in folder “C:\My Folder”:
 
 ![myFolder](../../img/server/reports/deploying_packages_12.png)
+![myFolder2](../../img/server/reports/deploying_packages_24.png)
 
 Click **[ Send ]** button to upload package to Administration console.
 
