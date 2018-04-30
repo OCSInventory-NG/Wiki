@@ -156,9 +156,6 @@ network by clicking on number in column “IpDiscover” in the network list.
 
 ## Show known or identified hosts
 
-You can view the list of known hosts already identified by someone on your network by clicking on number
-in column “Identified” in the network list.
-
 You can view the list of known hosts already identified by someone on your network by clicking on
 number in column “Identified” in the network list.
 
@@ -174,7 +171,7 @@ You may first define some device types to identify them easily.
 
 Click on Manage and then on “Administer” and finally on Manage TYPES menu to manage your device types.
 
-![Administer Acess](../../img/server/reports/ip_discover_feature_1.png)
+![Administer Acess](../../img/server/reports/ip_discover_feature_9.png)
 
 ![Manage TYPES](../../img/server/reports/ip_discover_feature_7.png)
 
