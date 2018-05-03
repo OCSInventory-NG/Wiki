@@ -33,8 +33,8 @@ favorite browser (Apache, php)**
 ## Deployment tools of the solution
 
 ### **Simplified installation of server**
-* Preconfigured XAMPP package for Windows
-* tar.gz package with automatic install script
+* .deb package with automatic install script for Debian 9 Stretch
+* .rpm package with automatic install script for Fedora/Redhat/Centos 7
 
 ### **Deployment tools of agents by the network**
 * [OCS Deployment Tool](../06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md) based on psexec
@@ -45,8 +45,10 @@ based on GPO and logon scripts
 ## Interfacing with many softwares
 
 ### **Classics**
-* GLPI (requests directly in OCS database)
-* LDAP for authentification on web interface (ocsreports)
+* GLPI http://glpi-project.org/
+* LDAP https://ldap.com/
+* ITOP https://www.combodo.com/itop-193
+* OTRS https://otrs.com/
 
 ### **Others**
 OCS provides a SOAP Web service, which allows it to interface with many applications, such as Nagios for exemple.
