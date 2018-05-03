@@ -39,7 +39,7 @@ on red cross at the end of the corresponding line.
 
 Click on the toolbar **Config** menu and then **config** to display all general options.
 
-![config access](../../img/server/reports/administration_ocs_19.png)
+![config access](../../img/server/reports/administration_ocs_20.png)
 
 ![OCS config](../../img/server/reports/administration_ocs_2.png)
 
@@ -329,7 +329,7 @@ general options.`**
 Click **Manage** toolbar menu and then **local import**, browse your hard drive to select the ".ocs"
 file or ".xml" file created by agent release and click **[ Send ]** button.
 
-![Local Import](../../img/server/reports/administration_ocs_17.png)
+![Local Import](../../img/server/reports/administration_ocs_21.png)
 
 ![Local Import](../../img/server/reports/administration_ocs_18.png)
 
