@@ -129,7 +129,7 @@ Then, click on the _Networks scans_ tab.
 ![Groups Pencil](../../img/server/reports/snmp_scan_feature_8.png)
 
 For more informations about groups page, click
-[here](../../03.Management-console-and-its-advanced-features/Using-computers-groups.md)
+[here](../../english/03.Management-console-and-its-advanced-features/Using-computers-groups.md)
 
 ![Networks scans tab](../../img/server/reports/snmp_scan_feature_6.png)
 
