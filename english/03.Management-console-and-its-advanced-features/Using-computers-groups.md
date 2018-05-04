@@ -116,3 +116,4 @@ As you do for a single computer, click now on icon _ACTIONS_ in the right column
 Now, your package is affected on your group and you can verify the affectation in the group custom parameters.
 
 ![Package affected](../../img/server/reports/computers_groups_11.png)
+![Package affected2](../../img/server/reports/computers_groups_12.png)
