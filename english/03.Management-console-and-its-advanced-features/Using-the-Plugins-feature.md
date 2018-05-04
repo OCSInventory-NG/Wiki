@@ -14,6 +14,8 @@ Select your plugins and click on Install
 
 ![Install plugin](../../img/server/filesystem/plugins_feature_3.png)
 
-You can see all plugins installed under Plugins installed
+You can see all plugins installed under Installed plugins
 
 ![Installed plugins](../../img/server/filesystem/plugins_feature_4.png)
+
+**`Don't forget to put your .vbs files into the folder plugin in agent folder`**
