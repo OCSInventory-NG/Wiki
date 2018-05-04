@@ -13,7 +13,7 @@ These IP addresses to scan are directly sent to OCS agent by OCS server when OCS
 (PROLOG step).
 
 You can find more information about Ipdiscover
-[here](../../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
+[here](../../english/05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
 
 **`Warning: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
 
@@ -144,34 +144,8 @@ Click on the _Update_ button to save your modifications.
 ### **Prerequisites**
 
 To be able to make SNMP using OCS Unified Unix agent, you have to install Net::SNMP perl module
-(see [http://search.cpan.org/~dtown/Net-SNMP-v6.0.1/lib/Net/SNMP.pm](http://search.cpan.org/~dtown/Net-SNMP-v6.0.1/lib/Net/SNMP.pm)).
 
-To install it, use your distribution or OS packages as much as possible. For Debian like distributions,
-install _libnet-snmp-perl_ package and for Redhat like distributions, install _perl-Net-SNMP_
-
-If you cannot use packages, install _Net::SNMP_ perl module using CPAN like this:
-
-    #cpan
-    cpan>install Net::SNMP
-
-### **Activate Snmp.pm**
-
-SNMP scans feature is managed by _Snmp.pm_ Unix Unified agent module. You have two ways to activate it
-in your Unix Unified agent installation:
-
-* By using post installation interactive script by answering 'y' this question:
-
-      Do you want to use OCS-Inventory SNMP scans feature ?
-
-* By editing _/etc/ocsinventory-agent/modules.conf_ file and uncomment this line :
-
-      use Ocsinventory::Agent::Modules::Snmp;
-
-To be sure that _Snmp.pm_ will be launched when Unix Unified agent will run, you can type using command:
-
-    #perl /etc/ocsinventory-agent/modules.conf
-
-If no errors are displayed on stdout, this means that you have no errors.
+you can find more information in the page [Unix agent](../../english/02.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md)
 
 ### **Copying SSL certificate file**
 
