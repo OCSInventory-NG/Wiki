@@ -6,9 +6,7 @@ However, MySQL Server provide standard tools usable in command line.
 
 ## Backing up OCS Inventory NG database
 
-Tool “mysqldump” allows you to dump all content of a database to a single file. These tool is
-available in directory “INSTALL_PATH\xampp\mysql\bin” where INSTALL_PATH is the installation
-oath you choosen for OCS Inventory NG Server for Windows, and generally can be directly called under Linux.
+Tool “mysqldump” allows you to dump all content of a database to a single file. These tool can be directly called under Linux.
 
 Simply run the following command to backup OCS Inventory NG database:
 
@@ -20,9 +18,7 @@ This will save database content of OCS Inventory NG database _ocsweb_ into file 
 
 ## Restoring OCS Inventory NG database
 
-Tool “mysql” allows you to launch SQL queries on a database. These tool is available in directory
-“INSTALL_PATH\xampp\mysql\bin” where INSTALL_PATH is the installation oath you choosen for
-OCS Inventory NG Server for Windows, and generally can be directly called under Linux.
+Tool “mysql” allows you to launch SQL queries on a database. These tool can be directly called under Linux.
 
 Just run MySQL command line interpreter to import saveset previously created “ocsweb” database.
 
@@ -32,5 +28,3 @@ Just run MySQL command line interpreter to import saveset previously created “
 
 **`Note: You will be prompted from root password. If you haven’t yet set root password, do use "-p"
 command line switch.`**
-
-![Linux Command](../../img/Restaure_bdd.jpg)
