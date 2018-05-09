@@ -55,7 +55,7 @@ Specify if you want to have a better verbose in your logs, if you want to regist
 and if you want or not see it in systray, administrative TAG of machine, and then if you want to send
 an inventory just after the end of the installation. Click on **Next** button.
 
-![OCS agent properties](../../agent/windows/install_agent_win_proxy5.png)
+![OCS agent properties](../../img/agent/windows/install_agent_win_proxy5.png)
 
 Choose installation directory of binaries. Click on **Install** button.
 
@@ -63,11 +63,11 @@ Choose installation directory of binaries. Click on **Install** button.
 
 Installation is in progress.
 
-![Install in progress](../../agent/windows/install_agent_win_proxy7.png)
+![Install in progress](../../img/agent/windows/install_agent_win_proxy7.png)
 
 Click on Close button.
 
-![End Install](../../agent/windows/install_agent_win_proxy8.png)
+![End Install](../../img/agent/windows/install_agent_win_proxy1.png)
 
 End of installation.
 
