@@ -36,38 +36,38 @@ Depending on proxy type (transparent/authenticator), differents configurations a
 
 Launch **OCS-NG-Windows-Agent-Setup.exe** file. A windows opens. Click on **Next** button.
 
-![Start install agent](../../img/Fr_install_agent_win_proxy1.jpg)
+![Start install agent](../../img/agent/windows/install_agent_win_proxy1.png)
 
 Accept user licence clicking on **I accept**.
 
-![Licence Agreement](../../img/Fr_install_agent_win_proxy2.jpg)
+![Licence Agreement](../../img/agent/windows/install_agent_win_proxy2.png)
 
 Specify the address of your OCS Inventory NG server, authentification parameters of web server (optionnal)
 and if you want to do a SSL control, define certificate path.
 
-![OCS server properties](../../img/Fr_install_agent_win_proxy3.jpg)
+![OCS server properties](../../agent/windows/install_agent_win_proxy3.png)
 
 Specify proxy type, proxy address, listen port, and its authentification parameters.
 
-![Proxy properties](../../img/Fr_install_agent_win_proxy4.jpg)
+![Proxy properties](../../img/agent/windows/install_agent_win_proxy4.png)
 
 Specify if you want to have a better verbose in your logs, if you want to register OCS as a service
 and if you want or not see it in systray, administrative TAG of machine, and then if you want to send
 an inventory just after the end of the installation. Click on **Next** button.
 
-![OCS agent properties](../../img/Fr_install_agent_win_proxy5.jpg)
+![OCS agent properties](../../agent/windows/install_agent_win_proxy5.png)
 
 Choose installation directory of binaries. Click on **Install** button.
 
-![Install folder](../../img/Fr_install_agent_win_proxy6.jpg)
+![Install folder](../../img/agent/windows/install_agent_win_proxy6.png)
 
 Installation is in progress.
 
-![Install in progress](../../img/Fr_install_agent_win_proxy7.jpg)
+![Install in progress](../../agent/windows/install_agent_win_proxy7.png)
 
 Click on Close button.
 
-![Install folder](../../img/Fr_install_agent_win_proxy8.jpg)
+![End Install](../../agent/windows/install_agent_win_proxy8.png)
 
 End of installation.
 
