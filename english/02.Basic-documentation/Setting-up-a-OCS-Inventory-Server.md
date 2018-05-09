@@ -1,6 +1,6 @@
 # Setting up OCS Inventory Server
 
-Management server is made up of 4 main components:
+Management server is made up of 4 main components :
 
 1. **Database server**, which stores inventory information.
 2. **Communication server**, which handles HTTP communications between database server and agents.
