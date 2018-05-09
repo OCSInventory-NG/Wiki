@@ -307,7 +307,8 @@ Setup can name Communication Server Apache configuration file
 'z-ocsinventory-server.conf' instead of 'ocsinventory-server.conf'.
 
 ```Do you allow Setup renaming Communication Server Apache configuration file
-to 'z-ocsinventory-server.conf' ([y]/n) ?```
+to 'z-ocsinventory-server.conf' ([y]/n) ?
+```
 
 **`Warning: Do not add content to apache main configuration file if it is not a fresh install!
 You must manually copy content of the ocsinventory.conf.local file created by setup into apache
@@ -678,7 +679,8 @@ Communication server installation is now finished. You will be prompted to set A
 Enter “y” or validate to set Administration console up, enter “n” to skip Administration console installation.
 
 ```Do you wish to setup Administration Server (Web Administration Console)
-on this computer ([y]/n)?```
+on this computer ([y]/n)?
+```
 
 **`CAUTION: Setup now install files in accordance with Filesystem Hierarchy
 Standard. So, no file is installed under Apache root document directory
@@ -693,13 +695,15 @@ Administration Server writable/cache directory (by default
 Setup asking you to copy Administration Server static files for PHP Web Console
 
 ```Where to copy Administration Server static files for PHP Web Console
-[/usr/share/ocsinventory-reports] ?```
+[/usr/share/ocsinventory-reports] ?
+```
 
 Setup asking you to create writable/cache directories for deployment packages,
 administration console logs, IPDiscover and SNMP
 
 ```Where to create writable/cache directories for deployment packages,
-administration console logs, IPDiscover and SNMP [/var/lib/ocsinventory-reports] ?```
+administration console logs, IPDiscover and SNMP [/var/lib/ocsinventory-reports] ?
+```
 
 Next, setup will check for required PERL modules
 (cf [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements).):
