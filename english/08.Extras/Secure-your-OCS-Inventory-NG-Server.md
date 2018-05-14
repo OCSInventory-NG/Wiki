@@ -11,10 +11,10 @@ You have to remove install.php in ocsreports directory. Generally under linux in
 
     /usr/share/ocsinventory-reports/ocsreports/
 
-## Secure your managment console
+## Secure your management console
 
 By default, an account is created by installation script : admin / admin You have to create your own
-account with Super Administrator profile, and after that remove defaut account. An other solution is
+account with Super Administrator profile, and after that remove default account. An other solution is
 to change the admin account password.
 
 ## Secure mysql access
