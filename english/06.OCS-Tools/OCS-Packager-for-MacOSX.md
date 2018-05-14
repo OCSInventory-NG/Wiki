@@ -35,7 +35,7 @@ Set your custom OCS MacOSX agent configuration by choosing serveral options:
 * Log file path for OCS MacOSX agent ("/var/log/ocsng.log" by default).
 * Activate or Unactivate OCS MacOSX agent debug mode for logs (activated by default).
 * Activate or Unactivate OCS MacOSX agent packages download feature (activated by default).
-* Activate or Unactivate OCS MacOSX agent lazy mode (unactivated by default).
+* Activate or Unactivate OCS MacOSX agent lazy mode (inactivated by default).
 * Periodicity for OCS MacOSX agent to be launched by Launchd daemon (5 hours by default).
 * Activate or Unactivate OCS MacOSX agent launch at Launchd daemon start (activated by default).
 * Activate or Unactivate OCS MacOSX agent launch, using Launchd daemon, after OCS agent installation
