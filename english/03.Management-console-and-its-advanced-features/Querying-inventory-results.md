@@ -15,7 +15,7 @@ the number of displayed lines per page. Theses customizations settings are saved
 user between sessions. This means that when you come back to OCS Inventory NG Administration
 console, your settings are restored as they were during your last visit.
 
-**`Note: Computers marked with a red bullet at beginning of line are computers whith
+**`Note: Computers marked with a red bullet at beginning of line are computers with
 specific customization parameters. They may have specific inventory frequency,
 ipdiscover status or have package deployment affected.`**
 
@@ -49,7 +49,7 @@ You can also select here package to deploy on a particular computer.
 This query allows you to display all machines grouped by TAG account info. Click on the computer
 count to retrieve the corresponding devices.
 
-For example, if you’ve choosen to set your TAG information to reflect your geographical sites,
+For example, if you’ve chosen to set your TAG information to reflect your geographical sites,
 this will display the number of computer in each different site.
 
 ![TAG Informations](../../img/server/reports/querying_ir_8.png)
