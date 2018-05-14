@@ -41,7 +41,7 @@ then sends these data using HTTP or HTTPS protocol to the server. The server ask
 computer is elected to run IPDISCOVERY (see
 [Using IP discovery feature](../../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).)
 * **Deploy a package**: Agent contacts the deployment server using the HTTPS protocol to get the information file
-(file INFO which describes the package), downloads package fragments from the deployement server,
+(file INFO which describes the package), downloads package fragments from the deployment server,
 rebuilds the package and launches it.
 
 **`Note`**`: The OCS Inventory NG Agent does not listen on the network. It only initiates communications to
@@ -219,7 +219,7 @@ Also, you can pass to the installer the following agent's command line parameter
 
 Launcher “OcsLogon.exe” is a small tool able to run inside a login script or an Active Directory GPO.
 Its purpose is to setup Agent, if not already installed on client computers, and to launch the
-OCS Inventory NG Agent if you don't not want to use the service.
+OCS Inventory NG Agent if you doesn't want to use the service.
 
 * To deploy Standalone Agent with launcher, **you first must have uploaded Standalone Agent** file
 “ocsagent.exe” or “OCSNG-Windows-Agent-Setup.exe” to the server using Administration Console.
@@ -258,7 +258,7 @@ the one copied in the GPO folder.
 is located at provided URL, instead of Communication Server.
 * **/DEPLOY=a.b.c.d** ensure there is at least the specified version installed. OcsLogon
 install/upgrade Agent only if installed version is lower than the specified one "a.b.c.d".
-* **/FORCE** force reinstalling agent, even if the installed version is newer or equal to
+* **/FORCE** force re-installing agent, even if the installed version is newer or equal to
 the specified one. Use it to downgrade version for example. CAUTION, USE THIS OPTION WITH CARE,
 as Launcher will setup agent each time.
 * **/TIMEOUT=x** (milliseconds) allow to modify default download timeout of 60 seconds.
@@ -310,7 +310,7 @@ and “Scripts”.
 
 ![Script start](../../img/GPO_Computer_startup_script_1.png)
 
-Then double click on “Startup” on right pane.
+Then double click on “Startup” on right pannel.
 
 ![Script start up](../../img/GPO_Computer_startup_script_2.png)
 
