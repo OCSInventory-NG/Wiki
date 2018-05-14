@@ -78,5 +78,5 @@ For example, here's what you might have:
 
 So each of your machines will have, in the _Machine details_, all fields you have created.
 
-These fields will also be present in some tables (_All machines_ for exemple), but also in the
+These fields will also be present in some tables (_All machines_ for example), but also in the
 multicriteria search. This will allow you to perform batch processing of your administrative data.
