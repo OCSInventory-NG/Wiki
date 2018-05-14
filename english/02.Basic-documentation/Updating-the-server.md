@@ -3,13 +3,13 @@ The process is mainly backup your configuration download the new version of OCS-
 
 ![OCS update to 2.4 notes](../../english/02.Basic-documentation/update-OCS-Server.md#ocs-server-update-to-24)
 
-### Delete extisting plugins
-If you have plugins installed delete this plugins prior the update otherwise you might have problems with or after reinstall them.
+### Delete existing plugins
+If you have plugins installed delete this plugins prior the update otherwise you might have problems with or after re-install them.
 Go to the plugin manager and delete them you may also need delete the configuration in:    
 _/etc/ocsinventory-server/plugins_
 
 ### Backup existing configuration
-Before you start it´s better to stop the webserver that nobody could do changes after you backed up the files.
+Before you start it´s better to stop the web server that nobody could do changes after you backed up the files.
 
 ```
 service apache2 stop
