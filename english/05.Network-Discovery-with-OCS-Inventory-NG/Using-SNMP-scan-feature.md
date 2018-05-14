@@ -18,7 +18,7 @@ You can find more information about Ipdiscover
 **`Warning: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
 
 **`Warning: Since OCS Inventory 2.0.3, you MUST set OCS server address in
-/etc/ocsinventory-agent/ocsinventory-agnet.cfg to use
+/etc/ocsinventory-agent/ocsinventory-agent.cfg to use
 `[_`https://your_ocs_server/ocsinventory`_](https://your_ocs_server/ocsinventory)`
 instead of`[_`http://your_ocs_server/ocsinventory`_](http://your_ocs_server/ocsinventory)`.
 If not, OCS agent won't receive SNMP scans orders from OCS server.`**
