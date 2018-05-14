@@ -28,9 +28,9 @@ The remaining configuration fields concern rights of the user on administration 
 
 ![User's rights](../../img/server/reports/ldap_3.png)
 
-For our exemple :
+For our example :
 
-* if the user whitch connects through the LDAP to title fiels to System Administrator,
+* if the user which connects through the LDAP to title fiels to System Administrator,
 it will automatically Super Administrator rights profile.
 * if the value of this field is Employee, it has the rights of the Local Administrator profile.
 * in other cases, LDAP users will have no OCS profile assigned
@@ -112,11 +112,11 @@ not be stored.
 
 ![users](../../img/server/reports/ldap_9.png)
 
-However, the user **georgess**, may well identify but can not connect directly. Indeed, we have assigned by
+However, the user **georgess**, may well identify but cannot connect directly. Indeed, we have assigned by
 default a **Local Administrator** profile, which has a limited view of the park of machines.
 So, after the connection of that user, it will have the following message:
 
 ![users](../../img/server/reports/ldap_9.png)
 
 For that user can access the administration console of OCS Inventory NG, it will wait a
-**Super Administrator** gives it access to TAG witch interested it.
+**Super Administrator** gives it access to TAG wich interested it.
