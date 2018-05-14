@@ -20,7 +20,7 @@ This will save database content of OCS Inventory NG database _ocsweb_ into file 
 
 Tool “mysql” allows you to launch SQL queries on a database. These tool can be directly called under Linux.
 
-Just run MySQL command line interpreter to import saveset previously created “ocsweb” database.
+Just run MySQL command line interpreter to import save set previously created “ocsweb” database.
 
     $mysql –u root –p ocsweb
     mysql>source <path_to_saveset>
