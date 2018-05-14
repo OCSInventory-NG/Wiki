@@ -25,7 +25,7 @@ Have a device under Android 2.1 or higher.
 2 solutions to install Android agent.
 
 [From OCS repository on Launchpad](https://launchpad.net/ocsinventory-android-agent)
-: Download and uncompress the lastestversion of Android Agent from download page of our website.
+: Download and decompress the lastestversion of Android Agent from download page of our website.
 This package contains file :
 
 **`OCSInventoryAgent-2.1.6c.apk: install Android agent, without any specific configuration.`**
@@ -43,12 +43,12 @@ on your device. You can list its before clicking on Install.`**
 
 ![Installation of android agent](../../img/Install_android_agent_1_en.png)
 
-At the end of installation, icon is created on desktop, and a message prevents you application was installed
+At the end of installation, icon is created on desktop, and a message prevents your application was installed
 correctly. Click on **Open** to quit the playstore and launch application.
 
 ![Windows agent installed](../../img/agent/android/android_agent_install_down.png)
 
-**`Note: On android v6.0 and more when you launch the app you can authorize the application to acces to the different information and data on your device`**
+**`Note: On android v6.0 and more when you launch the app you can authorize the application to access to the different information and data on your device`**
 
 ![Authorize appli to acces ](../../img/agent/android/android_agent_acces_1.png)
 ![Authorize appli to acces ](../../img/agent/android/android_agent_acces_2.png)
@@ -107,12 +107,12 @@ By clicking on configuration standard button of Android (different depending on 
 **port** of proxy server.
 
 **`Warning: To work with SSL control, you have to import CA in Android. To do this, use menu Localisation
-and security/Import certficate from SDCARD. Certificates MUST BE in the root of SDCARD. Extensions .crt and .cer are detected. Extension
+and security/Import certificate from SDCARD. Certificates MUST BE in the root of SDCARD. Extensions .crt and .cer are detected. Extension
 .pem isn't always.`**
 
 ## Feature of import/export configuration
 
-This feature allows to export agent configuration when defined, to import in others devices.
+This feature allows to export agent configuration when defined, to import in other devices.
 **org.ocsinventory.android.agent_preferences.xml** file containing configuration parameters to
 import/export is stored in directory "ocs".
 
