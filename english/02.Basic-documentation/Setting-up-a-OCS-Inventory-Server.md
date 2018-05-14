@@ -56,7 +56,7 @@ We assume that you have:
 * MySQL or MariaDB version 4.1.0 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
 * Make utility such as GNU make.
 
-**`Note : Mysql version upper than 5.5 are not supported but may work. We hightly recommand to use mariaDB`**
+**`Note : Mysql version upper than 5.5 are not supported but may work. We highly recommend to use mariaDB`**
 
 
 **`Note: OCS Inventory NG Server Setup will check for all these components and will exit
@@ -67,7 +67,7 @@ if any are missing.`**
 The web communication server requires Apache web server and Perl 5 scripting language and some additional modules for Perl 5
 (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 It acts as an Apache module which handles HTTP OCS Inventory agents' requests to a virtual directory _/ocsinventory_.
-Already the web communication server requires mysql dependancies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
+Already the web communication server requires mysql dependencies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
 
 **On Fedora/Redhat/Centos 7 like Linux**
 
@@ -81,7 +81,7 @@ Already the web communication server requires mysql dependancies if you choose t
 
 **`Warning: You must have root privileges to set required perl modules up.
 It is better for system integrity to use your distribution's precompiled packages when they are available.
-Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`.`**
+Some of these packages are only available in`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`.`**
 
 **`Note: On Fedore/Redhat/Centos 7 the package " Apache DBI " wasn't in the repo EPEL you can find the rpm `[`here`](https://centos.pkgs.org/7/epmel-x86_64/perl-Apache-DBI-1.12-2.el7.noarch.rpm.html)`.`**
 
@@ -104,7 +104,7 @@ Some of these packages are only avalaible in`[`EPEL`](https://fedoraproject.org/
 
 The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
 for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
-Already the web communication server requires mysql dependancies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
+Already the web communication server requires mysql dependencies if you choose to install the database server alone, you can refers to this page : [`Deploying Database Server`](../../english/02.Basic-documentation/Deploying-database-server.md)
 
 **On Fedora/Redhat/Centos 7 like Linux**
 
@@ -778,7 +778,7 @@ database, tables, indexes, etc (usually root):
 
 Setup actions : refer to [Deploying Database Server](../../english/02.Basic-documentation/Deploying-database-server.md)
 
-To secure you server, refer to
+To secure your server, refer to
 [Secure your OCS Inventory NG Server](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 documentation.
 
