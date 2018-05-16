@@ -11,7 +11,7 @@ the entire network of computers and devices.
 ## Operating principle
 
 The OCS server receives inventories which are sent by agents in XML format, and stored data in MySQL database.
-The Agents contact the server and not vice versa. The Server only listens during this process.
+The Agents contact the server. The server only listens during this process.
 Exchanges between agents and server are made in http and/or https. Software deployments and snmp scans
 are made in https only.
 
