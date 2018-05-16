@@ -7,13 +7,13 @@ on local proxy, and will not use WAN connection to get back packages so.
 ## Operating principe
 
 A new deployment package is created from OCS Inventory NG server and affected to differents machines
-located on a different geographical entity. On remote entity, fisrt agent will download package
+located on a different geographical entity. On remote entity, first agent will download package
 on OCS Inventory server. HTTP is filtered through the remote entity proxy and cached, that's why
-next agents will retrieve the package dirrectly in proxy cache (because stored in the cache at the
+next agents will retrieve the package directly in proxy cache (because stored in the cache at the
 previous query), and will not use WAN connection so.
 
 * \+ : avoids overloading of you WAN connection bandwidth.
-* \- : if a package is deffective, you will have to clean the proxy cache, in order to avoid next
+* \- : if a package is defective, you will have to clean the proxy cache, in order to avoid next
 agents to download this bad package.
 
 ## Architecture
@@ -30,7 +30,7 @@ ProxyPwd in ocsinventory.ini)
 
 ## Agents configuration
 
-Depending on proxy type (transparent/authenticator), differents configurations are possibles.
+Depending on proxy type (transparent/authentificator), differents configurations are possibles.
 
 ### **Configuration step by step**
 

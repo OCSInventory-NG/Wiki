@@ -2,14 +2,14 @@
 
 OCS Inventory server need a database to storage information from inventory
 
-## Install database server requierements
+## Install database server requirements
 
 **Database** server currently can only be MySQL 4.1 or higher with InnoDB engine active.
 
-**`Note : Mysql version upper than 5.5 are not supported but may work. We hightly recommand to use mariaDB`**
+**`Note : Mysql version upper than 5.5 are not supported but may work. We highly recommend to use mariaDB`**
 
 
-**`Note : On Fedora/Redhat/Centos 7 mariadb is avalaible on`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`. you need to install this repo to install database server.`**
+**`Note : On Fedora/Redhat/Centos 7 mariadb is avalaible on`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`. you need to install this repo for install database server.`**
 
 **On Fedora/Redhat/Centos 7** you can use "yum" to install mariadb
 
@@ -34,7 +34,7 @@ If you doesn't have set password for root you can set it up by the following com
 
     SET PASSWORD FOR 'root'@'localhost' = PASSWORD('yourpassword');
 
-## Configure dabatase server in only one server
+## Configure database server in only one server
 
 This part is only if you want to install database server, communication server and administration console in only one server.
 
@@ -75,7 +75,7 @@ For separated server you need to have two user if you use different server for d
     CREATE USER 'ocs'@'CommunicationServerIP' IDENTIFIED BY 'ocs';
     CREATE USER 'ocs'@'AdministrationConsoleIP' IDENTIFIED BY 'ocs';
 
-**`Note : If you want to deploy OCS in only two server you only need to create one user with the communication server / admin console IP if you install a database server and an other server for communication server / administration console`**
+**`Note : If you want to deploy OCS in only two server you only need to create one user with the communication server / admin console IP if you install a database server and another server for communication server / administration console`**
 
 Then user need all privileges on the database "ocsweb"
 

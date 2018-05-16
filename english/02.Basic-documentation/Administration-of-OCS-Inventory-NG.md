@@ -1,6 +1,6 @@
 # Administration of OCS Inventory NG
 
-Adminstrative Console: Point your browser to
+Administrative Console: Point your browser to
 [http://your_administration_server/ocsreports](http://your_administration_server/ocsreports)
 and login with username “admin”, and password “admin”.
 

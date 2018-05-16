@@ -50,7 +50,7 @@ to your system or download each package individually from the repository
 
     apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl
 
-Optional modules: but Hightly recommanded
+Optional modules: but hightly recommended
 
     apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
@@ -104,7 +104,7 @@ libraries ... and it generates the Makefile. During this step, a temporary envir
 
        Please install Crypt::SSLeay if you want to use SSL.
        Please install nmap or ipdiscover if you want to use the network discover feature.
-       Please install Proc::Daemon and Proc::PID::File if you want to use the daemon monde.
+       Please install Proc::Daemon and Proc::PID::File if you want to use the daemon mode.
 
 3. Compilation
 
@@ -175,7 +175,7 @@ If not found, it will ask you if you wish to install it. Enter “y” or valida
 of required component. You need to have access to Internet or local repositories. If you enter “n”, setup will stop here.
 
 
-**Configuration begins. You answer with y for yes n for no or specify link or location. Letter in brackets [] is choosen if you press enter.**
+**Configuration begins. You answer with y for yes n for no or specify link or location. Letter in brackets [] is chosen if you press enter.**
 
     Do you want to configure the agent
     Please enter 'y' or 'n'?> [y] y

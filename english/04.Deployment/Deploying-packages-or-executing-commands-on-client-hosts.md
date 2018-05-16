@@ -33,7 +33,7 @@ directory.**This action allows retrieving result code of launched command.**
 
 * **Action Execute**: to deploy a ZIP or TAR.GZ file (optional), and launch with or without
 parameters an executable file **included or not** in ZIP or TAR.GZ file.If executable is not included
-in ZIP or TAR.GZ file, it must be part of software already installed on client computer. Typcally,
+in ZIP or TAR.GZ file, it must be part of software already installed on client computer. Typically,
 it may be a Windows standard command like Windows Installer call, RPM or DPKG or TAR.GZ command
 on Linux.ZIP or TAR.GZ file will be uncompressed into a temporary directory, and associated command
 (name of executable file with path or parameters if needed) will be launched into this temporary directory.
@@ -96,7 +96,7 @@ After each fragment, the agent will wait “DOWNLOAD_FRAG_LATENCY” (configurat
 seconds by default).
 
 When all fragments of a cycle are downloaded, the agent will wait “DOWNLOAD_CYCLE_LATENCY”
-(configuration option set to 60 seconds by default) before beginning a new cycle and incrementing
+(configuration option set to 60 seconds by default) before beginning a new cycle and increment
 cycle number.
 
 For example, if you are deploying one package with a priority of 5, the agent would pause for

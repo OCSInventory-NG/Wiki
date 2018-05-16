@@ -29,7 +29,7 @@ file content will be erased !`**
 
 ![Ocs agent already exist](../../img/agent/macOS/macosx_agent_install_configuration_warn.png)
 
-Set your OCS MacOSX agent configuration by choosing serveral options:
+Set your OCS MacOSX agent configuration by choosing several options:
 * Http or https for MacOSX agent communication to OCS server ("http" by default).
 * OCS server server name ("ocsinventory-ng" by default).
 * MacOSX agent TAG value (optional).
@@ -53,7 +53,7 @@ certificate file path, OCS MacOSX agent packages download feature won't work !!!
 Set how OCS MacOSX agent will be launched by MacOSX Launchd daemon by choosing several options:
 * Periodicity for OCS MacOSX agent to be launched by Launchd daemon (5 hours by default).
 * Activate or Unactivate OCS MacOSX agent launch at Launchd daemon start (activated by default).
-* Activate or Unactivate OCS MacOSX agent launch, using Launchd daemon, after installation (unactivated by default)
+* Activate or Unactivate OCS MacOSX agent launch, using Launchd daemon, after installation (inactivated by default)
 
 ![Daemon Option](../../img/agent/macOS/macosx_agent_install_daemon_options.png)
 
