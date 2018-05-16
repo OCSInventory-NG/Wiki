@@ -142,6 +142,7 @@ Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](htt
 
 2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
 libraries ... and it generates the Makefile.
+
         perl Makefile.PL
 
     Exemple :
