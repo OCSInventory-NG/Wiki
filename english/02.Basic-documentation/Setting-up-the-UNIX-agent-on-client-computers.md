@@ -39,7 +39,7 @@ if they are available.`**
 
 **On Fedora/Redhat/Centos7 like Linux**, you can use “yum” tool to set required modules up like following:
 
-    yum install perl-XML-Simple perl-devel perl-Compress-Zlib perl-Net-IP perl-LWP perl-Digest-MD5 perl-Net-SSLeay
+    yum install perl-XML-Simple perl-devel perl-Compress-Zlib perl-Net-IP perl-LWP perl-Digest-MD5 perl-Net-SSLeay perl-Data-UUID
 
 Optional modules: these modules are available on [`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse) repository. Don't forget to add this repository
 to your system or download each package individually from the repository
@@ -48,7 +48,7 @@ to your system or download each package individually from the repository
 
 **On Debian Stretch like Linux**, you can use “apt” tool to set required modules up:
 
-    apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl
+    apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl libdata-uuid-perl
 
 Optional modules: but hightly recommended
 
