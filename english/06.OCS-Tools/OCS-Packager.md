@@ -104,37 +104,6 @@ Refer to [[Deploying Agent using launcher OcsLogon.exe through Login Script or A
 **`Warning: Mysql server must accept files larger than 5M. Edit my.cnf file and modify
 max_allowed_packets value to fix it more than 5M. Save this file and restart service.`**
 
-## Other possible usages
-
-As you might have realised, it is also quite possible to use ocspackager to do any other deployment or
-administrative task unrelated to OCS Inevtory Deployment feature.
-
-One example is where you've got some computers that you do not want to setup OcsAgent on. These computers
-are not attached to your network but you'd like to deploy software without giving administrative
-account information or rights to a remote user.
-
-In these situations Ocspackager is very useful because you can package any setup program with its
-own options. You just have to know it's silent option.
-
-Administrative tasks can also be performed using a .vbs script. To do this, in “Exe file” field you
-should select the full path to your Cscript.exe file, in “other file” select your vbs file,
-and in “Command line options” type “[yourBatch.vbs] /B ”
-
-The ocspackage.exe file properties will always contains the packaged file name plus it's version number.
-
-##Interoperability
-
-### **Using Wine under Linux**
-
-OcsPackager works on a Linux server, in an identical as it does under Windows, using the package Wine.
-
-After installing "wine" according to the your distribution, you can two options to run OcsPackager:
-
-* In graphical mode, right click on "OcsPackager.exe" and execute it with "Wine ...",
-* In console mode, enter: wine oscpackager_directory / OcsPackager.exe
-
-Once launched, you just have to use OcsPackager exactly as described in this documentation.
-
 ## Getting help in forums
 
 If you are unable to diagnose the problem yourself, you can get help using OCS Inventory NG web site forums

@@ -4,7 +4,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 ## Newbie documentation
 
-* [OCS Inventory NG in 2 pages - Basics](01.Newbie-documentation/OCS-Inventory-NG-Basics.md)
+* [OCS Inventory NG - Basics](01.Newbie-documentation/OCS-Inventory-NG-Basics.md)
 
 ## Basic documentation
 
@@ -14,6 +14,8 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Setting up the MacOSX agent on client computers](02.Basic-documentation/Setting-up-the-MacOSX-agent-on-client-computers.md)
 * [Setting up the Android Agent](02.Basic-documentation/Setting-up-the-Android-Agent.md)
 * [Administration of OCS Inventory NG](02.Basic-documentation/Administration-of-OCS-Inventory-NG.md)
+* [Deploying database server](02.Basic-documentation/Deploying-database-server.md)
+* [Updating the server](02.Basic-documentation/Updating-the-server.md)
 
 ## Management console and its advanced features
 
@@ -39,11 +41,9 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [OCS Inventory NG Agent Deployement Tool](06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
 * [OCS Packager](06.OCS-Tools/OCS-Packager.md)
 * [OCS Packager for MacOSX](06.OCS-Tools/OCS-Packager-for-MacOSX.md)
-* [Uninstall Windows Agent](06.OCS-Tools/Uninstall-Windows-Agent.md)
 
 ## Multi-site network architecture
 
-* [Using redistribution servers](07.Multi-site-network-architecture/Using-redistribution-servers.md)
 * [Using local proxy cache to deploy](07.Multi-site-network-architecture/Using-local-proxy-cache-to-deploy.md)
 * [Synchronisation between OCS server master/slaves](07.Multi-site-network-architecture/Synchronisation-between-OCS-server-master-slaves.md)
 

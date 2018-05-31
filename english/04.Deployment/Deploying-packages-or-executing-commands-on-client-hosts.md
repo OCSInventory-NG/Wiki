@@ -33,7 +33,7 @@ directory.**This action allows retrieving result code of launched command.**
 
 * **Action Execute**: to deploy a ZIP or TAR.GZ file (optional), and launch with or without
 parameters an executable file **included or not** in ZIP or TAR.GZ file.If executable is not included
-in ZIP or TAR.GZ file, it must be part of software already installed on client computer. Typcally,
+in ZIP or TAR.GZ file, it must be part of software already installed on client computer. Typically,
 it may be a Windows standard command like Windows Installer call, RPM or DPKG or TAR.GZ command
 on Linux.ZIP or TAR.GZ file will be uncompressed into a temporary directory, and associated command
 (name of executable file with path or parameters if needed) will be launched into this temporary directory.
@@ -96,7 +96,7 @@ After each fragment, the agent will wait “DOWNLOAD_FRAG_LATENCY” (configurat
 seconds by default).
 
 When all fragments of a cycle are downloaded, the agent will wait “DOWNLOAD_CYCLE_LATENCY”
-(configuration option set to 60 seconds by default) before beginning a new cycle and incrementing
+(configuration option set to 60 seconds by default) before beginning a new cycle and increment
 cycle number.
 
 For example, if you are deploying one package with a priority of 5, the agent would pause for
@@ -208,6 +208,7 @@ Last, you can select your action in **Action** dropdown list. Here are some samp
 kind of package you can build.
 
 ![Package builder page empty](../../img/server/reports/deploying_packages_4.png)
+![Package builder page empty2](../../img/server/reports/deploying_packages_23.png)
 
 ### **Deploying package through “Launch” command**
 
@@ -322,6 +323,7 @@ _Also, if provided folder path does not exist, it will be recursively created._
 In our following example, we deploy a file to store in folder “C:\My Folder”:
 
 ![myFolder](../../img/server/reports/deploying_packages_12.png)
+![myFolder2](../../img/server/reports/deploying_packages_24.png)
 
 Click **[ Send ]** button to upload package to Administration console.
 
@@ -747,83 +749,35 @@ take effect.
 **Last**, you have to install server certificate file “server.crt” on each client computer into OCS
 Inventory Agent installation directory, under the name “cacert.pem”.
 
-**For Debian Jessie:**
+**For Debian 9 Stretch:**
 
-    apt-get install ssl-cert
+    apt install ssl-cert
     a2ensite default-ssl
     a2enmod ssl
     make-ssl-cert generate-default-snakeoil --force-owerwrite
-    /etc/init.d/apache2 restart
+    systemctl restart apache2
 
 copy /etc/ssl/certs/ssl-cert-snakeoil.pem to cacert.pem and distribute
 
-**For CentOS / Redhat:**
+**For Fedora/RedHat/Centos 7:**
 
-The genkey command creates a public certificate and a private key for the :
+openssl command creates a public certificate and a private key.
 
-    genkey -days 365 ocsinventory-ng
+    openssl genrsa -out server.key 2048
+    openssl req -new -key server.key -out server.csr
 
-It creates
+Self-sign the certificate
 
-    * /etc/pki/tls/certs/ocsinventory-ng.cert
-    * /etc/pki/tls/private/ocsinventory-ng.key
+    openssl x509 -req -days 3650 -in server.csr -signkey server.key -out server.crt
+
+Set up the certificate
+
+Place these 2 files in certificates directory
+
+    cp server.crt /etc/ssl/certs/
+    cp server.key /etc/ssl/private/
 
 Set the correct values in /etc/httpd/conf.d/ssl.conf.
-
-#### **With OCS Inventory NG Server for Windows**
-
-XAMPP Apache distribution comes with a script “makecert.bat” for generating self signed certificates.
-This script is located under “INSTALL_PATH\xampp\apache” directory (where INSTALL_PATH is the
-installation folder of OCS Inventory NG Server)
-
-    @echo off
-    set OPENSSL_CONF=./bin/openssl.cnf
-    if not exist .\conf\ssl.crt mkdir .\conf\ssl.crt
-    if not exist .\conf\ssl.key mkdir .\conf\ssl.key
-    bin\openssl req -new -out server.csr
-    bin\openssl rsa -in privkey.pem -out server.key
-    bin\openssl x509 -in server.csr -out server.crt -req -signkey server.key '''-days 365'''
-    set OPENSSL_CONF=
-    del .rnd
-    del privkey.pem
-    del server.csr
-    move /y server.crt .\conf\ssl.crt
-    move /y server.key .\conf\ssl.key
-    echo.
-    echo -----
-    echo Das Zertifikat wurde erstellt.
-    echo The certificate was provided.
-    echo.
-    Pause
-
-This script generate self signed certificate usable for 365 days. If you want to increase certificate
-validity, you must update directive “-days 365” to specify in days new validity period (1825 days,
-about 5 years must be up a good value ;-).
-
-Just double run script “makecert.bat”. It will generate a RSA private key and ask you for a password
-(at least 4 characters).
-
-Enter password and confirm it.
-
-Next, you will be prompted for certificate properties:
-
-* Country code, usually required
-* State or province name, usually required
-* City, usually required
-* Organisation or company name, usually required
-* Organisational Unit name, usually optional
-* Common name (this is the DNS name or IP address of your server), required
-* An email address, usually optional
-* A challenge password (must be empty, just press enter)
-* An optional company name
-
-Finally, you will be prompted for private key password.
-
-Now, self signed certificate is created and installed. Just restart Apache2 service for changes to
-take effect.
-
-**Last**, you have to install server certificate file “INSTALL_PATH\xampp\apache\conf\ssl.crt\server.crt”
-on each client computer into OCS Inventory Agent installation directory, under the name “cacert.pem”.
 
 ### **Using PKI with Certificate Authority**
 

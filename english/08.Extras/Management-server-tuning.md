@@ -1,7 +1,7 @@
 # Management server tuning
 
 OCS Inventory NG management server needs some tuning to support the load of a large number of inventoried
-omputers. Performances are just limited by the hardware configuration (especially the amount of RAM,
+computers. Performances are just limited by the hardware configuration (especially the amount of RAM,
 processor is not very loaded) of computer hosting the 3 main components:
 
 * MySQL database server
@@ -12,8 +12,8 @@ processor is not very loaded) of computer hosting the 3 main components:
 For example, our production server manages more than 70 000 clients. For this, we have 3 servers running
 Linux Debian Sarge, one for the database server and the Communication server, another one for
 Administration console and a replica of database server (we choose to replicate database on
-Administration server to avoid Administration console SQL queries using CPU and MySQL connextions of
-database used by Communication server) and the last one for deployement server. Hardware configuration
+Administration server to avoid Administration console SQL queries using CPU and MySQL connexions of
+database used by Communication server) and the last one for deployment server. Hardware configuration
 for servers is the following:
 
 * 1 Intel Pentium Xeon 2,8 GHz.
@@ -35,7 +35,11 @@ Also, MySQL database server is limited by default to 100 simultaneous connection
 Communication server handles more than 100 simultaneous requests for inventory, it will not be able
 to answer all. You can upgrade this value by updating the “max_connections” MySQL variable for mysqld daemon.
 
-Here is sample recommdations found on MySQL web site, using server with different amount of physical memory.
+Here is sample lso, MySQL database server is limited by default to 100 simultaneous connections. So, if the
+Communication server handles more than 100 simultaneous requests for inventory, it will not be able
+to answer all. You can upgrade this value by updating the “max_connections” MySQL variable for mysqld daemon.
+
+Here is sample recommendations found on MySQL web site, using server with different amount of physical memory.
 
 **Paramètres** | 800 Mo | 1,7 Go | 2,4 Go
 ------|------|------|------

@@ -15,10 +15,6 @@ apt install php-ldap
 ```
 For debian based unix
 
-Of course we need a administrator account to configure stuff.
-
-**_Important: You have to do the configuration in the web gui before you do the changes in the config files!_**
-
 ## Configuration options in web gui
 Open the dropdown "Config" choose "Config" and then click on "LDAP configuration".
 
@@ -51,7 +47,6 @@ and the line below in
 
 It is also possible to use both, ldap and local authentication:                
 `$list_methode=array(0=>"ldap.php",1=>"local.php");`    
-
 
 ### Changes of ~/backend/identity/identity.php
 We need to delegate the rights of the account also to ldap by commenting this line out
@@ -89,4 +84,47 @@ the request for _username / password_ will be in this form
 
 **`Note: In this case, the choice of language will no longer directly available.
 You will need to choose it and freeze it in the var.php file.`**
+
+## Modification of backend/identity/identity.php file
+
+![modification of auth.php](../../img/server/reports/ldap_7.jpg)
+
+This file allow to define rights that the account logged will have into the administration console of
+OCS Inventory NG. In order to delegate those rights to a schedule base, in our case an LDAP,
+you have to change the line
+
+    $list_methode=array(0=>"local.php");
+
+by
+
+    $list_methode=array(0=>"ldap.php");
+
+It is also possible to keep the 2 ways to connect to the administration console by changing the line
+
+    $list_methode=array(0=>"ldap.php",1=>"local.php");
+
+In this case, rights will be retrieve in the LDAP, and will be completed by those found locally.
+
+## Exemple & practice
+
+Based on the LDAP database created at the beginning, and having made changes outlined in
+preceding paragraphs, so we can connect with the user **john/password**.
+
+![john connection](../../img/server/reports/ldap_8.png)
+
+On connection, he will have automatically rights of **Super administrator** profile.
+
+His account will be created directly in the _ocsweb_ database LDAP information. His Password will
+not be stored.
+
+![users](../../img/server/reports/ldap_9.png)
+
+However, the user **georgess**, may well identify but cannot connect directly. Indeed, we have assigned by
+default a **Local Administrator** profile, which has a limited view of the park of machines.
+So, after the connection of that user, it will have the following message:
+
+![users](../../img/server/reports/ldap_9.png)
+
+For that user can access the administration console of OCS Inventory NG, it will wait a
+**Super Administrator** gives it access to TAG wich interested it.
 

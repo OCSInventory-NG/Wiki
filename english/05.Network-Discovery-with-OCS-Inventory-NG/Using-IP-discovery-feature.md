@@ -94,13 +94,13 @@ this task (if you set this value to zero, feature will be disabled).
 You can view which computers run the IP discovery scans by clicking on toolbar “Security” menu
 (“IpDisc” menu if some languages).
 
-![IpDiscover](../../img/EN_ip_discover_feature_1.png)
+![IpDiscover](../../img/server/reports/ip_discover_feature_1.png)
 
 ## Manage names of your networks
 
 **`Note: You may define your sub networks by a name and a unique ID, to view results easily.`**
 
-![List of networks](../../img/EN_ip_discover_feature_2.png)
+![List of networks](../../img/server/reports/ip_discover_feature_2.png)
 
 For each network, you will be able to view how many inventoried hosts, non inventoried hosts,
 IPDISCOVER feature enabled hosts and identified hosts (known hosts manually registered in the database)
@@ -113,7 +113,7 @@ Click on the number of needed column to view each type of devices.
 You can view the list of inventoried hosts (computers with OCS Inventory NG agent installed)
 on your network by clicking on number in column “Inventoried” in the network list.
 
-![Non identified peripherals list](../../img/EN_ip_discover_feature_3.png)
+![Non identified peripherals list](../../img/server/reports/ip_discover_feature_3.png)
 
 If there is, in the list, devices you know as legitimate, you can register them so they will not be
 displayed next time. For this, just click the icon at the end of corresponding line. Before, you may
@@ -140,7 +140,7 @@ The following types are used:
 switch, printer, or host running Sun Solaris or IBM AIX… Maybe, host is running some firewall software?
 * **Phantom**: host is not responding at this time. Maybe it is powered off or there is a firewall ?
 
-![New peripheral addition](../../img/EN_ip_discover_feature_4.png)
+![New peripheral addition](../../img/server/reports/ip_discover_feature_4.png)
 
 If a network device is legitimate, you can register it by clicking on icon “Register” at the end of
 corresponding line. You will be able to enter a brief description and to select network device type
@@ -152,17 +152,14 @@ You can view the list of hosts running IPDISCOVERY feature (computers with OCS I
 agent installed, and this agent is elected by server to run discovery of his sub network) on your
 network by clicking on number in column “IpDiscover” in the network list.
 
-![Ip discover Ip discover](../../img/EN_ip_discover_feature_5.png)
+![Ip discover Ip discover](../../img/server/reports/ip_discover_feature_5.png)
 
 ## Show known or identified hosts
-
-You can view the list of known hosts already identified by someone on your network by clicking on number
-in column “Identified” in the network list.
 
 You can view the list of known hosts already identified by someone on your network by clicking on
 number in column “Identified” in the network list.
 
-![Computers of the subnet](../../img/EN_ip_discover_feature_6.png)
+![Computers of the subnet](../../img/server/reports/ip_discover_feature_6.png)
 
 ## Managing known device types
 
@@ -174,9 +171,9 @@ You may first define some device types to identify them easily.
 
 Click on Manage and then on “Administer” and finally on Manage TYPES menu to manage your device types.
 
-![Administer Acess](../../img/EN_ip_discover_feature_1.png)
+![Administer Acess](../../img/server/reports/ip_discover_feature_9.png)
 
-![Manage TYPES](../../img/EN_ip_discover_feature_7.png)
+![Manage TYPES](../../img/server/reports/ip_discover_feature_7.png)
 
 You can add new device type by entering the “Type name” you want and clicking “Send” button.
 
@@ -188,7 +185,7 @@ You can add new devices by browsing list of uninventoried devices and clicking t
 corresponding line. This will bring you to page for adding or removing network devices and “MAC” field
 will be automatically fill in.
 
-![New peripheral addition](../../img/EN_ip_discover_feature_8.png)
+![New peripheral addition](../../img/server/reports/ip_discover_feature_8.png)
 
 To remove a network device, just click on the red cross at the end of corresponding line.
 
@@ -245,7 +242,7 @@ of mysql server _OCSserveur_, witch listen on port 3306, using _gui_ account wit
 
 Result example :
 
-![Perl Ipdiscover](../../img/EN_ip_discover_feature_9.png)
+![Perl Ipdiscover](../../img/server/linux/ip_discover_feature.png)
 
 # Solutions and Tips
 

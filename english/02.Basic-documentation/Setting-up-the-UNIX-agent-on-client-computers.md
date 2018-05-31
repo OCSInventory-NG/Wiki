@@ -37,22 +37,22 @@ Optional modules:
 **`Note: it’s better for system integrity to use the precompiled packages for your distribution
 if they are available.`**
 
-_**On Fedora/Redhat like Linux**, you can use “yum” tool to set required modules up like following:_
+**On Fedora/Redhat/Centos7 like Linux**, you can use “yum” tool to set required modules up like following:
 
-    yum install perl-XML-Simple perl-Compress-Zlib perl-Net-IP perl-LWP perl-Digest-MD5 perl-Net-SSLeay
+    yum install perl-XML-Simple perl-devel perl-Compress-Zlib perl-Net-IP perl-LWP perl-Digest-MD5 perl-Net-SSLeay perl-Data-UUID
 
-_Optional modules: these modules are available on EPEL repository. Don't forget to add this repository
-to your system or download each package individually from the repository_
+Optional modules: these modules are available on [`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse) repository. Don't forget to add this repository
+to your system or download each package individually from the repository
 
     yum install perl-Crypt-SSLeay perl-Net-SNMP perl-Proc-Daemon perl-Proc-PID-File perl-Sys-Syslog pciutils smartmontools monitor-edid
 
-_**On Debian like Linux**, you can use “apt-get” tool to set required modules up:_
+**On Debian Stretch like Linux**, you can use “apt” tool to set required modules up:
 
-   apt-get install dmidecode libxml-simple-perl libio-compress-perl libnet-ip-perl libwww-perl libdigest-md5-perl libnet-ssleay-perl
+    apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl libdata-uuid-perl
 
-_Optional modules:_
+Optional modules: but hightly recommended
 
-    apt-get install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
+    apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
 **Unix agent 2.x is now installed without script “setup.sh”. During compilation, information about
 configuration and dependencies are returned. However, it will never upgrade an installed module.
@@ -65,13 +65,33 @@ setup will also fail.`
 **Also, a log file is generated. If you encounter any error while installing OCS Inventory NG agent,
 please refer to this file to have detailed error messages.**
 
+## Installing UNIX Agent with RPM
+
+**On Fedora/Redhat/Centos 7** you can install the unix agent with RPM
+
+You need to have "wget" to download the repo of EPEL and OCS
+
+    wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
+
+You can install the repo with "yum"
+
+    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm
+
+To install the unix agent and requierement use this command :
+
+    yum install ocsinventory-agent
+
+**`Note : The unix agent gonna be installed with default settings.`**
+
+
 ## Installing the agent non-interactively
 
-Download “Ocsinventory-Agent-2.x.y.tar.gz” from OCS Inventory Web Site
-([http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en)).
+Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
+
 
 1. Unpack it.
-      
+
         tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
         cd Ocsinventory-Agent-2.x.y
 
@@ -79,6 +99,51 @@ Download “Ocsinventory-Agent-2.x.y.tar.gz” from OCS Inventory Web Site
 libraries ... and it generates the Makefile. During this step, a temporary environment variable is created to install agent non-interactively.
 
         env PERL_AUTOINSTALL=1 perl Makefile.PL
+
+    Exemple :
+
+       Please install Crypt::SSLeay if you want to use SSL.
+       Please install nmap or ipdiscover if you want to use the network discover feature.
+       Please install Proc::Daemon and Proc::PID::File if you want to use the daemon mode.
+
+3. Compilation
+
+        make
+        make install
+
+**`Note: Installer writes a log file “ocs_agent_setup.log” in the same directory. If you encounter any errors,
+please refer to this log for the detailed error message.`**
+
+A check for PERL interpreter binary, C/C++ compiler and make utility is made during installation.
+If one of these components is not found, setup will stop.
+
+Setup will check for:
+
+* dmidecode binary.
+* Compress::Zlib PERL module
+* XML::Simple PERL module
+* Net::IP PERL module
+* LWP::UserAgent PERL module
+* Digest::MD5 PERL module
+* Net::SSLeay PERL module
+
+If not found, it will ask you if you wish to install it. Enter “y” or validate to enable install
+of required component. You need to have access to Internet or local repositories. If you enter “n”, setup will stop here.
+
+## Installing the agent interactively
+
+Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
+
+
+1. Unpack it.
+
+        tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
+        cd Ocsinventory-Agent-2.x.y
+
+2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
+libraries ... and it generates the Makefile.
+
+        perl Makefile.PL
 
     Exemple :
 
@@ -110,7 +175,8 @@ Setup will check for:
 If not found, it will ask you if you wish to install it. Enter “y” or validate to enable install
 of required component. You need to have access to Internet or local repositories. If you enter “n”, setup will stop here.
 
-**Configuration begins. You answer with y for yes n for no or specify link or location. Letter in brackets [] is choosen if you press enter.**
+
+**Configuration begins. You answer with y for yes n for no or specify link or location. Letter in brackets [] is chosen if you press enter.**
 
     Do you want to configure the agent
     Please enter 'y' or 'n'?> [y] y
@@ -128,21 +194,21 @@ of required component. You need to have access to Internet or local repositories
     Please enter 'y' or 'n'?> [y] y
 
     [info] The config file will be written in /etc/ocsinventory-agent/ocsinventory-agent.cfg,
-    
+
     What is the address of your ocs server?>  https://ocs/ocsinventory
-    
+
     Do you need credential for the server? (You probably don't)
     Please enter 'y' or 'n'?> [n]
-    
+
     Do you want to apply an administrative tag on this machine
     Please enter 'y' or 'n'?> [y]
     tag?>  Server
-    
+
     Do yo want to install the cron task in /etc/cron.d
     Please enter 'y' or 'n'?> [y]
-    
+
     Where do you want the agent to store its files? (You probably don't need to change it)?> [/var/lib/ocsinventory-agent]
-    
+
     Should I remove the old unix_agent
     Please enter 'y' or 'n'?> [n]
 
@@ -153,21 +219,21 @@ of required component. You need to have access to Internet or local repositories
     Please enter 'y' or 'n'?> [y]
 
     Specify log file path you want to use?>  /var/log/ocs_agent.log
-    
+
     Do you want disable SSL CA verification configuration option (not recommended) ?
     Please enter 'y' or 'n'?> [n]
-    
+
     Do you want to set CA certificate chain file path ?
     Please enter 'y' or 'n'?> [y] y
-    
+
     Specify CA certificate chain file path?>  /etc/ocsinventory-agent/cacert.pem
-    
+
     Do you want to use OCS-Inventory software deployment feature?
     Please enter 'y' or 'n'?> [y]
-    
+
     Do you want to use OCS-Inventory SNMP scans feature?
     Please enter 'y' or 'n'?> [y]
-    
+
     Do you want to send an inventory of this machine?
     Please enter 'y' or 'n'?> [y]
 
@@ -180,7 +246,7 @@ Here is a sample configuration file for OCS Inventory NG Linux agent.
         <IPDISCOVER_VERSION>3</IPDISCOVER_VERSION>
         <OCSFSERVER>my_ocs_com_server.domain.tld:80</OCSFSERVER>
     </CONF>
-You can choose between 3 methods for sending inventory:     
+You can choose between 3 methods for sending inventory:
 
 1. http: computer is connected to the network and is able to reach the Communication server with
 HTTP protocol *USED BY DEFAULT*.
@@ -202,7 +268,7 @@ Examples :
     ocsserver.domains.local
     https://w.x.y.z
     ocsserver.domains.local:1234
-    https://ocsserver.domains.local    
+    https://ocsserver.domains.local
 
 **Figure 5 : Sample agent’s configuration file ocsinv.conf for a network connected computer.**
 

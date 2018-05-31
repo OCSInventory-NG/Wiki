@@ -18,7 +18,7 @@ You can see three tabs :
 
 ![Groups page](../../img/server/reports/computers_groups_2.png)
 
-When you click on a group name, you go to the group page. In the top blue frame,
+When you click on a group name, you go to the group page. In the top,
 you can see various informations about the group:
 
 * Group name
@@ -26,13 +26,10 @@ you can see various informations about the group:
 * Query (the SQL query corresponding to the various criteria search parameters for dynamics groups)
 * Description
 
-You can edit the description and the group name by clicking on the pencil.
+You can edit the description and the group name by clicking on update.
 
 ![Edit group](../../img/server/reports/computers_groups_3.png)
 
-If you click on "Customization", you can see all custom parameters applied to the group.
-
-![Customization](../../img/server/reports/computers_groups_4.png)
 
 If you click on "All computers (cached)", you can see all the computers members of the group.
 
@@ -119,3 +116,4 @@ As you do for a single computer, click now on icon _ACTIONS_ in the right column
 Now, your package is affected on your group and you can verify the affectation in the group custom parameters.
 
 ![Package affected](../../img/server/reports/computers_groups_11.png)
+![Package affected2](../../img/server/reports/computers_groups_12.png)

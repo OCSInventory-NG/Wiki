@@ -3,7 +3,7 @@
 We recommend you to secure you OCS Inventory NG Server.
 Since OCS Inventory NG 2.0, warning message prevents you about a security risk in management console.
 
-![Error message](../../img/EN_secure_ocs_1.png)
+![Error message](../../img/server/reports/secure_ocs_1.png)
 
 ## Remove installation file
 
@@ -11,10 +11,10 @@ You have to remove install.php in ocsreports directory. Generally under linux in
 
     /usr/share/ocsinventory-reports/ocsreports/
 
-## Secure your managment console
+## Secure your management console
 
 By default, an account is created by installation script : admin / admin You have to create your own
-account with Super Administrator profile, and after that remove defaut account. An other solution is
+account with Super Administrator profile, and after that remove default account. An other solution is
 to change the admin account password.
 
 ## Secure mysql access
@@ -32,7 +32,7 @@ Create a new user: **user** with password:**password** with all privileges for o
 
     GRANT ALL PRIVILEGES ON `ocsweb` .* TO 'user'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
 
-![Error message](../../img/EN_secure_ocs_2.png)
+![Error message](../../img/server/linux/secure_ocs_database.png)
 
 ### **Modify configuration files**
 
@@ -43,11 +43,10 @@ Under Linux, generally in
     /usr/share/ocsinventory-reports/ocsreports/
 <br/>
 
-    define("DB_NAME", "ocsweb");
-    define("SERVER_READ","localhost");
-    define("SERVER_WRITE","localhost");
-    define("COMPTE_BASE","user");
-    define("PSWD_BASE","password");
+    $_SESSION["SERVEUR_SQL"]="localhost";
+    $_SESSION["COMPTE_BASE"]="ocs";
+    $_SESSION["PSWD_BASE"]="ocs";
+
 
 #### **z-ocsinventory-server.conf file**
 
@@ -76,6 +75,6 @@ Click on **Rights to manage** tab, an set **See warning messages of the GUI** to
 
 Finally, register modification.
 
-![GUI message](../../img/EN_secure_ocs_3.png)
+![GUI message](../../img/server/reports/secure_ocs_3.png)
 
 For more informations about users and profile, click [here](../../03.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md).

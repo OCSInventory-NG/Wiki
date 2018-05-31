@@ -1,7 +1,5 @@
 # Common errors
 
-Check [FAQ](http://www.ocsinventory-ng.org/index.php?page=faq) on OCS Inventory web site for updates.
-
 ## Troubleshooting the agents execution
 
 ### **Windows launcher OcsLogon.exe does not download Agent**

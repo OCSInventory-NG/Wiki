@@ -8,23 +8,23 @@ confirmée pour le courant de l'été.
 
 Pour vous donner une idée de l'ambiance très studieuse de cette réunion, voici quelques photos:
 
-![Guigui](../../img/Guigui.jpg)
+![Guigui](../../img/other/team-guigui.jpg)
 
 Guillaume (Mortheres) racontant son combat pour imposer son OS favori...
 
 
-![Rone](../../img/Rone.jpg)
+![Rone](../../img/other/team-rone.jpg)
 
 Erwan (Airoine) cherchant l'inspiration dans une pinte de bière (la deuxième déjà...)
 
 
-![Pierre](../../img/Pierre.jpg)
+![Pierre](../../img/other/team-pierre.jpg)
 
 Pierre (plemmet) mangeant la glace de l'homme invisible... A moins que ce soit la \<bip> de
 l'homme invisible..
 
 
-![Ordi](../../img/Ordi.jpg)
+![Ordi](../../img/other/team-the-ordi.jpg)
 
 Un bel ordi (sous kubuntu... burkkkkk!!!) appartenant à mortheres... \<troll> Et oui, OpenBSD
 ne fonctionne pas sur un portable! \</troll>
