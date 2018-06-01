@@ -43,10 +43,11 @@ Under Linux, generally in
     /usr/share/ocsinventory-reports/ocsreports/
 <br/>
 
-    $_SESSION["SERVEUR_SQL"]="localhost";
-    $_SESSION["COMPTE_BASE"]="ocs";
-    $_SESSION["PSWD_BASE"]="ocs";
-
+    define("DB_NAME", "ocsweb");
+    define("SERVER_READ", "localhost");
+    define("SERVER_WRITE", "localhost");
+    define("COMPTE_BASE", "ocs");
+    define("PSWD_BASE", "ocs");
 
 #### **z-ocsinventory-server.conf file**
 
