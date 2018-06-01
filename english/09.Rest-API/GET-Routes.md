@@ -5,8 +5,6 @@ By default, the API can be access trough :
 
 ## Computers Routes
 
-<hr>
-
 ### List computers ID
 
 `http://myocsserver/ocsapi/v1/computers/listID`
@@ -50,8 +48,6 @@ For exemple, `/ocsapi/v1/computers/search?workgroup=myworkgroup&start=0&limit=10
 
 ## SNMP Devices Routes
 
-<hr>
-
 ### List SNMP Devices ID
 
 `http://myocsserver/ocsapi/v1/snmps/listID`
@@ -80,8 +76,6 @@ In the case you want to retrieve everything from this snmp device just remove {s
 <hr>
 
 ## IP Discover Routes
-
-<hr>
 
 ### List IP Discover Networks
 

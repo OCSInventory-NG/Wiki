@@ -4,7 +4,7 @@ Our REST API need to be configured during the initial OCS Inventory setup AND af
 
 ## Configuration During OCS Setup
 
-During the setup (2.4 and newer). OCS Inventory will ask you if you want to install rest API on your server. Anwser yes or let the default choice.
+During the setup (2.4 and newer). OCS Inventory will ask you if you want to install rest API on your server. Awnser yes or let the default choice.
 
 ```
 Do you wish to setup Rest API server on this computer ([y]/n)?
