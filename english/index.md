@@ -54,9 +54,14 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Backup/restore of OCS Inventory NG database ](08.Extras/Backup-restore-of-OCS-Inventory-NG-database.md)
 * [Common errors](08.Extras/Common-errors.md)
 
-## Howtos
-
-
+## REST API
+* [Introduction](09.Rest-API/Introduction.md)
+* [Configuration](09.Rest-API/Configuration.md)
+* [Autentification](09.Rest-API/Authentification.md)
+* [GET Routes](09.Rest-API/GET-Routes.md)
+* [POST Routes](09.Rest-API/POST-Routes.md)
+* [DELETE Routes](09.Rest-API/DELETE-Routes.md)
+* [PUT Routes](09.Rest-API/PUT-Routes.md)
 
 ## Developers
 
