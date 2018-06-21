@@ -4,9 +4,11 @@ Mail Notifications have been added in release 2.5 of OCS Inventory. This feature
 
 Click on _Config_ then _Notifications_.
 
+![Notification follow](../../img/server/reports/notification_9.png)
+
 ## Configuration
 
-The first page is the configuration's page.
+The first page is the configuration page.
 
 * Activate or not notification mail.
 
@@ -14,23 +16,23 @@ The first page is the configuration's page.
 
 * Set Administrator's email address and name.
 
-![Notification follow](../../img/server/reports/notification_2.png)
+![Notification Admin email](../../img/server/reports/notification_2.png)
 
-* Set Reply's email address and name. (Optional)
+* Set reply email address and name. (Optional)
 
-![Notification follow](../../img/server/reports/notification_3.png)
+![Notification Admin name](../../img/server/reports/notification_3.png)
 
 * Configure SMTP : email send mode (_SMTP_ - _SMTP + SSL_ - _SMTP + TLS_), Host and Port.
 
-![Notification follow](../../img/server/reports/notification_4.png)
+![Notification SMTP](../../img/server/reports/notification_4.png)
 
-* Configure SMTP optional : User identifier and password.
+* Configure SMTP : User identifier and password. (Optional)
 
-![Notification follow](../../img/server/reports/notification_5.png)
+![Notification SMTP user](../../img/server/reports/notification_5.png)
 
 * Configure recurrence : reception time and day(s).
 
-![Notification follow](../../img/server/reports/notification_6.png)
+![Notification recurrence](../../img/server/reports/notification_6.png)
 
 ## Customization template
 
@@ -38,20 +40,35 @@ The second page allows you to customize your template.
 
 By default the OCS Inventory template is selected.
 
-![Notification follow](../../img/server/reports/notification_7.png)
+![Notification default](../../img/server/reports/notification_7.png)
 
 If you choose _Customize template_, you can upload an html file with your custom template. It will be uploaded to the folder
 
     ocsreports/templates
 
-![Notification follow](../../img/server/reports/notification_8.png)
+![Notification customize](../../img/server/reports/notification_8.png)
 
-In your OCS Inventory report you can use traduction files with 
-
-    {{g.number_of_the_traduction}}
-    Example : {{g.49}} = Name
+In order to have the OCS Inventory report values in your notification, put in your html code the values proposed below :
 
 At the moment the notification report only offers two choices :
 
     {{Report.Software}} - Number of softwares per software category
     {{Report.Asset}} - Number of machines per asset category
+
+In your OCS Inventory report you can use traduction files with
+
+    {{g.number_of_the_traduction}}
+    Example : {{g.49}} = Name
+
+## Change default notification language
+
+The default notification language is English but you can modify this value in
+
+    ocsreports/var.php
+
+Change the default value by your
+
+    /**
+     * Default GUI language
+     */
+    define('DEFAULT_LANGUAGE', 'your_language');
