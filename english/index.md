@@ -26,6 +26,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Managing administrative data](03.Management-console-and-its-advanced-features/Managing-administrative-data.md)
 * [Synchronization between OCS and LDAP](03.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
 * [Export a computer](03.Management-console-and-its-advanced-features/Export-a-computer.md)
+* [Configure mail notification](03.Management-console-and-its-advanced-features/Configure-mail-notification.md)
 
 ## Deployment
 
