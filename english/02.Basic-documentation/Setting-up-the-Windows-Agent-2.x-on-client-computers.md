@@ -6,6 +6,7 @@ You need to use old 1.X agent 4061-1.`
 **`Note`**` : On Windows XP and 2003R2 you can only use the Windows agent 2.1.1.1.`
 
 **OCS Inventory NG Agent for Windows can run as a Windows service** automatically at computer startup.
+
 **It can also work as a stand alone application** which can be launched through a login script, an Active
 Directory GPO, a scheduled task or a shortcut in the Start menu.
 
@@ -16,9 +17,6 @@ Download and unzip the latest Windows agent from the Downloads section. This pac
 
 *  **OCS-NG-Windows-Agent-Setup.exe**: installs the Windows Agent, either as a Windows Service or as a
 Standalone tool.
-* **OcsLogon.exe**: installs the agent by downloading binaries from Communication server, or runs the agent
-if already installed. It will install either the service or the standalone version based upon a
-command line switch.
 
 ## Which version: Service or Standalone ?
 
@@ -215,172 +213,26 @@ Also, you can pass to the installer the following agent's command line parameter
 * /TAG=
 * /D=
 
-## Deploying Agent using launcher OcsLogon.exe through Login Script or Active Directory GPO
-
-Launcher “OcsLogon.exe” is a small tool able to run inside a login script or an Active Directory GPO.
-Its purpose is to setup Agent, if not already installed on client computers, and to launch the
-OCS Inventory NG Agent if you doesn't want to use the service.
-
-* To deploy Standalone Agent with launcher, **you first must have uploaded Standalone Agent** file
-“ocsagent.exe” or “OCSNG-Windows-Agent-Setup.exe” to the server using Administration Console.
-* To deploy Service Agent with launcher, **you first must have uploaded the Service Agent** file
-“OCSNG-Windows-Agent-Setup.exe” or all-in-one installer “ocspackage.exe” (See Using OCS Packager
-to create an all-in-one installer to setup agent and server certificate) to the server using
-Administration Console.
-
-**`Note`**`: Refer to § Uploading Agent for deployment through launcher “OcsLogon.exe”.`
-
-
-Launcher “OcsLogon.exe” will try to connect by default to Communication Server
-using URL [http://ocsinventory-ng/ocsinventory](http://ocsinventory-ng/ocsinventory).
-
-To use a different URL, you must provide **“/SERVER=http[s]://your_server[:your_port]/ocsinventory”**
-command line parameter (strings between [] are optional).
-For example, if your server uses HTTP protocol, and is located on computer
-192.168.1.2 on port 80, you must use “/server=http://192.168.1.2/ocsinventory”.
-If your server requires HTTPS on port 8443, you must use “/server=http**s**://192.168.1.2:**8443**/ocsinventory”.
-
-**`Note`**`: Always use the latest version of OcsLogon.exe.
-You can get it from the latest package OCSNG-WINDOWS-AGENT_XXXX.zip.`
-
-Launcher will first check if OCS Inventory NG Agent is installed, and if not,
-will contact Communication Server in HTTP/HTTPS to download latest Agent installer and run it on the computer.
-
-Launcher OcsLogon.exe can use the following command line parameters:
-
-* **/PACKAGER** setup all-in-one installer “ocspackage.exe” (See Using OCS Packager to create
-an all-in-one installer to setup agent and server certificate), to install Agent and server
-certificate even if user does not have Administrator privileges.
-* **/GPO** tell Launcher that setup file to download is in the same folder as OcsLogon.exe.
-So, OcsLogon does not try to download setup file from Communication Server, but try to use
-the one copied in the GPO folder.
-* **/URL=http[s]://your_server:port/path_to_file_to_download.exe** tell Launcher that setup file
-is located at provided URL, instead of Communication Server.
-* **/DEPLOY=a.b.c.d** ensure there is at least the specified version installed. OcsLogon
-install/upgrade Agent only if installed version is lower than the specified one "a.b.c.d".
-* **/FORCE** force re-installing agent, even if the installed version is newer or equal to
-the specified one. Use it to downgrade version for example. CAUTION, USE THIS OPTION WITH CARE,
-as Launcher will setup agent each time.
-* **/TIMEOUT=x** (milliseconds) allow to modify default download timeout of 60 seconds.
-* **/UNINSTALL** uninstall agent, instead of installing it.
-
-You must also provide standard agent setup command line parameters (see OCS Inventory NG Agent
-setup command line options for more detail), and at least:
-
-* **/SERVER=http[s]://you_cs_server[:port]/ocsinventory**, URL to connect to OCS Inventory NG
-Communication Server.
-* **/NO_SERVICE** to not register OCS Inventory NG Agent into Windows Service Manager and so
-uses standalone agent. Launcher will then launch Agent each time. Otherwise, it will never run Agent,
-assuming Agent is launched by Windows Service.
-* **/EDITLOG** to display OcsLogon log generated through /DEBUG using notepad.
-**Warning** : This option works only with logon script or User GPO.
-
-**`Note`**`: Launcher OcsLogon.exe always create a log file “OcsLogon.log” into temporary folder.`
-
-   * `When launched through a computer GPO, this folder is usually “C:\Windows\Temp”.`
-   * `When launched through a user GPO or login script, this folder is usually “C:\Documents and
-   Settings\User Profile\Local settings\Temp” or “C:\Users\User Profile\AppData\Local\Temp”.`
-
 ### **Deploying or running Agent through Active Directory GPO**
 
 **`Note`**`: We recommend using service version of Agent if you plan to use package deployment feature.`
 
-Open “Group Policy Manager” tool.
+To deploy the agent using GPO we recommand you to create a standalone packager with all your configuration already provisionned. See [using OCS Packager to create an all-in-one installer to setup agent and server certificate](../../english/06.OCS-Tools/OCS-Packager.md)
 
-**`Note`**`: You can run GPO Manager directly by using gpmc.msc command.`
+After creating a packager, you will need to store it at a place where all your users have access to.
 
-Navigate in left pane to display “Group Policy objects” of your domain.
+Then create a GPO that trigger on user login. You will have a create a script that call the packager executable and trigger the installation on the computer.
 
-![Group Policy objects](../../img/GPO_Objects.png)
+Here is a sample script :
 
-Create a new policy, or edit existing one.
+```
+@echo off
 
-You can either use Computer policy, or User policy. Computer policy will run at computer startup
-or User policy will run at user login.
+rem Script that call the packager executable on shared file system
 
-**`Note`**`: In our example, we will use Computer policy and Startup script. Communication Server address
-is “ocs.mycompany.tld”, and we choose to set up Service Agent version using Packager all-in-one installer
-“ocspackage.exe” (See
-`[`Using OCS Packager to create an all-in-one installer to setup agent and server certificate`](../../english/06.OCS-Tools/OCS-Packager.md)`
-). If you choose to use Standalone Agent, it’s better to use User policy and startup script,
-to allow agent running each time a user log in.`
-
-Expand “Computer configuration” tree in left pane and navigate as shown below to “Windows settings”
-and “Scripts”.
-
-![Script start](../../img/GPO_Computer_startup_script_1.png)
-
-Then double click on “Startup” on right pannel.
-
-![Script start up](../../img/GPO_Computer_startup_script_2.png)
-
-Click on “Show files” button to display script and executable files usable by GPO and copy into this folder
-Launcher “Ocslogon.exe” and all-in-one installer “Ocspackage.exe” files.
-
-![Ocspackage.exe](../../img/GPO_Computer_startup_script_3.png)
-
-Next close “Startup” folder and click “Add” script button, click “Browse” button to select launcher
-“OcsLogon.exe” , and fill in Launcher parameters, in our example :
-
-* “/PACKAGER” to use OCS Packager all-in-one installer,
-* “/GPO” to use setup file located in the same folder as OcsLogon.exe aka the GPO folder,
-* “/DEPLOY=2.0.0.15” to ensure at least Agent version 2.0.0.15 is installed,
-* “/SERVER=http://ocs.mycompany.tld/ocsinventory" to use Communication Server URL
-[http://ocs.mycompany.tld/ocsinventory](http://ocs.mycompany.tld/ocsinventory).
-
-![Add script](../../img/GPO_Computer_startup_script_4.png)
-
-Validate each window to activate Computer Startup script GPO.
-
-![Script OK](../../img/GPO_Computer_startup_script_5.png)
-
-Update if needed default GPO filters to meet your needs, for example to apply this GPO only
-to specified Active Directory or site.
-
-![Activate Filter](../../img/GPO_Activate_Filter.png)
-
-When computer will start (or when user will login if using User policy), launcher will set up
-if needed OCS Inventory NG Agent as a service.
-
-### **Deploying or running Agent through login script**
-
-**`Note`**`: We recommend using service version of Agent if you plan to use package deployment feature.`
-
-Copy files “OcsLogon.exe” to a shared folder somewhere in your network.
-This folder must be readable by all your users. Then add a call to “OcsLogon.exe” in your users login script.
-
-Here is a sample login script.
-
-**`Warning`**`: Below code requires additional checking for internal LAN configuration, but is functionally.`
-
-    @echo of
-    echo Running system inventory, please wait…
-    REM Call to OCS Inventory NG Launcher
-    REM Using shared folder MY_SHARE on server MY_SERVER
-    REM Using OCS Inventory NG server address ocs.mycompny.tld using HTTP protocol (option /SERVER=)
-    REM Install stand alone agent without service (option /NO_SERVICE)
-    REM Ensure that at least Agent version 2.0.0.15 is installed (option /DEPLOY)
-    REM Configure Launcher and Agent to using HTTP proxy server 192.168.1.2 on port 8080 (option /PROXY_TYPE, /PROXY and /PROXY_PORT)
-    REM If needed, install agent silently (option /S)
-    REM As /PACKAGER is not used, this script can only install agent if launched by a user having Administrator rights
-
-    \\MY_SERVER\MY_SHARE\OcsLogon.exe /NO_SERVICE /S /SERVER=http://ocs.mycompny.tld/ocsinventory /proxy_type=1 /proxy=192.168.1.2 /proxy_port=8080
-
-    echo Done. Thanks a lot.
-
-**Sample login script for Windows domain**
-
-Put this script named “ocs.bat” for example on your Domain Controller
-(in the folder “%WINDIR%\SYSVOL\Domain\Scripts” on Windows Controller, where “%WINDIR%”
-is usually “C:\WINNT” or “C:\Windows”).
-
-Finally, you have to link login script with every users registered in your Samba or Active Directory domain.
-On Active Directory, you can do this using “Active Directory users and computers” tool, select “Profile”
-tab in user properties, and fill in “Session startup script”.
-
-![Logon Script](../../img/AD_Users_and_commputers_User_logon_script.png)
-
-When user log in, launcher will set up and/or launch OCS Inventory NG Agent.
+rem Installing our packager
+"myfileserver/my/path/packager.exe" 
+```
 
 ## Using PSEXEC or "OCS Inventory NG Agent Deployment Tool" to push OCS Inventory NG Agent
 
