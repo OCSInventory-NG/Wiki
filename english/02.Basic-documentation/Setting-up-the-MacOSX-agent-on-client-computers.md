@@ -2,10 +2,8 @@
 
 ## Installing OCS MacOSX agent 2.X
 
-**`Note: OCS MacOSX agent 2.X agent is full compatible under MacOSX 10.6 Snow Leopard and more.
-Under MacOSX 10.4 Tiger and MacOSX 10.5 Leopard, SSL layer and packages deployment feature won't work
-but inventory using HTTP connection will work. If you want to run OCS MacOSX agent under older MacOSX systems,
-you have to use the old OCS MacOSX 1.1 beta1 agent.`**
+**`Note: OCS MacOSX agent 2.3 and newer agent are fully compatible under MacOSX 10.11 El captain and more.
+For older macos system you will have to user older versions of our agent. We don't support Mac OS versions that are not maintained by Apple`**
 
 Download OCS MacOSX agent from OCS Inventory NG website download page(
 [http://www.ocsinventory-ng.org/en/#home-en](http://www.ocsinventory-ng.org/en/#home-en)
