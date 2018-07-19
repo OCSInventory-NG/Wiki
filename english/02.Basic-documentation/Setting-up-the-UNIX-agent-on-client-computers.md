@@ -4,6 +4,12 @@ OCS Inventory NG agent for Linux can only be set up locally. You cannot deploy t
 through the network currently as this is possible for Windows agent. However, you can choose during
 setup to activate auto-update of the agent if you’ve chosen HTTP inventory method.
 
+An automated deployment is now possible.
+
+Your use the [Packager for unix](https://github.com/OCSInventory-NG/Packager-for-Unix) to create a standalone package
+
+Automated deployment is possible using our [ansible role](https://github.com/OCSInventory-NG/Ansible-Role-For-Unix-Packager)
+
 **`Warning: You must have root privileges to set Ocsinventory-agent up.`**
 
 ## Requirements
@@ -346,6 +352,9 @@ For more informations, use
 6.x | YES | Unix Unified Agent 1.01 | 32 & 64 bits
 7.x | YES | Unix Unified Agent 1.01 | 32 & 64 bits
 8.x | to be tested | |
+9.x | to be tested | |
+10.x | to be tested | |
+11.x | to be tested | |
 
 ## OpenBSD
 
@@ -353,7 +362,8 @@ For more informations, use
 --------|--------|--------|--------
 4.5 | YES | Unix Unified Agent 1.01 | 32 & 64 bits
 4.6 | YES | Unix Unified Agent 1.01 | 32 & 64 bits
-5.1 | YES | Unix Unified Agent 1.01 | 32 & 64 bits
+5.1 | YES | Unix Unified Agent 2.4 | 32 & 64 bits
+6.3 | YES | Unix Unified Agent 2.4 | 32 & 64 bits
 
 ### **Installation Procedure**
 
@@ -380,12 +390,13 @@ For more informations, use
 
 **OS Version** | **Compatibility** | **Works with agent** | **Comments**
 --------|--------|--------|--------
-4.x | seems to work| Unix Unified Agent 1.01 |
-5.x | YES | Unix Unified Agent 1.01 |
-6 | YES | Unix Unified Agent 1.01 |
+4.x | seems to work| Unix Unified Agent 2.4 |
+5.x | YES | Unix Unified Agent 2.4 |
+6 | YES | Unix Unified Agent 2.4 |
+7 | YES | Unix Unified Agent 2.4 |
 
 ## Solaris
 
 **OS Version** | **Compatibility** | **Works with agent** | **Comments**
 --------|--------|--------|--------
->8 | YES | Unix Unified Agent 1.01 |
+>9 | YES | Unix Unified Agent 2.4 |
