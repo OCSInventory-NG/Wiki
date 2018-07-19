@@ -18,30 +18,20 @@ When an inventory is done, agent uses and writes in files stored in directory
 
 ## Prerequisites
 
-Have a device under Android 2.1 or higher.
+Have a device under Android 4.0 or higher.
 
 ## Installation of Android Agent
 
 2 solutions to install Android agent.
 
-[From OCS repository on Launchpad](https://launchpad.net/ocsinventory-android-agent)
+[From OCS repository on Github](https://github.com/OCSInventory-NG/AndroidAgent/releases)
 : Download and decompress the lastestversion of Android Agent from download page of our website.
-This package contains file :
-
-**`OCSInventoryAgent-2.1.6c.apk: install Android agent, without any specific configuration.`**
 
 Place this file on SDCARD and launch it.
 
 * From PlayStore : Download application and launch installation.
 
 ![Download of android agent](../../img/agent/android/android_agent_download.png)
-
-
-
-**`Note: Under android v6.0 only : When you launch installation, you authorize the application to access to the different information and data
-on your device. You can list its before clicking on Install.`**
-
-![Installation of android agent](../../img/Install_android_agent_1_en.png)
 
 At the end of installation, icon is created on desktop, and a message prevents your application was installed
 correctly. Click on **Open** to quit the playstore and launch application.
@@ -98,7 +88,7 @@ By clicking on configuration standard button of Android (different depending on 
 [http://ocsinventory-ng/ocsinventory](http://ocsinventory-ng/ocsinventory)).
 
     **`Note: If your OCS Inventory NG server listens on an other port than classic port, you have to define it in serveur URL.
-    Example :`[`https://ocsinventory-ng:4443/ocsinventory`](https://ocsinventory-ng:4443/ocsinventory)**
+    Example :`[`https://ocsinventory-ng:443/ocsinventory`](https://ocsinventory-ng:443/ocsinventory)**
 
 * **SSL CONTROL** : possible to active and desactive SSL control.
 * **BASIC AUTHENTIFICATION** : define if server needs authentification. If yes, you have to define
