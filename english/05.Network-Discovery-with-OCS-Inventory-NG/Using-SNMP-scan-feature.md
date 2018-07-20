@@ -65,9 +65,6 @@ version 2c etc...)
 * SNMP community name : it is the community name you set in your SNMP device(s). For many SNMP devices,
 the default SNMP community name is public.
 
-**`Note: In OCS Inventory NG 2.0, only SNMp v1, v2 and v2c are supported. SNMp v3 will be supported
-in future releases.`**
-
 If you set your own SNMP communities in your SNMP devices, you have to add it in OCS Inventory
 configuration. OCS agent will received informations about this communities and will try to scans SNMP
 devices using every SNMP communities you set in administration console. SNMP communites informations
@@ -229,6 +226,14 @@ You will see an debug output about SNMP scans like this:
     [Sun Jan  9 19:41:09 2011][debug] [snmp] End snmp_end_handler :)
 
 In this example, you can see that the agent scanned a printer and the data related.
+
+## Configuring Windows Agent
+
+Windows agent does not require any additional configuration to work as a SNMP Scanner.
+
+However, the SNMP implementation rely on WinSNMP and won't be as accure as the UNIX Agent.
+
+In the case you need to perform complex SNMP scanning, UNIX Agent is more suited for that.
 
 ## Query SNMP inventory results
 
