@@ -1,7 +1,6 @@
 # Using SNMP scans features
 
-**`Warning: This feature works ONLY with Unix Unified Agent. It will be integrate for Windows Agent
-in OCS Inventory NG 3.0.`**
+**`Warning: This feature works is available on all desktop operatings system (Windows + Linux). However, SNMP mib table from windows agent are static and thoses provisionned by windows might be outdated. It will work for simple SNMP inventory, but consider using Linux for complex scanning`**
 
 ## How does it works ?
 
@@ -16,13 +15,6 @@ You can find more information about Ipdiscover
 [here](../../english/05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
 
 **`Warning: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
-
-**`Warning: Since OCS Inventory 2.0.3, you MUST set OCS server address in
-/etc/ocsinventory-agent/ocsinventory-agent.cfg to use
-`[_`https://your_ocs_server/ocsinventory`_](https://your_ocs_server/ocsinventory)`
-instead of`[_`http://your_ocs_server/ocsinventory`_](http://your_ocs_server/ocsinventory)`.
-If not, OCS agent won't receive SNMP scans orders from OCS server.`**
-
 
 SNMP scanning step by step :
 
