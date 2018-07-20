@@ -1,8 +1,4 @@
-# Management of administrative data
-
-If you had migrate ocs 1.x to 2.x, you have to update your accountinfo.
-
-![Access Update](../../img/server/reports/administrative_data_1.png)
+## Introduction
 
 Complex administrative data have been added in 2.0 release of OCS inventory NG. This feature allow
 you to simply add informations to machines or SNMP devices.
