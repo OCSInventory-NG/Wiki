@@ -243,10 +243,3 @@ of mysql server _OCSserveur_, witch listen on port 3306, using _gui_ account wit
 Result example :
 
 ![Perl Ipdiscover](../../img/server/linux/ip_discover_feature.png)
-
-# Solutions and Tips
-
-To enable ipdiscover.pl to run correctly with SElinux enabled (CentOS/RHEL) type the following
-command in a terminal :
-
-    chcon -t httpd_sys_content_t ipdiscover-util.pl
