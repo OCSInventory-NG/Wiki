@@ -68,31 +68,17 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 ## Developers
 
-* [Unified backend 2.0](10.Developers/Unified-backend-2.0.md)
-* [Unified standalone](10.Developers/Unified-standalone.md)
-* [Unified OSX](10.Developers/Unified-OSX.md)
-* [Web services](10.Developers/Web-services.md)
-* [SNMP tables in ocsweb database](10.Developers/SNMP-tables-in-ocsweb-database.md)
-* [Linux Storage](10.Developers/Linux-Storage.md)
-* [Linux Storage 3ware](10.Developers/Linux-Storage-3ware.md)
 * [XML-Format](10.Developers/XML-Format.md)
-* [Data Filter](10.Developers/Data-Filter.md)
-* [Enhance database using type tables](10.Developers/Enhance-database-using-type-tables.md)
 * [HOWTO package OCS Unix server releases](10.Developers/HOWTO-package-OCS-Unix-server-releases.md)
 * [HOWTO package OCS Unix agent releases](10.Developers/HOWTO-package-OCS-Unix-agent-releases.md)
 * [HOWTO package OCS MacOSX agent releases](10.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
-* [HOWTO package OCS Windows server releases](10.Developers/HOWTO-package-OCS-Windows-server-releases.md)
-* [HOWTO export accountinfo data](10.Developers/HOWTO-export-accountinfo-data.md)
-* [Unified Agent 2.x](10.Developers/Unified-Agent-2.x.md)
-* [UTF-8 migration plan](10.Developers/UTF-8-migration-plan.md)
-* [Meetings:About SNMP](10.Developers/Meetings-About-SNMP.md)
 
 # FAQ
 
 
 * Can I upgrade my server from version X to the last stable version ?
 
-    **Solution**: Yes of course! All old versions can be upgrade to the latest version without problem.
+    **Solution**: Since we made a lot of changes from 2.0 to 2.4 in the database schema. We recommend you to not upgrade your OCS from 1.0 to 2.4 and newer directly. You may need to upgrade to 2.0 before. 
 
 * After installing the server, I go to the graphical admin console (GUI) and it asks me to install the database ?
 
@@ -105,10 +91,6 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * ocsinventory directory does not exist on my server
 
     **Solution**: ocsinventory is a virtual directory call by mod_perl in apache. ocsinventory directory must not exist.
-
-* Fatal error: main() [<a href='function.main'>function.main</a>]: The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition "language" of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition in /usr/share/ocsinventory-reports/ocsreports/install.php on line 29
-
-    **Solution**: Edit the php.ini file and change the value of session_auto_start from 1 to 0. Save and restart apache.
 
 * Error 500 :
 

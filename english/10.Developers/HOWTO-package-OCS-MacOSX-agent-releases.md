@@ -1,4 +1,4 @@
-# HOWTO package OCS MacOSX server releases
+# HOWTO package OCS MacOSX agent releases
 
 To package the OCS MacOSX agent release, we will use the OCS Unix Agent release tarball file.
 
