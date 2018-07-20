@@ -2,11 +2,11 @@
 
 Profiles of the web interface in OCS 2.0 are handled as files. They are storage by default in
 
-    ocsreports/plugins/main_sections/conf
+    ~/ocsreports/config/profiles/
 
 All changes made to a profile cause a backup of the original file. This backup is stored by default in
 
-    ocsreports/plugins/main_sections/conf/old_conf
+    ~/ocsreports/plugins/main_sections/conf/old_conf
 
 You can choose to store these files elsewhere by going to _Config_ then click on _Config_ and _Interface_ tab.
 
@@ -21,6 +21,8 @@ and modify options
 ### **Create a profile**
 
 Click on Config, Users and Create Profile at the left of the page, enter your informations and click on OK.
+
+`Apache need to have write permissions on the profiles folder since they are stored in XML, Apache needs to create a file for each new profile`
 
 ![Profile's Creation](../../img/server/reports/users_profiles_9.png)
 
@@ -46,11 +48,11 @@ that match the TAG of computers would be visible to that user.
 
 * Restrictions on the packets activation : Define if the profile has the right to activate a package.
 
-* Restrictions on invisible packages :
+* Restrictions on invisible packages 
 
-* Restrictions on the generation of an XML inventory :
+* Restrictions on the generation of an XML inventory 
 
-* Restrictions on Wake On Lan :
+* Restrictions on Wake On Lan 
 
 #### **Profile permissions on the blacklist**
 
@@ -191,8 +193,8 @@ Description of pages :
 * tele_package :
 * tele_popup_active :
 * tele_stat :
-* teledeploy_speed_stats : jpgraph chart in the statistics section of package deployment rate
-* teledeploy_stats : jpgraph chart on the rate of package deployment
+* teledeploy_speed_stats : chart in the statistics section of package deployment rate
+* teledeploy_stats : chart on the rate of package deployment
 * upload_file :
 * view_file :
 * visu_all_soft :
