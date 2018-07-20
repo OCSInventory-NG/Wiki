@@ -51,7 +51,7 @@ based on GPO and logon scripts
 * OTRS https://otrs.com/
 
 ### **Others**
-OCS provides a SOAP Web service, which allows it to interface with many applications, such as Nagios for example.
+OCS provides a REST API, which allows it to interface with many applications, such as Nagios for example.
 
 ## Major technical information
 

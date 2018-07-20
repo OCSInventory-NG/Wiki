@@ -2,104 +2,6 @@
 
 ## Troubleshooting the agents execution
 
-### **Windows launcher OcsLogon.exe does not download Agent**
-
-#### **When I launch launcher OcsLogon.exe, agent installation files are not downloaded**
-
-Launcher "OcsLogon.exe" must be renamed with communication server IP address or DNS name
-(ex : 192.168.1.12.exe or ocs_com.domain.tld.exe). If this is already done, you may have configured a
-proxy in Internet Explorer, and OCS is using this configuration. Try to disable use of proxy by
-lauching OcsLogon with "/NP" command line switch. In any case, launch OcsLogon with "/DEBUG" command
-line switch and take a look at log file "C:\ocs-ng\ocslogon.log" and "C:\ocs-ng\computer_name.log".
-
-Here is a typical OcsLogon.log content of faulting launcher:
-
-    OCS server port number : Default (80)
-    Install folder : C:\Ocs-ng
-    OCSserver is set to: a.b.c.d
-    Internal Ocslogon version: 4.0.1.4
-    Testing: C:\ocs-ng\BIOSINFO.EXE
-    Ocs Inventory NG () was not previously installed.
-    Start deploying OCS
-    http://a.b.c.d/ocsinventory/deploy/ocsagent.exe : HTTP/1.1 500 Internal Server Error
-    http://a.b.c.d/ocsinventory/deploy/label : HTTP/1.1 500 Internal Server Error
-    End Deploying
-    Testing ocsagent.exe version:0000
-    Proxy use.
-    Launching : C:\ocs-ng\OCSInventory.exe /debug /server:a.b.c.d
-    Cmdline option is :\\server_share\a.b.c.d.exe /debug
-
-As you can see, launcher is using proxy settings from IE, and there is "HTTP/1.1 500 Internal Server Error"
-error when downloading file "ocsagent.exe". This means that launcher is not able to download agent
-installation file. So try disabling use of proxy by adding « /NP » to agent’s command line launch,
-and then take a look at § 11.1.4 Agent HTTP errors., and then at § 11.3 Communication server errors.
-
-**`Note: same error for file "label" is not blocking one. This means you aren't using TAG.`**
-
-### **Windows agent does not send inventory to server**
-
-**I have set OCS Inventory NG server up as per the guide, but when I launch agent, nothing
-appears in Administration console.**
-
-On Windows client computer, launch "INSTALL_FOLDER\ocsinventory.exe /server:communication_server_ip /debug".
-A log file "computer_name.log" is created in directory "C:\ocs-ng", which will help you finding problem.
-Generally, you will see something like: "...is not a well configured ocs server" and an http error
-(see FAQ Windows agent HTTP errors).
-
-Here is a typical "computer_name.log" content of faulting agent:
-
-    OCS INVENTORY ver. 4014 Starting session for Device <COMPUTER_NAME> on Friday, February 24, 2006 15:34:27...
-    Command line parameters: </np /debug /server:a.b.c.d>
-    WMI Connect: Trying to connect to WMI namespace root\cimv2 on device <Localhost>...OK.
-    Registry Connect: Trying to connect to HKEY_LOCAL_MACHINE on device <Localhost>...OK.
-    SetupAPI Connect: Trying to connect to SetupAPI on device <Localhost>...OK.
-    CHECKINGS: No ocsinventory.dat file found !
-    IpHlpAPI GetNetworkAdapters...
-    IpHlpAPI GetNetworkAdapters: Calling GetIfTable to determine network adapter properties...OK
-    IpHlpAPI GetNetworkAdapters: Calling GetAdapterInfo to determine IP Infos...OK
-    IpHlpAPI GetNetworkAdapters: OK (1 objects).
-    DID_CHECK: Mac changed new:<00:40:63:D8:BC:61> old:<>, hname changed new:<COMPUTER_NAME> old:<>
-    Generating Unique ID for device <COMPUTER_NAME>...OK (COMPUTER_NAME-2006-02-24-15-34-27)
-    CHECKINGS: write <COMPUTER_NAME-2006-02-24-15-34-27> and <00:40:63:D8:BC:61> in ocsinventory.dat
-    HTTP SERVER: Connection WITHOUT proxy
-    HTTP SERVER: Creating CInternetSession to get inventory parameters...OK.
-    HTTP SERVER: Connecting to server a.b.c.d 80...OK.
-    HTTP SERVER: Sending prolog query...
-    HTTP SERVER: The server <a.b.c.d> is not a well configured OCS server
-    HTTP ERROR:
-    <...>
-    Server error!
-
-    The server encountered an internal error and was unable to complete your request.
-    Either the server is overloaded or there was an error in a CGI script.
-    If you think this is a server error, please contact the <a href="mailto:admin@localhost">webmaster</a>.
-
-    Error 500
-    <address>
-    a.b.c.d
-    24.02.2006 15:40:10
-    Apache/2.2.0 (Win32) DAV/2 mod_ssl/2.2.0 OpenSSL/0.9.8a mod_autoindex_color PHP/5.1.1 mod_perl/2.0.2 Perl/v5.8.7
-    </address>
-
-    HTTP SERVER: Closing HTTP connection
-    WMI Disconnect: Disconnected from WMI namespace.
-    SetupAPI Disconnect: Disconnected from SetupAPI.
-    Execution duration: 00:00:00.
-
-As you can see, agent is not using IE proxy settings ("HTTP SERVER: Connection WITHOUT proxy "),
-and there is error "HTTP SERVER: The server is not a well configured OCS server" followed by "Error 500".
-So take a look at § 11.1.4 Agent HTTP errors., and then at § 11.3 Communication server errors.
-
-### **Linux agent does not send inventory to server**
-
-**I have set OCS Inventory NG server up as per the guide, but when i launch Linux agent, nothing appears
-in Administration console.**
-
-On Linux client computer, you can use "ocsinv –debug" or "ocsinv –info" to obtain a trace.
-
-Generally, you will see something like: « ...is not a well configured ocs server » and an http error.
-So take a look at § 11.1.4 Agent HTTP errors., and then at § 11.3 Communication server errors.
-
 ### **Agent HTTP errors**
 
 **I see in agent logs http errors. What do they mean ?**
@@ -143,59 +45,10 @@ in “[mysqld]”, “[mysql.server]” or “[safe_mysqld]” section.
     pid-file=/var/run/mysqld/mysqld.pid
     max_allowed_packet=4M
 
-**Figure 15 : Sample my.cnf MySQL configuration file**
 
 Then, restart MySQL server.
 
-    /etc/rc.d/init.d/mysql restart
-
-### **MySQL Client does not support authentication protocol**
-
-**If you encounter an error message with “Client does not support authentication protocol requested by server;
-consider upgrading MySQL client” MySQL error, you must enable support for old password storage method
-in your MySQL configuration.**
-
-There are 2 ways to do this.
-
-1. Add directive “old-passwords” to the file “my.cnf” (usually in directory “/etc” under Linux and
-in “C:\OCSinventoryNG\xampp\mysql\bin” under Windows), in the section corresponding to your MySQL server.
-
-        [mysqld]
-        old-passwords
-        port=3306
-        socket=mysql
-
-     **Figure 16 : Sample my.cnf MySQL configuration file.**
-
-2. Add switch “--old-password” to the command line launching MySQL server.
-
-Then, restart MySQL server.
-
-    /etc/rc.d/init.d/mysql restart
-
-Next, you may have to update ‘root’ password with the following commands:
-
-* Connect to MySQL database “mysql –u root –p mysql” as root to update his password.
-* Then, run the update statement “update user set password=OLD_PASSWORD(‘root_password’) where user=’root’;”
-* Once terminated, exit mysql command interpreter by entering “exit” command.
-
-        [root@linux root]# mysql -u root -p mysql
-        Enter password:
-        Reading table information for completion of table and column names
-        You can turn off this feature to get a quicker startup with -A'
-        Welcome to the MySQL monitor. Commands end with ; or \g.
-        Your MySQL connection id is 19 to server version: 4.1.7-standard
-        Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
-
-        mysql> update user set password=OLD_PASSWORD('admin123') where user='root';
-        Query OK, 1 row affected (0.00 sec)
-        Rows matched: 1 Changed: 1 Warnings: 0
-
-        mysql> exit
-        Bye
-        [root@linux root]#
-
-     **Figure 17 : Sample MySQL root password update**
+    systemctl restart mysql
 
 ### **PHP Requested content-length**
 
@@ -211,24 +64,9 @@ To fix this, open Apache configuration file “httpd.conf”, usually in directo
 (under some distributions, Apache configuration for PHP may also resides in include directory,
 usually “/etc/httpd/conf.d”).
 
-Find the directive “LimitRequestBody” and ensure that the size is at least 4 MB (4194304 bytes)
-and not the default 512 KB (524288 bytes).
+`Note : for debian, default directory is /etc/apache2/`
 
-    #
-    # PHP is an HTML-embedded scripting language which attempts to make it
-    # easy for developers to write dynamically generated webpages.
-    #
-
-    LoadModule php4_module modules/libphp4.so
-
-    #
-    # Cause the PHP interpreter handle files with a .php extension.
-    #
-    <Files *.php>
-    SetOutputFilter PHP
-    SetInputFilter PHP
-    LimitRequestBody 4194304
-    </Files>
+Find the directive “LimitRequestBody” and ensure that the size is at least 4 MB (4194304 bytes).
 
 **Figure 18 : Sample Apache configuration for PHP.**
 
@@ -259,7 +97,7 @@ settings in detail below.
 
 **`Note: On some Linux distributions (for example Debian), you do not need to modify php.ini,
 but just edit the ocsinventory-reports.conf which is in the conf.d directory
-(in Debian /etc/apache2/conf.d/ocsinventory-reports.conf).
+(in Debian /etc/apache2/conf-available/ocsinventory-reports.conf).
 All the settings needed regarding to PHP are located in this file.`**
 
 Remenber to restart Apache web server for changes to take effect.
@@ -288,10 +126,6 @@ time. Setting too high a value can be very dangerous because if several uploads 
 concurrently all available memory will be used up and other unrelated scripts that consume a lot
 of memory might effect the whole server as well.
 
-So we recommend using the following value in “php.ini” file:
-
-    memory_limit = 16M
-
 #### **max_execution_time and max_input_time**
 
 These settings define the maximum life time of the script and the time that the script should spend in
@@ -314,39 +148,6 @@ If you want to deploy files up to 200 MB, you must comment in apache main config
 
 ## Communication server errors
 
-### **I see "Unknown directive PerlRequire...." in Apache log files.**
-
-This means that mod_perl for Apache is not installed, or loaded at startup by Apache. Install mod_perl
-and then update apache configuration file "httpd.conf" to load mod_perl.so extension.
-
-You can check which version of mod_perl is installed by launching following command:
-
-* On RPM based Linux: rpm -q mod_perl
-* On Debian package based Linux: dpkg –l libapache*-mod-perl*
-
-        [root@linux conf.d]# rpm -q mod_perl
-
-        mod_perl-1.99_16-4.centos4
-
-        [root@linux conf.d]#
-
-If mod_perl is installed, check Apache configuration files to ensure mod_perl is enabled.
-You may found something like this:
-
-    #
-    # Mod_perl incorporates a Perl interpreter into the Apache web server,
-    # so that the Apache web server can directly execute Perl code.
-    # Mod_perl links the Perl runtime library into the Apache web server
-    # and provides an object-oriented Perl interface for Apache's C
-    # language API. </nowiki>The end result is a quicker CGI script turnaround''
-    # process, since no external Perl interpreter has to be started.
-    #
-    LoadModule perl_module modules/mod_perl.so
-
-If needed, uncomment line (remove # at line begin) and restart Apache.
-
-Please, refer to Apache manual for more details.
-
 ### **I see "Can't locate [Perl module name], cannot resolve handler Ocsinventory.pm..." in Apache log files.**
 
 Perl module [Perl module name] is not installed on your server. Please, refer to OCS Inventory NG
@@ -364,21 +165,6 @@ You probably have installed Communication server for use with Apache mod_perl ve
     # For mod_perl > 1.999_21, replace VERSION_MP by 2
 
     PerlSetEnv OCS_MODPERL_VERSION 2
-
-Then restart Apache web server.
-
-**If this error concerns Perl module "Apache2/connection.pm"** like below
-
-    [Sun Mar 05 12:46:09 2006] [error] [client client_ip] failed to resolve handle
-    Ocsinventory: Can't locate Apache2/Connection.pm in @INC (@INC contains:...)
-
-You probably have installed Communication server for use with Apache mod_perl 1.999_22 and newer. Open OCS Inventory NG apache configuration file « ocsinventory.conf » and set variable « OCS_PERL_VERSION » to 1 to enable use of mod_perl version 1.999_21 or previous.
-
-    # Which version of mod_perl we are using
-    # For mod_perl <= 1.999_21, replace VERSION_MP by 1
-    # For mod_perl > 1.999_21, replace VERSION_MP by 2
-
-    PerlSetEnv OCS_MODPERL_VERSION 1
 
 Then restart Apache web server.
 
@@ -419,10 +205,9 @@ Directory | File | Owner | Group | Permissions
 /var/log/ocsinventory-NG |   | root | apache | -rwxrwx-r-x
  | All files | apache | apache | -rw-rw-r--
 
-## Getting help in forums
+## Getting help in ASK
 
 If you are unable to diagnose yourself the problem, you can get help using OCS Inventory NG web site
-forums ([http://forums.ocsinventory-ng.org](http://forums.ocsinventory-ng.org)).
 
 If you do so, please provide us:
 

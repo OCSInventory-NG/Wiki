@@ -1,8 +1,8 @@
-#Synchronization between OCS servers master/slaves
+# Synchronization between OCS servers master/slaves
 
 ## Operating principe
 
-Since 1.02 release, you can use the OCS_OPT_GENERATE_OCS_FILES server parameter to automatically generate
+You can use the OCS_OPT_GENERATE_OCS_FILES server parameter to automatically generate
 these files to "inject" it to a higher level server. (in case of multi entities configuration for example).
 
 In that case, you can use a cronjob if the two servers are connected, or put it on the higher level server

@@ -14,13 +14,10 @@ These 4 components can be hosted on a single computer or on different computers 
 
 **Figure 1 : OCS Inventory NG communication architecture.**
 
-**`Note: If you want to use multiple computers to host OCS inventory NG management server,
-we recommend that you set it up on Linux servers.`**
-
-**Database** server currently can only be MySQL 4.1 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
-**Communication server** needs Apache Web Server 1.3.X/2.X and is written in PERL as an Apache module. Why? Because PERL scripts are compiled when Apache starts, and not at each request. This is better performance-wise. Communication server may require some additional PERL modules, according to your distribution.
+**Database** server currently can only be MySQL 5.4 or higher with InnoDB engine active.
+**Communication server** needs Apache Web Server 2.2.X / 2.4.X and is written in PERL as an Apache module. Why? Because PERL scripts are compiled when Apache starts, and not at each request. This is better performance-wise. Communication server may require some additional PERL modules, according to your distribution.
 **Deployment server** needs any Web Server with SSL enabled.
-**Administration console** is written in PHP 4.1 (or higher) and runs under Apache Web Server 1.3.X/2.X. Administration console requires ZIP and GD support enabled in PHP in order to use package deployment.
+**Administration console** is written in PHP 5.6 (or higher) and runs under Apache Web Server 2.2.X /2.4.X. Administration console requires ZIP and GD support enabled in PHP in order to use package deployment.
 
 # Under Linux Operating System
 
@@ -35,7 +32,7 @@ We assume that you have:
 
 * Apache version 2.2 or higher.
     * Mod_perl version 1.29 or higher.
-* PHP 5.4 or higher, with ZIP and GD support enabled.
+* PHP 5.5 or higher, with ZIP and GD support enabled.
     * php_curl
     * php_mbstring
     * php_soap
@@ -56,8 +53,7 @@ We assume that you have:
 * MySQL or MariaDB version 4.1.0 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
 * Make utility such as GNU make.
 
-**`Note : Mysql version upper than 5.5 are not supported but may work. We highly recommend to use mariaDB`**
-
+**`Note : We highly recommend to use mariaDB`**
 
 **`Note: OCS Inventory NG Server Setup will check for all these components and will exit
 if any are missing.`**

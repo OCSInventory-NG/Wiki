@@ -1,19 +1,13 @@
 # HOWTO package OCS Unix agent releases
 
-To package the OCS Unix server release, we will use bazaar to get code from Launchpad.
-
-## Create the working directory
-
-Create a working directory first and go in this directory:
-
-    $mkdir ocsinventory-unix-agent
-    $cd  ocsinventory-unix-agent
+To package the OCS Unix server release, we will use git to get code from GitHub.
 
 ## Get OcsInventory Unix agent code
 
 Now, get the Ocsinventory Unix agent code from Launchpad using this command :
 
-    $bzr export . lp:ocsinventory-unix-agent/stable-xxx
+    $git clone https://github.com/OCSInventory-NG/UnixAgent
+    $cd UnixAgent
 
 ## Create the tarball file
 

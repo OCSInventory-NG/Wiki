@@ -1,8 +1,6 @@
 ## Update an existing OCS Server installation
 The process is mainly backup your configuration download the new version of OCS-Server use the setup.sh and restore the backed up configuration.
 
-![OCS update to 2.4 notes](../../english/02.Basic-documentation/update-OCS-Server.md#ocs-server-update-to-24)
-
 ### Delete existing plugins
 If you have plugins installed delete this plugins prior the update otherwise you might have problems with or after re-install them.
 Go to the plugin manager and delete them you may also need delete the configuration in:    
@@ -16,8 +14,9 @@ service apache2 stop
 ```
 You need to backup the following configuration files:
 1. Apache files:    
-* ~/apache2/conf-available/z-ocsinventory-serve.conf
-*  ~/apache2/conf-available/ocsinventory-resports.conf
+* ~/apache2/conf-available/z-ocsinventory-server.conf
+* ~/apache2/conf-available/zz-ocsinventory-restapi.conf
+* ~/apache2/conf-available/ocsinventory-reports.conf
 2. OCS configuration:
 * /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php
 
@@ -27,7 +26,8 @@ mkdir /home/backup_ocs
 ```
 then copy the files to the backup folder
 ```
-cp /etc/apache2/conf-available/z-ocsinventory-server.conf /etc/apache2/conf-available/ocsinventory-reports.conf /home/backup_ocs/ && cp /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php /home/backup_ocs/
+cp /etc/apache2/conf-available/z-ocsinventory-server.conf
+/etc/apache2/conf-available/zz-ocsinventory-restapi.conf /etc/apache2/conf-available/ocsinventory-reports.conf /home/backup_ocs/ && cp /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php /home/backup_ocs/
 ```
 If your scared about losing data then better backup your database, but theoretical this is not necessary.
 ```
@@ -52,7 +52,7 @@ sh setup.sh
 restore the backed up files from above 
 ```
 cd /home/backup_ocs
-cp ocsinventory-reports.conf z-ocsinventory-server.conf /etc/apache2/conf-available/ && cp dbconfig.inc.php /usr/share/ocsinventory-reports/ocsreports/
+cp ocsinventory-reports.conf z-ocsinventory-server.conf zz-ocsinventory-restapi.conf /etc/apache2/conf-available/ && cp dbconfig.inc.php /usr/share/ocsinventory-reports/ocsreports/
 ```
 don´t forget to delete the install.php in the install dir
 ```
@@ -64,10 +64,6 @@ service apache2 start
 ```
 
 sometimes is it required to update the database via the webconsole, simply click update on the webconsole.
-
-
-## That´s all!
-
 
 #### OCS Server update to 2.4
 

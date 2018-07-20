@@ -11,7 +11,7 @@ Using this installer, you will be able to deploy or upgrade OCS MacOSX agent in 
 
 ## Using OCS Inventory NG Packager for MacOSX
 
-**`Note: OCS MacOSX Packager agent is compatible from MacOSX 10.4 Tiger to MacOSX 10.7 Lion.`**
+**`Note: OCS MacOSX Packager agent need Mac OS 10.10 and newer.`**
 
 **`Warning: To be able to use OCS MacOSX Packager for MacOSX, you have to download an OCS MacOSX agent
 installation file from OCS Inventory NG website download page

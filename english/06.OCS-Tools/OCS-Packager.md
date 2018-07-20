@@ -29,8 +29,7 @@ to your updates as well, as required by the GPL license terms.
 Using OCS Inventory **Packager** is the fastest way to deploy and setup the OCS Inventory NG Agent
 on stand alone or domain integrated computers. It is based on the NSIS script and RemCom tools.
 It generates a file called **ocspackage.exe** based on your parameters, which allows a one click and/or
-a silent user install. Combined with the **OcsLogon /install** parameter this makes a very fast service
-deployment on the Windows operating systems easy to achieve.
+a silent user install.
 
 In this document a number of assumptions are made:
 
@@ -57,7 +56,7 @@ The following window will appear:
 This entry is required !
 * On the **Certificate file** line, select your **cacert.pem** file.
 * The **other files** line allows additional files to be specified which will be copied to your install folder.
-* On **![Command line options](../../english/06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md#windows-command-line-options)** line you should enter all the needed options for the Ocs Agent setup
+* On **[Command line options](../../english/06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md#windows-command-line-options)** line you should enter all the needed options for the Ocs Agent setup
 program (e.g. /server=http[s]://my_server/ocsinventory:8181 **/S**). Do not forget to specify the
 **/S** option for a silent installation.
 * The **Label** line will create a **label** file containing your user prompt. The first time
@@ -88,10 +87,9 @@ A log file named ocspackage.log is created at install time.
 
 ## Publishing “ocspackage.exe”
 
-You must now upload ocspackage.exe to the communication server or publish it on an alternative
-web server if you use the Ocslogon.exe **[/url:]** option.
+You must now upload ocspackage.exe to the ocs web console or publish it on an alternative shared file system.
 
-### **Publishing on the communication server**
+### **Publishing on the ocs web server**
 
 Log on to the administration console and select the Configuration icon:
 
@@ -99,15 +97,14 @@ Then upload your **ocspackage.exe** file.
 
 ## Deploying agent on a domain
 
-Refer to [[Deploying Agent using launcher OcsLogon.exe through Login Script or Active Directory GPO](../../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)]
+Refer to our documention to [setup Windows Agent 2.X](../../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
 
 **`Warning: Mysql server must accept files larger than 5M. Edit my.cnf file and modify
 max_allowed_packets value to fix it more than 5M. Save this file and restart service.`**
 
 ## Getting help in forums
 
-If you are unable to diagnose the problem yourself, you can get help using OCS Inventory NG web site forums
-([http://forums.ocsinventory-ng.org/](http://forums.ocsinventory-ng.org/index.php#idx1)).
+If you are unable to diagnose the problem yourself, you can get help on the OCS Inventory Ask. The link is available on our website.
 
 If you do so, please provide us with the following:
 

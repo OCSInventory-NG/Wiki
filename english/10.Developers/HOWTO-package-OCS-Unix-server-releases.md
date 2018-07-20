@@ -1,6 +1,6 @@
 # HOWTO package OCS Unix server releases
 
-To package the OCS Unix server release, we will use bazaar to get code from Launchpad.
+To package the OCS Unix server release, we will use git to get code from GitHub.
 
 ## Create the working directory
 

@@ -1,7 +1,6 @@
 # Using SNMP scans features
 
-**`Warning: This feature works ONLY with Unix Unified Agent. It will be integrate for Windows Agent
-in OCS Inventory NG 3.0.`**
+**`Warning: This feature works is available on all desktop operatings system (Windows + Linux). However, SNMP mib table from windows agent are static and thoses provisionned by windows might be outdated. It will work for simple SNMP inventory, but consider using Linux for complex scanning`**
 
 ## How does it works ?
 
@@ -16,13 +15,6 @@ You can find more information about Ipdiscover
 [here](../../english/05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
 
 **`Warning: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
-
-**`Warning: Since OCS Inventory 2.0.3, you MUST set OCS server address in
-/etc/ocsinventory-agent/ocsinventory-agent.cfg to use
-`[_`https://your_ocs_server/ocsinventory`_](https://your_ocs_server/ocsinventory)`
-instead of`[_`http://your_ocs_server/ocsinventory`_](http://your_ocs_server/ocsinventory)`.
-If not, OCS agent won't receive SNMP scans orders from OCS server.`**
-
 
 SNMP scanning step by step :
 
@@ -72,9 +64,6 @@ authentication informations to be allowed to scan SNMP devices. SNMP community i
 version 2c etc...)
 * SNMP community name : it is the community name you set in your SNMP device(s). For many SNMP devices,
 the default SNMP community name is public.
-
-**`Note: In OCS Inventory NG 2.0, only SNMp v1, v2 and v2c are supported. SNMp v3 will be supported
-in future releases.`**
 
 If you set your own SNMP communities in your SNMP devices, you have to add it in OCS Inventory
 configuration. OCS agent will received informations about this communities and will try to scans SNMP
@@ -237,6 +226,14 @@ You will see an debug output about SNMP scans like this:
     [Sun Jan  9 19:41:09 2011][debug] [snmp] End snmp_end_handler :)
 
 In this example, you can see that the agent scanned a printer and the data related.
+
+## Configuring Windows Agent
+
+Windows agent does not require any additional configuration to work as a SNMP Scanner.
+
+However, the SNMP implementation rely on WinSNMP and won't be as accure as the UNIX Agent.
+
+In the case you need to perform complex SNMP scanning, UNIX Agent is more suited for that.
 
 ## Query SNMP inventory results
 

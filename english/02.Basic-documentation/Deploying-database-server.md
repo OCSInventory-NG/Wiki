@@ -1,13 +1,10 @@
 # Deploying database server
 
-OCS Inventory server need a database to storage information from inventory
+OCS Inventory server need a database to store information from inventory
 
 ## Install database server requirements
 
-**Database** server currently can only be MySQL 4.1 or higher with InnoDB engine active.
-
-**`Note : Mysql version upper than 5.5 are not supported but may work. We highly recommend to use mariaDB`**
-
+**Database** server currently can only be MySQL 5.4 or higher.
 
 **`Note : On Fedora/Redhat/Centos 7 mariadb is avalaible on`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`. you need to install this repo for install database server.`**
 
@@ -15,7 +12,7 @@ OCS Inventory server need a database to storage information from inventory
 
     yum install mariadb-server
 
-**On Debian 9 Stretch ** you can use "apt" to install mariadb
+**On Debian 9 Stretch** you can use "apt" to install mariadb
 
     apt install mariadb-server mariadb-common mariadb-client
 

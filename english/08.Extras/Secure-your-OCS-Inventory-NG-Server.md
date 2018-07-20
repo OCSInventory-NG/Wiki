@@ -53,7 +53,7 @@ Under Linux, generally in
 
 Under Linux, generally in
 
-    /etc/apache2/conf.d/
+    /etc/apache2/conf-available/
 <br/>
 
     # User allowed to connect to database

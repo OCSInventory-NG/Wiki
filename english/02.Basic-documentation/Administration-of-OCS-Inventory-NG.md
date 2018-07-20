@@ -110,38 +110,18 @@ General options of configuration
 **TAB_CACHE** | Activer ou non le cache des tableaux .
 **TELEDIFF_WK** | Activate workflow for teledeployment.
 **TRACE_DELETED** | Activates or not tracking of deleted/renamed computers for integration with GLPI. Enable this feature only if you use integration with GLPI asset management software.
-**UPDATE** | Not used, always set to OFF.
-**USE_FLASH** | Utiliser ou non flash dans la GUI.
-**WEB_SERVICE_ENABLED** | Activer ou non le webservice.
 
 Click **[ Update ]** button when you set all changes.
 
-## Uploading Agent for deployment through launcher “OcsLogon.exe”
+### Simplified configuration
 
-**`Warning: This feature works only for network connected computers able to connect to the
-Communication server.`**
+If you find the config panel a bit overhelming and you don't use all the available configuration, you can disable the advanced configuration in the "Server" tab at the bottom of the page.
 
+## Create customized serup using OCS Packager
 
-OCS Inventory NG is able to automatically install an agent on computers when the launcher “OcsLogon.exe”
-is used through a login script or GPO. The Agent’s files are downloaded from the Communication server.
-
-You first must upload the agent package(s) into the Administration console and activate the deployment
-feature by setting the “DEPLOY” general option to ON (see § 6.2 Managing OCS Inventory NG general options.).
-
-One or both of the following 2 files must be uploaded to the server:
-
-* **OCS-NG-Windows-Agent-Setup.exe** file for Windows, to deploy the standalone Agent
-(not running as a Windows service). This file is included in package OCSNG-Windows-Agent-2.0.zip.
-* **ocspackage.exe** file, created using OCS Inventory NG
-[Packager](../../06.OCS-Tools/OCS-Packager.md), to deploy the Windows
-service version of the Agent, even if the connected user does not have Administrator privileges.
-
-**`Warning: A control is made on files name imported via GUI. You will not upload file having a
-different name of ocsagent.exe and ocspackages.exe.`**
-
+In the case you need to install an agent with pre-provisioned configuration, you can use the OCS Packager to create a customized setup of the agent.
 
 To create the “ocspackage.exe” file, run the
-[OCS Inventory NG Packager](../../06.OCS-Tools/OCS-Packager.md)
 [OCS Inventory NG Packager](../../06.OCS-Tools/OCS-Packager.md)
 and fill in the following informations:
 
@@ -159,19 +139,9 @@ Administrator privileges.
 
 **`Note`**`: Refer to OCS Inventory NG Packager documentation for more informations on how to use Packager.`
 
-OcsAgentSetup.exe supports the following command line parameters (and all Agent’s parameters
-defined in § 4.1.5 Agent’s command line switches):
-
-* **/S** Use quiet, silent installation
-* **/SERVER=IP_ADDRESS** Use Communication Server address “IP_ADDRESS”
-* **/PNUM=XX** Use port XX instead of default HTTP port 80.
-* **/NP** Do not use Microsoft Internet Explorer Proxy settings
-* **/DEBUG** Produce a log file of OCS Inventory NG agent execution. This mode is automatically
-used under Windows to launch agent as a service through an entry in registry key
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\RunServices.
-
-This will create the file “ocspackage.exe” to upload into Administration console. Click on
-toolbar **Config** menu.
+This will create the file “ocspackage.exe”.
+If you want to store it, OCS Inventory include a package file upload into Administration console. 
+Click on toolbar **Config** menu.
 
 ![Toolbar Config Menu](../../img/server/reports/administration_ocs_3.png)
 
@@ -179,8 +149,7 @@ Click **[ Agent ]** toolbar menu, browse your hard drive to select agent file an
 
 ![Add agent](../../img/server/reports/administration_ocs_4.png)
 
-**`Note: If you encounter error while uploading agent, refer to common errors § 11.2.3 PHP Requested
-content-length.`**
+**`Note: If you encounter error while uploading agent, refer to common errors PHP max post size and MySql upload size`**
 
 ## Using Registry Query feature
 
@@ -279,9 +248,7 @@ characters are not allowed) and selecting their type. You can choose type betwee
 * Text
 * Textarea
 * Select
-* Show this fied
 * Checkbox
-* Blob
 * Radiobutton
 * Date
 
@@ -340,12 +307,10 @@ This file has “.ocs” extension.
 
 We assume that administrator can get the file from somewhere, his mailbox, a USB drive or any other place.
 
-Go to the directory where you’ve installed Communication server, “/usr/local/ocsinventory-NG” for us,
-and run the script “Ocsinventory_local.pl” with path to file which contains inventory results as argument.
+All of our tools are available at the following URL : https://github.com/OCSInventory-NG/OCSInventory-Server/tree/master/binutils
+They are also present in the ocs inventory setup if you still have it on your server.
 
-
-**`Note: With OCSInventory NG Server for Windows, import script “local_import.bat” is located in
-“INSTALLDIR\binutils” directory, where “INSTALLDIR” is the installation folder selected during server setup.`**
+To import the computer you need to run the script “Ocsinventory_local.pl” with path to file which contains inventory results as argument.
 
 This will import inventory results into the database.
 

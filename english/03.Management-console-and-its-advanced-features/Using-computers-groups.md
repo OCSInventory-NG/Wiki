@@ -1,8 +1,12 @@
 # Using computer groups
 
 Since OCS Inventory NG 1.02, you can create computer groups. Computer groups can be used to sort your
-computers, add custom parameters or deploy packages on these computers. Computer groups are created using
-various criteria search. You can create dynamic, static or redistribution server groups.
+computers, add custom parameters or deploy packages on these computers. 
+
+Computer groups are created using
+various criteria search, see [queyring inventory results](Querying-inventory-results.md) for more informations. 
+
+You can create dynamic, static or redistribution server groups.
 
 ## Viewing groups
 
@@ -15,6 +19,8 @@ You can see three tabs :
 * Dynamic Groups tab : to view the list of dynamic groups
 * Static Groups tab : to view the list of static groups
 * Server Groups tab : to view the list of redistribution server groups
+
+`Note : Restribution groups tab might be unavailable if you disabled redistributions server in the configuration`
 
 ![Groups page](../../img/server/reports/computers_groups_2.png)
 
@@ -48,8 +54,7 @@ another various criteria search.
 To create a static group of computers, you have to make a various criteria search first.
 Click on "Search with various criteria", select your parameters, and click on "Search" button.
 In the result table, check the computers you want to add to the static group (you can click on
-"the page" to select all the computers). Click on Groups at the bottom of the result table and
-go to the "For selection" section.
+"the page" to select all the computers). Click on Groups at the bottom of the result table and select if you want to add what you selected (checkboxes) or for the request itself.
 
 ![Request's results](../../img/server/reports/computers_groups_6.png)
 
