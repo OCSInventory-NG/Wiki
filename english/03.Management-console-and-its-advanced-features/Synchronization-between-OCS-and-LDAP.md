@@ -4,9 +4,7 @@ It is possible to delegate authentication to the administration console of OCS I
 database. Some modules have already been developed and are available natively in version 2.0. So we will
 see how to delegate the connection to the OCSInventory NG GUI to LDAP.
 
-**`Note: For this documentation, we set up an LDAP from the following documentation :
-`[`http://doc.ubuntu-fr.org/openldap-server`](http://doc.ubuntu-fr.org/openldap-server)`
-and we kept the default configuration.`**
+**`Note: For this documentation, we assume that you have a working and fully configured LDAP server`**
 
 ## Preperations
 For the LDAP connection we need the php_ldap module:
@@ -35,7 +33,7 @@ Currently we can seperate users authenticated with ldap through three options: F
 
 
 ## Modification of configurations in file system
-Typical the files are stored under: ```/usr/share/ocsinventory-reports/ocsreports/```
+Typical the files are stored under: ```/usr/share/ocsinventory-reports/ocsreports/backend/AUTH```
 We have to change two files: In the first (auth.php) we set the authentication method and in the other (identity.php) we define that the user rights (role) are also synchronised with ldap.
 
 ### Changes of ~/backend/AUTH/auth.php
