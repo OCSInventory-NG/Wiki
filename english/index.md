@@ -42,6 +42,8 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [OCS Inventory NG Agent Deployement Tool](06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
 * [OCS Packager](06.OCS-Tools/OCS-Packager.md)
 * [OCS Packager for MacOSX](06.OCS-Tools/OCS-Packager-for-MacOSX.md)
+* [OCS Packager for Unix](06.OCS-Tools/OCS-Packager-for-UNIX.md)
+* [Ansible role for Unix Packager](06.OCS-Tools/OCS-Ansible-Role-for-Unix-Packager.md)
 
 ## Multi-site network architecture
 
