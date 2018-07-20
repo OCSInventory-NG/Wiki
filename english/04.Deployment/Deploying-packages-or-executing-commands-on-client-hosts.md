@@ -16,8 +16,10 @@ A package has 4 main components:
 
 * A priority
 * An action
-* (Optional) A ZIP or TAR.GZ file including how many files and directories you want
-* (Optional) A command to launch
+* A ZIP or TAR.GZ file including how many files and directories you want
+* A command to launch
+
+`Note : in the case the action is set to "execute" you don't need to upload a file.`
 
 **There are 11 levels of priority**, ranging from level **0** to 10. Level 0 is the **highest** priority and
 level 10 the lowest. Package of priority level 0 will be deployed before package of priority 1.
