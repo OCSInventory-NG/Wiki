@@ -8,7 +8,7 @@ see how to delegate the connection to the OCSInventory NG GUI to LDAP.
 
 ## Preperations
 For the LDAP connection we need the php_ldap module:
-``` 
+```
 apt install php-ldap
 ```
 For debian based unix
@@ -28,7 +28,7 @@ Here we have varius files to fill:
 
 Currently we can seperate users authenticated with ldap through three options: Field1, Field2 and default role. With the options below we can use an attribute to assigen the users to a differnt group than the default group.
 + **CONEX_LDAP_CHECK_FIELD1_NAME:** An attribute which has every user (ex. department)
-+ **CONEX_LDAP_CHECK_FIELD1_VALUE:** A value of the attribute above 
++ **CONEX_LDAP_CHECK_FIELD1_VALUE:** A value of the attribute above
 + **CONEX_LDAP_CHECK_FIELD1_ROLE:** Choose a role from dropdown
 
 
@@ -37,7 +37,7 @@ Typical the files are stored under: ```/usr/share/ocsinventory-reports/ocsreport
 We have to change two files: In the first (auth.php) we set the authentication method and in the other (identity.php) we define that the user rights (role) are also synchronised with ldap.
 
 ### Changes of ~/backend/AUTH/auth.php
-We need to change the login option from local to ldap by comment this line out 
+We need to change the login option from local to ldap by comment this line out
 
 `$list_methode=array(0=>"local.php");`       
 and the line below in        
@@ -70,7 +70,7 @@ If you don't modify the line
 
 then you will keep the "classic " login page.
 
-![ocsreport's homesecreen](../../img/server/reports/ldap_5.png)
+![ocsreport's homesecreen](../../img/server/reports/login_page_1.png)
 
 However, if you replace **html** by **SSO**
 
@@ -85,7 +85,45 @@ You will need to choose it and freeze it in the var.php file.`**
 
 ## Modification of backend/identity/identity.php file
 
-![modification of auth.php](../../img/server/reports/ldap_7.jpg)
+    require_once(BACKEND . 'require/connexion.php');
+    $list_methode = array(0 => "local.php");
+    //$list_methode=array(0=>"ldap.php");
+    if (!isset($_SESSION['OCS']["lvluser"])) {
+        $i = 0;
+        //methode pour le calcul des droits
+        while ($list_methode[$i]) {
+            require_once('methode/' . $list_methode[$i]);
+            //on garde les erreurs présentes
+            //entre chaque méthode
+            if (isset($ERROR)) {
+                $tab_error[$list_methode[$i]] = $ERROR;
+                unset($ERROR);
+            }
+            //on garde les tags qu'a le droit de voir l'utilisateur
+            if (isset($list_tag)) {
+                $tab_tag[$list_methode[$i]] = $list_tag;
+                unset($list_tag);
+            }
+            $i++;
+        }
+    }
+
+    if (!isset($tab_tag) && $restriction != 'NO') {
+        $LIST_ERROR = "";
+        foreach ($tab_error as $script => $error) {
+            $LIST_ERROR .= $error;
+            addLog('ERROR_IDENTITY', $error);
+        }
+        $_SESSION['OCS']["mesmachines"] = "NOTAG";
+    } elseif (isset($tab_tag)) {
+        foreach ($list_methode as $prio => $script) {
+            if (isset($tab_tag[$script])) {
+                foreach ($tab_tag[$script] as $tag => $lbl) {
+                    $list_tag[$tag] = $tag;
+                    $lbl_list_tag[$tag] = $lbl;
+                }
+            }
+        }
 
 This file allow to define rights that the account logged will have into the administration console of
 OCS Inventory NG. In order to delegate those rights to a schedule base, in our case an LDAP,
@@ -108,7 +146,7 @@ In this case, rights will be retrieve in the LDAP, and will be completed by thos
 Based on the LDAP database created at the beginning, and having made changes outlined in
 preceding paragraphs, so we can connect with the user **john/password**.
 
-![john connection](../../img/server/reports/ldap_8.png)
+![john connection](../../img/server/reports/login_page_2.png)
 
 On connection, he will have automatically rights of **Super administrator** profile.
 
@@ -125,4 +163,3 @@ So, after the connection of that user, it will have the following message:
 
 For that user can access the administration console of OCS Inventory NG, it will wait a
 **Super Administrator** gives it access to TAG wich interested it.
-
