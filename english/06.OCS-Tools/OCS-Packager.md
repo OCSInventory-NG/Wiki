@@ -116,10 +116,8 @@ If you do so, please provide us with the following:
     * Run _“AGENT_INSTALL_FOLDER\ocsinventory.exe /NP /DEBUG=2 /SERVER=http://your_server_address/ocsinventory”_
      under Windows. Log file is created on folder “AGENT_INSTALL_FOLDER” under name “ocsinventory.log”.
     * Run _“ocsinventory-agent --debug > ocsinv.log”_ under Linux. Log file is “ocsinv.log”.
-* Apache server error.log file, located for Windows under _“SERVER_INSTALL_FOLDER\xampp\apache\logs\error.log”_
-and for Linux under _“/var/log/httpd/*error.log”_.
-* OCS Inventory NG Server log file, located for Windows under
-_“SERVER_INSTALL_FOLDER\xampp\apache\logs\ocsinventory-NG.log”_ and for Linux under
+* Apache server error.log file, located under _“/var/log/httpd/*error.log”_.
+* OCS Inventory NG Server log file, located under
 _“/var/log/ocsinventory-NG/ocsinventory-NG.log”_ under Linux.
 
 Thanks in advance.

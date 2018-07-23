@@ -26,8 +26,7 @@ If you encounter an error message with “max_allowed_packet” MySQL error, you
 MySQL configuration to increase the maximum size of packet accepted by MySQL. We recommend setting
 the value to 4 MB.
 
-Open the file “my.ini” (usually available in “/etc” directory under Linux,
-in “C:\OCSinventoryNG\xampp\mysql\bin” under Windows) and add the line “max_allowed_packet=4M”
+Open the file “my.ini” (usually available in “/etc” directory) and add the line “max_allowed_packet=4M”
 in “[mysqld]”, “[mysql.server]” or “[safe_mysqld]” section.
 
     [mysqld]
@@ -219,10 +218,8 @@ If you do so, please provide us:
     * Run “AGENT_INSTALL_FOLDER\ocsinventory.exe /NP /DEBUG /SERVER:you_server_address” under Windows.
     Log file is created on folder “AGENT_INSTALL_FOLDER” under name “your_computer_name.log”.
     * Run “ocsinv –debug > ocsinv.log” under Linux. Log file is “ocsinv.log”.
-* Apache server error.log file, located for Windows under “SERVER_INSTALL_FOLDER\xampp\apache\logs\error.log”
-and for Linux under “/var/log/httpd/*error.log”.
-* OCS Inventory NG Server log file, located for Windows under
-“SERVER_INSTALL_FOLDER\xampp\apache\logs\ocsinventory-NG.log” and for Linux under
+* Apache server error.log file, located under “/var/log/httpd/*error.log”.
+* OCS Inventory NG Server log file, located under
 “/var/log/ocsinventory-NG/ocsinventory-NG.log” under Linux.
 
 Thanks in advance.
