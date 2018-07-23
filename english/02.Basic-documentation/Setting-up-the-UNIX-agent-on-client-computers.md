@@ -6,7 +6,7 @@ setup to activate auto-update of the agent if you’ve chosen HTTP inventory met
 
 An automated deployment is now possible.
 
-Your use the [Packager for unix](https://github.com/OCSInventory-NG/Packager-for-Unix) to create a standalone package
+You can use the [Packager for unix](https://github.com/OCSInventory-NG/Packager-for-Unix) to create a standalone package
 
 Automated deployment is possible using our [ansible role](https://github.com/OCSInventory-NG/Ansible-Role-For-Unix-Packager)
 
@@ -22,21 +22,27 @@ Required modules:
     * Perl module Net::IP
     * Perl module LWP::UserAgent
     * Perl module Digest::MD5
-    * Perl Module Net::SSLeay
-    * Perl Module Mac::SysProfile is need on MacOSX
+    * Perl module Net::SSLeay
+    * Perl module Data::UUID
+    * Perl Module Mac::SysProfile is needed on MacOSX
 * dmidecode
 * lspci on Linux and *BSD (pciutils package)
 * Make utility
 * C/C++ compiler like GNU GCC
 
-Optional modules:
+Recommended modules:
 
+* Perl module IO::Socket::SSL
+* Perl module Crypt::SSLeay
+* Perl module LWP::Protocol::https
 * Perl module Proc::Daemon
 * Perl module Proc::PID::File if Proc::Daemon is installed
 * Perl module Net::SNMP
+* Perl module Net::Netmask
 * Perl module Nmap::Parser
 * Perl module Module::Install
 * Perl module Net::CUPS
+* Perl module Parse::EDID
 * Nmap (v3.90 or superior)
 
 
@@ -56,7 +62,7 @@ to your system or download each package individually from the repository
 
     apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl libdata-uuid-perl
 
-Optional modules: but hightly recommended
+Optional modules: but highly recommended
 
     apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
@@ -77,16 +83,16 @@ please refer to this file to have detailed error messages.**
 
 You need to have "wget" to download the repo of EPEL and OCS
 
-    wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
+   $ sudo wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+   $ sudo wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
 
 You can install the repo with "yum"
 
-    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm
+   $ sudo  yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm
 
 To install the unix agent and requierement use this command :
 
-    yum install ocsinventory-agent
+   $ sudo yum install ocsinventory-agent
 
 **`Note : The unix agent gonna be installed with default settings.`**
 
@@ -98,13 +104,13 @@ Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](htt
 
 1. Unpack it.
 
-        tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
-        cd Ocsinventory-Agent-2.x.y
+        $ sudo tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
+        $ sudo cd Ocsinventory-Agent-2.x.y
 
 2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
 libraries ... and it generates the Makefile. During this step, a temporary environment variable is created to install agent non-interactively.
 
-        env PERL_AUTOINSTALL=1 perl Makefile.PL
+        $ sudo env PERL_AUTOINSTALL=1 perl Makefile.PL
 
     Exemple :
 
@@ -114,8 +120,8 @@ libraries ... and it generates the Makefile. During this step, a temporary envir
 
 3. Compilation
 
-        make
-        make install
+        $ sudo make
+        $ sudo make install
 
 **`Note: Installer writes a log file “ocs_agent_setup.log” in the same directory. If you encounter any errors,
 please refer to this log for the detailed error message.`**
@@ -138,18 +144,18 @@ of required component. You need to have access to Internet or local repositories
 
 ## Installing the agent interactively
 
-Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
+Download “Ocsinventory-Unix-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
 
 
 1. Unpack it.
 
-        tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
-        cd Ocsinventory-Agent-2.x.y
+        $ sudo tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
+        $ sudo cd Ocsinventory-Agent-2.x.y
 
 2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
 libraries ... and it generates the Makefile.
 
-        perl Makefile.PL
+        $sudo perl Makefile.PL
 
     Exemple :
 
@@ -159,8 +165,8 @@ libraries ... and it generates the Makefile.
 
 3. Compilation
 
-        make
-        make install
+        $ sudo make
+        $ sudo make install
 
 **`Note: Installer writes a log file “ocs_agent_setup.log” in the same directory. If you encounter any errors,
 please refer to this log for the detailed error message.`**
@@ -312,14 +318,14 @@ For example, if you want to install OCS Unix Unified agent in non-interactive mo
 create a crontab, set a custom tag, enable debug mode, set a log file path and activate download feature,
 you have to run this command:
 
-    env PERL_AUTOINSTALL=1 perl Makefile.PL && make && make install && perl postinstl.pl --nowizard --server=http://yourserver/ocsinventory --crontab
+   $ sudo env PERL_AUTOINSTALL=1 perl Makefile.PL && make && make install && perl postinstl.pl --nowizard --server=http://yourserver/ocsinventory --crontab
 
 # Agent’s command line switches
 
 If you encounter errors, agent's produce a log file in directory “/var/log/ocsinventory-client”.
 
-However, agent’s also support some command line switches. You can use them while launching the
-agent manually using “ocsinv” command:
+However, agent also supports some command line switches. You can use them while launching the
+agent manually using “ocsinventory-agent” command:
 
 Agent’s command line switch | Meaning
 ----------- | ------------
@@ -340,7 +346,7 @@ Agent’s command line switch | Meaning
 
 For more informations, use
 
-    man ocsinventory-agent
+    $ man ocsinventory-agent
 
 # Compatibility
 
