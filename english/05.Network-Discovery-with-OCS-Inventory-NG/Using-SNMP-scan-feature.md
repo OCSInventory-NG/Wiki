@@ -12,7 +12,7 @@ These IP addresses to scan are directly sent to OCS agent by OCS server when OCS
 (PROLOG step).
 
 You can find more information about Ipdiscover
-[here](../../english/05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
+[here](../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
 
 **`Warning: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
 
@@ -118,7 +118,7 @@ Then, click on the _Networks scans_ tab.
 ![Groups Pencil](../../img/server/reports/snmp_scan_feature_8.png)
 
 For more informations about groups page, click
-[here](../../english/03.Management-console-and-its-advanced-features/Using-computers-groups.md)
+[here](../03.Management-console-and-its-advanced-features/Using-computers-groups.md)
 
 ![Networks scans tab](../../img/server/reports/snmp_scan_feature_6.png)
 
@@ -134,7 +134,7 @@ Click on the _Update_ button to save your modifications.
 
 To be able to make SNMP using OCS Unified Unix agent, you have to install Net::SNMP perl module
 
-you can find more information in the page [Unix agent](../../english/02.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md)
+you can find more information in the page [Unix agent](../02.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md)
 
 ### **Copying SSL certificate file**
 
