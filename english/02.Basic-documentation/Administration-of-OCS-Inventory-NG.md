@@ -92,7 +92,7 @@ General options of configuration
 **LOCAL_SERVER** | IP address or DNS name of OCS Inventory NG Communication Server.
 **LOG_DIR** | Specify the logs directory
 **LOG_GUI** | Enable or not the logs of the GUI.
-**LOGLEVEL** | Enable or disable detailed log for Communication server. If enabled, server will write logs to file “ocsinventory-NG.log” in directory “/var/log/ocsinventory-NG” for Linux and “…\xampp\apache\logs” for Windows.
+**LOGLEVEL** | Enable or disable detailed log for Communication server. If enabled, server will write logs to file “ocsinventory-NG.log” in directory “/var/log/ocsinventory-NG” for Linux.
 **LOG_SCRIPT** | Specify the logs directory of scripts
 **LOCK_REUSE_TIME** | Specify the lock validity of computer in seconds.
 **OCS_FILES_FORMAT** | Define the format of the inventory file, compressed (OCS) or plain XML.

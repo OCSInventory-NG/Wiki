@@ -94,7 +94,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 * Error 500 :
 
-    **Solution**: OCS engine can't comunicate with mysql server. Probably due to a wrong mysql account. You have to check z-ocsinventory-server.conf (ocsinventory-server.conf on Windows Server), exactly theses few lines
+    **Solution**: OCS engine can't comunicate with mysql server. Probably due to a wrong mysql account. You have to check z-ocsinventory-server.conf exactly theses few lines
 
         # Master Database settings
           # Replace localhost by hostname or ip of MySQL server for WRITE
