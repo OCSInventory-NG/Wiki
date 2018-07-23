@@ -55,7 +55,7 @@ Don't forget to apply parameters :
 If you do not wish to use default MySQL user ocs with ocs password, you must update in the file
 /etc/apache2/conf-avaible/z-ocsinventory-server.conf.
 Don’t forget to also enable your conf and restart apache.
-Refer to `[`Secure your OCS Inventory NG Server`](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
+Refer to `[`Secure your OCS Inventory NG Server`](../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
 for all information about modifications of configuration files.`**
 
 
@@ -103,5 +103,5 @@ Restart your apache service to activate the conf
 If you do not wish to use default MySQL user ocs with ocs password, you must update in the file
 /etc/apache2/conf-avaible/z-ocsinventory-server.conf.
 Don’t forget to also enable your conf and restart apache.
-Refer to `[`Secure your OCS Inventory NG Server`](../../english/08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
+Refer to `[`Secure your OCS Inventory NG Server`](../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)`
 for all information about modifications of configuration files.`**

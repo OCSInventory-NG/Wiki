@@ -80,11 +80,11 @@ results to Communication server using HTTP or HTTPS.
 
 
 **`Note`**`: You must have Administrator privileges to set up OCS Inventory NG Agent as a service,
-or you may use OCS Inventory NG `[`Packager`](../../english/06.OCS-Tools/OCS-Packager.md)
+or you may use OCS Inventory NG `[`Packager`](../06.OCS-Tools/OCS-Packager.md)
 `to create an installer able to run even if user do not
 have Administrator privileges. Refer to`
 [`Uploading Agent for deployment through launcher “OcsLogon.exe”`](Administration-of-OCS-Inventory-NG.md#uploading-agent-for-deployment-through-launcher-ocslogonexe)
-`or OCS Inventory NG `[`Packager`](../../english/06.OCS-Tools/OCS-Packager.md)` documentation.`
+`or OCS Inventory NG `[`Packager`](../06.OCS-Tools/OCS-Packager.md)` documentation.`
 
 * OCS Inventory NG Agent “OCSInventory.exe” is launched by service “OcsService.exe” every **PROLOG_FREQ** hours.
 It keeps trace of the countdown in seconds in file “ocsinventory.ini” (value **TTO_WAIT**), so it is the time
@@ -217,7 +217,7 @@ Also, you can pass to the installer the following agent's command line parameter
 
 **`Note`**`: We recommend using service version of Agent if you plan to use package deployment feature.`
 
-To deploy the agent using GPO we recommand you to create a standalone packager with all your configuration already provisionned. See [using OCS Packager to create an all-in-one installer to setup agent and server certificate](../../english/06.OCS-Tools/OCS-Packager.md)
+To deploy the agent using GPO we recommand you to create a standalone packager with all your configuration already provisionned. See [using OCS Packager to create an all-in-one installer to setup agent and server certificate](../06.OCS-Tools/OCS-Packager.md)
 
 After creating a packager, you will need to store it at a place where all your users have access to.
 
