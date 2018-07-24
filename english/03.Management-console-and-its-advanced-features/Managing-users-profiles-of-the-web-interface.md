@@ -168,7 +168,6 @@ Description of pages :
 * pack_search :
 * plugins :
 * pluginsmanager :
-* qrcode :
 * rules_redistrib :
 * script_new_tag :
 * search_soft :

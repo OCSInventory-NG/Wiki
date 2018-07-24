@@ -73,6 +73,14 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [HOWTO package OCS Unix agent releases](10.Developers/HOWTO-package-OCS-Unix-agent-releases.md)
 * [HOWTO package OCS MacOSX agent releases](10.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
 
+# Contribution
+
+If you think something is missing feel free to open an issue or fork it and document it by yourself. 
+Same for mistakes in the documentation.
+
+The Github repository below is directly linked to our documentation.
+See [our GitHub repository](https://github.com/OCSInventory-NG/Wiki)
+
 # FAQ
 
 
