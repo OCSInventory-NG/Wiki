@@ -47,16 +47,6 @@ Going into the details of a machine, we find all these fields.
 
 ![Fields in computer](../../img/server/reports/administrative_data_8.png)
 
-### **QR code**
-
-We create a new administrative data with type QR code, and chose the URL (detail of machine)
-
-![New data](../../img/server/reports/administrative_data_9.png)
-
-Going into the details of a machine, we find new tab with QR code.
-
-![QR_CODE](../../img/server/reports/administrative_data_10.png)
-
 ## Add data to administrative data with multivalues
 
 If you have created administrative data such as checkbox, select or radiobutton, you'll need to enter
