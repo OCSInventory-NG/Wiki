@@ -14,9 +14,9 @@ Automated deployment is possible using our [ansible role](https://github.com/OCS
 
 ## Requirements
 
-Required modules:
+Required modules and commands:
 
-* PERL 5.8
+* PERL 5.8 and higher
     * Perl module XML::Simple
     * Perl module Compress::Zlib
     * Perl module Net::IP
@@ -51,20 +51,19 @@ if they are available.`**
 
 **On Fedora/Redhat/Centos7 like Linux**, you can use “yum” tool to set required modules up like following:
 
-    yum install perl-XML-Simple perl-devel perl-Compress-Zlib perl-Net-IP perl-LWP perl-Digest-MD5 perl-Net-SSLeay perl-Data-UUID
+    $ sudo yum install perl-XML-Simple perl-devel perl-Compress-Zlib perl-Net-IP perl-LWP perl-Digest-MD5 perl-Net-SSLeay perl-Data-UUID
 
-Optional modules: these modules are available on [`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse) repository. Don't forget to add this repository
-to your system or download each package individually from the repository
+Optional modules: these modules are available on [`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse) repository. Don't forget to add this repository to your system or download each package individually from the repository
 
-    yum install perl-Crypt-SSLeay perl-Net-SNMP perl-Proc-Daemon perl-Proc-PID-File perl-Sys-Syslog pciutils smartmontools monitor-edid
+    $ sudo yum install perl-Crypt-SSLeay perl-Net-SNMP perl-Proc-Daemon perl-Proc-PID-File perl-Sys-Syslog pciutils smartmontools monitor-edid
 
 **On Debian Stretch like Linux**, you can use “apt” tool to set required modules up:
 
-    apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl libdata-uuid-perl
+    $ sudo apt install libmodule-install-perl dmidecode libxml-simple-perl libcompress-zlib-perl libnet-ip-perl libwww-perl libdigest-md5-perl libdata-uuid-perl
 
 Optional modules: but highly recommended
 
-    apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
+    $ sudo apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap
 
 **Unix agent 2.x is now installed without script “setup.sh”. During compilation, information about
 configuration and dependencies are returned. However, it will never upgrade an installed module.
@@ -149,8 +148,8 @@ Download “Ocsinventory-Unix-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site
 
 1. Unpack it.
 
-        $ sudo tar –xvzf Ocsinventory-Agent-2.x.y.tar.gz
-        $ sudo cd Ocsinventory-Agent-2.x.y
+        $ sudo tar –xvzf Ocsinventory-Unix-Agent-2.x.y.tar.gz
+        $ sudo cd Ocsinventory-Unix-Agent-2.x.y
 
 2. Check perl configuration with the script Makefile.PL. Its looks at the configuration of Perl, machine,
 libraries ... and it generates the Makefile.
@@ -322,7 +321,7 @@ you have to run this command:
 
 # Agent’s command line switches
 
-If you encounter errors, agent's produce a log file in directory “/var/log/ocsinventory-client”.
+If you encounter errors, agent's produce a log file in directory “/var/log/ocsinventory-agent”.
 
 However, agent also supports some command line switches. You can use them while launching the
 agent manually using “ocsinventory-agent” command:
@@ -336,7 +335,7 @@ Agent’s command line switch | Meaning
 **--debug** | Force agent to produce a more detailed log file, showing XML exchange with communication server.
 **--nosoftware** | Do not search for installed software.
 **--info** | Show a detailed output of agent runs.
-**--proxy=”PROXY SERVER”** | Specify a proxy.
+**--proxy=”url_proxy:[port]”** | Specify the url of a proxy.
 **--lazy** | Do not contact the server more than one time during the PROLOG_FREQ and do an exit if there is nothing to do.
 **--daemon** | Launch ocsinventory-agent in background. Proc::Daemon is needed.
 **--basevardir=”PATH”** | Used to specify the place where the agent should store its files.
@@ -360,7 +359,7 @@ For more informations, use
 8.x | to be tested | |
 9.x | to be tested | |
 10.x | to be tested | |
-11.x | to be tested | |
+11.x | YES | Unix Unified Agent 2.4 | 32 & 64 bits
 
 ## OpenBSD
 
@@ -396,7 +395,7 @@ For more informations, use
 
 **OS Version** | **Compatibility** | **Works with agent** | **Comments**
 --------|--------|--------|--------
-4.x | seems to work| Unix Unified Agent 2.4 |
+4.x | seems to work| Unix Unified Agent 1.1.2 |
 5.x | YES | Unix Unified Agent 2.4 |
 6 | YES | Unix Unified Agent 2.4 |
 7 | YES | Unix Unified Agent 2.4 |
