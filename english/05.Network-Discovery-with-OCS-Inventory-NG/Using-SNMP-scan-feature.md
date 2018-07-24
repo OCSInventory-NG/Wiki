@@ -1,10 +1,10 @@
 # Using SNMP scans features
 
-**`Warning: This feature works is available on all desktop operatings system (Windows + Linux). However, SNMP mib table from windows agent are static and thoses provisionned by windows might be outdated. It will work for simple SNMP inventory, but consider using Linux for complex scanning`**
+**`Warning: This feature works is available on all desktop operatings system (Windows + Linux). However, SNMP mib table from windows agent are static and those provisionned by windows might be outdated. It will work for simple SNMP inventory, but consider using Linux for complex scanning`**
 
 ## How does it works ?
 
-Since version 2.0, OCS Inventory NG integrates SNMP scans feature. The main goal of the SNMP integration
+Since version 2.0, OCS Inventory NG integrates SNMP scans feature. The main goal of the SNMP integration 
 in OCS Inventory NG is to enhance data collected by Ipdiscover. Using SNMP scans, you will be able
 to get a lot of informations about network devices : printers, switches, computers (which don't have
 an OCS agent), etc... SNMP scans will be made by OCS agents using IP addresses collected by Ipdiscover.
@@ -14,27 +14,20 @@ These IP addresses to scan are directly sent to OCS agent by OCS server when OCS
 You can find more information about Ipdiscover
 [here](../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).
 
-**`Warning: An OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
+**`Warning: an OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
 
 SNMP scanning step by step :
 
 1. an OCS agent is Ipdiscover elected or Ipdiscover forced manually
 2. the agent takes contact to the server (PROLOG) and do its Ipdiscover network scan
-3. OCS agent send back the data collected (using Ipdiscover) to OCS server (IP addresses,
-MAC addresses, hostnames etc...)
-4. during the next contact to OCS server, OCS agent received from server the IP addresses to scan
-using SNMP (this IP addresses are get using previous Ipdiscover data sent back by OCS agent)
-and retrieve SNMP communities information from database
-5. OCS agent do its Ipdiscover scan (because it is Ipdscover elected anyway) and sent back data collected
-to OCS server
+3. OCS agent send back the data collected (using Ipdiscover) to OCS server (IP addresses, MAC addresses, hostnames etc...)
+4. during the next contact to OCS server, OCS agent received from server the IP addresses to scan using SNMP (this IP addresses are get using previous Ipdiscover data sent back by OCS agent) and retrieve SNMP communities information from database
+5. OCS agent do its Ipdiscover scan (because it is Ipdscover elected anyway) and sent back data collected to OCS server
 6. OCS agent make SNMP scans using IP addresses received from server and SNMP communities
 7. OCS agent sent back the SNMP data collected to the server
 
-
-Once all theses steps are done, you will be able to view SNMP scans results using OCS Web Interface.
-You will be able to enable or disable SNMP scan features in Web Interface using global configuration
-or using computer or groups custom parameters, and will be able to add your own SNMP communities in
-Web Interface too.
+Once all these steps are done, you will be able to view SNMP scans results using OCS Web Interface.
+You will be able to enable or disable SNMP scan features in Web Interface using global configuration or using computer or groups custom parameters, and will be able to add your own SNMP communities in Web Interface too.
 
 ## Configuration using Web Interface
 
@@ -42,38 +35,27 @@ Web Interface too.
 
 ![Access Config](../../img/server/reports/snmp_scan_feature_1.png)
 
-To manage SNMP general options in Web Interface, go to Config menu, click on _Config_ and
-go to the _SNMP_ tab.
+To manage SNMP general options in Web Interface, go to Config menu, click on _Config_ and go to the _SNMP_ tab.
 
 ![SNMP tab](../../img/server/reports/snmp_scan_feature_2.png)
 
 This is the SNMP configuration options available:
 
-* **SNMP**: activate or deactivate SNMP scan feature. If this option is _OFF_, no SNMP scans will
-be made by any OCS agent
-* **SNMP_INVENTORY_DIFF**: use SNMP Inventory diff feature to lighten your DB backend. SNMP inventory
-data will be written in database only if it changes. OCS server will use _snmp_laststate_ table
-to make this comparison
+* **SNMP**: activate or deactivate SNMP scan feature. If this option is _OFF_, no SNMP scans will be made by any OCS agent
+* **SNMP_INVENTORY_DIFF**: use SNMP Inventory diff feature to lighten your DB backend. SNMP inventory data will be written in database only if it changes. OCS server will use _snmp_laststate_ table to make this comparison
 
 ### **Manage SNMP communities**
 
-To be able to scan a SNMP device, you must use SNMP community. SNMP community can be viewed as
-authentication informations to be allowed to scan SNMP devices. SNMP community is created by 2 informations:
+To be able to scan a SNMP device, you must use SNMP community. SNMP community can be viewed as authentication informations to be allowed to scan SNMP devices. SNMP community is created by 2 informations:
 
-* SNMP version : it is the SNMP version supported by the SNMP device(s) (can be version 1, version 2,
-version 2c etc...)
-* SNMP community name : it is the community name you set in your SNMP device(s). For many SNMP devices,
-the default SNMP community name is public.
+* SNMP version : it is the SNMP version supported by the SNMP device(s) (can be version 1, version 2, version 2c etc...)
+* SNMP community name : it is the community name you set in your SNMP device(s). For many SNMP devices, the default SNMP community name is public.
 
-If you set your own SNMP communities in your SNMP devices, you have to add it in OCS Inventory
-configuration. OCS agent will received informations about this communities and will try to scans SNMP
-devices using every SNMP communities you set in administration console. SNMP communites informations
-are directly added in database.
+If you set your own SNMP communities in your SNMP devices, you have to add it in OCS Inventory configuration. OCS agent will received informations about this communities and will try to scans SNMP devices using every SNMP communities you set in administration console. SNMP communites informations are directly added in database.
 
 ![Manage SNMP communities access](../../img/server/reports/snmp_scan_feature_3.png)
 
-To manage SNMP communities in Web Interface, go to _Network(s)_ menu, click on _Administer_ and go to
-the _Manage SNMP communites_ tab.
+To manage SNMP communities in Web Interface, go to _Network(s)_ menu, click on _Administer_ and go to the _Manage SNMP communites_ tab.
 
 ![Manage SNMP communities](../../img/server/reports/snmp_scan_feature_4.png)
 
@@ -89,13 +71,11 @@ You have to set a community name and a SNMP version (using the drop list)
 
 ### **Configuring custom parameters**
 
-To make an OCS agent to scan its network using SNMP (without waiting for an Ipdiscover automatic election),
-you may have to set its custom parameters at computer side or at groups side.
+To make an OCS agent to scan its network using SNMP (without waiting for an Ipdiscover automatic election), you may have to set its custom parameters at computer side or at groups side.
 
 #### **Configuring computer custom parameters**
 
-To make a single OCS agent to scan its network using SNMP, you have to set it in its custom parameters.
-First, go to its _Configuration_'s page and click on the _pencil_. Then, click on the _Networks scans_ tab.
+To make a single OCS agent to scan its network using SNMP, you have to set it in its custom parameters. First, go to its _Configuration_'s page and click on the _pencil_. Then, click on the _Networks scans_ tab.
 
 ![Computer Pencil](../../img/server/reports/snmp_scan_feature_7.png)
 
@@ -103,9 +83,8 @@ First, go to its _Configuration_'s page and click on the _pencil_. Then, click o
 
 ![Networks scans tab](../../img/server/reports/snmp_scan_feature_6.png)
 
-* If no network address appears in **IPDISCOVER** option, you have to set it manually using the drop list
-* You can enable/disable a computer to make SNMP scans using **SNMP_SWITCH** option. By default,
-global configuration parameter is taken, corresponding to the Default radio button.
+* If no network address appears in **IPDISCOVER** option, you have to set it manually using the drop list 
+* You can enable/disable a computer to make SNMP scans using **SNMP_SWITCH** option. By default, global configuration parameter is taken, corresponding to the Default radio button.
 
 Click on the _Update_ button to save your modifications.
 
@@ -117,14 +96,13 @@ Then, click on the _Networks scans_ tab.
 
 ![Groups Pencil](../../img/server/reports/snmp_scan_feature_8.png)
 
-For more informations about groups page, click
+For more informations about groups page, click 
 [here](../03.Management-console-and-its-advanced-features/Using-computers-groups.md)
 
 ![Networks scans tab](../../img/server/reports/snmp_scan_feature_6.png)
 
 * If no network address appears in **IPDISCOVER** option, you have to set it manually using the drop list
-* You can enable/disable a computer to make SNMP scans using **SNMP_SWITCH** option. By default,
-global configuration parameter is taken, corresponding to the Default radio button.
+* You can enable/disable a computer to make SNMP scans using **SNMP_SWITCH** option. By default, global configuration parameter is taken, corresponding to the Default radio button.
 
 Click on the _Update_ button to save your modifications.
 
@@ -138,29 +116,22 @@ you can find more information in the page [Unix agent](../02.Basic-documentation
 
 ### **Copying SSL certificate file**
 
-To allow Unix Unified agent to download snmp_com.txt file using HTTPS, you have to copy SSL certificate file
-(as cacert.pem) in your OCS server configuration directory in your basevardir directory.
+To allow Unix Unified agent to download snmp_com.txt file using HTTPS, you have to copy SSL certificate file (as cacert.pem) in your OCS server configuration directory in your basevardir directory.
 
 **`Note: basevardir directory is the path specified in your /etc/ocsinventory-agent/ocsinventory-agent.cfg
 using basevardir= parameter.`**
 
-Your OCS server configuration directory is a directory created automatically using your OCS server URL
-(http:__ocsinventory-ng_ocsinventory for example).
+Your OCS server configuration directory is a directory created automatically using your OCS server URL (http:__ocsinventory-ng_ocsinventory for example).
 
-For example, if your basevardir parameter is _/var/lib/ocsinventory-agent/_ and your OCS server URL
-is [_http://ocsinventory-ng/ocsinventory_](http://ocsinventory-ng/ocsinventory),
-so you have to copy your cacert.pem certificate file in
-/var/lib/ocsinventory-agent/http:__ocsinventory-ng_ocsinventory directory.
+For example, if your basevardir parameter is _/var/lib/ocsinventory-agent/_ and your OCS server URL is [_http://ocsinventory-ng/ocsinventory_](http://ocsinventory-ng/ocsinventory), so you have to copy your cacert.pem certificate file in /var/lib/ocsinventory-agent/http:__ocsinventory-ng_ocsinventory directory.
 
-**`Note: If you already use a SSL certificate for OCS packages deployment, you may not have to copy a
-new one for SNMP scans feature. Indeed, if you use the same HTTPS server for OCS package deployment
-and snmp_com.txt file download, cacert.pem file will be same one in the same directory.`**
+**`Note: If you already use a SSL certificate for OCS packages deployment, you may not have to copy a new one for SNMP scans feature. Indeed, if you use the same HTTPS server for OCS package deployment and snmp_com.txt file download, cacert.pem file will be same one in the same directory.`**
 
 ### **Scans informations using debug mode**
 
 To see more informations about SNMP scans, you can launch _ocsinventory-agent_ using debug mode, like this :
 
-    #ocsinventory-agent --debug
+    $ sudo ocsinventory-agent --debug
 
 You will see an debug output about SNMP scans like this:
 
@@ -254,14 +225,10 @@ IP address, MAC address, Name, Description etc...
 * At the middle of the page, you have a blue frame corresponding to special information depending on
 the device type . For a printer you will have its number of impressions, its serial number,
 its status etc...For a switch, you will have its type, etc...
-* At the bottom of the page, you have different tabs corresponding to inventory data. For example,
-you may have _Administrative data, Cartridges, Trays_ tabs. The number of tabs will depends on the data
-scanned by OCS agent, so you may not have all the tabs for a SNMP device. However, you will have
-the _Administrative data_ tab by default, to be able to modify administrative data on a SNMP device
+* At the bottom of the page, you have different tabs corresponding to inventory data. For example, you may have _Administrative data, Cartridges, Trays_ tabs. The number of tabs will depends on the data scanned by OCS agent, so you may not have all the tabs for a SNMP device. However, you will have the _Administrative data_ tab by default, to be able to modify administrative data on a SNMP device
 (like TAG or any administrative data you created).
 
 ### **Delete a SNMP device**
 
 * To delete a SNMP device, just click on the red cross at the right of the SNMP devices table.
-* If you want to delete several SNMP devices, select it using the select box at the right of the table,
-and click on the _"Remove Selected" icon a the bottom of the table_.
+* If you want to delete several SNMP devices, select it using the select box at the right of the table, and click on the _"Remove Selected" icon a the bottom of the table_.
