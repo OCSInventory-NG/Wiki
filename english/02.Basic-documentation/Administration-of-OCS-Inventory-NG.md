@@ -140,7 +140,7 @@ Administrator privileges.
 **`Note`**`: Refer to OCS Inventory NG Packager documentation for more informations on how to use Packager.`
 
 This will create the file “ocspackage.exe”.
-If you want to store it, OCS Inventory include a package file upload into Administration console. 
+If you want to store it, OCS Inventory include a package file upload into Administration console.
 Click on toolbar **Config** menu.
 
 ![Toolbar Config Menu](../../img/server/reports/administration_ocs_3.png)
@@ -240,7 +240,7 @@ You can define the administrative information you want for each computer by clic
 
 ![Access Administrative Data](../../img/server/reports/administration_ocs_17.png)
 
-![Administrative Data](../../img/server/reports/administration_ocs_12.png)
+![Administrative Data](../../img/server/reports/administration_ocs_22.png)
 
 You can add new administrative information definition by entering their name (space or special
 characters are not allowed) and selecting their type. You can choose type between:
@@ -255,11 +255,19 @@ characters are not allowed) and selecting their type. You can choose type betwee
 To delete an administrative information definition, just click on red cross at the end of the corresponding
 line. For example, we will add administrative information corresponding to the buy date of computer.
 
-![New Data](../../img/server/reports/administration_ocs_13.png)
+![New Data](../../img/server/reports/administration_ocs_25.png)
 
 You can now browse all your computers to set the buy date for each.
 
-![Warranty begin](../../img/server/reports/administration_ocs_14.png)
+![Warranty begin](../../img/server/reports/administration_ocs_26.png)
+
+You can also see available tabs.
+
+![Available tab](../../img/server/reports/administration_ocs_24.png)
+
+And create a new tab.
+
+![New tab](../../img/server/reports/administration_ocs_23.png)
 
 ## Editing the label
 
