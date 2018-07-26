@@ -9,7 +9,7 @@ This feature may seem really similar to dynamic group and that the case.
 
 However, this feature is intended to be used by third party software since the category can be easly retrieved using the [REST API](../09.Rest-API/Introduction.md)
 
-## Create an asset categorization
+## Create an asset category
 
 To create an asset category you need to go into the multi search page : ```Inventory > Search with various criteria```
 
@@ -25,7 +25,7 @@ You will be redirected to a form to create your category
 
 Note : Categories are set on inventory, so it can take some time to be set on computers informations.
 
-## List an asset categorization
+## List asset categories
 
 To list all your categories, click on the ```Manage > Assets Categories``` menu.
 
