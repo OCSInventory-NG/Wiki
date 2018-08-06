@@ -25,7 +25,7 @@ CurrentUser    AllSigned
 LocalMachine   RemoteSigned
 ```
 
-If you want mor informations on ExecutionPolicies, please see [Windows' MSDN link on execution policies](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6)
+If you want more informations on ExecutionPolicies, please see [Windows' MSDN link on execution policies](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6)
 
 ## Set execution policies by scope
 
