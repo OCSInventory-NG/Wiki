@@ -56,6 +56,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 * [Secure your OCS Inventory NG Server](08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 * [Management server tuning](08.Extras/Management-server-tuning.md)
+* [Enable Powershell Support on Windows Agent](08.Extras/Enable-Powershell-Support-on-Windows-Agent.md)
 * [Backup/restore of OCS Inventory NG database ](08.Extras/Backup-restore-of-OCS-Inventory-NG-database.md)
 * [Common errors](08.Extras/Common-errors.md)
 
