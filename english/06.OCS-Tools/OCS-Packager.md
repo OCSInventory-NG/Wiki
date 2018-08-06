@@ -97,7 +97,7 @@ Then upload your **ocspackage.exe** file.
 
 ## Deploying agent on a domain
 
-Refer to our documention to [setup Windows Agent 2.X](../../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
+Refer to our documention to [setup Windows Agent 2.X](../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
 
 **`Warning: Mysql server must accept files larger than 5M. Edit my.cnf file and modify
 max_allowed_packets value to fix it more than 5M. Save this file and restart service.`**
