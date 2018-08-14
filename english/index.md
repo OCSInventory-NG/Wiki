@@ -1,6 +1,10 @@
 # OCS Inventory NG 2.x Documentation
 
-To make it easier to read, the OCS Inventory NG documentation has been divided into 10 sections.
+To make it easier to read, the OCS Inventory NG documentation has been divided into 11 sections.
+
+## Prerequisites
+
+* [Libraries and Modules versions](11.Prerequisites/Libraries-version.md)
 
 ## Newbie documentation
 
@@ -79,7 +83,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 # Contribution
 
-If you think something is missing feel free to open an issue or fork it and document it by yourself. 
+If you think something is missing feel free to open an issue or fork it and document it by yourself.
 Same for mistakes in the documentation.
 
 The Github repository below is directly linked to our documentation.
@@ -90,7 +94,7 @@ See [our GitHub repository](https://github.com/OCSInventory-NG/Wiki)
 
 * Can I upgrade my server from version X to the last stable version ?
 
-    **Solution**: Since we made a lot of changes from 2.0 to 2.4 in the database schema. We recommend you to not upgrade your OCS from 1.0 to 2.4 and newer directly. You may need to upgrade to 2.0 before. 
+    **Solution**: Since we made a lot of changes from 2.0 to 2.5 in the database schema. We recommend you to not upgrade your OCS from 1.0 to 2.5 and newer directly. You may need to upgrade to 2.0 before.
 
 * After installing the server, I go to the graphical admin console (GUI) and it asks me to install the database ?
 
