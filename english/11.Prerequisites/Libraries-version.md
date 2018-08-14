@@ -1,4 +1,4 @@
-# Libraries version and Modules versions
+# Libraries and Modules versions
 
 Here is the list of the different libraries and modules and their versions useful for OCS Inventory server as well as the Agents.
 
@@ -39,7 +39,7 @@ Here is the list of the different libraries and modules and their versions usefu
     * Perl module Data::UUID
     * Perl Module Mac::SysProfile is needed on MacOSX
 * dmidecode
-* lspci on Linux and *BSD (pciutils package)
+* lspci on Linux and BSD (pciutils package)
 * Make utility
 * C/C++ compiler like GNU GCC
 
