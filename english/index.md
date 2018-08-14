@@ -4,7 +4,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 ## Prerequisites
 
-* [Libraries and modules versions](11.Prerequisites/Libraries-version.md)
+* [Libraries and Modules versions](11.Prerequisites/Libraries-version.md)
 
 ## Newbie documentation
 
