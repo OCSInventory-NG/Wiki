@@ -85,7 +85,7 @@ Click on "Search with various criteria", select your parameters, and click on "S
 
 ![Dynamic group's creation](../../img/server/reports/computers_groups_8.png)
 
-Now, you can view your new static group, as described before, by clicking "Groups" and "Dynamics groups" tab.
+Now, you can view your new dynamic group, as described before, by clicking "Groups" and "Dynamics groups" tab.
 
 ## Deploying packages on groups
 
