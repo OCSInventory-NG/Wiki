@@ -117,7 +117,7 @@ Click **[ Update ]** button when you set all changes.
 
 If you find the config panel a bit overhelming and you don't use all the available configuration, you can disable the advanced configuration in the "Server" tab at the bottom of the page.
 
-## Create customized serup using OCS Packager
+## Create customized setups using OCS Packager
 
 In the case you need to install an agent with pre-provisioned configuration, you can use the OCS Packager to create a customized setup of the agent.
 
