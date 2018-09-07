@@ -8,6 +8,27 @@ various criteria search, see [queyring inventory results](Querying-inventory-res
 
 You can create dynamic, static or redistribution server groups.
 
+## Enabling computer's group feature
+
+To be able to use computer groups, you must first enable its feature.
+
+To do so, go to your management server's configuration menu, and select the "Groups" configuration screen:
+
+![Groups configuration screen](../../img/server/reports/groups_configuration.png)
+
+There, set the "ENABLE_GROUPS" parameter to "ON", and adjust the other parameters if needed.
+
+The available parameters are:
+
+* ENABLE_GROUPS: Enable or disable the computer's group feature;
+* GROUPS_CACHE_OFFSET: This setting is used to add a random number of seconds to the "GROUPS_CACHE_REVALIDATE"
+  to avoid computing many groups in the same process. See hereunder for more information;
+* GROUPS_CACHE_REVALIDATE: To avoid excessive load on servers where a large number of dynamic groups is being
+  used, groups' membership is cached and refreshed at regular interval. This setting specify the interval,
+  in seconds, at which dynamic groups' cached data is refreshed. This interval is actualy increased at run time 
+  by a random number of seconds chosen between O and "GROUPS_CACHE_OFFSET" to avoid all dynamic groups being
+  refreshed at the same time.
+
 ## Viewing groups
 
 To views the groups you created, click on the menu Inventory toolbar and then groups.
@@ -86,6 +107,9 @@ Click on "Search with various criteria", select your parameters, and click on "S
 ![Dynamic group's creation](../../img/server/reports/computers_groups_8.png)
 
 Now, you can view your new dynamic group, as described before, by clicking "Groups" and "Dynamics groups" tab.
+
+**`Remark: Dynamic group's membership is cached. See paragraph "Enabling computer's group feature" for more
+ information about this.`**
 
 ## Deploying packages on groups
 
