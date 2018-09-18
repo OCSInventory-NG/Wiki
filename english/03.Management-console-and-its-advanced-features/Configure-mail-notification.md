@@ -72,3 +72,11 @@ Change the default value by your
      * Default GUI language
      */
     define('DEFAULT_LANGUAGE', 'your_language');
+
+## Configure CronTab
+
+In your server, configure a CronTab to call the file cron_mailer.php in
+
+    ocsreports/tools/cron_mailer.php
+
+**`Note`**`: It's recommended to set the frequency to every minute`
