@@ -87,7 +87,7 @@ Some of these packages are only available in`[`EPEL`](https://fedoraproject.org/
 
 **On Debian 9 Stretch like Linux**, you can use “apt” to set required modules up:
 
-    apt install libxml-simple-perl libcompress-zlib-perl libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl make build-essentials
+    apt install libxml-simple-perl libperl5.24 libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl make build-essential
     cpan install XML::Entities
 
 **On Gentoo like Linux**, you can use "emerge" to get required modules set up:
@@ -110,7 +110,7 @@ Already the web communication server requires mysql dependencies if you choose t
 **On Debian 9 Stretch like Linux**
 
     apt install apache2
-    apt install mysql-client
+    apt install mariadb-client
 
 **install PHP Zip support and dependacies**
 
@@ -125,10 +125,7 @@ Already the web communication server requires mysql dependencies if you choose t
 
 **On Debian 9 Stretch like Linux**, you can use “apt” to set it up:
 
-    apt install php-plczip
-    apt install make build-essentials
-    cpan -i DBI DBD::mysql XML::Simple Net::IP
-
+    apt install php-pclzip make build-essential libdbd-mysql-perl libnet-ip-perl libxml-simple-perl
 
 **You also need to install GD support for PHP.**
 
@@ -138,7 +135,7 @@ Already the web communication server requires mysql dependencies if you choose t
 
 **On Debian 9 Stretch like Linux**, you can use “apt” to set it up:
 
-    apt install php7.0-gd
+    apt install php-gd
 
 ## Installing OCS Inventory Server with RPM
 
