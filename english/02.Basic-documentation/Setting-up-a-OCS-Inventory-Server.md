@@ -125,7 +125,7 @@ Already the web communication server requires mysql dependencies if you choose t
 
 **On Debian 9 Stretch like Linux**, you can use “apt” to set it up:
 
-    apt install php-pclzip make build-essential libdbd-mysql-perl libnet-ip-perl libxml-simple-perl
+    apt install php-pclzip make build-essential libdbd-mysql-perl libnet-ip-perl libxml-simple-perl php php-mbstring
 
 **You also need to install GD support for PHP.**
 
