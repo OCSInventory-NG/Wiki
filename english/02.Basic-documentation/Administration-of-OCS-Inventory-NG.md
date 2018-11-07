@@ -103,12 +103,8 @@ General options of configuration
 **PROLOG_FREQ** | Controls how often the windows service agent runs. Specified in number of hours 1-24. The agent will contact the OCS server every PROLOG_FREQ hours. The agent will not send an inventory if inventory is not older than FREQUENCY days.
 **REGISTRY** | Activates or disables the registry query function.
 **SESSION_VALIDITY_TIME** | Spécifier la durée de validité d'une session en secondes.
-**SNMP** | Activer ou non la fonctionnalité SNMP.
-**SNMP_DIR** | Spécifier le répertoire du fichier des communautés SNMP.
-**SNMP_INVENTORY_DIFF** | Activer ou non la fonctionnalité de mise à jour de l'inventaire snmp en se basant sur la table snmp_laststate.
-**SNMP_URI** | Spécifier l'adresse du fichier des communautés SNMP.
-**TAB_CACHE** | Activer ou non le cache des tableaux .
-**TELEDIFF_WK** | Activate workflow for teledeployment.
+**SNMP** | Enable SNMP feature
+**SNMP_DIFF** | Less intensive backend inventory method
 **TRACE_DELETED** | Activates or not tracking of deleted/renamed computers for integration with GLPI. Enable this feature only if you use integration with GLPI asset management software.
 
 Click **[ Update ]** button when you set all changes.
