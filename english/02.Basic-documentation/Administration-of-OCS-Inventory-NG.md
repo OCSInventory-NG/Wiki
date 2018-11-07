@@ -104,7 +104,7 @@ General options of configuration
 **REGISTRY** | Activates or disables the registry query function.
 **SESSION_VALIDITY_TIME** | Spécifier la durée de validité d'une session en secondes.
 **SNMP** | Enable SNMP feature
-**SNMP_DIFF** | Less intensive backend inventory method
+**SNMP_DIFF** | Less intensive backend inventory method which rely on snmp_lastdate
 **TRACE_DELETED** | Activates or not tracking of deleted/renamed computers for integration with GLPI. Enable this feature only if you use integration with GLPI asset management software.
 
 Click **[ Update ]** button when you set all changes.
