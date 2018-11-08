@@ -31,14 +31,18 @@ Click on the ```Add software``` tab.
 A form will be displayed, asking for two things :
 * Category
 * Software name / expression
-  
+
 ![Add regular exp](../../img/server/reports/software_categories_add_regular_exp.png)
 
 You can also add by name :
 
 ![Add by name](../../img/server/reports/software_categories_add_soft_name.png)
 
-Note : form will autocomplete with all the software available in OCS Inventory database.
+**`Note : form will autocomplete with all the software available in OCS Inventory database.`**
+
+When you choose ```Advanced Settings``` you can add by version and publisher :
+
+![Add by name](../../img/server/reports/software_categories_advance_settings.png)
 
 ## List software categories
 
@@ -66,4 +70,3 @@ At the bottom of the page, you will see a configuration named ```DEFAULT_CATEGOR
 ![Default cat](../../img/server/reports/software_categories_default_config.png)
 
 Change this value to the desired default category.
-
