@@ -6,7 +6,7 @@ Softwares categorization is a new feature introduced in 2.5.
 
 It's goal is to create and attribute category to softwares depending on regular expressions or software name.
 
-Note that software categories are calculated on computer inventory. Look at your prolog frequency to see how many time it will take to have all yours computers processed.
+**`Note that software categories are calculated on computer inventory. Look at your prolog frequency to see how many time it will take to have all yours computers processed.`**
 
 ## Create a software category
 
@@ -16,9 +16,9 @@ Click on the ```New category``` tab.
 
 ![Create category](../../img/server/reports/software_categories_tab_create.png)
 
-You have to fill the form to create your category, the only value is the name for the moment.
+You have to fill the form to create your category, enter the name and if you want to make a sort by OS choose the name of OS (All OS, Windows, Unix or Android).
 
-![Category form](../../img/server/reports/software_categories_category_form.png)
+![Category form](../../img/server/reports/software_categories_category_form_create.png)
 
 ## Add regular expression / software name to a category
 
