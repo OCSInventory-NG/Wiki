@@ -6,7 +6,7 @@ Softwares categorization is a new feature introduced in 2.5.
 
 It's goal is to create and attribute category to softwares depending on regular expressions or software name.
 
-Note that software categories are calculated on computer inventory. Look at your prolog frequency to see how many time it will take to have all yours computers processed.
+**`Note that software categories are calculated on computer inventory. Look at your prolog frequency to see how many time it will take to have all yours computers processed.`**
 
 ## Create a software category
 
@@ -16,9 +16,9 @@ Click on the ```New category``` tab.
 
 ![Create category](../../img/server/reports/software_categories_tab_create.png)
 
-You have to fill the form to create your category, the only value is the name for the moment.
+You have to fill the form to create your category, enter the name and if you want to make a sort by OS choose the name of OS (All OS, Windows, Unix or Android).
 
-![Category form](../../img/server/reports/software_categories_category_form.png)
+![Category form](../../img/server/reports/software_categories_category_form_create.png)
 
 ## Add regular expression / software name to a category
 
@@ -31,14 +31,18 @@ Click on the ```Add software``` tab.
 A form will be displayed, asking for two things :
 * Category
 * Software name / expression
-  
+
 ![Add regular exp](../../img/server/reports/software_categories_add_regular_exp.png)
 
 You can also add by name :
 
 ![Add by name](../../img/server/reports/software_categories_add_soft_name.png)
 
-Note : form will autocomplete with all the software available in OCS Inventory database.
+**`Note : form will autocomplete with all the software available in OCS Inventory database.`**
+
+When you choose ```Advanced Settings``` you can add by version and publisher :
+
+![Add by name](../../img/server/reports/software_categories_advance_settings.png)
 
 ## List software categories
 
@@ -66,4 +70,3 @@ At the bottom of the page, you will see a configuration named ```DEFAULT_CATEGOR
 ![Default cat](../../img/server/reports/software_categories_default_config.png)
 
 Change this value to the desired default category.
-
