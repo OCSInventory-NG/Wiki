@@ -81,7 +81,7 @@ General options of configuration
 **INVENTORY_WRITE_DIFF** | Enable or not the differential update of inventory sections at the engine.
 **INVENTORY_SESSION_ONLY** | Accept an inventory only if a session is active.
 **INVENTORY_CACHE_REVALIDATE** | Specify the cleaning frequency of inventory structures in cache.
-**IPDISCOVE** | Specify the number of agents that will run the IP discovery feature for each gateway (subnet). If you leave the default value of 2, this means that the Communication server will ask the 2 most active computers on each subnet to run IP discovery feature. If you set it to 0, IP discovery will be disabled.
+**IPDISCOVER** | Specify the number of agents that will run the IP discovery feature for each gateway (subnet). If you leave the default value of 2, this means that the Communication server will ask the 2 most active computers on each subnet to run IP discovery feature. If you set it to 0, IP discovery will be disabled.
 **IPDISCOVER_BETTER_THRESHOLD** | Specify the minimum difference in days to replace an ipdiscover agent.
 **IPDISCOVER_IPD_DIR** | Specify the cache directory of ipdiscover analyzes.
 **IPDISCOVER_LATENCY** | Agent will pause this many seconds between each IP address scan during IP discovery.
