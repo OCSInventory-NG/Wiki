@@ -4,82 +4,86 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 ## Prerequisites
 
-* [Libraries and Modules versions](11.Prerequisites/Libraries-version.md)
+* [Libraries and Modules versions](01.Prerequisites/Libraries-version.md)
 
 ## Newbie documentation
 
-* [OCS Inventory NG - Basics](01.Newbie-documentation/OCS-Inventory-NG-Basics.md)
+* [OCS Inventory NG - Basics](02.Newbie-documentation/OCS-Inventory-NG-Basics.md)
 
 ## Basic documentation
 
-* [Setting up a OCS Inventory server](02.Basic-documentation/Setting-up-a-OCS-Inventory-Server.md)
-* [Setting up the UNIX agent on client computers](02.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md)
-* [Setting up the Windows Agent 2.X on client computers](02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
-* [Setting up the MacOSX agent on client computers](02.Basic-documentation/Setting-up-the-MacOSX-agent-on-client-computers.md)
-* [Setting up the Android Agent](02.Basic-documentation/Setting-up-the-Android-Agent.md)
-* [Administration of OCS Inventory NG](02.Basic-documentation/Administration-of-OCS-Inventory-NG.md)
-* [Deploying database server](02.Basic-documentation/Deploying-database-server.md)
-* [Updating the server](02.Basic-documentation/Updating-the-server.md)
+* [Setting up a OCS Inventory server](03.Basic-documentation/Setting-up-a-OCS-Inventory-Server.md)
+* [Setting up the UNIX agent on client computers](03.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md)
+* [Setting up the Windows Agent 2.X on client computers](03.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
+* [Setting up the MacOSX agent on client computers](03.Basic-documentation/Setting-up-the-MacOSX-agent-on-client-computers.md)
+* [Setting up the Android Agent](03.Basic-documentation/Setting-up-the-Android-Agent.md)
+* [Administration of OCS Inventory NG](03.Basic-documentation/Administration-of-OCS-Inventory-NG.md)
+* [Deploying database server](03.Basic-documentation/Deploying-database-server.md)
+* [Updating the server](03.Basic-documentation/Updating-the-server.md)
 
 ## Management console and its advanced features
 
-* [Querying inventory results](03.Management-console-and-its-advanced-features/Querying-inventory-results.md)
-* [Using computers groups](03.Management-console-and-its-advanced-features/Using-computers-groups.md)
-* [Using the Plugins feature](03.Management-console-and-its-advanced-features/Using-the-Plugins-feature.md)
-* [Using assets categorization](03.Management-console-and-its-advanced-features/Using-Assets-Categorization.md)
-* [Using softwares categorization](03.Management-console-and-its-advanced-features/Using-Software-Categorization.md)
-* [Managing users profiles of the web interface](03.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
-* [Managing administrative data](03.Management-console-and-its-advanced-features/Managing-administrative-data.md)
-* [Synchronization between OCS and LDAP](03.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
-* [Export a computer](03.Management-console-and-its-advanced-features/Export-a-computer.md)
-* [Configure mail notification](03.Management-console-and-its-advanced-features/Configure-mail-notification.md)
+* [Querying inventory results](04.Management-console-and-its-advanced-features/Querying-inventory-results.md)
+* [Using computers groups](04.Management-console-and-its-advanced-features/Using-computers-groups.md)
+* [Using the Plugins feature](04.Management-console-and-its-advanced-features/Using-the-Plugins-feature.md)
+* [Using assets categorization](04.Management-console-and-its-advanced-features/Using-Assets-Categorization.md)
+* [Using softwares categorization](04.Management-console-and-its-advanced-features/Using-Software-Categorization.md)
+* [Managing users profiles of the web interface](04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
+* [Managing administrative data](04.Management-console-and-its-advanced-features/Managing-administrative-data.md)
+* [Synchronization between OCS and LDAP](04.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
+* [Export a computer](04.Management-console-and-its-advanced-features/Export-a-computer.md)
+* [Configure mail notification](04.Management-console-and-its-advanced-features/Configure-mail-notification.md)
 
 ## Deployment
 
-* [Deploying packages or executing commands on client hosts](04.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [Deploying packages or executing commands on client hosts](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
 
 ## Network Discovery with OCS Inventory NG
 
-* [Using IP discovery feature](05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md)
-* [Using SNMP scan feature](05.Network-Discovery-with-OCS-Inventory-NG/Using-SNMP-scan-feature.md)
+* [Using IP discovery feature](06.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md)
+* [Using SNMP scan feature](06.Network-Discovery-with-OCS-Inventory-NG/Using-SNMP-scan-feature.md)
 
 ## OCS Tools
 
-* [OCS Inventory NG Agent Deployement Tool](06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
-* [OCS Packager](06.OCS-Tools/OCS-Packager.md)
-* [OCS Packager for MacOSX](06.OCS-Tools/OCS-Packager-for-MacOSX.md)
-* [OCS Packager for Unix](06.OCS-Tools/OCS-Packager-for-UNIX.md)
-* [Ansible role for Unix Packager](06.OCS-Tools/OCS-Ansible-Role-for-Unix-Packager.md)
+* [OCS Inventory NG Agent Deployement Tool](07.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
+* [OCS Packager](07.OCS-Tools/OCS-Packager.md)
+* [OCS Packager for MacOSX](07.OCS-Tools/OCS-Packager-for-MacOSX.md)
+* [OCS Packager for Unix](07.OCS-Tools/OCS-Packager-for-UNIX.md)
+* [Ansible role for Unix Packager](07.OCS-Tools/OCS-Ansible-Role-for-Unix-Packager.md)
 
 ## Multi-site network architecture
 
-* [Using local proxy cache to deploy](07.Multi-site-network-architecture/Using-local-proxy-cache-to-deploy.md)
-* [Synchronisation between OCS server master/slaves](07.Multi-site-network-architecture/Synchronisation-between-OCS-server-master-slaves.md)
+* [Using local proxy cache to deploy](08.Multi-site-network-architecture/Using-local-proxy-cache-to-deploy.md)
+* [Synchronisation between OCS server master/slaves](08.Multi-site-network-architecture/Synchronisation-between-OCS-server-master-slaves.md)
 
 ## Extras
 
-* [Secure your OCS Inventory NG Server](08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
-* [Management server tuning](08.Extras/Management-server-tuning.md)
-* [Enable Powershell Support on Windows Agent](08.Extras/Enable-Powershell-Support-on-Windows-Agent.md)
-* [Backup/restore of OCS Inventory NG database ](08.Extras/Backup-restore-of-OCS-Inventory-NG-database.md)
-* [Common errors](08.Extras/Common-errors.md)
+* [Secure your OCS Inventory NG Server](09.Extras/Secure-your-OCS-Inventory-NG-Server.md)
+* [Management server tuning](09.Extras/Management-server-tuning.md)
+* [Enable Powershell Support on Windows Agent](09.Extras/Enable-Powershell-Support-on-Windows-Agent.md)
+* [Backup/restore of OCS Inventory NG database ](09.Extras/Backup-restore-of-OCS-Inventory-NG-database.md)
+* [Common errors](09.Extras/Common-errors.md)
+
+## Plugin Engine
+
+* [Plugin installer](10.Plugin-engine/Using-plugins-installer.md)
 
 ## REST API
-* [Introduction](09.Rest-API/Introduction.md)
-* [Configuration](09.Rest-API/Configuration.md)
-* [Autentification](09.Rest-API/Authentification.md)
-* [GET Routes](09.Rest-API/GET-Routes.md)
-* [POST Routes](09.Rest-API/POST-Routes.md)
-* [DELETE Routes](09.Rest-API/DELETE-Routes.md)
-* [PUT Routes](09.Rest-API/PUT-Routes.md)
+* [Introduction](11.Rest-API/Introduction.md)
+* [Configuration](11.Rest-API/Configuration.md)
+* [Autentification](11.Rest-API/Authentification.md)
+* [GET Routes](11.Rest-API/GET-Routes.md)
+* [POST Routes](11.Rest-API/POST-Routes.md)
+* [DELETE Routes](11.Rest-API/DELETE-Routes.md)
+* [PUT Routes](11.Rest-API/PUT-Routes.md)
 
 ## Developers
 
-* [XML-Format](10.Developers/XML-Format.md)
-* [HOWTO create theme](10.Developers/HOWTO-create-theme.md)
-* [HOWTO package OCS Unix server releases](10.Developers/HOWTO-package-OCS-Unix-server-releases.md)
-* [HOWTO package OCS Unix agent releases](10.Developers/HOWTO-package-OCS-Unix-agent-releases.md)
-* [HOWTO package OCS MacOSX agent releases](10.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
+* [XML-Format](12.Developers/XML-Format.md)
+* [HOWTO create theme](12.Developers/HOWTO-create-theme.md)
+* [HOWTO package OCS Unix server releases](12.Developers/HOWTO-package-OCS-Unix-server-releases.md)
+* [HOWTO package OCS Unix agent releases](12.Developers/HOWTO-package-OCS-Unix-agent-releases.md)
+* [HOWTO package OCS MacOSX agent releases](12.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
 
 # Contribution
 
