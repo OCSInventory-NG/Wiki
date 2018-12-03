@@ -33,6 +33,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Synchronization between OCS and LDAP](04.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
 * [Export a computer](04.Management-console-and-its-advanced-features/Export-a-computer.md)
 * [Configure mail notification](04.Management-console-and-its-advanced-features/Configure-mail-notification.md)
+* [Configure OCS news](04.Management-console-and-its-advanced-features/Configure-OCS-news.md)
 
 ## Deployment
 

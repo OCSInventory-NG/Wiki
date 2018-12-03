@@ -2,7 +2,7 @@
 
 **`Note : You can download plugin at :`** https://plugins.ocsinventory-ng.org/
 
-First step put your zip file into the ocs download folder by default in  /usr/share/ocsinventory-reports/ocsreports
+First step put your zip file into the ocs "download" folder by default in  /usr/share/ocsinventory-reports/ocsreports
 
 ![Download plugin](../../img/server/filesystem/plugins_feature_1.png)
 
