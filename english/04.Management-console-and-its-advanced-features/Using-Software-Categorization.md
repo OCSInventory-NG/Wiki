@@ -70,3 +70,7 @@ At the bottom of the page, you will see a configuration named ```DEFAULT_CATEGOR
 ![Default cat](../../img/server/reports/software_categories_default_config.png)
 
 Change this value to the desired default category.
+
+## Update the software category
+
+For software categories to be updated, it is necessary to start or wait for machines to take inventory.
