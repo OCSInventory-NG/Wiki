@@ -71,6 +71,7 @@ At the bottom of the page, you will see a configuration named ```DEFAULT_CATEGOR
 
 Change this value to the desired default category.
 
-## Update the software category
+## Updating software categories
 
-For software categories to be updated, it is necessary to start or wait for machines to take inventory.
+In order to update a software category entries, you need to wait or trigger an agent's inventory.
+Indeed, categories are generated on agent inventory to reduce backend load.
