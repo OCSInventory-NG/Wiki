@@ -70,3 +70,8 @@ At the bottom of the page, you will see a configuration named ```DEFAULT_CATEGOR
 ![Default cat](../../img/server/reports/software_categories_default_config.png)
 
 Change this value to the desired default category.
+
+## Updating software categories
+
+In order to update a software category entries, you need to wait or trigger an agent's inventory.
+Indeed, categories are generated on agent inventory to reduce backend load.
