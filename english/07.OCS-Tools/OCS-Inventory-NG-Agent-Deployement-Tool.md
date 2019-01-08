@@ -132,7 +132,7 @@ save logs to a file using “Save logs” button.
 /debug[=level]|Generate a very verbose log file "ocsinventory.log" into agent's install folder.0 => disable verbose logs (default),1 => enable default verbose logs (default when no level provided provided),2 => enable debuging logs
 /notag|Agent must NOT prompt user for TAG in any case
 /tag="my value"|Agent have to set "my value" as TAG value
-/xml=["path to folder"]|Agent have to store inventory in uncompressed xml format into folder "path to folder". If no "path to folder" provided, agent assume folder as data folder
+/xml=["path to folder"]|Agent have to store inventory in uncompressed xml format into folder "path to folder". If no "path to folder" provided, agent assume folder as data folder. If no server is configured, you need to use it in conjonction with parameter /local
 /force|Always send inventory, even if server do not ask for it (use only for debugging purpose !) 
 /ipdisc="network number"|Agent have to launch IP discovery on network "network number" (use only for debugging purpose !) 
 /ipdisc_lat="number of milliseconds"|Set latency between 2 IP Discover requests to "number of milliseconds" 
