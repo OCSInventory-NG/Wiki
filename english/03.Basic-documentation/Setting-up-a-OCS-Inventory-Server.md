@@ -789,4 +789,4 @@ Just point your browser to the URL
 [http://administration_server/ocsreports](http://administration_server/ocsreports)
 and login in with **admin** as user and **admin** as password.
 
-![Ocsreports' homsecreen](../../img/server/reports/Homescreen_ocsreports.png)
+![Ocsreports' homsecreen](../../img/server/reports/homescreen_reports.png)
