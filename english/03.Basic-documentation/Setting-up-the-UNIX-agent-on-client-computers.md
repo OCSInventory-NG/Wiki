@@ -63,7 +63,7 @@ Optional modules: these modules are available on [`EPEL`](https://fedoraproject.
 
 Optional modules: but highly recommended
 
-    $ sudo apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap linet-netmask-perl
+    $ sudo apt install libcrypt-ssleay-perl libnet-snmp-perl libproc-pid-file-perl libproc-daemon-perl net-tools libsys-syslog-perl pciutils smartmontools read-edid nmap libnet-netmask-perl
 
 **Unix agent 2.x is now installed without script “setup.sh”. During compilation, information about
 configuration and dependencies are returned. However, it will never upgrade an installed module.
