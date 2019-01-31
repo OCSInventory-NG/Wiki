@@ -113,7 +113,7 @@ See [our GitHub repository](https://github.com/OCSInventory-NG/Wiki)
 
     **Solution**: ocsinventory is a virtual directory call by mod_perl in apache. ocsinventory directory must not exist.
 
-* Error 500 :
+* Error 500:
 
     **Solution**: OCS engine can't comunicate with mysql server. Probably due to a wrong mysql account. You have to check z-ocsinventory-server.conf exactly theses few lines
 
@@ -132,6 +132,6 @@ See [our GitHub repository](https://github.com/OCSInventory-NG/Wiki)
 
     Modify **OCS_DB_USER** and **OCS_DB_PWD** with your own account, restart apache, and finaly launch an inventory.
 
-* Error 417 :
+* Error 417:
 
     **Solution** : insert ignore_expect_100 on into your squid.conf file and then run squid -k reconfigure.

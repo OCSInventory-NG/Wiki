@@ -236,10 +236,10 @@ DATABASE
 **Example**
 
 Example of command to scan IP 192.168.1.252 and reach back informations in database named _ocsdb_
-of mysql server _OCSserveur_, witch listen on port 3306, using _gui_ account with password _ocsrox_ :
+of mysql server _OCSserveur_, witch listen on port 3306, using _gui_ account with password _ocsrox_:
 
     perl ipdiscover-util.pl -ip=192.168.1.252/255.255.255.0 -net=255.255.255.0 -a -xml -h=OCSserveur -u=gui -p=ocsrox -d=ocsdb
 
-Result example :
+Result example:
 
 ![Perl Ipdiscover](../../img/server/linux/ip_discover_feature.png)

@@ -15,7 +15,7 @@ The Agents contact the server. The server only listens during this process.
 Exchanges between agents and server are made in http and/or https. Software deployments and snmp scans
 are made in https only.
 
-Schema of data transmission :
+Schema of data transmission:
 
 `Raw `**`data`**` -> `**`XML`**` formatting -> sending in HTTP or HTTPS in `**`/ocsinventory`**` -> handling with `**`mod_perl`**` on the fly -> DB `**`mysql`**
 
@@ -56,7 +56,7 @@ OCS provides a REST API, which allows it to interface with many applications, su
 ## Major technical information
 
 ### **Windows agent**
-Agent configuration directory :
+Agent configuration directory:
 * C:\Documents and Settings\All Users\Application Data\OCS Inventory NG\Agent under Windows 2000, XP and 2003.
 * C:\ProgramData\OCS Inventory NG\Agent under Windows Vista, 2008, Seven and 2008 R2.
 Agent configuration file is **ocsinventory.ini**
@@ -69,16 +69,16 @@ We use a browser to access, with URL : http://serveur/ocsreports
 and to store data in database.
 
 ### **Debug the solution**
-* Using agents logs :
+* Using agents logs:
     * Windows : Use **Debug** parameter in **ocsinventory.ini** file to have more verbose logs (Debug=2).
-    This config file is located in :
+    This config file is located in:
         * C:\Documents and Settings\All Users\Application Data\OCS Inventory NG\Agent for Windows 2000, XP et 2003.
         * C:\ProgramData\OCS Inventory NG\Agent for Windows Vista, 2008, Seven et 2008 R2.
 You have first to stop OCS service if OCS is installed as a service. Then, set Debug=2 to obtain the higher
  log level and save. Finally, restart OCS service, and send a new inventory.
     * Unix/Linux : Use **--debug** and **--logfile** parameters to obtain a detailed log.
 Launch inventory with these options : _ocsinventory-agent --debug --logfile=/mon/path/log.txt_
-* Using server log :
+* Using server log:
     * Apache logs : **access.log** and **error.log**. To found it use locate or find commands.
     * OCS log : **activity.log**
 To use this functionality, you have to activate log function from administration console (LOGLEVEL),

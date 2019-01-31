@@ -28,19 +28,19 @@ Click on the ```Add software``` tab.
 
 ![Add soft tab](../../img/server/reports/software_categories_tab_add_soft.png)
 
-A form will be displayed, asking for two things :
+A form will be displayed, asking for two things:
 * Category
 * Software name / expression
 
 ![Add regular exp](../../img/server/reports/software_categories_add_regular_exp.png)
 
-You can also add by name :
+You can also add by name:
 
 ![Add by name](../../img/server/reports/software_categories_add_soft_name.png)
 
 **`Note : form will autocomplete with all the software available in OCS Inventory database.`**
 
-When you choose ```Advanced Settings``` you can add by version and publisher :
+When you choose ```Advanced Settings``` you can add by version and publisher:
 
 ![Add by name](../../img/server/reports/software_categories_advance_settings.png)
 
@@ -51,7 +51,7 @@ By default, there is no category.
 
 ![Empty list soft cat](../../img/server/reports/software_categories_list_empty.png)
 
-When categories are available they are shown as is :
+When categories are available they are shown as is:
 
 ![List soft cat](../../img/server/reports/software_categories_list_categories.png)
 

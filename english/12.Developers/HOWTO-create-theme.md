@@ -4,7 +4,7 @@
 
 Since OCS Inventory 2.5, you have the possibility to create Theme to customize your OCS Reports web console.
 
-At the moment, you can :
+At the moment, you can:
 * Change CSS
 * Images (logo and banner)
 
