@@ -89,7 +89,7 @@ You can install the repo with "yum"
 
    $ sudo  yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm
 
-To install the unix agent and requierement use this command :
+To install the unix agent and requirement use this command:
 
    $ sudo yum install ocsinventory-agent
 
@@ -111,7 +111,7 @@ libraries ... and it generates the Makefile. During this step, a temporary envir
 
         $ sudo env PERL_AUTOINSTALL=1 perl Makefile.PL
 
-    Exemple :
+    Exemple:
 
        Please install Crypt::SSLeay if you want to use SSL.
        Please install nmap or ipdiscover if you want to use the network discover feature.
@@ -156,7 +156,7 @@ libraries ... and it generates the Makefile.
 
         $sudo perl Makefile.PL
 
-    Exemple :
+    Exemple:
 
        Please install Crypt::SSLeay if you want to use SSL.
        Please install nmap or ipdiscover if you want to use the network discover feature.
@@ -266,15 +266,15 @@ HTTP protocol *USED BY DEFAULT*.
 HTTPS protocol. You have to configure SSL on your OCS Server and copy the SSL certificate
 on the agent directory to use this method.
 
-3. local: computer is not connected to the network and inventory will be generated in a file manually sent to OCS Inventory NG by the operator. This option must be set manually in ocsinventory-agent.conf like this :
+3. local: computer is not connected to the network and inventory will be generated in a file manually sent to OCS Inventory NG by the operator. This option must be set manually in ocsinventory-agent.conf like this:
 
         local=/tmp
 
-For two others methods :
+For two others methods:
 
     Syntax : http[s]://ocsinventory-ng-server[:port]/ocsinventory
 
-Examples :
+Examples:
 
     ocsserver.domains.local
     https://w.x.y.z

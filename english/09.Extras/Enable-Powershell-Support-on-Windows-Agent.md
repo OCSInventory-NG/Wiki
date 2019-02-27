@@ -9,7 +9,7 @@ Windows' default execution policy is really restrictive and will prevent the OCS
 
 ## List execution policies by scope
 
-In the first place, you may want to see what policies are active on your computer. To list the policies you need to open a powershell window and type :
+In the first place, you may want to see what policies are active on your computer. To list the policies you need to open a powershell window and type:
 
 ```Get-ExecutionPolicy -List```
 
@@ -35,7 +35,7 @@ The command is the following :
 
 ```Set-ExecutionPolicy -Scope {MyScope} -ExecutionPolicy {Policy Level}```
 
-In our case :
+In our case:
 * ```Set-ExecutionPolicy -Scope LocalMachine -ExecutionPolicy Unrestricted```
 * ```Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted```
 

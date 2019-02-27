@@ -1,6 +1,6 @@
 # Setting up OCS Inventory Server
 
-Management server is made up of 4 main components :
+Management server is made up of 4 main components:
 
 1. **Database server**, which stores inventory information.
 2. **Communication server**, which handles HTTP communications between database server and agents.
@@ -150,7 +150,7 @@ You can install the repo with "yum"
 
     yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm
 
-To install the OCS inventory server and requierement use this command :
+To install the OCS inventory server and requirement use this command:
 
     yum install ocsinventory-server
 

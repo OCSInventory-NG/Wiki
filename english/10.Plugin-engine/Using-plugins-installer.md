@@ -26,12 +26,12 @@ Now you can process to installation on the server.
 ####Install plugin in server
 For install plugin on server, use the script ocsreports/tools/install_plugin.py.
 
-Execute the script in sudo :
+Execute the script in sudo:
 ```bash
 sudo python3 install_plugin.py
 ```
 
-Enter the path where plugin's location :
+Enter the path where plugin's location:
 ```bash
 Where is the plugins location [/usr/share/ocsinventory-reports/ocsreports/extensions/]
 /path/to/plugin/
@@ -39,7 +39,7 @@ Where is the plugins location [/usr/share/ocsinventory-reports/ocsreports/extens
 _Don't forget the last slash_
 
 After, the script will suggest all repositories who can be plugins.
-Select with a number the plugin who you want to install :
+Select with a number the plugin who you want to install:
 ``` bash
 [0] => plugin1
 [1] => plugin2
@@ -48,21 +48,21 @@ Select with a number the plugin who you want to install :
 0
 ```
 
-Now there are two specific cases :
+Now there are two specific cases:
  * The Ocs server is in same server.
  * Ocs Server is in other server.
 
-In case where ocs is in other server, you need to enter the server's informations :
+In case where ocs is in other server, you need to enter the server's informations:
 ``` bash
-What is the host :
+What is the host:
 127.0.0.1
-What is the username :
+What is the username:
 root
-What is the password :
+What is the password:
 Password:
 ```
 
-In both case, you will enter the OCS server location :
+In both case, you will enter the OCS server location:
 ``` bash
 Where is the server location [/etc/ocsinventory-server]
 

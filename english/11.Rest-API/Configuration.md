@@ -46,12 +46,12 @@ You can now proceed to the post setup configuration step.
 
 Once, your OCS Installation and database configuration is complete. You need to setup the Apache2 REST API configuration file.
 
-By default the file is located in :
+By default the file is located in:
 ``` 
 /etc/apache2/conf-availabe/zz-ocsinventory-restapi.conf
 ```
 
-The configuration look like this :
+The configuration look like this:
 ```
 PerlOptions +Parent
 
@@ -73,7 +73,7 @@ PerlOptions +Parent
 </Location>
 ```
 
-You need to change the following variables in the `<perl></perl>` indent :
+You need to change the following variables in the `<perl></perl>` indent:
 1. OCS_DB_HOST => Database host 
 2. OCS_DB_PORT => Database port
 3. OCS_DB_LOCAL => OCS Database name

@@ -82,7 +82,7 @@ have to use web interface to configure this feature.`**
 
 ## Cron job
 
-You can "inject" inventories automaticaly with a new entry in your crontab :
+You can "inject" inventories automaticaly with a new entry in your crontab:
 
     ##### Every 5 minutes ----- execution of OCS injector
     */5  * * * *   root    perl /usr/src/OCSNG_UNIX_SERVER-1.3.3/binutils/ocsinventory-injector.pl -v -r -d /home/ocs -u http://OCSmasterServer/ocsinventory

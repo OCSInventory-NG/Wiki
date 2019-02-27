@@ -48,9 +48,9 @@ If you choose _Customize template_, you can upload an html file with your custom
 
 ![Notification customize](../../img/server/reports/notification_8.png)
 
-In order to have the OCS Inventory report values in your notification, put in your html code the values proposed below :
+In order to have the OCS Inventory report values in your notification, put in your html code the values proposed below:
 
-At the moment the notification report only offers two choices :
+At the moment the notification report only offers two choices:
 
     {{Report.Software}} - Number of softwares per software category
     {{Report.Asset}} - Number of machines per asset category

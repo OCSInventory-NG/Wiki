@@ -35,7 +35,7 @@ To views the groups you created, click on the menu Inventory toolbar and then gr
 
 ![Access groups page](../../img/server/reports/computers_groups_1.png)
 
-You can see three tabs :
+You can see three tabs:
 
 * Dynamic Groups tab : to view the list of dynamic groups
 * Static Groups tab : to view the list of static groups

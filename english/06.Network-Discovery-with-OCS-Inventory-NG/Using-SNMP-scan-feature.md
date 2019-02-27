@@ -16,7 +16,7 @@ You can find more information about Ipdiscover
 
 **`Warning: an OCS agent MUST BE Ipdiscover elected (or forced manually) to be able to make SNMP scans.`**
 
-SNMP scanning step by step :
+SNMP scanning step by step:
 
 1. an OCS agent is Ipdiscover elected or Ipdiscover forced manually
 2. the agent takes contact to the server (PROLOG) and do its Ipdiscover network scan
@@ -129,7 +129,7 @@ For example, if your basevardir parameter is _/var/lib/ocsinventory-agent/_ and 
 
 ### **Scans informations using debug mode**
 
-To see more informations about SNMP scans, you can launch _ocsinventory-agent_ using debug mode, like this :
+To see more informations about SNMP scans, you can launch _ocsinventory-agent_ using debug mode, like this:
 
     $ sudo ocsinventory-agent --debug
 

@@ -4,7 +4,7 @@
 
 Note : This documentation has been done on Debian 9, some path might differ if you use another distribution.
 
-In the first place, we recommand you to learn how to configuration and how to setup autentification for our API :
+In the first place, we recommand you to learn how to configuration and how to setup autentification for our API:
 1. [Configuration](Configuration.md)
 2. [Authentification](Authentification.md)
 
