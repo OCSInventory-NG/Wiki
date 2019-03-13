@@ -4,7 +4,7 @@ To package the OCS Unix server release, we will use git to get code from GitHub.
 
 ## Get OcsInventory Unix agent code
 
-Now, get the Ocsinventory Unix agent code from Launchpad using this command :
+Now, get the Ocsinventory Unix agent code from Launchpad using this command:
 
     $ git clone https://github.com/OCSInventory-NG/UnixAgent
     $ cd UnixAgent

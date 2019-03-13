@@ -431,7 +431,7 @@ This search returns computers whitch respond to the request.
 
 ![List PC Windows XP](../../img/server/reports/deploying_packages_18.png)
 
-Two possibilities available :
+Two possibilities available:
 
 1. Select with check-box computers where you want to deploy package
 2. Select nothing and click directly on **Deploy**

@@ -39,7 +39,7 @@ Now, you can create you own administrative data by categories.
 ## Different types of administrative data
 
 You can create different data types : text, checkbox, button, textarea, **QR code**, etc. For exemple,
-we have created following administrative data :
+we have created following administrative data:
 
 ![Existing Data](../../img/server/reports/administrative_data_3.png)
 

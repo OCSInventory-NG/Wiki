@@ -223,7 +223,7 @@ After creating a packager, you will need to store it at a place where all your u
 
 Then create a GPO that trigger on user login. You will have a create a script that call the packager executable and trigger the installation on the computer.
 
-Here is a sample script :
+Here is a sample script:
 
 ```
 @echo off

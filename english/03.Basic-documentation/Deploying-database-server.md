@@ -27,7 +27,7 @@ Launch MariaDB
 
     mysql -u root
 
-If you doesn't have set password for root you can set it up by the following command :
+If you doesn't have set password for root you can set it up by the following command:
 
     SET PASSWORD FOR 'root'@'localhost' = PASSWORD('yourpassword');
 
@@ -35,11 +35,11 @@ If you doesn't have set password for root you can set it up by the following com
 
 This part is only if you want to install database server, communication server and administration console in only one server.
 
-First step create database :
+First step create database:
 
     CREATE DATABASE ocsweb;
 
-OCS need a user to use the database "ocsweb" :
+OCS need a user to use the database "ocsweb":
 
     CREATE USER 'ocs'@'localhost' IDENTIFIED BY 'ocs';
 
@@ -47,7 +47,7 @@ This user need all privileges on the database "ocsweb"
 
     GRANT ALL PRIVILEGES ON ocsweb.* TO 'ocs'@'localhost' WITH GRANT OPTION;
 
-Don't forget to apply parameters :
+Don't forget to apply parameters:
 
     FLUSH PRIVILEGES;
 
@@ -63,7 +63,7 @@ for all information about modifications of configuration files.`**
 
 This part is only if you want to install database server, communication server and administration console in separated server
 
-First step create database :
+First step create database:
 
     CREATE DATABASE ocsweb;
 
@@ -79,7 +79,7 @@ Then user need all privileges on the database "ocsweb"
     GRANT ALL PRIVILEGES ON ocsweb.* TO 'ocs'@'CommunicationServerIP' WITH GRANT OPTION;
     GRANT ALL PRIVILEGES ON ocsweb.* TO 'ocs'@'AdministrationConsoleIP' WITH GRANT OPTION;
 
-Don't forget to apply parameters :
+Don't forget to apply parameters:
 
     FLUSH PRIVILEGES;
 

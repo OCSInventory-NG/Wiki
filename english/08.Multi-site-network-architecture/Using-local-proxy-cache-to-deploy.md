@@ -73,7 +73,7 @@ End of installation.
 
 ### **Result in ocsinventory.ini**
 
-Here, the configuration file of an agent using authentifiant proxy :
+Here, the configuration file of an agent using authentifiant proxy:
 
     [OCS Inventory Agent]
     ComProvider=ComHTTP.dll

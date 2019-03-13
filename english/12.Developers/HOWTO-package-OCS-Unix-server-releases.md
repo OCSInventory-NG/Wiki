@@ -11,7 +11,7 @@ Create a working directory first and go in this directory:
 
 ## Get OcsInventory Server code
 
-Now, get the Ocsinventory Server code from Launchpad using this command :
+Now, get the Ocsinventory Server code from Launchpad using this command:
 
     $bzr export . lp:ocsinventory-server/stable-xxx
 

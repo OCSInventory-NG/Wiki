@@ -17,9 +17,9 @@ for example) you need to update the corresponding DTD.
 
 The biggest one is for the inventory request, we have every field defined in.
 
-For example :
+For example:
 
-When a Storage inventory is done you have an XML like that :
+When a Storage inventory is done you have an XML like that:
 
     <STORAGES>
       <DESCRIPTION>SATA</DESCRIPTION>
@@ -32,7 +32,7 @@ When a Storage inventory is done you have an XML like that :
       <TYPE>disk</TYPE>
     </STORAGES>
 
-For each field you have a corresponding line in the DTD :
+For each field you have a corresponding line in the DTD:
 
 This one define the subtree STORAGES, you have a list of every field allowed in, the separator is a | because we don't want a special order, and we put a * after the brackets, because there are not all mandatory.
 

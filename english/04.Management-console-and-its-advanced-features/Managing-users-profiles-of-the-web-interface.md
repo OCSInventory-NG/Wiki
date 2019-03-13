@@ -40,7 +40,7 @@ Now you can do many things.
 
 ![Management of the profile restriction](../../img/server/reports/users_profiles_10.png)
 
-Description of options :
+Description of options:
 
 * Restrictions on computers : Define if the visibility of Computers is restricted only to a specific
 selected group by TAG. You have to coiche user , add a set of strings that may contain ? or * and
@@ -58,7 +58,7 @@ that match the TAG of computers would be visible to that user.
 
 ![Profile permissions on the blacklist](../../img/server/reports/users_profiles_11.png)
 
-Description of options :
+Description of options:
 
 **`Note: the blacklisting of serial numbers and MAC addresses is useful for the management
 of duplicate machines.`**
@@ -78,7 +78,7 @@ for ipdiscover. Sub-nets blacklisted enter in category _blacklist_ in ipdiscover
 
 ![Administration rights of the profile](../../img/server/reports/users_profiles_12.png)
 
-Description of options :
+Description of options:
 
 * Manage ipdiscover : Allows the profile to modify networks ipdiscover.
 
@@ -118,7 +118,7 @@ to create or delete users groups of teledeploy workflow.
 
 ![Profiles' Tab](../../img/server/reports/users_profiles_7.png)
 
-Description of pages :
+Description of pages:
 
 * account_config :
 * activity_stats : jpgraph chart in the statistics section
