@@ -340,6 +340,25 @@ agent will have to launch.
 
 ![myFolder fragmented](../../img/server/reports/deploying_packages_13.png)
 
+
+## Editing package
+
+Once package have been created, you can always edit it.
+
+![Edit Access](../../img/server/reports/deploying_packages_14.png)
+
+Point your mouse on “Deployment” menu and select “Activate”. You will view here all built package.
+
+![List packages](../../img/server/reports/deploying_packages_activate.png)
+
+**Click "Edit" button on the line corresponding to the package you want to edit.**
+
+![Edit packages](../../img/server/reports/deploying_packages_edit.png)
+
+You can editing all informations of your package and you can download a new .zip file. Click on the "Update" button when you have finished editing.
+
+If you have downloaded a new .zip file, you must specify the size of each fragment of package to allow agent downloading package by small parts. If not, the size of the fragments remains the same.
+
 ## Activating package
 
 Once package have been created, you must specify where agent can download it.
@@ -371,7 +390,7 @@ database and also delete information file and fragment files from Administration
 directory. So, deleted package will be unavailable for activation, all activated packages using
 this package will be deleted, and also unaffected from computers.
 
-![List packages](../../img/server/reports/deploying_packages_15.png)
+![List packages](../../img/server/reports/deploying_packages_activate.png)
 
 **Click “Active” button on the line corresponding to the package you want to activate.**
 
@@ -396,7 +415,7 @@ file and package fragments.
 
 So we have filled in in both fill something like “ocs-admin-srv.domain.tld/download”.
 
-![Package manual deployment](../../img/server/reports/deploying_packages_16.png)
+![Package manual deployment](../../img/server/reports/deploying_packages_activateman.png)
 
 Click send button. Administration console will ensure that both information file and package fragment
 files are available on specified URLs.
