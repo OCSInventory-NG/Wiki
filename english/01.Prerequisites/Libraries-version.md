@@ -24,6 +24,7 @@ Here is the list of the different libraries and modules and their versions usefu
     * Perl module Archive::Zip
     * Perl module YAML
     * Perl module XML::Entities
+    * Perl module Switch
 * MySQL or MariaDB version 4.1.0 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
 * Make utility such as GNU make.
 
