@@ -40,7 +40,7 @@ Go on ocsreports in extension tab. Select the plugin and click on install.
 Logout and login for finish the web installation.
 Now you can process to installation on the server.
 
-#### Server install
+#### Server install with script
 
 For install plugin on server, use the script ocsreports/tools/install_plugin.py.
 
@@ -88,5 +88,16 @@ Where is the server location [/etc/ocsinventory-server]
 
 You can write nothing if the path in brackets is correct.
 The script will copy all needed file in the server location.
+
+**`Note :  Don't forget to restart Apache after installation finished`**
+
+#### Server install without script
+For install plugin without using script, go to OCS server directory into your server. (By default, to 
+"/etc/ocsinventory-server/")
+
+Then create new directory into "perl/Apache/Ocsinventory/Plugins/" with the same name of the plugin and place 
+Map.pm file inside.
+
+Finally, place the plugin conf file into "plugins/"
 
 **`Note :  Don't forget to restart Apache after installation finished`**
