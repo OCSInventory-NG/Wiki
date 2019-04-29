@@ -207,7 +207,7 @@ You may also specify if package deployment needs an user interaction by setting 
 **Installation completion need user action** to **YES**, for example, if setup needs that user
 fill in a informations on a dialog to terminate. Pay attention that this notification will prevent the 
 OCS agent from reporting the deployement's exit code to the server until the user clicks on OK. This 
-will also blocks all other package installations that may be pending.
+will also block all other package installations that may be pending.
 
 **`Note: You can use HTML tags (eg: "<br/>", "<b></b>") to format the text you show to your users.`**
 
