@@ -28,24 +28,24 @@ Package of priority level 1 will be deployed before package of priority 2…
 **Action is associated with file to deploy and command to launch**.
 This may be one of the following three commands:
 
-* **Action Launch**: to deploy a ZIP or TAR.GZ file and launch with or without parameters an executable
-file **included** in ZIP or TAR.GZ file.ZIP or TAR.GZ file will be uncompressed into a temporary directory,
-and associated command (name of executable file without path!) will be launched into this temporary
-directory.**This action allows retrieving result code of launched command.**
+* **Action Launch**: to deploy a ZIP or TAR.GZ file and launch, with or without parameters, an executable
+file **included** in ZIP or TAR.GZ file. The ZIP or TAR.GZ file will be uncompressed into a temporary directory,
+and the associated command (name of executable file without path!) will be launched into this temporary
+directory.**This action allows retrieving result code of the command launched.**
 
-* **Action Execute**: to deploy a ZIP or TAR.GZ file (optional), and launch with or without
-parameters an executable file **included or not** in ZIP or TAR.GZ file.If executable is not included
-in ZIP or TAR.GZ file, it must be part of software already installed on client computer. Typically,
-it may be a Windows standard command like Windows Installer call, RPM or DPKG or TAR.GZ command
-on Linux.ZIP or TAR.GZ file will be uncompressed into a temporary directory, and associated command
+* **Action Execute**: to optionaly deploy a ZIP or TAR.GZ file and launch, with or without parameters, an executable
+file **included or not** in the optional ZIP or TAR.GZ file. If the executable is not included in the
+ZIP or TAR.GZ file, it must be already installed on the client computers. Typically, it may be a Windows 
+standard command like Windows Installer call (ie: msiexec), RPM, DPKG or TAR.GZ command on Linux. 
+The ZIP or TAR.GZ file will be uncompressed into a temporary directory, and associated command
 (name of executable file with path or parameters if needed) will be launched into this temporary directory.
-**This action does not allow retrieving result code of launched command.** However, this action allows
-you running command on client computers, without deploying any file. For example, you can use it
+**This action does not allow retrieving the result code of the command launched.** However, this action allows
+you to runn a command on client computers, without deploying any file. For example, you can use it
 to run specific operating system configuration command.
 
-* **Action Store**: to deploy a ZIP or TAR.GZ file and only store his content on a folder of
-client computer. **There is no command associated with this action, only a path to specify where
-to store extracted files.**
+* **Action Store**: to deploy a ZIP or TAR.GZ file and only store his content on a folder on the 
+client computers. **There is no command associated with this action, only a path to specify where
+to store the extracted files.**
 
 **`Note: All packages you want want to deploy must be compressed with ZIP for Windows Agents and tar
 gzipped for Linux computers.`**
@@ -179,7 +179,9 @@ Refer to § 8.8
 [Using SSL certificates in Package deployment](Deploying-packages-or-executing-commands-on-client-hosts.md#using-ssl-certificates-in-package-deployment)
 for more informations.
 
-**`Warning: You ONLY can upload .zip or .tar.gz files.`**
+## Creating/Build the package
+
+**`Warning: You can ONLY upload .zip or .tar.gz files.`**
 
 First of all, you must build your package.
 
@@ -189,22 +191,25 @@ Point your mouse on **Deployment** menu and select **Build**.
 
 Enter a name for your package.
 
-Select operating system for this package. You can choose between Windows and Linux.
+Select the operating system for this package. You can choose between Windows and Linux.
 
-Select download protocol for this package. At this time, only HTTP protocol is available.
+Select the download protocol for this package. At this time, only HTTP protocol is available.
 
-Select priority on this package. You can choose level 0 to 10 for priority. Package with lesser
-priority will be downloaded before package of greater priority, except if download fails
-(cf § 8.7 Deployment statistics and success validation.).
+Select the priority for this package. Package with lesser priority will be downloaded before package 
+of greater priority, except if download fails (cf § 8.7 Deployment statistics and success validation.).
 
-You may also choose to **warn user** that something is being launched on his computer.
-Set Warn user dropdown list to **YES**, fill in text to display to user, how long to display the text
-before auto validating package installation (set 0 to wait indefinitely) and if user can cancel
-deployment or delay deployement to next inventory.
+You can choose to **warn user** that something is being launched on his computer.
+Set Warn user dropdown list to **YES**, fill in the text to display to the user, how long to display it
+before automaticaly launching the installation (set 0 to wait indefinitely), and if user can cancel the
+deployment or delay it to the next inventory.
 
-You may also specify if package deployment needs a user interaction by setting dropdown
-list **Installation completion need user action** to **YES**, for example, if setup needs that user
-fill in a informations on a dialog to terminate.
+You may also specify if package deployment needs an user interaction by setting dropdown list 
+**Installation completion need user action** to **YES**, for example, if setup needs that user
+fill in a informations on a dialog to terminate. Pay attention that this notification will prevent the 
+OCS agent from reporting the deployement's exit code to the server until the user clicks on OK. This 
+will also block all other package installations that may be pending.
+
+**`Note: You can use HTML tags (eg: "<br/>", "<b></b>") to format the text you show to your users.`**
 
 Last, you can select your action in **Action** dropdown list. Here are some samples describing what
 kind of package you can build.
@@ -212,106 +217,62 @@ kind of package you can build.
 ![Package builder page empty](../../img/server/reports/deploying_packages_4.png)
 ![Package builder page empty2](../../img/server/reports/deploying_packages_23.png)
 
-### **Deploying package through “Launch” command**
+### **Deploying package through the “Launch” command**
 
-Package you want to deploy has one or more files, with at least an executable file for launching
-package setup. Compress theses files using ZIP tool if package addresses Windows computers,
-using tar and gzip if package addresses Linux computers.
+The package you want to deploy has one or more files, **with at least an executable file for launching
+the package's installation**.
 
-Choose action **Execute** and click **Browse** button to select your ZIP or TAR.GZ file.
+Compress the files using ZIP tool if your package addresses Windows computers, or tar and gzip if it
+addresses Linux computers.
 
-In field **Command**, just fill in name of executable file without path, but with, optionally,
-parameters. It’s this command which will be launched on client computer once package will be
-downloaded and uncompressed to a temporary directory.
+Choose action **Launch** and click the **Browse** button to select your ZIP or TAR.GZ file.
 
-You could define an interactivity with users.
+In field **Command**, just fill in the name of the executable file without path, but with, optionally,
+parameters. It’s this command that will be launched on client computers once the package is
+downloaded and uncompressed in a temporary directory.
 
-In our following example, we deploy a new release of OCS Inventory NG Agent for Windows, using silent
+In the following example, we deploy a new release of OCS Inventory NG Agent for Windows, using silent
 installation with a .bat file:
 
 ![Package builder page launch](../../img/server/reports/deploying_packages_5.png)
 
-Click **[ Send ]** button to upload package to Administration console.
+Click **[ Send ]** button to upload the package to the Administration console.
 
-Next, you must specify the size of each fragment of package to allow agent downloading package by small
-parts. This will allow download resuming. If download of a fragment fails, only this fragment will
-be downloaded another time, not all the package. So choose fragment size according to your network
-capabilities.
+### **Deploying package through the “Execute” command**
 
-![New package build](../../img/server/reports/deploying_packages_6.png)
+You want to execute a program that's already on the target computers.
 
-Administration console will then split package in fragments and store them in a folder named as package
-timestamp in directory **download** of apache web server root directory. It will also create in the same
-directory the package information file named **info**, an XML file describing the package and action agent
-will have to launch.
+The Package you want to deploy has optionaly one or more files, with optionally an executable file for
+launching package setup. 
 
-![dowload/package](../../img/server/reports/deploying_packages_7.png)
+Compress the files using ZIP tool if your package addresses Windows computers, or tar and gzip if it
+addresses Linux computers.
 
-### **Deploying package through “Execute” command**
+Choose action **Execute** and click **Browse** button to select your ZIP or TAR.GZ file, or leave the
+**File** field empty if you just want to execute a command on the target computers.
 
-Package you want to deploy has one or more files, with optionally an executable file for
-launching package setup. Compress theses files using ZIP tool if package addresses Windows computers,
-using tar and gzip if package addresses Linux computers.
-
-Choose action **Execute** and click **Browse** button to select your ZIP or TAR.GZ file.
-
-In field **Command**, just fill in path of executable file to launch with parameters
+In field **Command**, just fill in the path of the executable file to launch with parameters
 (full path is not required as application executable is listed on system search path, or is included
-in package). It’s this command which will be launched on client computer once package will be downloaded.
+in package). It’s this command that will be launched on client computer once the package is downloaded.
 
 **`Note: Environnement variables are expanded in “Command”. It enables you to use things such
 as %SystemDrive%, %SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`**
 
-In our following example, we deploy software using silent Windows Installer installation. So, ZIP
-file only include file “software.msi” and the “Command” field contains:
+In the following example, we deploy a software using silent Windows Installer installation. Our ZIP
+file only includes the file “software.msi” and the “Command” field contains:
 
     msiexec.exe /i software.msi /quiet
 
 ![Package builder page execute](../../img/server/reports/deploying_packages_8.png)
 
-Click **[ Send ]** button to upload package to Administration console.
+Click **[ Send ]** button to upload the package to the Administration console.
 
-Next, you must specify the size of each fragment of package to allow agent downloading package by small parts. This will allow download resuming. If download of a fragment fails, only this fragment will be downloaded another time, not all the package. So choose fragment size according to your network capabilities.
+### **Store files through the “Store” command**
 
-Administration console will then split package in fragments and store them in a folder named as
-package timestamp in directory **download** of apache web server root directory. It will also create in
-the same directory the package information file named **info**, an XML file describing the package and
-action agent will have to launch.
+The package you want to deploy has one or more files to be stored in a specific folder on client computers.
 
-![Package builder page execute](../../img/server/reports/deploying_packages_9.png)
-
-### **Command through “Execute” command**
-
-Package you want to deploy is only a command launch.
-
-Choose action **Execute** and leave field **File** empty.
-
-In field **Command**, just fill in name of command with, optionally, parameters.
-It’s this command which will be launched on client computer once package will be downloaded.
-
-**`Note: Environnement variables are expanded in “Command”. It enables you to use things such as %SystemDrive%,
-%SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`**
-
-In our following example, we deploy a command to specify proxy address to use for System Applications under
-Windows. So the **Command** field contains:
-
-    Proxycfg.exe /p 192.168.1.1
-
-![Proxycfg.exe /p 192.168.1.1](../../img/server/reports/deploying_packages_10.png)
-
-Click **[ Send ]** button to upload package to Administration console.
-
-Administration console will only create, in a folder named as package timestamp in directory download
-of apache web server root directory, the package information file named info, an XML file describing
-the package and action agent will have to launch.
-
-![info](../../img/server/reports/deploying_packages_11.png)
-
-### **Stored package through “Store” command**
-
-Package you want to deploy has one or more files, to be stored in a specific folder on client computers.
-Compress theses files using ZIP tool if package addresses Windows computers, using tar and gzip if
-package addresses Linux computers.
+Compress the files using ZIP tool if your package addresses Windows computers, or tar and gzip if it
+addresses Linux computers.
 
 Choose action **Store** and click **Browse** button to select your ZIP or TAR.GZ file.
 
@@ -320,52 +281,61 @@ In field **Path**, just fill in path where agent will store extracted files once
 **`Note: Environnement variables are expanded in “Command”. It enables you to use things such as
 %SystemDrive%, %SystemRoot%, %windir%, %ProgramFiles%, %CommonProgramFiles% ...etc.`**
 
-_Also, if provided folder path does not exist, it will be recursively created._
+_If the provided folder path does not exist, it will be recursively created._
 
-In our following example, we deploy a file to store in folder “C:\My Folder”:
+In the following example, we deploy a file to store in folder “C:\My Folder”:
 
 ![myFolder](../../img/server/reports/deploying_packages_12.png)
 ![myFolder2](../../img/server/reports/deploying_packages_24.png)
 
 Click **[ Send ]** button to upload package to Administration console.
 
-Next, you must specify the size of each fragment of package to allow agent downloading package by small
-parts. This will allow download resuming. If download of a fragment fails, only this fragment will be
-downloaded another time, not all the package. So choose fragment size according to your network capabilities.
+### Dividing your package in fragments
 
-Administration console will then split package in fragments and store them in a folder named as package
-timestamp in directory **download** of apache web server root directory. It will also create in the
-same directory the package information file named **info**, an XML file describing the package and action
-agent will have to launch.
+Next, you must specify the size of you package's fragments to allow agents to download your package
+by small parts. This will allow resuming download (ie: If the download of a fragment fails, only this 
+fragment will be downloaded another time, not all the package).
+Choose fragment size according to your network capabilities.
 
-![myFolder fragmented](../../img/server/reports/deploying_packages_13.png)
+![New package build](../../img/server/reports/deploying_packages_6.png)
 
+Administration console will then split your package into fragments and store them in a folder named by the
+package's timestamp in the **download** directory of your apache web server. It will also create in the same
+directory the package information file named **info**, an XML file describing the package and action agent
+will have to launch.
+
+![dowload/package](../../img/server/reports/deploying_packages_7.png)
+
+**`Note: If you have created a package without any ZIP or TAR.GZ file (ie: through the “Execute” command), the 
+administration console will only create the package information file **info** into the package's folder.`**
+
+![info](../../img/server/reports/deploying_packages_11.png)
 
 ## Editing package
 
-Once package have been created, you can always edit it.
+Once packages have been created, they can always be edited.
 
 ![Edit Access](../../img/server/reports/deploying_packages_14.png)
 
-Point your mouse on “Deployment” menu and select “Activate”. You will view here all built package.
+Point your mouse on the “Deployment” menu and select “Activate”. You will view here all the activated packages.
 
 ![List packages](../../img/server/reports/deploying_packages_activate.png)
 
-**Click "Edit" button on the line corresponding to the package you want to edit.**
+**Click the "Edit" button on the line corresponding to the package you want to edit.**
 
 ![Edit packages](../../img/server/reports/deploying_packages_edit.png)
 
-You can editing all informations of your package and you can download a new .zip file. Click on the "Update" button when you have finished editing.
+You can edit all informations of your package and you can download a new .zip file. Click on the "Update" button when you have finished editing.
 
-If you have downloaded a new .zip file, you must specify the size of each fragment of package to allow agent downloading package by small parts. If not, the size of the fragments remains the same.
+If you have downloaded a new .zip file, you must specify the size of the package fragments. If not, the size of the fragments remains the same.
 
 ## Activating package
 
-Once package have been created, you must specify where agent can download it.
+Once package have been created, you must specify where agents can download it.
 
-Agent will first download package information file. As this file is very critical, this download must
-be done using HTTP over SSL (HTTPS) to ensure that agent can authenticate deployment server. Next,
-download of package fragment described in information file will be done using standard HTTP.
+Agents will first download the package information file. As this file is very critical, this download must
+be done using HTTP over SSL (HTTPS) to ensure that agents can authenticate the deployment server. Next,
+the download of the package's fragments described in the information file will be done using standard HTTP.
 
 **`Note: If you do not want to use Administration server as deployment server, you must first copy folder
 “download/package_timestamp” from Administration server Apache document root directory to another web
