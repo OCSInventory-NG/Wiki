@@ -1,18 +1,10 @@
 # Using extension engine
 
-Since 2.6RC, the plugin engine has been completely redone and improved.
-
-You can download extension to :
-
-Github : https://github.com/PluginsOCSInventory-NG
-
-OR
-
-Plugin site : https://plugins.ocsinventory-ng.org/
+Since 2.6RC, the plugin engine has been completely rewritten and improved.
 
 **`Note : Be careful to download the plugin version compatible with the extension engine`**
 
-## Prerequisites for the extension installation
+## Prerequisites for the extention engine
 
 To use the extension engine, Python3 is required.
 
@@ -26,38 +18,67 @@ sudo pip3 install scp
 
 ## Installation
 
+Installing a plugin on your server(s) occurs in 3 steps:
 
-#### Web install
+1. Installation of the extension package on the Administration server's filesystem;
+2. Activation of the extension via the Administration console;
+3. Installation of the extension for the Communication server.
 
-Download the plugin, place it on the extensions folder on ocsreports and unzip it.
+Once the plugin is installed on your server(s) you still have to deploy an agent-part on all your agents.
 
-Go on ocsreports in extension tab. Select the plugin and click on install.
+### Plugin installation on filesystem
+
+First download the extension here:
+
+Github : https://github.com/PluginsOCSInventory-NG
+
+OR
+
+Plugin site : https://plugins.ocsinventory-ng.org/
+
+Then, place the downloaded zip file on the `extensions` folder of your Administration server and unzip it.
+
+**` The Administration server's extenstions folder is /usr/share/ocsinventory-reports/ocsreports/extensions by default `**
+
+You may delete the zip file after it is unzipped.
+
+### Plugin activation
+
+Log into your Administration console and go to the "Extensions" tab.
+
+Select the plugin and click on "Install".
 
 ![OCS plugin installation onglet](../../img/server/reports/plugin_installation_onglet.png)
 
 ![OCS plugin installation](../../img/server/reports/plugin_installation.png)
 
 Logout and login for finish the web installation.
-Now you can process to installation on the server.
 
-#### Server install with script
+You can now proceed with the installation on your Communication server.
 
-For install plugin on server, use the script ocsreports/tools/install_plugin.py.
+### Scripted communication server installation
 
-Execute the script in sudo:
+To install your plugin on the Communication server, the `install_plugin.py` may be used.
+
+On your Administration server, go to the `/usr/share/ocsinventory-reports/ocsreports/tools` 
+folder, and execute the script with sudo:
+
 ```bash
 sudo python3 install_plugin.py
 ```
 
-Enter the path where plugin's location:
+Enter the path to your Administration server's `extensions` folder:
+
 ```bash
 Where is the plugins location [/usr/share/ocsinventory-reports/ocsreports/extensions/]
 /path/to/plugin/
 ```
+
 _Don't forget the last slash_
 
-After, the script will suggest all repositories who can be plugins.
-Select with a number the plugin who you want to install:
+After, the script will present you all the plugins that can be installed.
+Select with a number the plugin that you want to install:
+
 ``` bash
 [0] => plugin1
 [1] => plugin2
@@ -67,10 +88,13 @@ Select with a number the plugin who you want to install:
 ```
 
 Now there are two specific cases:
+
  * The Ocs server is in same server.
  * Ocs Server is in other server.
 
-In case where ocs is in other server, you need to enter the server's informations:
+In the case where you Communication server is on another server, you need to enter 
+the server's informations:
+
 ``` bash
 What is the host:
 127.0.0.1
@@ -80,24 +104,38 @@ What is the password:
 Password:
 ```
 
-In both case, you will enter the OCS server location:
+In both case, you will have to enter the path of you Communication server's configuration directory:
+
 ``` bash
 Where is the server location [/etc/ocsinventory-server]
 
 ```
 
-You can write nothing if the path in brackets is correct.
-The script will copy all needed file in the server location.
+The script will copy all the needed files into your Communication server's configuration directory.
 
-**`Note :  Don't forget to restart Apache after installation finished`**
+**`Note :  Don't forget to restart your Communication server's apache service after the installation has finished`**
 
-#### Server install without script
-For install plugin without using script, go to OCS server directory into your server. (By default, to 
-"/etc/ocsinventory-server/")
+### Server installation without script
 
-Then create new directory into "perl/Apache/Ocsinventory/Plugins/" with the same name of the plugin and place 
+To install plugins without the `install_plugin.py` script, log into your Communication server and go to its configuration 
+directory (By default "/etc/ocsinventory-server/").
+
+There, create a new directory into "perl/Apache/Ocsinventory/Plugins/" with the name of the plugin and place the
 Map.pm file inside.
 
-Finally, place the plugin conf file into "plugins/"
+Finally, place the plugin's configuration file into the "plugins/" folder.
 
-**`Note :  Don't forget to restart Apache after installation finished`**
+**`Note :  Don't forget to restart your Communication server's apache service after the installation has finished`**
+
+### Plugin deployment 
+
+Now that your Administration and Communication servers support your plugin, you need to deploy the agent part on you clients.
+
+The plugin's agent part is usualy located in the `agent` subfolder of your plugin's zip file.
+
+So, find this folder back and create a zip file containing all the files in this folder.
+
+Then, create a deployment package with the `Store` action as explained in 
+[Deploying packages or executing commands on client hosts](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+
+Specify `C:\Program Files (x86)\OCS Inventory Agent\Plugins` as the path where the files need to be copied on the agents.
