@@ -42,9 +42,12 @@ Now you can do many things.
 
 Description of options:
 
-* Restrictions on computers : Define if the visibility of Computers is restricted only to a specific
-selected group by TAG. You have to coiche user , add a set of strings that may contain ? or * and
-that match the TAG of computers would be visible to that user.
+* Restrictions on computers : Define if the visibility of computers is restricted only to specific
+TAG(s) assigned to users.
+When this restriction is set, you have to specify, for each user you want to restrict her accesses,
+the set of TAGs defining which computers you allow her to see.
+You can use ? or * to match multiple TAGs at once.
+If you don't specify any TAG, the user will be allowed to see all computers.
 
 * Restrictions on the packets activation : Define if the profile has the right to activate a package.
 
