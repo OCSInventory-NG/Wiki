@@ -1,6 +1,6 @@
 # Using extension engine
 
-Since 2.6RC, the plugin engine has been completely rewritten and improved.
+Since 2.6, the plugin engine has been completely rewritten and improved.
 
 **`Note : Be careful to download the plugin version compatible with the extension engine`**
 
