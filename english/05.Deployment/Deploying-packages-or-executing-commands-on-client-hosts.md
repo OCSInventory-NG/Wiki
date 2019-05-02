@@ -996,7 +996,7 @@ Next, connect to Administration console and go to menu “Deployment / Build”.
 * **select action** “Launch”
 * **and fill in file name** with Service Agent setup command line switches, for example
 “OcsAgentSetup.exe /S /NOSPLASH /UPGRADE /NP /DEBUG /SERVER:my_ocs_server.domain.tld”
-(/S to run installer in silent mode, /NOSLPASH to disable installer spash screen, /UPGRADE to
+(/S to run installer in silent mode, /NOSPLASH to disable installer spash screen, /UPGRADE to
 indicate that you’re upgrading an already installed Service Agent, /NP to disable use of IE proxy
 settings, /DEBUG to enable creation of log files, /SERVER to indicate that agent must connect to
 server at address “my_ocs_server.domain.tld”).
