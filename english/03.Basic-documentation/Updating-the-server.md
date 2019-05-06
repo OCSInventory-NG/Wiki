@@ -63,20 +63,5 @@ start apache webserver
 service apache2 start
 ```
 
-sometimes is it required to update the database via the webconsole, simply click update on the webconsole.
-
-#### OCS Server update to 2.4
-
-For the new API feature we need the follwoing new Perl modules:
-* PERL module Mojolicious::Lite 
-* PERL module Switch 
-* PERL module Plack::Handler
-
-It´s better to install them before you update the server core     
-on Ubuntu you can install them via
-```
-sudo apt-get install libswitch-perl
-Cpan -i Mojolicious::Lite
-Cpan -i Plack::Handler
-```
+Sometimes it's required to update the database via the webconsole, simply click update on the webconsole.
 
