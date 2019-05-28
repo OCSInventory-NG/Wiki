@@ -136,6 +136,6 @@ The plugin's agent part is usualy located in the `agent` subfolder of your plugi
 So, find this folder back and create a zip file containing all the files in this folder.
 
 Then, create a deployment package with the `Store` action as explained in 
-[Deploying packages or executing commands on client hosts](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+[Deploying packages or executing commands on client hosts](../05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
 
 Specify `C:\Program Files (x86)\OCS Inventory Agent\Plugins` as the path where the files need to be copied on the agents.
