@@ -47,9 +47,9 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 ## OCS Tools
 
 * [OCS Inventory NG Agent Deployement Tool](07.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
-* [OCS Packager](07.OCS-Tools/OCS-Packager.md)
-* [OCS Packager for MacOSX](07.OCS-Tools/OCS-Packager-for-MacOSX.md)
-* [OCS Packager for Unix](07.OCS-Tools/OCS-Packager-for-UNIX.md)
+* [OCS Packager for Windows](07.OCS-Tools/OCS-Windows-Packager.md)
+* [OCS Packager for MacOSX](07.OCS-Tools/OCS-MacOSX-Packager.md)
+* [OCS Packager for Unix](07.OCS-Tools/OCS-Unix-Packager.md)
 * [Ansible role for Unix Packager](07.OCS-Tools/OCS-Ansible-Role-for-Unix-Packager.md)
 
 ## Multi-site network architecture
@@ -85,14 +85,8 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [HOWTO package OCS Unix server releases](12.Developers/HOWTO-package-OCS-Unix-server-releases.md)
 * [HOWTO package OCS Unix agent releases](12.Developers/HOWTO-package-OCS-Unix-agent-releases.md)
 * [HOWTO package OCS MacOSX agent releases](12.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
+* [HOWTO compile OCS Windows Agent](12.Developers/HOWTO-compile-OCS-Windows-Agent.md)
 
-# Contribution
-
-If you think something is missing feel free to open an issue or fork it and document it by yourself.
-Same for mistakes in the documentation.
-
-The Github repository below is directly linked to our documentation.
-See [our GitHub repository](https://github.com/OCSInventory-NG/Wiki)
 
 # FAQ
 
@@ -135,3 +129,12 @@ See [our GitHub repository](https://github.com/OCSInventory-NG/Wiki)
 * Error 417:
 
     **Solution** : insert ignore_expect_100 on into your squid.conf file and then run squid -k reconfigure.
+
+
+# Contribution
+
+If you think something is missing feel free to open an issue or fork it and document it by yourself.
+Same for mistakes in the documentation.
+
+The Github repository below is directly linked to our documentation.
+See [our GitHub repository](https://github.com/OCSInventory-NG/Wiki)
