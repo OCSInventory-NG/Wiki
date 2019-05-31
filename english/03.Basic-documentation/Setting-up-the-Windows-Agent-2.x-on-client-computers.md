@@ -1,8 +1,11 @@
 # OCS Inventory NG Agent 2.X on Windows Operating Systems
 
-**`Note`**`: OCS Inventory NG Agent 2.X does not work on Windows 9X, Windows Millennium Edition or Windows NT4. You need to use old 1.X agent 4061-1.`
 
-**`Note`**` : On Windows XP and 2003R2 you can only use the Windows agent 2.1.1.1.`
+| Notes        |
+| :------------- |
+| `OCS Inventory NG Agent 2.X does not work on Windows 9X, Windows Millennium Edition or Windows NT4. You need to use old 1.X agent 4061-1.` |
+| `On Windows XP and 2003R2 you can only use the Windows agent 2.1.1.1.` | 
+| `Since OCS Inventory Agent 2.6, the Agent is only installable on 64-bit machines.` |
 
 **OCS Inventory NG Agent for Windows can run as a Windows service** automatically at computer startup.
 
@@ -16,7 +19,6 @@ Download and unzip the latest Windows agent from the Downloads section. This pac
 
 *  **OCS-NG-Windows-Agent-Setup.exe**: installs the Windows Agent, either as a Windows Service or as a Standalone tool.
 
-**`Note`**` : Since OCS Inventory Agent 2.6, the Agent is only installable on 64-bit machines.`
 
 ## Which version: Service or Standalone ?
 
