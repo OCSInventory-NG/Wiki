@@ -1,9 +1,12 @@
 # OCS Inventory NG Agent 2.X on Windows Operating Systems
 
-**`Note`**`: OCS Inventory NG Agent 2.X does not work on Windows 9X, Windows Millennium Edition or Windows NT4.
-You need to use old 1.X agent 4061-1.`
 
-**`Note`**` : On Windows XP and 2003R2 you can only use the Windows agent 2.1.1.1.`
+| Agent Version        | Compatibility Note |
+| :-------------       | :---------------   |
+| 2 . X | `Does not work on Windows 9X, Windows Millennium Edition or Windows NT4. You need to use old 1.X agent 4061-1.` |
+| 2 . 1 . 1 . 1 | `On Windows XP and 2003R2 you can only use this Windows agent version. ` | 
+| 2 . 4 | `Last 32-bit compatible release.` |
+| 2 . 6 | `Agent is only installable on 64-bit machines.` |
 
 **OCS Inventory NG Agent for Windows can run as a Windows service** automatically at computer startup.
 
@@ -13,10 +16,10 @@ Directory GPO, a scheduled task or a shortcut in the Start menu.
 **`Note`**`: We recommend using the service version of the Agent, especially if you plan to use the package
 deployment feature.`
 
-Download and unzip the latest Windows agent from the Downloads section. This package contains 2 files:
+Download and unzip the latest Windows agent from the Downloads section. This package contains 1 file:
 
-*  **OCS-NG-Windows-Agent-Setup.exe**: installs the Windows Agent, either as a Windows Service or as a
-Standalone tool.
+*  **OCS-NG-Windows-Agent-Setup.exe**: installs the Windows Agent, either as a Windows Service or as a Standalone tool.
+
 
 ## Which version: Service or Standalone ?
 
@@ -38,14 +41,12 @@ is older than the general option “FREQUENCY”, specified in days (see
 then sends these data using HTTP or HTTPS protocol to the server. The server ask this only if the
 computer is elected to run IPDISCOVERY (see
 [Using IP discovery feature](../../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).)
-* **Deploy a package**: Agent contacts the deployment server using the HTTPS protocol to get the information file
-(file INFO which describes the package), downloads package fragments from the deployment server,
-rebuilds the package and launches it.
+* **Deploy a package**: Agent contacts the deployment server using the HTTPS protocol to get the information file (file INFO which describes the package), downloads package fragments from the deployment server, rebuilds the package and launches it. 
 
-**`Note`**`: The OCS Inventory NG Agent does not listen on the network. It only initiates communications to
-the server, so you do not have to open inbound port on a personal firewall. However, you must allow
-outbound connections from OCS Inventory NG agent files “OCSInventory.exe” and “Download.exe”
-to the Communication Server or Deployment Server using either HTTP or HTTPS.`
+Since OCS Inventory Agent 2.6, it's possible to deploy package greater than 4GB. 
+However, the deployment of such package may cause latency in machines on which it's deployed.
+
+**`Note`**`: The OCS Inventory NG Agent does not listen on the network. It only initiates communications to the server, so you do not have to open inbound port on a personal firewall. However, you must allow outbound connections from OCS Inventory NG agent files "OCSInventory.exe" and "Download.exe" to the Communication Server or Deployment Server using either HTTP or HTTPS.`
 
 
 Each time an inventory is done, the Agent uses and writes configuration files stored into folder
@@ -63,8 +64,7 @@ proxy address and credentials, service properties...),
 * **history**: package deployment history,
 * All log files created by OCS Inventory NG Agent.
 
-**`Note`**`: YOU MUST STOP “OCS Inventory Service” to make changes on these files, because they are write
-protected while service is running. As is, only user having Administrator privileges can modify these files.`
+**`Note`**`: YOU MUST STOP "OCS Inventory Service" to make changes on these files, because they are write protected while service is running. As is, only user having Administrator privileges can modify these files.`
 
 When launched for the first time, OCS Inventory NG agent will prompt user for the TAG value
 (if this feature is enabled). Help text displayed in the dialog-box is the one you have entered
@@ -79,12 +79,10 @@ results to Communication server using HTTP or HTTPS.
 ### **How does Windows service work?**
 
 
-**`Note`**`: You must have Administrator privileges to set up OCS Inventory NG Agent as a service,
-or you may use OCS Inventory NG `[`Packager`](../06.OCS-Tools/OCS-Packager.md)
-`to create an installer able to run even if user do not
+**`Note`**`: You must have Administrator privileges to set up OCS Inventory NG Agent as a service, or you may use OCS Inventory NG ` [`Packager`](../06.OCS-Tools/OCS-Packager.md) ` to create an installer able to run even if user do not
 have Administrator privileges. Refer to`
 [`Uploading Agent for deployment through launcher “OcsLogon.exe”`](Administration-of-OCS-Inventory-NG.md#uploading-agent-for-deployment-through-launcher-ocslogonexe)
-`or OCS Inventory NG `[`Packager`](../06.OCS-Tools/OCS-Packager.md)` documentation.`
+`or OCS Inventory NG ` [`Packager`](../06.OCS-Tools/OCS-Packager.md) ` documentation.`
 
 * OCS Inventory NG Agent “OCSInventory.exe” is launched by service “OcsService.exe” every **PROLOG_FREQ** hours.
 It keeps trace of the countdown in seconds in file “ocsinventory.ini” (value **TTO_WAIT**), so it is the time
@@ -180,20 +178,18 @@ all your computers. Hopefully, this installation can be scripted.
 
 ### **OCS Inventory NG Agent for Windows Setup command line options**
 
-Service Agent setup “OCS-NG-Windows-Agent-Setup.exe” may be called with some command line parameters:
+Service Agent setup "OCS-NG-Windows-Agent-Setup.exe" may be called with some command line parameters:
 
 * **/S** to run the installer in silent mode, no interaction with user
 * **/NOSPLASH** disable splash screen when installer starts
-* **/UPGRADE** to deploy new agent through OCS deployment feature. Because you upgrade agent using agent itself
-to run the upgrade, it is needed to notify the installer (which terminates agent's processes) to specify the
-result in order to send it back to the server next time agent will run
-* **/NO_SERVICE** to not register OCS Inventory NG Agent into Windows Service Manager. Agent can only be
-launched manually or through a script/GPO.
-* **/NO_SYSTRAY** to not create a shortcut into "All Users" startup folder to start systray applet when user
-log in.
+* **/NO_SERVICE** to not register OCS Inventory NG Agent into Windows Service Manager. Agent can only be launched manually or through a script/GPO.
+* **/NO_SYSTRAY** to not create a shortcut into "All Users" startup folder to start systray applet when user log in.
 * **/NOW** to launch inventory just after setup
 * **/NOSOFTWARE** to ignore software installed
 * **/D** to install ocsinventory agent in an another directory (default %PROGRAMFILES%\ocs inventory agent)
+* **/UPGRADE** to deploy new agent through OCS deployment feature. Because you upgrade agent using agent itself to run the upgrade, it is needed to notify the installer (which terminates agent's processes) to specify the result in order to send it back to the server next time agent will run.
+
+**`Note: Please, don't use OCSPackager to upgrade OCS Inventory Windows Agent. Create deployement package with "OCS-NG-Windows-Agent-Setup.exe" on zip file and launch with command example : OCS-NG-Windows-Agent-Setup.exe /S /UPGRADE /SERVER=ocs_server_address`**
 
 Also, you can pass to the installer the following agent's command line parameters
 (see agent's options below for more detail):

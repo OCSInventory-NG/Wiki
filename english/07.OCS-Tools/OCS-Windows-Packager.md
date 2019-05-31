@@ -2,6 +2,8 @@
 
 [Dowload page](http://www.ocsinventory-ng.org/en/download-en/)
 
+**`Note: Please, don't use OCSPackager to upgrade OCS Inventory Windows Agent. To upgrade Agent see : ` [ OCS Inventory NG Agent 2.X on Windows Operating Systems](../03.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md) `part "OCS Inventory NG Agent for Windows Setup command line options"`**
+
 ## Introduction
 
 **Open Computer and Software Inventory NG Packager** is an application designed to prepare automated
@@ -56,7 +58,7 @@ The following window will appear:
 This entry is required !
 * On the **Certificate file** line, select your **cacert.pem** file.
 * The **other files** line allows additional files to be specified which will be copied to your install folder.
-* On **[Command line options](../06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md#windows-command-line-options)** line you should enter all the needed options for the Ocs Agent setup
+* On **[Command line options](../07.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md#windows-command-line-options)** line you should enter all the needed options for the Ocs Agent setup
 program (e.g. /server=http[s]://my_server/ocsinventory:8181 **/S**). Do not forget to specify the
 **/S** option for a silent installation.
 * The **Label** line will create a **label** file containing your user prompt. The first time

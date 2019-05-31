@@ -980,29 +980,24 @@ take effect.
 **Last**, you have to install Certificate Authority root certificate file “ca_root.crt” on each client
 computer into OCS Inventory Agent installation directory, under the name “cacert.pem”.
 
-##Example: Deploying new version of Service agent for Windows
+## Example: Deploying new version of Service agent for Windows
 
 ![Build access](../../img/server/reports/deploying_packages_14.png)
 
 Create a ZIP “OCS-NG-Windows-Agent-2.0.zip” including file “OCS-NG-Windows-Agent-Setup.exe”.
 
-Next, connect to Administration console and go to menu “Deployment / Build”.
+Next, connect to Administration console and go to menu "Deployment / Build".
 
-* **Fill in package name**, for example “Ocs Agent Service 2.0”,
-* **select target operating system** “Windows”,
-* **select protocol** “HTTP”,
-* **select priority** “5”,
+* **Fill in package name**, for example "Ocs Agent Service 2.0",
+* **select target operating system** "Windows",
+* **select protocol** "HTTP",
+* **select priority** "5",
 * **browse to select ZIP file**,
-* **select action** “Launch”
-* **and fill in file name** with Service Agent setup command line switches, for example
-“OcsAgentSetup.exe /S /NOSPLASH /UPGRADE /NP /DEBUG /SERVER:my_ocs_server.domain.tld”
-(/S to run installer in silent mode, /NOSPLASH to disable installer spash screen, /UPGRADE to
-indicate that you’re upgrading an already installed Service Agent, /NP to disable use of IE proxy
-settings, /DEBUG to enable creation of log files, /SERVER to indicate that agent must connect to
-server at address “my_ocs_server.domain.tld”).
+* **select action** "Launch",
+* **and fill in file name** with Service Agent setup command line switches, for example "OcsAgentSetup.exe /S /NOSPLASH /UPGRADE /NP /DEBUG /SERVER=my_ocs_server.domain.tld"
+(/S to run installer in silent mode, /NOSPLASH to disable installer spash screen, /UPGRADE to indicate that you’re upgrading an already installed Service Agent, /NP to disable use of IE proxy settings, /DEBUG to enable creation of log files, /SERVER to indicate that agent must connect to server at address "my_ocs_server.domain.tld").
 
-**`Note: Don’t forget /UPGRADE command line switch to allow upgrading an existing OCS Inventory NG agent
-installed as a service.`**
+**`Note: Don’t forget /UPGRADE command line switch to allow upgrading an existing OCS Inventory NG agent installed as a service.`**
 
 ![Package builder page launch](../../img/server/reports/deploying_packages_5.png)
 
