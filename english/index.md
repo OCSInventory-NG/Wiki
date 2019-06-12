@@ -25,7 +25,6 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 * [Querying inventory results](04.Management-console-and-its-advanced-features/Querying-inventory-results.md)
 * [Using computers groups](04.Management-console-and-its-advanced-features/Using-computers-groups.md)
-* [Using the Plugins feature](04.Management-console-and-its-advanced-features/Using-the-Plugins-feature.md)
 * [Using assets categorization](04.Management-console-and-its-advanced-features/Using-Assets-Categorization.md)
 * [Using softwares categorization](04.Management-console-and-its-advanced-features/Using-Software-Categorization.md)
 * [Managing users profiles of the web interface](04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
