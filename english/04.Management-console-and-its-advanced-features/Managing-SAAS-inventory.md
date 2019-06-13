@@ -1,41 +1,55 @@
 # Managing SAAS Inventory
 
-SAAS (Software as a Service) Inventory feature has been added in release 2.7. This feature is completed by an OCS Windows Agent plugin named : Saas.ps1. 
+## Introduction
 
-`Note : Saas plugin is automatically installed on Windows Agent version 2.6 and later.`
+SAAS (Software as a Service) Inventory feature has been added in release 2.7.
+
+At the moment, this feature is only available for windows agent. Its goal is to inventory web applications used on a computer or by a user. OCSInventory will look at the DNS cache of the windows machine to see which web site has been reached in a given amount of time. 
+
+This inventory feature is installed as a plugin on the Windows Agent (by default in "C:\Programs files\OCS Inventory Agent\Plugins") and is named "Saas.ps1". Thus, removing this file will prevent SAAS inventory from working.
+
+SAAS Inventory is working only with agent 2.6.0.0 and newer.
 
 ## Enable SAAS Inventory 
 
-To activate SAAS Inventory, go to ```Configuration > General configuration```, and click on _Inventory_ entry in left navigation pane. At the bottom page click on _ON_ for **INVENTORY_SAAS_ENABLED**.
+To activate SAAS Inventory, go to ```Configuration > General configuration```, and click on _Inventory_ entry in left navigation pane. At the bottom of the page click on _ON_ for **INVENTORY_SAAS_ENABLED**.
 
 ![saas enabled](../../img/server/reports/SAAS_activate.png)
 
-## Register SAAS to be inventoried
+## Register a domain to be inventoried
 
-Go to ```Inventory > SAAS Inventory``` and click on _Add SAAS_ in left menu.
+Since we are using the DNS cache of the windows machine, all the DNS entries are retrieved by the agent. To solve this problem, we implemented a whitelist which allow to filter the domain names to inventory.
+
+To add a new domain go to ```Inventory > SAAS Inventory``` and click on _Add SAAS_ in left menu.
 
 ![saas menu](../../img/server/reports/SAAS_menu.png)
 
-In order, enter the name that corresponds to the SAAS you want to register and its associated DNS. After, click on _OK_.   
+In order, enter the name that corresponds to the SAAS you want to register and its associated domain. After, click on _OK_.   
 
 ![saas register](../../img/server/reports/SAAS_add.png)
 
 
-## Make a Software as a Service Inventory
+## Show inventory results
 
-When SAAS Inventory has been enabled, Saas.ps1 on the Windows Agent plugin's folder and have been created an entry on SAAS Inventory menu, execute a Windows machine inventory. Go to ```Inventory > SAAS Inventory``` and click on _SAAS list_ in left menu.
+In the case SAAS Inventory is enabled and configured, you will have to wait for the agent to send its inventory or trigger one manually.
 
-Here the different informations display :
+### On a global reporting
 
-+ Name : SAAS name you have been created before.
-+ Entry : associated DNS.
-+ Data : IP address associated to the DNS.
-+ Count : Number of machine with this entry.
+To display the inventoried data, go to ```Inventory > SAAS Inventory``` and click on _SAAS list_ in left menu.
+
+You will find below the displayed informations :
+
++ Name : SAAS name of the matching entry.
++ Entry : Associated domain.
++ Data : IP address associated to the domain.
++ Count : Number of machine matching this entry.
 
 ![saas list](../../img/server/reports/SAAS_list_all.png)
 
-When you click on the count, you will be redirected to a search reporting based on the Entry.
+When you click on the count number, you will be redirected to a search reporting based on the domain name.
 
-Also, you can see SAAS inventoried per machine. Go to computer details page and click on _Software_ in left navigation pane. Below software table, the SAAS Inventory table list all Software as a Service entry for this machine.
+### On computer details
+
+Go to computer details page and click on _Software_ in left navigation pane. Below software table, the SAAS Inventory table list all matching entries for this machine.
 
 ![saas computer details](../../img/server/reports/SAAS_computer_detail.png)
