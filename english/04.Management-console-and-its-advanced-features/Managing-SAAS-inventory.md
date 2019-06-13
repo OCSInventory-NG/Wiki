@@ -2,7 +2,7 @@
 
 ## Introduction
 
-SAAS (Software as a Service) Inventory feature has been added in release 2.7.
+SAAS (Software as a Service) Inventory feature has been added in 2.7 release.
 
 At the moment, this feature is only available for windows agent. Its goal is to inventory web applications used on a computer or by a user. OCSInventory will look at the DNS cache of the windows machine to see which web site has been reached in a given amount of time. 
 
