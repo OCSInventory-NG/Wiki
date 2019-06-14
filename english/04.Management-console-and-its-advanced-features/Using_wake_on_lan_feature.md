@@ -18,12 +18,11 @@ To trigger a Wake On Lan on multiple machines, navigate to the ```All computers`
 
 **`Note : you can perform the same operation from a multi-criteria search`**
 
-## Schedule wol
+## Scheduled wol
 
-To schedule WOL, navigate to the ```All computers``` page. Check machine you need to wake up and click on ```Mass Processing``` button. Navigate to the ```Wake On Lan``` tab and check ```Schedule a Wake On Lan```.
+To schedule a WOL, navigate to the ```All computers``` page. Check machine you need to wake up and click on ```Mass Processing``` button. Navigate to the ```Wake On Lan``` tab and check ```Schedule a Wake On Lan```.
 
 Click on ```Save``` when you scheduled your WOL.
-
 
 ![Schedule WOL](../../img/server/reports/wol_schedule.png)
 
