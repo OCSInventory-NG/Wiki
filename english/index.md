@@ -27,6 +27,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Using computers groups](04.Management-console-and-its-advanced-features/Using-computers-groups.md)
 * [Using assets categorization](04.Management-console-and-its-advanced-features/Using-Assets-Categorization.md)
 * [Using softwares categorization](04.Management-console-and-its-advanced-features/Using-Software-Categorization.md)
+* [Using Wake On Lan](04.Management-console-and-its-advanced-features/Using-wake-on-lan-feature.md)
 * [Managing users profiles of the web interface](04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
 * [Managing administrative data](04.Management-console-and-its-advanced-features/Managing-administrative-data.md)
 * [Managing CVE-search reporting](04.Management-console-and-its-advanced-features/CVE-Search-management.md)
