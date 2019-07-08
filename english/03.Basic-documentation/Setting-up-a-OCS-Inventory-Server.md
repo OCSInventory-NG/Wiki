@@ -14,12 +14,16 @@ These 4 components can be hosted on a single computer or on different computers 
 
 **Figure 1 : OCS Inventory NG communication architecture.**
 
-**Database** server currently can only be MySQL 5.4 or higher with InnoDB engine active.
+**Database** server currently can only be MySQL 5.5 or MariaDB with InnoDB engine active.
 **Communication server** needs Apache Web Server 2.2.X / 2.4.X and is written in PERL as an Apache module. Why? Because PERL scripts are compiled when Apache starts, and not at each request. This is better performance-wise. Communication server may require some additional PERL modules, according to your distribution.
 **Deployment server** needs any Web Server with SSL enabled.
 **Administration console** is written in PHP 5.6 (or higher) and runs under Apache Web Server 2.2.X /2.4.X. Administration console requires ZIP and GD support enabled in PHP in order to use package deployment.
 
-# Under Linux Operating System
+# Under Fedora/RHEL/Centos
+
+We provide RPM for RedHat Linux and derivate. Instructions can be find here: [Install with RPM](Setting-up-a-OCS-Inventory-Server-with-rpm.md)
+
+# Install from Source
 
 We assume that you have:
 
@@ -79,7 +83,7 @@ Already the web communication server requires mysql dependencies if you choose t
 It is better for system integrity to use your distribution's precompiled packages when they are available.
 Some of these packages are only available in`[`EPEL`](https://fedoraproject.org/wiki/EPEL/FAQ#howtouse)`.`**
 
-**`Note: On Fedore/Redhat/Centos 7 the package " Apache DBI " wasn't in the repo EPEL you can find the rpm `[`here`](https://centos.pkgs.org/7/epmel-x86_64/perl-Apache-DBI-1.12-2.el7.noarch.rpm.html)`.`**
+**`Note: On Fedore/Redhat/Centos 7 the package " Apache DBI " wasn't in the repo EPEL you can find the rpm `[`here`](http://rpm.ocsinventory-ng.org/enterprise/7/x86_64/perl-Apache-DBI-1.12-2.el7.ocs.noarch.rpm)`.`**
 
 **On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to set required modules up:
 
@@ -136,25 +140,6 @@ Already the web communication server requires mysql dependencies if you choose t
 **On Debian 9 Stretch like Linux**, you can use “apt” to set it up:
 
     apt install php-gd
-
-## Installing OCS Inventory Server with RPM
-
-**On Fedora/Redhat/Centos 7** you can install the ocs server with RPM
-
-You need to have "wget" to download the repo of EPEL and OCS
-
-    wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
-
-You can install the repo with "yum"
-
-    yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm
-
-To install the OCS inventory server and requirement use this command:
-
-    yum install ocsinventory-server
-
-**`Note : The server gonna be installed by default settings like using the setup.sh`**
 
 ## Installing management server
 
