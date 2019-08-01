@@ -38,7 +38,7 @@ Plugin site : https://plugins.ocsinventory-ng.org/
 
 Then, place the downloaded zip file on the `extensions` folder of your Administration server and unzip it.
 
-**` The Administration server's extenstions folder is /usr/share/ocsinventory-reports/ocsreports/extensions by default `**
+**` The Administration server's extensions folder is /usr/share/ocsinventory-reports/ocsreports/extensions by default `**
 
 You may delete the zip file after it is unzipped.
 
