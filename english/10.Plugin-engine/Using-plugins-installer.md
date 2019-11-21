@@ -120,10 +120,25 @@ The script will copy all the needed files into your Communication server's confi
 To install plugins without the `install_plugin.py` script, log into your Communication server and go to its configuration 
 directory (By default "/etc/ocsinventory-server/").
 
-There, create a new directory into "perl/Apache/Ocsinventory/Plugins/" with the name of the plugin and place the
-Map.pm file inside.
+There, create a new directory into "perl/Apache/Ocsinventory/Plugins/" with the name of the plugin :
+
+```
+sudo mkdir /etc/ocsinventory-server/perl/Apache/Ocsinventory/Plugins/PluginName
+```
+
+**`Note : Don't forget to put the first letter in uppercase`**
+
+Next, place the Map.pm file inside.
+
+```
+sudo cp Map.pm /etc/ocsinventory-server/perl/Apache/Ocsinventory/Plugins/PluginName/
+```
 
 Finally, place the plugin's configuration file into the "plugins/" folder.
+
+```
+sudo cp pluginname.conf /etc/ocsinventory-server/plugins/
+```
 
 **`Note :  Don't forget to restart your Communication server's apache service after the installation has finished`**
 
