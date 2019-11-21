@@ -164,9 +164,9 @@ _MYSHARE_ on server _MYSERVER_).
 
     @echo off
     REM Check if CA file exists
-    if exist “C:\Program Files\OCS Inventory Agent\cacert.pem” goto CA_END
+    if exist “%PROGRAMDATA%\OCS Inventory NG\Agent\cacert.pem” goto CA_END
     REM CA file does not exists, install it
-    Copy \\MYSERVER\MYSHARE\cacert.pem “C:\Program Files\OCS Inventory Agent\cacert.pem”
+    Copy \\MYSERVER\MYSHARE\cacert.pem “%PROGRAMDATA%\OCS Inventory NG\Agent\cacert.pem”
     :CA_END
 
 **If you have a Public Key Infrastructure**, you must create a valid server certificate for
