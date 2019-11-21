@@ -31,7 +31,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Managing users profiles of the web interface](04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
 * [Managing administrative data](04.Management-console-and-its-advanced-features/Managing-administrative-data.md)
 * [Managing CVE-search reporting](04.Management-console-and-its-advanced-features/CVE-Search-management.md)
-* [Managing SAAS Inventory](04.Management-console-and-its-advanced-features/Managing-SAAS-inventory.md)
+* [Managing Web application Inventory](04.Management-console-and-its-advanced-features/Managing-SAAS-inventory.md)
 * [Synchronization between OCS and LDAP](04.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
 * [Export a computer](04.Management-console-and-its-advanced-features/Export-a-computer.md)
 * [Configure mail notification](04.Management-console-and-its-advanced-features/Configure-mail-notification.md)
