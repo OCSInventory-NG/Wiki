@@ -11,7 +11,7 @@ Since version 2.7, OCS Inventory's SNMP feature has been reworked
 
 OCS Inventory SNMP is now based on a dynamic data model, which mean that the database model and inventory will be adapted depending on the queried device.
 
-Bascially, OCS will work using the following method :
+Basically, OCS will work using the following method :
 1 - Declare a type and setup a matching criteria for this type
 2 - Configure the needed labels (fields) for this type
 3 - Configured the inventoried OID or import a mib file and link them to a label
@@ -42,7 +42,7 @@ Below, you can see all created type. You can remove a type using the red cross.
 
 ## SNMP Label configuration
 
-A label is bascally a field. When a label is linked to a type it will update the type's data model.
+A label is basically a field. When a label is linked to a type it will update the type's data model.
 
 To create a label, click on `Create label` and create a label for every fields you need on your device. 
 
@@ -73,6 +73,8 @@ If you want to display just one type configuration, select the type you want wit
 ![SNMP feature configuration table](../../img/server/reports/snmp_feature_config_table.png)
 
 ### 2 - Configuring type from MIBs file
+
+**`Warning : We advise you to increase your max_input_vars value on server's php.ini otherwise larger MIB file won't be imported correctly`**
 
 Go to `Configuration > General configuration > SNMP` and set your server MIB folder directory. All MIBs files will need to be stored in this directory. We recommand to use the standard MIBs directory of your operating system.
 

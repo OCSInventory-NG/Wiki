@@ -45,6 +45,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 * [Using IP discovery feature](06.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md)
 * [Using SNMP scan feature](06.Network-Discovery-with-OCS-Inventory-NG/Using-SNMP-scan-feature.md)
+* [Managing SNMP on Web Console](06.Network-Discovery-with-OCS-Inventory-NG/Managing-and-using-SNMP-feature.md)
 
 ## OCS Tools
 
