@@ -91,7 +91,7 @@ Some of these packages are only available in`[`EPEL`](https://fedoraproject.org/
 
 **On Debian 9 Stretch like Linux**, you can use “apt” to set required modules up:
 
-    apt install libxml-simple-perl libperl5.24 libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl make build-essential
+    apt install libxml-simple-perl libdbi-perl libdbd-mysql-perl libapache-dbi-perl libnet-ip-perl libsoap-lite-perl libarchive-zip-perl make build-essential
     cpan install XML::Entities
 
 **On Gentoo like Linux**, you can use "emerge" to get required modules set up:
