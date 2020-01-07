@@ -39,9 +39,7 @@ In this document a number of assumptions are made:
 
 ### **Usage**
 
-Download the **Packager** and the latest
-[[OCS-NG-Windows-Agent-Setup.exe](http://www.ocsinventory-ng.org/en/#download-en)]
-program from the OCS Inventory Web Site.
+Download the **Packager** and the latest **Windows agent** from our website.
 
 Prepare your certificate (needed for software remote deployment).
 
