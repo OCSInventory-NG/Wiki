@@ -21,6 +21,10 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Deploying database server](03.Basic-documentation/Deploying-database-server.md)
 * [Updating the server](03.Basic-documentation/Updating-the-server.md)
 
+## Docker documentation
+
+* [Using docker image](13.Docker-documentation/Using-the-docker-image.md)
+
 ## Management console and its advanced features
 
 * [Querying inventory results](04.Management-console-and-its-advanced-features/Querying-inventory-results.md)
