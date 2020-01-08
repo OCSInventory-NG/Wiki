@@ -36,7 +36,7 @@ You currently have two options :
 
 OCS Inventory image doesn't come with MySQL instance, if you want one, please check the documentation below (docker-compose)
 
-To run a OCS Inventory instance with the most settings, you can use the following command :
+To run a OCS Inventory instance with the most basics settings, you can use the following command :
 
 ```
 docker run \
@@ -51,6 +51,8 @@ docker run \
 -itd \
 ocsinventory/ocsinventory-docker-image:MY_TAG
 ```
+
+See *List of all image tags* for more informations.
 
 ### OCS Inventory image with Mariadb (using docker-compose)
 
@@ -71,7 +73,19 @@ An then run :
 docker-compose up -d
 ```
 
-### List of all environements variables available 
+### A note on OCS Mysql SSL
+
+Since 2.7 and nightly after 1st january of 2020, our product support MySQL SSL connection.
+All env variables are usable in our docker image but we don't provide default volume for this type of configuration.
+You will have to add the volume by yourself. See *List of all environements variables available* for more informations 
+
+### A note on OCS HTTPS Configuration
+
+OCS Inventory support HTTPS inventory and webconsole access. 
+You will have to configure ocsinventory-reports.conf and z-ocsinventory-server.conf file which are (by default) saved in volumes.
+Although there is no volume created to store the SSL certificates.
+
+## List of all environments variables available 
 
 You will find below the list of all available environments variables available for our docker image.
 
@@ -93,9 +107,24 @@ You will find below the list of all available environments variables available f
 | **OCS_WEBCONSOLE_DIR** | OCS webconsole directory  | /usr/share/ocsinventory-reports/ocsreports/ |
 | **OCS_PERLEXT_DIR** | OCS communication perl extensions directory | /etc/ocsinventory-server/perl/ |
 | **OCS_PLUGINSEXT_DIR** | OCS communication plugins extensions directory | /etc/ocsinventory-server/plugins/ |
+| **OCS_SSL_ENABLED** | OCS MySQL SSL Enabled | 0 (NO) |
+| **OCS_SSL_WEB_MODE** | OCS MySQL mode for webconsole | NULL : Can be either MYSQLI_CLIENT_SSL or MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT (see mysql documentation for more information)  |
+| **OCS_SSL_COM_MODE** | OCS MySQL mode for communication server  | NULL : Can be either SSL_MODE_PREFERRED (SSL enabled but optional) / SSL_MODE_REQUIRED (SSL enabled, mandatory but don't verify server certificate. Ex self signed cert) / SSL_MODE_STRICT (SSL enabled, mandatory and server cert must be trusted) |
+| **OCS_SSL_KEY** | SSL Key file path |  |
+| **OCS_SSL_CERT** | SSL Cert file path |  |
+| **OCS_SSL_CA** | SSL CA file path |  |
 | **TZ** | Default timezone | Europe/Paris |
 
 *`NOTE : Default volumes are created for OCS_LOG_DIR, OCS_VARLIB_DIR, OCS_WEBCONSOLE_DIR, OCS_PERLEXT_DIR, OCS_PLUGINSEXT_DIR. If you edit these variables you will need to create your own volumes.`*
+
+## List of all image tags 
+
+| Tag | Description | Usage |
+| :--- | :---: | :--- |
+| **2.6** | Stable version of OCS Inventory | Production |
+| **nightly** | Rolling releases | Production / Testing |
+| **dev** | Apache run directory | Developpment / Testing |
+| **latest** | Use the last stable version of OCS Inventory | Production |
 
 ## Use older image tags
 
