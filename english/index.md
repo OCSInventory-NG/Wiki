@@ -24,7 +24,6 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 ## Docker documentation
 
 * [Using docker image](13.Docker-documentation/Using-the-docker-image.md)
-* [Using docker developpement environement](13.Docker-documentation/Using-docker-development-environement.md)
 
 ## Management console and its advanced features
 
