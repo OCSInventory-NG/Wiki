@@ -9,7 +9,7 @@ docker pull ocsinventory/ocsinventory-docker-image:latest
 
 Note : latest will pull the latest stable version
 
-To pull nightly environement run :
+To pull nightly environment run :
 ```
 docker pull ocsinventory/ocsinventory-docker-image:nightly
 ```
@@ -77,7 +77,7 @@ docker-compose up -d
 
 Since 2.7 and nightly after 1st january of 2020, our product support MySQL SSL connection.
 All env variables are usable in our docker image but we don't provide default volume for this type of configuration.
-You will have to add the volume by yourself. See *List of all environements variables available* for more informations 
+You will have to add the volume by yourself. See *List of all environments variables available* for more informations 
 
 ### A note on OCS HTTPS Configuration
 
