@@ -66,11 +66,13 @@ have to use web interface to configure this feature.`**
 -m | --msg | Show message returned my ocsinventory
 -v | --verbose | Verbose mode
 --stdin |   | Read data from STDIN
+--sslmode |   | Enable or disable SSL (0|1)
+--cafile |   | CA File to use for SSL Communication
 
 
 **`Note: You can specify a --file or a --directory or STDIN. Current directory is the default`**
 
-## Exemples
+## Examples
 
 ### **Synchronsation of one inventory**
 
@@ -79,6 +81,10 @@ have to use web interface to configure this feature.`**
 ### **Synchronsation of all inventories in a specific directory**
 
     perl ocsinventory-injector.pl  -v -r -d /my/specific/directory -u http://OCSmasterServer/ocsinventory
+
+### **Synchronsation of one inventory using HTTPS**
+
+    perl ocsinventory-injector.pl -f MYFILE.OCS -u https://OCSmasterServer/ocsinventory -v --sslmode 1 --cafile /path/to/ca/file
 
 ## Cron job
 
