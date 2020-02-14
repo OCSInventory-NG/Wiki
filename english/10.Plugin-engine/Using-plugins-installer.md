@@ -4,7 +4,7 @@ Since 2.6, the plugin engine has been completely rewritten and improved.
 
 **`Note : Be careful to download the plugin version compatible with the extension engine`**
 
-## Prerequisites for the extention engine
+## Prerequisites for the extension engine
 
 To use the extension engine, Python3 is required.
 
@@ -36,7 +36,7 @@ OR
 
 Plugin site : https://plugins.ocsinventory-ng.org/
 
-Then, place the downloaded zip file on the `extensions` folder of your Administration server and unzip it.
+Then, place the downloaded zip file in the `extensions` folder of your Administration server and unzip it.
 
 **` The Administration server's extensions folder is /usr/share/ocsinventory-reports/ocsreports/extensions by default `**
 
@@ -77,7 +77,7 @@ Where is the plugins location [/usr/share/ocsinventory-reports/ocsreports/extens
 _Don't forget the last slash_
 
 After, the script will present you all the plugins that can be installed.
-Select with a number the plugin that you want to install:
+Select the number of the plugin that you want to install:
 
 ``` bash
 [0] => plugin1
@@ -89,10 +89,10 @@ Select with a number the plugin that you want to install:
 
 Now there are two specific cases:
 
- * The Ocs server is in same server.
- * Ocs Server is in other server.
+ * OCS Comuunication server is on the same server.
+ * OCS Communication server is on an other server.
 
-In the case where you Communication server is on another server, you need to enter 
+In the case where your Communication server is on an another server, you need to enter 
 the server's informations:
 
 ``` bash
@@ -104,7 +104,7 @@ What is the password:
 Password:
 ```
 
-In both case, you will have to enter the path of you Communication server's configuration directory:
+In both case, you will have to enter the path of your Communication server's configuration directory:
 
 ``` bash
 Where is the server location [/etc/ocsinventory-server]
@@ -117,7 +117,7 @@ The script will copy all the needed files into your Communication server's confi
 
 ### Server installation without script
 
-To install plugins without the `install_plugin.py` script, log into your Communication server and go to its configuration 
+To install plugins without the `install_plugin.py` script, log into your Communication server and go to the configuration 
 directory (By default "/etc/ocsinventory-server/").
 
 There, create a new directory into "perl/Apache/Ocsinventory/Plugins/" with the name of the plugin :
