@@ -11,8 +11,19 @@ To use the extension engine, Python3 is required.
 First, you need one python's package : scp.
 Install it with the command pip3.
 
-```bash
+On debian based systems :
+
+```
 sudo apt install python3-pip
+sudo pip3 install scp
+```
+
+On redhat based systems :
+
+```
+yum install epel-release
+yum update
+yum install python34 python34-pip
 sudo pip3 install scp
 ```
 
