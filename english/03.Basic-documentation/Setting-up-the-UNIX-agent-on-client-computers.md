@@ -78,7 +78,7 @@ please refer to this file to have detailed error messages.**
 
 ## Installing UNIX Agent with RPM
 
-**On Fedora/Redhat/Centos 7** you can install the unix agent with RPM
+**On Redhat/Centos 7** you can install the unix agent with RPM
 
 You need to have "wget" to download the repo of EPEL and OCS
 
@@ -92,6 +92,36 @@ You can install the repo with "yum"
 To install the unix agent and requirement use this command:
 
    $ sudo yum install ocsinventory-agent
+
+**On Redhat/Centos 8** you can install the unix agent with RPM
+
+You need to have "wget" to download the repo of EPEL and OCS
+
+   $ sudo wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+   $ sudo wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el8.ocs.noarch.rpm
+
+You can install the repo with "dnf"
+
+   $ sudo  dnf install ocsinventory-release-latest.el8.ocs.noarch.rpm epel-release-latest-8.noarch.rpm
+
+To install the unix agent and requirement use this command:
+
+   $ sudo dnf --enablerepo=PowerTools --enablerepo=epel-playground install ocsinventory-agent
+
+**On Fedora** you can install the unix agent with RPM
+
+You need to have "wget" to download the OCS's repo
+
+   $ export FEDORA_VERSION=$(awk '{print $3}' /etc/fedora-release)
+   $ sudo wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc$FEDORA_VERSION.ocs.noarch.rpm
+
+You can install the repo with "dnf"
+
+   $ sudo  dnf install ocsinventory-release-latest.fc$FEDORA_VERSION.ocs.noarch.rpm
+
+To install the unix agent and requirement use this command:
+
+   $ sudo dnf install ocsinventory-agent
 
 **`Note : The unix agent gonna be installed with default settings.`**
 
