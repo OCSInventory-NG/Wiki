@@ -19,24 +19,31 @@ For more information about using selinux, please read [this documentation](https
 
 The simplest way is to install the ocsinventory-release package which provides the repository configuration for YUM/DNF and the GPG key used to sign the RPM.
 
-### Enterprise Linux 7 (with EPEL) x86_64
+### Enterprise Linux 7 (with EPEL and Remi) x86_64
 
     wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
     wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm
     wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el7.ocs.noarch.rpm
     yum install ocsinventory-release-latest.el7.ocs.noarch.rpm epel-release-latest-7.noarch.rpm remi-release-7.rpm
 
-### Fedora 28 x86_64
+### Enterprise Linux 8 (with EPEL and Remi) x86_64
 
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc28.ocs.noarch.rpm https://rpms.remirepo.net/fedora/remi-release-28.rpm
+    wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    wget https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el8.ocs.noarch.rpm
+    dnf install ocsinventory-release-latest.el8.ocs.noarch.rpm epel-release-latest-8.noarch.rpm remi-release-8.rpm
 
-### Fedora 29 x86_64
+### Fedora 29 (with Remi) x86_64
 
     dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc29.ocs.noarch.rpm https://rpms.remirepo.net/fedora/remi-release-29.rpm
 
 ### Fedora 30 x86_64
 
     dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc30.ocs.noarch.rpm
+
+### Fedora 31 x86_64
+
+    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc31.ocs.noarch.rpm
 
 # Install OCS Inventory server
 
@@ -52,7 +59,18 @@ Here will be the instructions for installing the server with the Admin GUI.
 
 ## Enterprise Linux 7
 
+    yum install yum-utils
+    yum-config-manager --enable remi
+    yum-config-manager --enable remi-php73
     yum install ocsinventory
+
+## Enterprise Linux 8
+
+    dnf install yum-utils
+    yum-config-manager --enable remi
+    dnf module reset php
+    dnf module install php:remi-7.3
+    dnf install --enablerepo=PowerTools ocsinventory
 
 ## Fedora
 
@@ -82,7 +100,7 @@ You need to enable and launch apache:
 
 On RHEL 7 or Centos 7, nothing is needed for php.
 
-On Fedora, php-fpm is used and must be enable:
+On Fedora, RHEL 8 and Centos 8, php-fpm is used and must be enable:
 
     systemctl enable php-fpm
     systemctl start php-fpm
