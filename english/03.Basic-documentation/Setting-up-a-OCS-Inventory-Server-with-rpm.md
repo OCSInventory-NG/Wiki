@@ -109,8 +109,8 @@ On Fedora, RHEL 8 and Centos 8, php-fpm is used and must be enable:
 
 By default, firewalld block all needed port. To open them:
 
-    firewall-cmd --zone=public --add-service=http
-    firewall-cmd --zone=public --add-service=https
+    firewall-cmd --zone=public --add-service=http --permanent
+    firewall-cmd --zone=public --add-service=https --permanent
     firewall-cmd --reload
 
 ## Configuring management server
