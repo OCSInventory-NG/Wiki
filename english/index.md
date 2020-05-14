@@ -25,6 +25,11 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 * [Using docker image](13.Docker-documentation/Using-the-docker-image.md)
 
+## Authentication
+
+* [Managing users profiles of the web interface](04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
+* [Synchronization between OCS and LDAP](04.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
+
 ## Management console and its advanced features
 
 * [Querying inventory results](04.Management-console-and-its-advanced-features/Querying-inventory-results.md)
@@ -33,14 +38,17 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Using softwares categorization](04.Management-console-and-its-advanced-features/Using-Software-Categorization.md)
 * [Using Wake On Lan](04.Management-console-and-its-advanced-features/Using-wake-on-lan-feature.md)
 * [Using and managing saved searches](04.Management-console-and-its-advanced-features/Using-Saved-Searches.md)
-* [Managing users profiles of the web interface](04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
 * [Managing administrative data](04.Management-console-and-its-advanced-features/Managing-administrative-data.md)
-* [Managing CVE-search reporting](04.Management-console-and-its-advanced-features/CVE-Search-management.md)
 * [Managing Web application Inventory](04.Management-console-and-its-advanced-features/Managing-SAAS-inventory.md)
-* [Synchronization between OCS and LDAP](04.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
 * [Export a computer](04.Management-console-and-its-advanced-features/Export-a-computer.md)
 * [Configure mail notification](04.Management-console-and-its-advanced-features/Configure-mail-notification.md)
 * [Configure OCS news](04.Management-console-and-its-advanced-features/Configure-OCS-news.md)
+
+## CVE Inventory 
+
+* [Enabled and configure CVE-search reporting](04.Management-console-and-its-advanced-features/CVE-Search-management.md)
+* [Setup matching regex for CVE-search server](04.Management-console-and-its-advanced-features/CVE-Search-match-regex.md)
+* [Visualize CVE Inventory history](04.Management-console-and-its-advanced-features/CVE-Search-visualize-history.md)
 
 ## Deployment
 
