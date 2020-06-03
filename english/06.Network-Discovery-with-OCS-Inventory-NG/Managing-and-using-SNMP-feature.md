@@ -62,7 +62,7 @@ When a type and their corresponding label are created, you will be able to confi
 
 ### 1 - Manual type configuration
 
-Click on `Type configuration` on the left navigation panel. Select your type, select your label and set the OID coresponding to the label's type. If you want tu use this field for reconciliation, check `Use for reconciliation`. Click on `Send`. 
+Click on `Type configuration` on the left navigation panel. Select your type, select your label and set the OID coresponding to the label's type. If you want to use this field for reconciliation, check `Use for reconciliation`. Click on `Send`. 
 
 ![SNMP feature configuration type](../../img/server/reports/snmp_feature_config_type.png)
 
