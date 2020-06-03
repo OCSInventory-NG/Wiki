@@ -88,11 +88,16 @@ Select the MIB file you want to use.
 ![SNMP feature MIB](../../img/server/reports/snmp_feature_mib.png)
 
 OCS Inventory will scan the mib file and show every available entry in it. 
-Check every OID needed and link it to one of the label created earlier.
 
 **`Note : Keep in mind that if a MIB depend from another MIB files, you will need to have them all on the system.`**
 
-![SNMP feature MIB configuration](../../img/server/reports/snmp_feature_mib_config.png)
+Select the type that you want to configure.
+
+![SNMP feature MIB type](../../img/server/reports/snmp_scan_feature_type_mib.png)
+
+Check every OID needed and link it to one of the label created earlier. You can search by OID name string and Numeric OID.
+
+![SNMP feature MIB configuration](../../img/server/reports/snmp_scan_feature_mib_details.png)
 
 On type configuration panel, you can see all type configuration. You can remove configuration with the red cross.
 
