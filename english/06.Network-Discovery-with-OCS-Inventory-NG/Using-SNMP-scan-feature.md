@@ -25,7 +25,6 @@ To manage SNMP general options in Web Interface, go to `Configuration` menu, cli
 This is the SNMP configuration options available:
 
 * **SNMP**: activate or deactivate SNMP scan feature. If this option is _OFF_, no SNMP scans will be made by any OCS agent
-* **SNMP_INVENTORY_DIFF**: use SNMP Inventory diff feature to lighten your DB backend. SNMP inventory data will be written in database only if it changes. OCS server will use _snmp_laststate_ table to make this comparison
 * **SNMP_MIB_DIRECTORY**: set the server MIBs folder path
 
 ### **Manage SNMP communities**
@@ -150,7 +149,7 @@ The left panel lists all types that you created before with the SNMP data model 
 
 ![SNMP Inventory table](../../img/server/reports/snmp_feature_inventory_tables.png)
 
-Click on the loop icon to display the SNMP Inventory details of one equipment.
+Click on the detail icon to display the SNMP Inventory details of one equipment.
 
 ![SNMP Inventory table](../../img/server/reports/snmp_feature_inventory_detail.png)
 

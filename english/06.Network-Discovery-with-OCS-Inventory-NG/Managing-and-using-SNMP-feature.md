@@ -1,6 +1,6 @@
 # Managing SNMP on Web Console
 
-Since version 2.8, OCS Inventory's SNMP feature has been reworked
+Since version 2.8 and nightlies from the 10th of june, OCS Inventory's SNMP feature has been reworked
 
 ## Prerequisites
 
@@ -12,9 +12,10 @@ Since version 2.8, OCS Inventory's SNMP feature has been reworked
 OCS Inventory SNMP is now based on a dynamic data model, which mean that the database model and inventory will be adapted depending on the queried device.
 
 Basically, OCS will work using the following method :
-1 - Declare a type and setup a matching criteria for this type
-2 - Configure the needed labels (fields) for this type
-3 - Configured the inventoried OID or import a mib file and link them to a label
+
+* Declare a type and setup a matching criteria for this type
+* Configure the needed labels (fields) for this type
+* Configured the inventoried OID or import a mib file and link them to a label
 
 ## SNMP Type configuration
 
