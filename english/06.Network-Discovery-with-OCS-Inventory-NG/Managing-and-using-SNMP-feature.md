@@ -1,6 +1,6 @@
 # Managing SNMP on Web Console
 
-Since version 2.7, OCS Inventory's SNMP feature has been reworked
+Since version 2.8 and nightlies from the 10th of june, OCS Inventory's SNMP feature has been reworked
 
 ## Prerequisites
 
@@ -12,9 +12,10 @@ Since version 2.7, OCS Inventory's SNMP feature has been reworked
 OCS Inventory SNMP is now based on a dynamic data model, which mean that the database model and inventory will be adapted depending on the queried device.
 
 Basically, OCS will work using the following method :
-1 - Declare a type and setup a matching criteria for this type
-2 - Configure the needed labels (fields) for this type
-3 - Configured the inventoried OID or import a mib file and link them to a label
+
+* Declare a type and setup a matching criteria for this type
+* Configure the needed labels (fields) for this type
+* Configured the inventoried OID or import a mib file and link them to a label
 
 ## SNMP Type configuration
 
@@ -62,15 +63,15 @@ When a type and their corresponding label are created, you will be able to confi
 
 ### 1 - Manual type configuration
 
-Click on `Type configuration` on the left navigation panel. Select your type, select your label and set the OID coresponding to the label's type. Click on `Send`. 
+Click on `Type configuration` on the left navigation panel. Select your type, select your label and set the OID coresponding to the label's type. If you want to use this field for reconciliation, check `Use for reconciliation`. Click on `Send`. 
 
-![SNMP feature configuration type](../../img/server/reports/snmp_feature_config_type.png)
+![SNMP feature configuration type](../../img/server/reports/snmp_feature_configuration_type.png)
 
 Below, you can see all type configuration. You can remove configuration using the red cross.
 
 If you want to display just one type configuration, select the type you want with the select field `Filter by type` and click on `Filter`.
 
-![SNMP feature configuration table](../../img/server/reports/snmp_feature_config_table.png)
+![SNMP feature configuration table](../../img/server/reports/snmp_feature_configuration_table.png)
 
 ### 2 - Configuring type from MIBs file
 
@@ -88,11 +89,16 @@ Select the MIB file you want to use.
 ![SNMP feature MIB](../../img/server/reports/snmp_feature_mib.png)
 
 OCS Inventory will scan the mib file and show every available entry in it. 
-Check every OID needed and link it to one of the label created earlier.
 
 **`Note : Keep in mind that if a MIB depend from another MIB files, you will need to have them all on the system.`**
 
-![SNMP feature MIB configuration](../../img/server/reports/snmp_feature_mib_config.png)
+Select the type that you want to configure.
+
+![SNMP feature MIB type](../../img/server/reports/snmp_scan_feature_type_mibs.png)
+
+Check every OID needed and link it to one of the label created earlier. You can search by OID name string and Numeric OID.
+
+![SNMP feature MIB configuration](../../img/server/reports/snmp_scan_feature_mib_detail.png)
 
 On type configuration panel, you can see all type configuration. You can remove configuration with the red cross.
 
