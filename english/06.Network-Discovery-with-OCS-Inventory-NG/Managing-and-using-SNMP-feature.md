@@ -1,6 +1,6 @@
 # Managing SNMP on Web Console
 
-Since version 2.7, OCS Inventory's SNMP feature has been reworked
+Since version 2.8, OCS Inventory's SNMP feature has been reworked
 
 ## Prerequisites
 
