@@ -20,7 +20,7 @@ You can find more informations about Ipdiscover [here](../06.Network-Discovery-w
 
 To manage SNMP general options in Web Interface, go to `Configuration` menu, click on `General configuration` and go to the `SNMP` tab.
 
-![SNMP tab](../../img/server/reports/snmp_feature_configurations.png)
+![SNMP tab](../../img/server/reports/snmp_scan_configuration.png)
 
 This is the SNMP configuration options available:
 
