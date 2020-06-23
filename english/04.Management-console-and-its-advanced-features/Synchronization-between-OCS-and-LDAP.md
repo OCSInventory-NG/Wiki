@@ -44,7 +44,7 @@ After configuring the LDAP connection from web console, you will need to edit th
 
 In this file you will find a section named : ```Authentication Configuration``` (see screenshot below)
 
-![var.php Auth section](../../img/server/reports/administration_ocs_ldap_var.php)
+![var.php Auth section](../../img/server/reports/administration_ocs_ldap_var.png)
 
 To change the way OCS manage authentication, you will have to edit the **AUTH_TYPE** value :
 * 1 => Local database only
