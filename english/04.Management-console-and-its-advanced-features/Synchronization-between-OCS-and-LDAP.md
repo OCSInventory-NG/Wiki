@@ -1,6 +1,6 @@
 # Manage authentification with LDAP
 
-It is possible to delegate authentication àd the administration console of OCS Inventory. 
+It is possible to delegate authentication of the administration console of OCS Inventory. 
 So we will see how to delegate the connection to the OCSInventory NG GUI to LDAP.
 
 **`Note: We assume that you have a working and fully configured LDAP server`**
