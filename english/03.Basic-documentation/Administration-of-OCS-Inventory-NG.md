@@ -1,4 +1,4 @@
-# Administration of OCS Inventory NG
+# Administration of OCS Inventory
 
 Administrative Console: Point your browser to
 [http://your_administration_server/ocsreports](http://your_administration_server/ocsreports)
@@ -6,19 +6,17 @@ and login with username “admin”, and password “admin”.
 
 **`Warning: You must change the default password or better, add a new administrative user and remove the default "admin" user.`**
 
-**`Note: All these features are only available to OCS Inventory NG administrators.`**
+**`Note: All these features are only available to OCS Inventory administrators.`**
 
-## Managing OCS Inventory NG Administration server users.
+## Managing OCS Inventory Administration server users.
 
-Click on the toolbar config menu and then on users to display all configured OCS Inventory NG
-Administration server users.
+Click on the toolbar config menu and then on users to display all configured OCS Inventory Administration server users.
 
 ![Users access](../../img/server/reports/administration_ocs_19.png)
 
 ![Users administration](../../img/server/reports/administration_ocs_1.png)
 
-You can add new users by entering their name, password (user will be able to change it when logged in),
-and selecting their type. You can choose between:
+You can add new users by entering their name, password (user will be able to change it when logged in), and selecting their type. You can choose between:
 
 * Super Administrators : user has the ability to configure all parameters of the product. Look like root.
 * Local Administrators : user has the ability to configure all parameters of the product authorized
@@ -87,6 +85,7 @@ General options of configuration
 **IPDISCOVER_MAX_ALIVE** | Maximum number of days between two inventories for an IP Discovery enabled computer to hold his status of IP discovery computer. An IP discovery enabled computer will lose his status if it has not been seen by the Communication server for more days than the number of days defined in this setting. Another computer in the same sub network will then be designated.
 **IPDISCOVER_NO_POSTPONE** | Disable or not the time before a first election.
 **IPDISCOVER_USE_GROUPS** | Enable or disable the use of groups for ipdiscover.
+**IPDISCOVER_LINK_TAG_NETWORK** | Link ipdiscover network to computer TAG. Logout / Login after updating this configuration
 **LOCAL_PORT** | IP port of OCS Inventory NG Communication Server.
 **LOCAL_SERVER** | IP address or DNS name of OCS Inventory NG Communication Server.
 **LOG_DIR** | Specify the logs directory
