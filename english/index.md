@@ -33,6 +33,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 ## Management console and its advanced features
 
 * [Querying inventory results](04.Management-console-and-its-advanced-features/Querying-inventory-results.md)
+* [Using computers archiving capabilities](04.Management-console-and-its-advanced-features/Using-computers-archive-feature.md)
 * [Using computers groups](04.Management-console-and-its-advanced-features/Using-computers-groups.md)
 * [Using assets categorization](04.Management-console-and-its-advanced-features/Using-Assets-Categorization.md)
 * [Using softwares categorization](04.Management-console-and-its-advanced-features/Using-Software-Categorization.md)
