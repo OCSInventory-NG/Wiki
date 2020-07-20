@@ -92,3 +92,13 @@ In the case you want to retrieve everything from this snmp type just remove {ID}
 For exemple, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from the network 172.18.27.0
 
 <hr>
+
+### List IP Discover Elements by TAG
+
+`http://myocsserver/ocsapi/v1/ipdiscover/{TAG}`
+
+{TAG} is the computer TAG
+
+For exemple, `/ocsapi/v1/ipdiscover/NA` will retrieve the elements from ipdiscover with NA tag
+
+<hr>
