@@ -48,13 +48,13 @@ For exemple, `/ocsapi/v1/computers/search?workgroup=myworkgroup&start=0&limit=10
 
 ## SNMP Devices Routes
 
-### List SNMP Devices ID
+### List SNMP Type
 
-`http://myocsserver/ocsapi/v1/snmps/listID`
+`http://myocsserver/ocsapi/v1/snmps/typeList`
 
 <hr>
 
-### List X SNMP Devices details (start, limit)
+### List X SNMP Type details (start, limit)
 
 `http://myocsserver/ocsapi/v1/snmps?start={startoffset}&limit={limitoffset}`
 
@@ -62,16 +62,16 @@ Start and limit offset are mandatory !
 
 <hr>
 
-### List one SNMP Device details
+### List one SNMP Type details
 
-`http://myocsserver/ocsapi/v1/snmp/{ID}/{specificSection}`
+`http://myocsserver/ocsapi/v1/snmp/{TABLE_TYPE_NAME}/{ID}`
 
+{TABLE_TYPE_NAME} is the type you want to retrieve.
 {ID} is the ID in ocs database
-{specificSection} is the section you want to retrieve.
 
-For exemple, `/ocsapi/v1/snmp/4/cartridges` will retrieve the cartridges list of the SNMP Device with the id 4 in database.
+For exemple, `/ocsapi/v1/snmp/snmp_printer/1` will retrieve the SNMP Printer Type with the id 1 in database.
 
-In the case you want to retrieve everything from this snmp device just remove {specificSection} parameters
+In the case you want to retrieve everything from this snmp type just remove {ID} parameters
 
 <hr>
 
@@ -90,5 +90,15 @@ In the case you want to retrieve everything from this snmp device just remove {s
 {networkID} is the network number
 
 For exemple, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from the network 172.18.27.0
+
+<hr>
+
+### List IP Discover Elements by TAG
+
+`http://myocsserver/ocsapi/v1/ipdiscover/{TAG}`
+
+{TAG} is the computer TAG
+
+For exemple, `/ocsapi/v1/ipdiscover/NA` will retrieve the elements from ipdiscover with NA tag
 
 <hr>
