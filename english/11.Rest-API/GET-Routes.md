@@ -54,14 +54,6 @@ For exemple, `/ocsapi/v1/computers/search?workgroup=myworkgroup&start=0&limit=10
 
 <hr>
 
-### List X SNMP Type details (start, limit)
-
-`http://myocsserver/ocsapi/v1/snmps?start={startoffset}&limit={limitoffset}`
-
-Start and limit offset are mandatory !
-
-<hr>
-
 ### List one SNMP Type details
 
 `http://myocsserver/ocsapi/v1/snmp/{TABLE_TYPE_NAME}/{ID}`
