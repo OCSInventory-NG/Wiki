@@ -71,7 +71,9 @@ Start and limit offset are mandatory !
 
 For exemple, `/ocsapi/v1/snmp/snmp_printer/1` will retrieve the SNMP Printer Type with the id 1 in database.
 
-In the case you want to retrieve everything from this snmp type just remove {ID} parameters
+In the case you want to retrieve everything from this snmp type just remove {ID} parameters and add start and limit offset.
+
+For example, `/ocsapi/v1/snmp/snmp_printer?start={startoffset}&limit={limitoffset}`.
 
 <hr>
 
