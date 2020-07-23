@@ -26,9 +26,18 @@ Start and limit offset are mandatory !
 {ID} is the ID in ocs database
 {specificSection} is the section you want to retrieve.
 
-For exemple, `/ocsapi/v1/computer/4/softwares` will retrieve the software list of the computer with the id 4 in database.
+For example, `/ocsapi/v1/computer/4/softwares` will retrieve the software list of the computer with the id 4 in database.
 
-For exemple, `/ocsapi/v1/computer/4/officepack` will retrieve the office plugin informations of the computer with the id 4 in database.
+For example, `/ocsapi/v1/computer/4/officepack` will retrieve the office plugin informations of the computer with the id 4 in database.
+
+If you want to do a simple search on a computer, add parameters at the end.
+For example, `/ocsapi/v1/computer/4/softwares?where=PUBLISHER&operator=like&value=OCS`.
+
+Operator list :
+
+* Like / Not like
+* = / !=
+* < / > / <= / >= 
 
 In the case you want to retrieve everything from this computer just remove {specificSection} parameters
 
@@ -42,7 +51,7 @@ Start and limit offset are mandatory !
 {searchCriteria} is a fields in the hardware table (other table are not supported atm)
 {valueToMatch} is the value to match for this fields. (only equal atm)
 
-For exemple, `/ocsapi/v1/computers/search?workgroup=myworkgroup&start=0&limit=10` will retrieve the computers that are in the workgroup `myworkgroup`
+For example, `/ocsapi/v1/computers/search?workgroup=myworkgroup&start=0&limit=10` will retrieve the computers that are in the workgroup `myworkgroup`
 
 <hr>
 
@@ -69,7 +78,7 @@ Start and limit offset are mandatory !
 {TABLE_TYPE_NAME} is the type you want to retrieve.
 {ID} is the ID in ocs database
 
-For exemple, `/ocsapi/v1/snmp/snmp_printer/1` will retrieve the SNMP Printer Type with the id 1 in database.
+For example, `/ocsapi/v1/snmp/snmp_printer/1` will retrieve the SNMP Printer Type with the id 1 in database.
 
 In the case you want to retrieve everything from this snmp type just remove {ID} parameters
 
@@ -89,7 +98,7 @@ In the case you want to retrieve everything from this snmp type just remove {ID}
 
 {networkID} is the network number
 
-For exemple, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from the network 172.18.27.0
+For example, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from the network 172.18.27.0
 
 <hr>
 
@@ -99,6 +108,6 @@ For exemple, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from
 
 {TAG} is the computer TAG
 
-For exemple, `/ocsapi/v1/ipdiscover/NA` will retrieve the elements from ipdiscover with NA tag
+For example, `/ocsapi/v1/ipdiscover/NA` will retrieve the elements from ipdiscover with NA tag
 
 <hr>
