@@ -28,6 +28,8 @@ Here is the list of the different libraries and modules and their versions usefu
 * MySQL or MariaDB version 4.1.0 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
 * Make utility such as GNU make.
 
+**`Note : We highly recommend to use mariaDB`**
+
 ## OCS Inventory Agent 2.x on Unix Operating Systems
 
 * PERL 5.8 and higher

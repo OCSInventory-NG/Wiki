@@ -34,30 +34,9 @@ We assume that you have:
 
 ## Requirements
 
-* Apache version 2.2 or higher.
-    * Mod_perl version 1.29 or higher.
-* PHP 5.5 or higher, with ZIP and GD support enabled.
-    * php_curl
-    * php_mbstring
-    * php_soap
-    * php_xml
-* PERL 5.6 or higher.
-    * Perl module XML::Simple version 2.12 or higher.
-    * Perl module Compress::Zlib version 1.33 or higher.
-    * Perl module DBI version 1.40 or higher.
-    * Perl module DBD::Mysql version 2.9004 or higher.
-    * Perl module Apache::DBI version 0.93 or higher.
-    * Perl module Net::IP version 1.21 or higher.
-    * Perl module SOAP::Lite version 0.66 or higher (optional)
-    * Perl module Mojolicious::Lite
-    * Perl module Plack::Handler
-    * Perl module Archive::Zip
-    * Perl module YAML
-    * Perl module XML::Entities
-* MySQL or MariaDB version 4.1.0 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
-* Make utility such as GNU make.
+For the requirements, please follow the dedicated page :
 
-**`Note : We highly recommend to use mariaDB`**
+`[`Prerequisites`](../01.Prerequisites/Libraries-version/)`
 
 **`Note: OCS Inventory NG Server Setup will check for all these components and will exit
 if any are missing.`**
