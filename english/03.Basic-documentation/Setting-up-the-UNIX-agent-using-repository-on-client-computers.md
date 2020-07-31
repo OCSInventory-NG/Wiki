@@ -14,11 +14,13 @@ You need to add our repository using the following command
     $ sudo apt update 
 
 You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
+
 * buster | stable 
 * stretch | oldstable
 * sid | unstable
 
 Then install the agent using : 
+
     $ sudo apt install ocsinventory-agent
 
 **On Ubuntu-based distributions** you can install the agent with APT
@@ -30,11 +32,13 @@ You need to add our repository using the following command
     $ sudo apt update
 
 You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
+
 * focal | stable 
 * bionic | oldstable
 * xenial | backport
 
 Then install the agent using : 
+
     $ sudo apt install ocsinventory-agent
 
 ## Installing UNIX Agent with RPM
