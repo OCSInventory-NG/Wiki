@@ -78,7 +78,7 @@ please refer to this file to have detailed error messages.**
 
 ## Installing the agent non-interactively
 
-Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
+Download “Ocsinventory-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](https://ocsinventory-ng.org/?page_id=1548&lang=en).
 
 
 1. Unpack it.
@@ -123,7 +123,7 @@ of required component. You need to have access to Internet or local repositories
 
 ## Installing the agent interactively
 
-Download “Ocsinventory-Unix-Agent-2.x.y.tar.gz” from [OCS Inventory Web Site](http://www.ocsinventory-ng.org/en/#download-en).
+Download “Ocsinventory-Unix-Agent-2.x.y.tar.gz” from [OCS Inventory Download page](https://ocsinventory-ng.org/?page_id=1548&lang=en).
 
 
 1. Unpack it.
@@ -275,7 +275,8 @@ A set of launch arguments has been added to this script to allow to set all conf
 as you can do in interactive mode. This is a list of all available _postinst.pl_ script arguments:
 
 * **--nowizard** : launch this script without interaction
-* **--server** : set OCS Inventory NG server address (e.g: http://ocsinventory-ng/ocsinventory)
+* **--server** : set OCS Inventory NG server address (e.g: 
+``http://ocsinventory-ng/ocsinventory``)
 * **--basevardir** : set OCS Inventory NG Unix Unified agent variables directory (e.g: /var/lib/ocsinventory-agent)
 * **--configdir** : set OCS Inventory NG Unix Unified configuration directory (e.g: /etc/ocsinventory-agent)
 * **--user** : set username for OCS Inventory server Apache authentication (if needed)
@@ -297,7 +298,7 @@ For example, if you want to install OCS Unix Unified agent in non-interactive mo
 create a crontab, set a custom tag, enable debug mode, set a log file path and activate download feature,
 you have to run this command:
 
-   $ sudo env PERL_AUTOINSTALL=1 perl Makefile.PL && make && make install && perl postinstl.pl --nowizard --server=http://yourserver/ocsinventory --crontab
+   $ sudo env PERL_AUTOINSTALL=1 perl Makefile.PL && make && make install && perl postinstl.pl --nowizard --server=``http://yourserver/ocsinventory`` --crontab
 
 # Agent’s command line switches
 

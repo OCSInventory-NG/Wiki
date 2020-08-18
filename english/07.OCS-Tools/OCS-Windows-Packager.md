@@ -95,7 +95,7 @@ Then upload your **ocspackage.exe** file.
 
 ## Deploying agent on a domain
 
-Refer to our documention to [setup Windows Agent 2.X](../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
+Refer to our documention to [setup Windows Agent 2.X](../03.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
 
 **`Warning: Mysql server must accept files larger than 5M. Edit my.cnf file and modify
 max_allowed_packets value to fix it more than 5M. Save this file and restart service.`**
@@ -111,7 +111,7 @@ If you do so, please provide us with the following:
 * Agent’s operating system
 * OCS Inventory NG agent version
 * Agent execution logs
-    * Run _“AGENT_INSTALL_FOLDER\ocsinventory.exe /NP /DEBUG=2 /SERVER=http://your_server_address/ocsinventory”_
+    * Run _“AGENT_INSTALL_FOLDER\ocsinventory.exe /NP /DEBUG=2 /SERVER=``http://your_server_address/ocsinventory``”_
      under Windows. Log file is created on folder “AGENT_INSTALL_FOLDER” under name “ocsinventory.log”.
     * Run _“ocsinventory-agent --debug > ocsinv.log”_ under Linux. Log file is “ocsinv.log”.
 * Apache server error.log file, located under _“/var/log/httpd/*error.log”_.

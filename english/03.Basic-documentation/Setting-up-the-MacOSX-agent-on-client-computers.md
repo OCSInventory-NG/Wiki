@@ -5,8 +5,8 @@
 **`Note: OCS MacOSX agent 2.3 and newer agent are fully compatible under MacOSX 10.11 El captain and more.
 For older macos system you will have to user older versions of our agent. We don't support Mac OS versions that are not maintained by Apple`**
 
-Download OCS MacOSX agent from OCS Inventory NG website download page(
-[http://www.ocsinventory-ng.org/en/#home-en](http://www.ocsinventory-ng.org/en/#home-en)
+Download OCS MacOSX agent from OCS Inventory NG website download page (
+[Download page](https://ocsinventory-ng.org/?page_id=1548&lang=en)
 ), unzip the file and double click "Ocsinventory_Agent_MacOSX.pkg".
 
 ![Mac OSX Icon](../../img/agent/macOS/macosx_agent_pkg_icon.png)

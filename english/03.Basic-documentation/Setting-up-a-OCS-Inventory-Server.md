@@ -36,7 +36,7 @@ We assume that you have:
 
 For the requirements, please follow the dedicated page :
 
-`[`Prerequisites`](../01.Prerequisites/Libraries-version/)`
+[Prerequisites](../01.Prerequisites/Libraries-version.md)
 
 **`Note: OCS Inventory NG Server Setup will check for all these components and will exit
 if any are missing.`**
@@ -46,7 +46,7 @@ if any are missing.`**
 The web communication server requires Apache web server and Perl 5 scripting language and some additional modules for Perl 5
 (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 It acts as an Apache module which handles HTTP OCS Inventory agents' requests to a virtual directory _/ocsinventory_.
-Already the web communication server requires mysql dependencies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../02.Basic-documentation/Deploying-database-server.md)
+Already the web communication server requires mysql dependencies if you choose to install the database server alone, you can reffer to this page : [`Deploying Database Server`](../03.Basic-documentation/Deploying-database-server.md)
 
 **On Fedora/Redhat/Centos 7 like Linux**
 
@@ -83,7 +83,7 @@ Some of these packages are only available in`[`EPEL`](https://fedoraproject.org/
 
 The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
 for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
-Already the web communication server requires mysql dependencies if you choose to install the database server alone, you can refers to this page : [`Deploying Database Server`](../02.Basic-documentation/Deploying-database-server.md)
+Already the web communication server requires mysql dependencies if you choose to install the database server alone, you can refers to this page : [`Deploying Database Server`](../03.Basic-documentation/Deploying-database-server.md)
 
 **On Fedora/Redhat/Centos 7 like Linux**
 
@@ -689,7 +689,7 @@ If everything is OK, setup will install Administration console into the “ocsre
 * Writing Administration server configuration to file /etc/apache2/conf-available/ocsinventory-reports.conf
 * Fix directories and files permissions to allow Apache daemon reading and writing to required directories
 (write access is required in /ocsreports, /ocsreports/ipd and /download, cf § 11.4 [Files and directories
-permissions under Linux](../08.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
+permissions under Linux](../09.Extras/Common-errors.md#files-and-directories-permissions-under-linux).).
 * Configure PERL script ipdiscover-util.pl to access database and install it.
 
 
@@ -712,16 +712,16 @@ specially these variables :`**
     mysql -f -hlocalhost -uroot -p DBNAME < ocsbase.sql >log.log
 
 Else, open your favorite web browser and point it on URL
-[http://administration_console/ocsreports](http://administration_console/ocsreports) to connect
+``http://administration_console/ocsreports`` to connect
 the Administration server.
 
 As database is not yet created, this will begin OCS Inventory setup process.
 Otherwise, you can rerun configuration process by browsing
-[http://administration_console/ocsreports/install.php](http://administration_console/ocsreports/install.php)
+``http://administration_console/ocsreports/install.php``
 URL (this must be used when upgrading OCS Inventory management server).
 
 **`Note: You will see warning regarding max size of package you will be able to deploy. Please, see
-`[`Uploads size for package deployment`](../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
+`[`Uploads size for package deployment`](../09.Extras/Common-errors.md#uploads-size-for-package-deployment)`
 to configure your server to match your need.`**
 
 ![Installation's page of ocsreports](../../img/server/reports/install/installation_ocsreports_1.png)
@@ -733,10 +733,10 @@ database, tables, indexes, etc (usually root):
 * MySQL user password
 * MySQL hostname
 
-Setup actions : refer to [Deploying Database Server](../02.Basic-documentation/Deploying-database-server.md)
+Setup actions : refer to [Deploying Database Server](../03.Basic-documentation/Deploying-database-server.md)
 
 To secure your server, refer to
-[Secure your OCS Inventory NG Server](../08.Extras/Secure-your-OCS-Inventory-NG-Server.md)
+[Secure your OCS Inventory NG Server](../09.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 documentation.
 
 If you don't want to secure your OCS Inventory Server, you have to desactivate Warning message in user profile.
@@ -750,7 +750,7 @@ Procedure is in the same documentation page.
 Click on the following link : "Click here to enter OCS-NG GUI"
 
 Just point your browser to the URL
-[http://administration_server/ocsreports](http://administration_server/ocsreports)
+``http://administration_server/ocsreports``
 and login in with **admin** as user and **admin** as password.
 
 ![Ocsreports' homsecreen](../../img/server/reports/homescreen_reports.png)

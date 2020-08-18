@@ -60,7 +60,7 @@ have to use web interface to configure this feature.`**
 -h | --help | Command line options
 -d | --directory | Load every .ocs files from a directory
 -f | --file | Load a speficic file
--u | --url | Ocsinventory backend URL, default is [http://ocsinventory-ng/ocsinventory](http://ocsinventory-ng/ocsinventory)
+-u | --url | Ocsinventory backend URL, default is ``http://ocsinventory-ng/ocsinventory``
 --useragent |   | HTTP user agent, default is OCS-NG_LOCAL_PL_v".VERSION."
 -r | --remov | Remove succesfuly injected files
 -m | --msg | Show message returned my ocsinventory

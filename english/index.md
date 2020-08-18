@@ -119,7 +119,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 * What URL must I put in the agent to contact the server ?
 
-    **Solution**: The URL must be in this form http://dns_or_ip/ocsinventory. It is recommended that you use DNS instead of IP.
+    **Solution**: The URL must be in this form ``http://dns_or_ip/ocsinventory``. It is recommended that you use DNS instead of IP.
 
 * ocsinventory directory does not exist on my server
 

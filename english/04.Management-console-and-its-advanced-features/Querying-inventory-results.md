@@ -1,7 +1,7 @@
 # Querying inventory results
 
 Point your browser to the URL
-[http://administration_server/ocsreports](http://administration_server/ocsreports)
+``http://administration_server/ocsreports``
 and log into Administration console (default credentials are “admin” as login and “admin” as password).
 
 ![OCS admin home](../../img/server/reports/querying_ir_1.png)

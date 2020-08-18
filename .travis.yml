@@ -1,0 +1,18 @@
+
+language: generic
+
+before_script:
+  - sudo apt -y install npm wget
+  - sudo npm install -g markdown-link-check
+  - wget https://raw.githubusercontent.com/richelbilderbeek/travis_markdown-link-check/master/check_dead_links
+  - chmod +x check_dead_links
+
+script: ./check_dead_links
+
+addons:
+  apt:
+    update: true
+
+branches:
+  only:
+    - master

@@ -15,11 +15,9 @@ Using this installer, you will be able to deploy or upgrade OCS MacOSX agent in 
 
 **`Warning: To be able to use OCS MacOSX Packager for MacOSX, you have to download an OCS MacOSX agent
 installation file from OCS Inventory NG website download page
-(`[`http://www.ocsinventory-ng.org/en/#download-en`](http://www.ocsinventory-ng.org/en/#download-en)`).`**
+(`[OCS download page](https://ocsinventory-ng.org/?page_id=1548&lang=en)`).`**
 
-Download OCS MacOSX Packager for MacOSX from OCS Inventory NG website download page
-([http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en)),
-unzip the file and double click _Ocsinventory_MacOSX_Packager.app_.
+Download OCS MacOSX Packager for MacOSX from OCS Inventory NG website download page, unzip the file and double click _Ocsinventory_MacOSX_Packager.app_.
 
 ![Mac OSX packager configuration window](../../img/agent/macOS/packager/configuration_window.png)
 

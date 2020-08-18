@@ -779,10 +779,6 @@ you can use services provided by cacert.org ([http://www.cacert.org](http://www.
 a free worldwide PKI provider. Using cacert.org services require that you register your email
 and DNS domain name, before to be able to request server certificate. See cacert.org manuals.
 
-You may take a look at Pablo Iranzo Gómez excellent article
-([http://alufis35.uv.es/OCS-Inventory-Package-Deployment.html](http://alufis35.uv.es/OCS-Inventory-Package-Deployment.html))
-for more detailled instructions about using cacert.org certificates in OCS Inventory NG.
-
 #### **With OCS Inventory NG Server for Linux**
 
 Usually, Apache or mod_ssl packages come with sample scripts to generate certificates request to submit
@@ -1011,16 +1007,12 @@ Now, deployement package is created. You have to activate it.
 
 Go to menu **Deployment / Activate**.
 
-![Choose Fragment Size](../../img/server/reports/deploying_packages_15.png)
-
 Click on button **Activate** in the corresponding line.
 
 * Fill in HTTPS url where metadata file INFO can be downloaded by agents using HTTPS.
 * Fill in HTTP url where fragment files can be downloaded by agent using HTTP.
 
 And click **[ Send ]** button.
-
-![Package manual deployment](../../img/server/reports/deploying_packages_16.png)
 
 Now, package is ready to be affected to computers.
 

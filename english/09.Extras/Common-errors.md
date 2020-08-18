@@ -49,30 +49,6 @@ Then, restart MySQL server.
 
     systemctl restart mysql
 
-### **PHP Requested content-length**
-
-**If you see in apache error log** (file error_log or ssl_error.log) **message like following:**
-
-\[Mon Sep 05 18:30:03 2005] \[error] \[client XXX.XXX.XXX.XXX] Requested content-length of 831148
-is larger than the configured limit of 524288, referer:
-[http://administration_server/ocsreports/?multi=8](http://administration_server/ocsreports/?multi=8)
-
-That’s because Apache directive “LimitRequestBody” is used to limit size of HTTP requests.
-
-To fix this, open Apache configuration file “httpd.conf”, usually in directory “/etc/httpd/conf”
-(under some distributions, Apache configuration for PHP may also resides in include directory,
-usually “/etc/httpd/conf.d”).
-
-`Note : for debian, default directory is /etc/apache2/`
-
-Find the directive “LimitRequestBody” and ensure that the size is at least 4 MB (4194304 bytes).
-
-**Figure 18 : Sample Apache configuration for PHP.**
-
-Update this value if needed and restart Apache daemon.
-
-    /etc/rc.d/init.d/httpd restart
-
 ### **Uploads size for package deployment**
 
 All the configuration settings for your installation are contained in the “php.ini” file or Apache

@@ -94,7 +94,7 @@ Click on the `Update` button to save your modifications.
 
 ### **Prerequisites**
 
-To be able to make SNMP using OCS Unified Unix agent, you have to install Net::SNMP perl module. You can find more information in the page [Unix agent](../03.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md).
+To be able to make SNMP using OCS Unified Unix agent, you have to install Net::SNMP perl module. You can find more information in the page [Unix agent](../03.Basic-documentation/Setting-up-the-UNIX-agent-manually-on-client-computers.md).
 
 ### **Copying SSL certificate file**
 
@@ -104,7 +104,7 @@ To allow Unix Unified agent to download snmp_com.txt file using HTTPS, you have 
 
 Your OCS server configuration directory is a directory created automatically using your OCS server URL (http:__ocsinventory-ng_ocsinventory for example).
 
-For example, if your basevardir parameter is _/var/lib/ocsinventory-agent/_ and your OCS server URL is [_http://ocsinventory-ng/ocsinventory_](http://ocsinventory-ng/ocsinventory), so you have to copy your cacert.pem certificate file in /var/lib/ocsinventory-agent/http:__ocsinventory-ng_ocsinventory directory.
+For example, if your basevardir parameter is _/var/lib/ocsinventory-agent/_ and your OCS server URL is ``http://ocsinventory-ng/ocsinventory``, so you have to copy your cacert.pem certificate file in /var/lib/ocsinventory-agent/http:__ocsinventory-ng_ocsinventory directory.
 
 **`Note: If you already use a SSL certificate for OCS packages deployment, you may not have to copy a new one for SNMP scans feature. Indeed, if you use the same HTTPS server for OCS package deployment and snmp_com.txt file download, cacert.pem file will be same one in the same directory.`**
 
