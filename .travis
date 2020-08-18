@@ -15,3 +15,4 @@ addons:
 branches:
   only:
     - master
+    - fix-dead-links
