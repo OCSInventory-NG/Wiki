@@ -2,7 +2,7 @@
 language: generic
 
 install:
-  - sudo apt -y install npm node
+  - sudo apt -y install npm
   - sudo npm install -g markdown-link-check
   - if find . -name \*.md -exec markdown-link-check {} \; | grep "ERROR"; then exit 1; fi
 
