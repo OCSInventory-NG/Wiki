@@ -14,7 +14,7 @@ and Microsoft SysInternals PsExec free utility
 ## Installing and configuring OCS Inventory NG Agent Deployement tool
 
 To install OCS Inventory NG Agent Deployment Tool, download zip archive from
-[http://www.ocsinventory-ng.org/en/#download-en](http://www.ocsinventory-ng.org/en/#download-en).
+[our download page](https://ocsinventory-ng.org/?page_id=1548&lang=en).
 
 Uncompress the zip file and run **OCS-NG-Agent-Deployment-Tool-Setup.exe** on a Windows Computer.
 
@@ -72,10 +72,10 @@ Click **[ Next ]** button.
 * Select optional plugin files to copy into plugins directory of the agent,
 * Select additional files to copy into Agent's data folder, like certificate file,
 * Enter OCS Inventory NG server URL
-[http://your_ocs_server/ocsinventory](http://your_ocs_server/ocsinventory)
-or [http://your_ocs_server:ip_port/ocsinventory](http://your_ocs_server:ip_port/ocsinventory)
-or [https://your_ocs_server/ocsinventory](https://your_ocs_server/ocsinventory)
-or [https://your_ocs_server:ip_port/ocsinventory](https://your_ocs_server:ip_port/ocsinventory),
+``http://your_ocs_server/ocsinventory``
+or ``http://your_ocs_server:ip_port/ocsinventory``
+or ``https://your_ocs_server/ocsinventory``
+or ``https://your_ocs_server:ip_port/ocsinventory``,
 * Check Enable _verbose log_ to activate OCS Inventory Agent logs (same as /DEBUG parameter)
 * Check _Do not register service_ if you do not wish to use service for launching Agent
 (same as /NO_SERVICE parameter)

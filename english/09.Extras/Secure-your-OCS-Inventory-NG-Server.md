@@ -78,4 +78,4 @@ Finally, register modification.
 
 ![GUI message](../../img/server/reports/secure_ocs_3.png)
 
-For more informations about users and profile, click [here](../../03.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md).
+For more informations about users and profile, click [here](../04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md).

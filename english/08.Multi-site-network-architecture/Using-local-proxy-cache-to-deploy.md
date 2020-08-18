@@ -45,8 +45,6 @@ Accept user licence clicking on **I accept**.
 Specify the address of your OCS Inventory NG server, authentification parameters of web server (optionnal)
 and if you want to do a SSL control, define certificate path.
 
-![OCS server properties](../../agent/windows/install_agent_win_proxy3.png)
-
 Specify proxy type, proxy address, listen port, and its authentification parameters.
 
 ![Proxy properties](../../img/agent/windows/install_agent_win_proxy4.png)

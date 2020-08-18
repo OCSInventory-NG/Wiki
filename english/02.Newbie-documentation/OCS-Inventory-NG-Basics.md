@@ -37,9 +37,9 @@ favorite browser (Apache, php)**
 * .rpm package with automatic install script for Fedora/Redhat/Centos 7
 
 ### **Deployment tools of agents by the network**
-* [OCS Deployment Tool](../06.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md) based on psexec
-* [OCSPackager](../06.OCS-Tools/OCS-Packager.md) and
-[OCSLogon](../02.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)
+* [OCS Deployment Tool](../07.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md) based on psexec
+* [OCSPackager](../07.OCS-Tools/OCS-Windows-Packager.md) and
+[OCSLogon](../03.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md#deploying-agent-using-launcher-ocslogonexe-through-login-script-or-active-directory-gpo)
 based on GPO and logon scripts
 
 ## Interfacing with many softwares
@@ -64,7 +64,6 @@ Agent configuration file is **ocsinventory.ini**
 ### **Server**
 Do not confuse directories **/ocsinventory** and **/ocsreports**.
 * ocsreports : directory containing all the php files that make up the administration console.
-We use a browser to access, with URL : http://serveur/ocsreports
 * ocsinventory : **virtual** directory used by mod_perl to handle XML inventories files sent by agents
 and to store data in database.
 

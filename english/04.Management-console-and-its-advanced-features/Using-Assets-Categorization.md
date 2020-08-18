@@ -7,13 +7,13 @@ It's goal is to create and attribute category to computers depending on specific
 
 This feature may seem really similar to dynamic group and that the case. 
 
-However, this feature is intended to be used by third party software since the category can be easly retrieved using the [REST API](../09.Rest-API/Introduction.md)
+However, this feature is intended to be used by third party software since the category can be easly retrieved using the [REST API](../11.Rest-API/Introduction.md)
 
 ## Create an asset category
 
 To create an asset category you need to go into the multi search page : ```Inventory > Search with various criteria```
 
-If you need more informations about the multi search, please see : [Querying inventory results](03.Management-console-and-its-advanced-features/Querying-inventory-results.md)
+If you need more informations about the multi search, please see : [Querying inventory results](../04.Management-console-and-its-advanced-features/Querying-inventory-results.md)
 
 When all you criteria are ready, perform the search. You will see a button named ```Assets categorization``` at the bottom of the page
 

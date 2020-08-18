@@ -1,7 +1,6 @@
 # Administration of OCS Inventory
 
-Administrative Console: Point your browser to
-[http://your_administration_server/ocsreports](http://your_administration_server/ocsreports)
+Administrative Console: Point your browser to `/ocsreports` of your webserver root
 and login with username “admin”, and password “admin”.
 
 **`Warning: You must change the default password or better, add a new administrative user and remove the default "admin" user.`**
@@ -116,7 +115,7 @@ If you find the config panel a bit overhelming and you don't use all the availab
 In the case you need to install an agent with pre-provisioned configuration, you can use the OCS Packager to create a customized setup of the agent.
 
 To create the “ocspackage.exe” file, run the
-[OCS Inventory NG Packager](../07.OCS-Tools/OCS-Packager.md)
+[OCS Inventory NG Packager](../07.OCS-Tools/OCS-Windows-Packager.md)
 and fill in the following informations:
 
 * Path to file “OcsAgentSetup.exe”, the OCS Inventory NG service Agent installer, included in the package

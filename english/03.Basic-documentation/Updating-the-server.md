@@ -40,7 +40,7 @@ mysqldump -u ocs -p --all-databases > /home/backup_ocs/ocsdbbackup.sql
 
 ## Update the existing installation
 
-Download the last release of OCS from the [Website](https://www.ocsinventory-ng.org/en/download-en/) or here from github.    
+Download the last release of OCS from the [Website](https://ocsinventory-ng.org/?page_id=1548&lang=en) or here from github.    
 Unpack it :
 ```
 tar –xvzf OCSNG_UNIX_SERVER-2.x.x.tar.gz

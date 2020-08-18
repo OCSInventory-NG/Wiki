@@ -127,16 +127,16 @@ specially these variables :`**
     mysql -f -hlocalhost -uroot -p DBNAME < ocsbase.sql >log.log
 
 Else, open your favorite web browser and point it on URL
-[http://administration_console/ocsreports](http://administration_console/ocsreports) to connect
+``http://administration_console/ocsreports`` to connect
 the Administration server.
 
 As database is not yet created, this will begin OCS Inventory setup process.
 Otherwise, you can rerun configuration process by browsing
-[http://administration_console/ocsreports/install.php](http://administration_console/ocsreports/install.php)
+``http://administration_console/ocsreports/install.php``
 URL (this must be used when upgrading OCS Inventory management server).
 
 **`Note: You will see warning regarding max size of package you will be able to deploy. Please, see
-`[`Uploads size for package deployment`](../08.Extras/Common-errors.md#uploads-size-for-package-deployment)`
+`[`Uploads size for package deployment`](../09.Extras/Common-errors.md#uploads-size-for-package-deployment)`
 to configure your server to match your need.`**
 
 ![Installation's page of ocsreports](../../img/server/reports/install/installation_ocsreports_1.png)
@@ -149,7 +149,7 @@ database, tables, indexes, etc (usually root):
 * MySQL hostname
 
 To secure your server, refer to
-[Secure your OCS Inventory NG Server](../09.Extras/Secure-your-OCS-Inventory-NG-Server/)
+[Secure your OCS Inventory NG Server](../09.Extras/Secure-your-OCS-Inventory-NG-Server.md)
 documentation.
 
 If you don't want to secure your OCS Inventory Server, you have to desactivate Warning message in user profile.
@@ -163,7 +163,7 @@ Procedure is in the same documentation page.
 Click on the following link : "Click here to enter OCS-NG GUI"
 
 Just point your browser to the URL
-[http://administration_server/ocsreports](http://administration_server/ocsreports)
+``http://administration_server/ocsreports``
 and login in with **admin** as user and **admin** as password.
 
 ![Ocsreports' homsecreen](../../img/server/reports/homescreen_reports.png)

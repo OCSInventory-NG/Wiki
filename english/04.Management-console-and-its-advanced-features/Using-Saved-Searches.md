@@ -5,7 +5,7 @@ It's goal is to save a current multicriteria search to permit future re-use.
 
 ## Create saved search
 
-First step is to create a multicirteria search. If you don't know how to create a multicriteria search please read the documentation [Querying inventory results](04.Management-console-and-its-advanced-features/Querying-inventory-results.md).
+First step is to create a multicirteria search. If you don't know how to create a multicriteria search please read the documentation [Querying inventory results](../04.Management-console-and-its-advanced-features/Querying-inventory-results.md).
 
 ![Multicriteria search](../../img/server/reports/saved_searches_search.png)
 

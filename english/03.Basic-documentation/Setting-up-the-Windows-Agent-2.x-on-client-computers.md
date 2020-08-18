@@ -40,7 +40,7 @@ is older than the general option “FREQUENCY”, specified in days (see
 * **Discover the network**: Agent scans his IP subnet for active devices listening on the network,
 then sends these data using HTTP or HTTPS protocol to the server. The server ask this only if the
 computer is elected to run IPDISCOVERY (see
-[Using IP discovery feature](../../05.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).)
+[Using IP discovery feature](../06.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).)
 * **Deploy a package**: Agent contacts the deployment server using the HTTPS protocol to get the information file (file INFO which describes the package), downloads package fragments from the deployment server, rebuilds the package and launches it. 
 
 Since OCS Inventory Agent 2.6, it's possible to deploy package greater than 4GB. 
@@ -79,10 +79,10 @@ results to Communication server using HTTP or HTTPS.
 ### **How does Windows service work?**
 
 
-**`Note`**`: You must have Administrator privileges to set up OCS Inventory NG Agent as a service, or you may use OCS Inventory NG ` [`Packager`](../06.OCS-Tools/OCS-Packager.md) ` to create an installer able to run even if user do not
+**`Note`**`: You must have Administrator privileges to set up OCS Inventory NG Agent as a service, or you may use OCS Inventory NG ` [`Packager`](../07.OCS-Tools/OCS-Windows-Packager.md) ` to create an installer able to run even if user do not
 have Administrator privileges. Refer to`
 [`Uploading Agent for deployment through launcher “OcsLogon.exe”`](Administration-of-OCS-Inventory-NG.md#uploading-agent-for-deployment-through-launcher-ocslogonexe)
-`or OCS Inventory NG ` [`Packager`](../06.OCS-Tools/OCS-Packager.md) ` documentation.`
+`or OCS Inventory NG ` [`Packager`](../07.OCS-Tools/OCS-Windows-Packager.md) ` documentation.`
 
 * OCS Inventory NG Agent “OCSInventory.exe” is launched by service “OcsService.exe” every **PROLOG_FREQ** hours.
 It keeps trace of the countdown in seconds in file “ocsinventory.ini” (value **TTO_WAIT**), so it is the time
@@ -132,7 +132,7 @@ later on server (see chapter **Generating inventory of a non network connected W
 ![Choose components](../../img/agent/windows/setup_4.png)
 
 Fill in OCS Inventory NG Communication server URL, like
-[http://your_ocs_server_address:your_server_port/ocsinventory](http://your_ocs_server_address:your_server_port/ocsinventory)
+``http://your_ocs_server_address:your_server_port/ocsinventory``
 . You can also specify https if your server is SSL enabled to secure communication.
 If you've protected your Communication Server access with credentials, you must specify credentials
 agent will use to authenticate (these credentials will be encrypted to be stored into configuration file).
@@ -213,7 +213,7 @@ Also, you can pass to the installer the following agent's command line parameter
 
 **`Note`**`: We recommend using service version of Agent if you plan to use package deployment feature.`
 
-To deploy the agent using GPO we recommand you to create a standalone packager with all your configuration already provisionned. See [using OCS Packager to create an all-in-one installer to setup agent and server certificate](../06.OCS-Tools/OCS-Packager.md)
+To deploy the agent using GPO we recommand you to create a standalone packager with all your configuration already provisionned. See [using OCS Packager to create an all-in-one installer to setup agent and server certificate](../07.OCS-Tools/OCS-Windows-Packager.md)
 
 After creating a packager, you will need to store it at a place where all your users have access to.
 
