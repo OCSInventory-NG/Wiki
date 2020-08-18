@@ -2,11 +2,12 @@
 language: generic
 
 before_script:
-  - sudo apt -y install npm
+  - sudo apt -y install npm wget
   - sudo npm install -g markdown-link-check
-  - if find . -name \*.md -exec markdown-link-check {} \; | grep "ERROR"; then exit 1; fi
+  - wget https://raw.githubusercontent.com/richelbilderbeek/travis_markdown-link-check/master/check_dead_links
+  - chmod +x check_dead_links
 
-script: exit 0
+script: ./check_dead_links
 
 addons:
   apt:
