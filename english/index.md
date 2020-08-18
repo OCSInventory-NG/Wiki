@@ -13,7 +13,8 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 ## Basic documentation
 
 * [Setting up a OCS Inventory server](03.Basic-documentation/Setting-up-a-OCS-Inventory-Server.md)
-* [Setting up the UNIX agent on client computers](03.Basic-documentation/Setting-up-the-UNIX-agent-on-client-computers.md)
+* [Setting up manually the UNIX agent on client computers](03.Basic-documentation/Setting-up-the-UNIX-agent-manually-on-client-computers.md)
+* [Setting up the UNIX agent on client computers using offical repositories](03.Basic-documentation/Setting-up-the-UNIX-agent-using-repository-on-client-computers.md)
 * [Setting up the Windows Agent 2.X on client computers](03.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
 * [Setting up the MacOSX agent on client computers](03.Basic-documentation/Setting-up-the-MacOSX-agent-on-client-computers.md)
 * [Setting up the Android Agent](03.Basic-documentation/Setting-up-the-Android-Agent.md)
