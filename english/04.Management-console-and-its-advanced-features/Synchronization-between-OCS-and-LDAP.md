@@ -38,8 +38,6 @@ Here is a summary of the available web configuration :
 
 ## Configure AUTH Method from var.php file 
 
-Since nightly of 25th june of 2020 and the 2.8 version of OCS Inventory we don't need to edit the PHP files anymore.
-
 After configuring the LDAP connection from web console, you will need to edit the ```var.php``` file located in ```/usr/share/ocsinventory-reports/ocsreports``` folder (by default).
 
 In this file you will find a section named : ```Authentication Configuration``` (see screenshot below)
