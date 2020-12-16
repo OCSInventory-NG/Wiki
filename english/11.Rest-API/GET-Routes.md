@@ -55,6 +55,67 @@ For example, `/ocsapi/v1/computers/search?workgroup=myworkgroup&start=0&limit=10
 
 <hr>
 
+## All Softwares Routes
+
+### List softwares (start, limit, soft)
+
+`http://myocsserver/ocsapi/v1/softwares?start={startoffset}&limit={limitoffset}&soft={software}`
+
+Start and limit offset are mandatory !
+
+{software} can be used to filter the list, and only show those softwares starting with this string.
+
+For example, `/ocsapi/v1/softwares?&start=0&limit=10&soft=7-zip` will retrieve all softwares whose name start with `7-zip`
+
+Example of result:
+
+```json
+[
+  {
+    "NAME": "7-Zip 16.02",
+    "VERSION": "16.02"
+  },
+  {
+    "NAME": "7-Zip 18.01 (x64)",
+    "VERSION": "18.01"
+  },
+  {
+    "NAME": "7-Zip 18.05",
+    "VERSION": "18.05.00.0"
+  },
+  {
+    "NAME": "7-Zip 18.05 (x64 edition)",
+    "VERSION": "18.05.00.0"
+  },
+  {
+    "NAME": "7-Zip 18.05 (x64)",
+    "VERSION": "18.05"
+  },
+  {
+    "NAME": "7-Zip 18.06 (x64 edition)",
+    "VERSION": "18.06.00.0"
+  },
+  {
+    "NAME": "7-Zip 18.06 (x64)",
+    "VERSION": "18.06"
+  },
+  {
+    "NAME": "7-Zip 19.00 (x64 edition)",
+    "VERSION": "19.00.00.0"
+  },
+  {
+    "NAME": "7-Zip 19.00 (x64)",
+    "VERSION": "19.00"
+  },
+  {
+    "NAME": "7-Zip 20.00 alpha (x64)",
+    "VERSION": "20.00 alpha"
+  }
+]
+```
+
+<hr>
+
 ## SNMP Devices Routes
 
 ### List SNMP Type
