@@ -28,12 +28,12 @@ Package of priority level 1 will be deployed before package of priority 2…
 **Action is associated with file to deploy and command to launch**.
 This may be one of the following three commands:
 
-* **Action Launch**: to deploy a ZIP or TAR.GZ file and launch, with or without parameters, an executable
+* **Execute a file**: to deploy a ZIP or TAR.GZ file and launch, with or without parameters, an executable
 file **included** in ZIP or TAR.GZ file. The ZIP or TAR.GZ file will be uncompressed into a temporary directory,
 and the associated command (name of executable file without path!) will be launched into this temporary
 directory.**This action allows retrieving result code of the command launched.**
 
-* **Action Execute**: to optionaly deploy a ZIP or TAR.GZ file and launch, with or without parameters, an executable
+* **Execute a command**: to optionaly deploy a ZIP or TAR.GZ file and launch, with or without parameters, an executable
 file **included or not** in the optional ZIP or TAR.GZ file. If the executable is not included in the
 ZIP or TAR.GZ file, it must be already installed on the client computers. Typically, it may be a Windows 
 standard command like Windows Installer call (ie: msiexec), RPM, DPKG or TAR.GZ command on Linux. 
@@ -43,7 +43,7 @@ The ZIP or TAR.GZ file will be uncompressed into a temporary directory, and asso
 you to runn a command on client computers, without deploying any file. For example, you can use it
 to run specific operating system configuration command.
 
-* **Action Store**: to deploy a ZIP or TAR.GZ file and only store his content on a folder on the 
+* **Store**: to deploy a ZIP or TAR.GZ file and only store his content on a folder on the 
 client computers. **There is no command associated with this action, only a path to specify where
 to store the extracted files.**
 
@@ -217,7 +217,7 @@ kind of package you can build.
 ![Package builder page empty](../../img/server/reports/deploying_packages_4.png)
 ![Package builder page empty2](../../img/server/reports/deploying_packages_23.png)
 
-### **Deploying package through the “Launch” command**
+### **Deploying package through the “Execute a file” command**
 
 The package you want to deploy has one or more files, **with at least an executable file for launching
 the package's installation**.
@@ -225,7 +225,7 @@ the package's installation**.
 Compress the files using ZIP tool if your package addresses Windows computers, or tar and gzip if it
 addresses Linux computers.
 
-Choose action **Launch** and click the **Browse** button to select your ZIP or TAR.GZ file.
+Choose action **Execute a file** and click the **Browse** button to select your ZIP or TAR.GZ file.
 
 In field **Command**, just fill in the name of the executable file without path, but with, optionally,
 parameters. It’s this command that will be launched on client computers once the package is
@@ -238,7 +238,7 @@ installation with a .bat file:
 
 Click **[ Send ]** button to upload the package to the Administration console.
 
-### **Deploying package through the “Execute” command**
+### **Deploying package through the “Execute a command” command**
 
 You want to execute a program that's already on the target computers.
 
@@ -248,7 +248,7 @@ launching package setup.
 Compress the files using ZIP tool if your package addresses Windows computers, or tar and gzip if it
 addresses Linux computers.
 
-Choose action **Execute** and click **Browse** button to select your ZIP or TAR.GZ file, or leave the
+Choose action **Execute a command** and click **Browse** button to select your ZIP or TAR.GZ file, or leave the
 **File** field empty if you just want to execute a command on the target computers.
 
 In field **Command**, just fill in the path of the executable file to launch with parameters
@@ -306,7 +306,7 @@ will have to launch.
 
 ![dowload/package](../../img/server/reports/deploying_packages_7.png)
 
-**`Note: If you have created a package without any ZIP or TAR.GZ file (ie: through the “Execute” command), the 
+**`Note: If you have created a package without any ZIP or TAR.GZ file (ie: through the “Execute a command” command), the 
 administration console will only create the package information file **info** into the package's folder.`**
 
 ![info](../../img/server/reports/deploying_packages_11.png)
@@ -472,7 +472,7 @@ Status code | Meaning
 ------|------
 **WAITING NOTIFICATION** | Server is waiting for agent communication to notify there is something to download.
 **NOTIFIED** | Agent has been notified there is something to download. Now server waiting for result code.
-**SUCCESS** | Agent has successfully download package and launch command or stored extracted data. With “Launch” action, this status may be completed with command execution return code. (return code 0).
+**SUCCESS** | Agent has successfully download package and launch command or stored extracted data. With “Execute a file” action, this status may be completed with command execution return code. (return code 0).
 **ERR_EXIT_CODE_xxx** | Agent has successfully download package, **BUT** command of execution or data store associated terminated **in error** (return code xxx).
 **ERR_ALREADY_SETUP** | Package was previously installed successfully on this computer.
 **ERR_BAD_ID** | Agent is unable to download package because it cannot find package ID on deployment server.
@@ -989,7 +989,7 @@ Next, connect to Administration console and go to menu "Deployment / Build".
 * **select protocol** "HTTP",
 * **select priority** "5",
 * **browse to select ZIP file**,
-* **select action** "Launch",
+* **select action** "Execute a file",
 * **and fill in file name** with Service Agent setup command line switches, for example "OcsAgentSetup.exe /S /NOSPLASH /UPGRADE /NP /DEBUG /SERVER=my_ocs_server.domain.tld"
 (/S to run installer in silent mode, /NOSPLASH to disable installer spash screen, /UPGRADE to indicate that you’re upgrading an already installed Service Agent, /NP to disable use of IE proxy settings, /DEBUG to enable creation of log files, /SERVER to indicate that agent must connect to server at address "my_ocs_server.domain.tld").
 
