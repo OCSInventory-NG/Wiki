@@ -88,6 +88,10 @@ At first, you need to enable and launch mariadb:
 To secure your database, please launch the following command:
 
     mysql_secure_install
+    
+On Enterprise Linux 8 use the following command to secure your Database:
+
+    mysql_secure_installation
 
 ## Apache
 
