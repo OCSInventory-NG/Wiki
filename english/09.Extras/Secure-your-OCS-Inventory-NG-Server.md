@@ -79,3 +79,22 @@ Finally, register modification.
 ![GUI message](../../img/server/reports/secure_ocs_3.png)
 
 For more informations about users and profile, click [here](../04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md).
+
+# Apache and PHP informations leakage
+
+By default, the apache2 and php version can be recovered in the HTTP header.
+
+### Apache2 :
+You can hide the apache version from the header by modify the `/etc/apache2/conf-enabled/security.conf` on Debian/Ubuntu or `/etc/httpd/conf/httpd.conf` on RHEL/CentOS : 
+```
+ServerTokens Prod
+ServerSignature Off
+```
+
+### PHP : 
+To hide the PHP version, you need to modify the php.ini. (`/etc/php/[php_version]/apache2/php.ini on Debian/Ubuntu` or `/etc/php.ini` on RHEL/CentOS).
+```
+expose_php = Off
+```
+
+You need to restart apache2 after these to apply modifications.
