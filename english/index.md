@@ -21,6 +21,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Administration of OCS Inventory NG](03.Basic-documentation/Administration-of-OCS-Inventory-NG.md)
 * [Deploying database server](03.Basic-documentation/Deploying-database-server.md)
 * [Updating the server](03.Basic-documentation/Updating-the-server.md)
+* [Understanding OCS Crontab](03.Basic-documentation/Understanding-OCS-Crontab.md)
 
 ## Docker documentation
 
