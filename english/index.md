@@ -22,6 +22,8 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Deploying database server](03.Basic-documentation/Deploying-database-server.md)
 * [Updating the server](03.Basic-documentation/Updating-the-server.md)
 
+## Deploying softwares and execute commands using OCS
+
 ## Docker documentation
 
 * [Using docker image](13.Docker-documentation/Using-the-docker-image.md)
@@ -46,15 +48,21 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [Configure mail notification](04.Management-console-and-its-advanced-features/Configure-mail-notification.md)
 * [Configure OCS news](04.Management-console-and-its-advanced-features/Configure-OCS-news.md)
 
+## Deployment
+
+* [Prerequisites to packages deployment](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [Introduction and working principle](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [Configuring the deployment](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [Windows deployment templates](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [Linux deployment templates](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [MacOS deployment templates](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [Developers - Creating your own templates](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+
 ## CVE Inventory 
 
 * [Enabled and configure CVE-search reporting](04.Management-console-and-its-advanced-features/CVE-Search-management.md)
 * [Setup matching regex for CVE-search server](04.Management-console-and-its-advanced-features/CVE-Search-match-regex.md)
 * [Visualize CVE Inventory history](04.Management-console-and-its-advanced-features/CVE-Search-visualize-history.md)
-
-## Deployment
-
-* [Deploying packages or executing commands on client hosts](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
 
 ## Network Discovery with OCS Inventory NG
 
