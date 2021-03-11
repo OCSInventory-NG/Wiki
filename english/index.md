@@ -50,13 +50,13 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 ## Deployment
 
-* [Prerequisites to packages deployment](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
-* [Introduction and working principle](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
-* [Configuring the deployment](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
-* [Windows deployment templates](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
-* [Linux deployment templates](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
-* [MacOS deployment templates](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
-* [Developers - Creating your own templates](05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
+* [Prerequisites to packages deployment](05.Deployment/Prerequisites.md)
+* [Introduction and working principle](05.Deployment/Introduction.md)
+* [Configuring the deployment](05.Deployment/Configuration.md)
+* [Windows deployment templates](05.Deployment/Windows/Summary.md)
+* [Linux deployment templates](05.Deployment/Linux/Summary.md)
+* [MacOS deployment templates](05.Deployment/Mac/Summary.md)
+* [Developers - Creating your own templates](05.Deployment/Developers.md)
 
 ## CVE Inventory 
 
