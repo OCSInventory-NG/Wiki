@@ -13,7 +13,7 @@ To enable OCS Inventory deployment feature, login with a sadmin user and navigat
 On the left of the page, click on the `Deployment` tab and set the `DOWNLOAD` settings to ON. 
 Don't forget to click on the update button at the bottom of the page otherwise your settings won't be saved.
 
-![OCS plugin installation onglet](../../img/server/deployment/configuration_enable_download.png)
+![Enable OCS Deployment](../../img/server/deployment/configuration_enable_download.png)
 
 To configure the SSL with OCS, you need make sure that `mod_ssl` is available on your system.
 Please, refer to your system documentation to get it installed and working.
