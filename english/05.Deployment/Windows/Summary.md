@@ -16,7 +16,7 @@
 
 ### Others
 
-* [Store file or folder](#store-file-or-folder)
+* [Store file/folder](#store-file-or-folder)
 * [Custom package](#custom-package)
 
 
