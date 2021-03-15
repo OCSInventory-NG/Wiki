@@ -1,3 +1,9 @@
-1 - Expliquer le principe de création de templates
-2 - Explication ligne par ligne fonctionnement template 
-3 - Exemple de template, cas simple 
+# Deployment template
+
+Since OCS Inventory 2.9, the deployment feature has been reworked. The new deployment options works by XML templates. 
+
+## How does it works ?
+
+## Create your template
+
+## Template example
