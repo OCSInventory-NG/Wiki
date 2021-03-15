@@ -6,7 +6,40 @@ Since OCS Inventory 2.9, the deployment feature has been reworked. The new deplo
 
 ## Create your template step by step
 
+The first step is to declare your interaction to the operating system XML file. Edit the file `ocsreports > config > teledeploy > operatingsystems > operatingsystems.xml` and add your interaction line.
 
+Example to add interaction to Others category of Windows system :
+
+```
+<category id="otherswindows">
+    <interaction order="1">store</interaction>
+    <interaction order="2">custompackage</interaction>
+    <interaction order="3">example</interaction> <-- Line to declare your custom interaction -->
+</category>
+```
+
+Save and close.
+
+Next, create your interaction file in `ocsreports > config > teledeploy > interactions` folder. In our example the name file is `example.xml`. Edit this file and add this lines :
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<interactiondefinition>
+    <id>example</id>
+    <name>9323</name>
+    <refos>all</refos>
+    <imgref>image/example.png</imgref>
+    <linkedoptions>exampletopt</linkedoptions>
+</interactiondefinition>
+```
+
+Explainations :
+
+* id : name of the interaction that you declared in operating systems file.
+* name : translation number of your interaction.
+* refos : name of the OS (all / windows / linux / macos).
+* imgref : path to the icon that will be displayed in the package build page.
+* linkedoptions : name of the options parameters file.
 
 ## Template example
 
