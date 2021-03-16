@@ -236,6 +236,20 @@ File form block example :
 <NEED_DONE_ACTION_TEXT/>
 ```
 
+| XML Tag               | Definition                                                               |
+|---                    |---                                                                       |
+| PRI                   | Priority number (between 0 and 9)                                        |
+| ACT                   | Deployment action (EXECUTE / LAUNCH / STORE)                             |
+| PROTO                 | Protocol (HTTP / HTTPS)                                                  |
+| COMMAND/PATH          | Command to execute/launch or path to store file                          |
+| NOTIFY_USER           | Notify the user before deployment (0 for disabled / 1 for enabled)       |
+| NOTIFY_TEXT           | Text for NOTIFY_USER (disabled if NOTIFY_USER is set to 0)               |
+| NOTIFY_COUNTDOWN      | Countdown for NOTIFY_USER (disabled if NOTIFY_USER is set to 0)          |
+| NOTIFY_CAN_ABORT      | User can abort the deployment (0 for disabled / 1 for enabled)           |
+| NOTIFY_CAN_DELAY      | User can delay the deployment (0 for disabled / 1 for enabled)           |
+| NEED_DONE_ACTION      | Deployment need done action by the user (0 for disabled / 1 for enabled) |
+| NEED_DONE_ACTION_TEXT | Done action text (disabled if NEED_DONE_ACTION is set to 0)              |
+
 ## Template example
 
 You can find an example of interaction and option template below.
