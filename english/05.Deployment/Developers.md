@@ -277,6 +277,8 @@ Behavior description : It will get the file input sent in the web form and injec
 
 #### **Package definition**
 
+The pacakge definition refer to the configuration and command that will be executed by OCS Inventory agent upon package execution. It will also impact the way the deployment will be downloaded, on Windows it can also show an informative window to notice something to the enduser (i.e : inform the user to close a progam / that a software is gonna be updated)
+
 ```
 <PRI>5</PRI>
 <ACT>EXECUTE</ACT>
