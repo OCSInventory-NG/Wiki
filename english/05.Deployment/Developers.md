@@ -60,7 +60,8 @@ Now that we declared our interation we need to link it to a targeted operating s
 ```
 
 The interactions are divided in differents category :
-*screen*
+
+![teledeploy_interations](../../img/server/deployment/teledeploy_interactions.png)
 
 Example to add interaction to Others category of Windows system :
 ```
@@ -74,7 +75,9 @@ Example to add interaction to Others category of Windows system :
 Save and close.
 
 After setting the interaction, it will appear in the list in the selected category :
-*example interaction screen*
+
+![teledeploy_interations](../../img/server/deployment/teledeploy_interactions_example.png)
+
 
 ### Create options file
 
@@ -264,7 +267,7 @@ There is two different configuration possible :
 </codeasfile>
 ```
 
-Behavior description : It will retrieve the data sent in the code form block and inject it with the name "examplesript.bat". You can change the file name depending on which script type you want to execute.
+Behavior description : It will retrieve the data sent in the code form block and inject it with the name `examplesript.bat`. You can change the file name depending on which script type you want to execute.
 
 *Filesinarchive example :* 
 ```
@@ -273,17 +276,17 @@ Behavior description : It will retrieve the data sent in the code form block and
     <replacename>examplecript.bat</replacename>
 </filesinarchive>
 ```
-Behavior description : It will get the file input sent in the web form and inject it with the name "examplesript.bat". You can change the file name depending on what you want to deploy.
+Behavior description : It will get the file input sent in the web form and inject it with the name `examplesript.bat`. You can change the file name depending on what you want to deploy.
 
 #### **Package definition**
 
-The pacakge definition refer to the configuration and command that will be executed by OCS Inventory agent upon package execution. It will also impact the way the deployment will be downloaded, on Windows it can also show an informative window to notice something to the enduser (i.e : inform the user to close a progam / that a software is gonna be updated)
+The pacakge definition refer to the configuration and command that will be executed by OCS Inventory agent upon package execution. It will also impact the way the deployment will be downloaded, on Windows it can also show an informative window to notice something to the enduser (i.e : inform the user to close a progam / that a software is gonna be updated).
 
 ```
 <PRI>5</PRI>
 <ACT>EXECUTE</ACT>
 <PROTO>HTTP</PROTO>
-<COMMAND>examplescript.ps1</COMMAND> 
+<COMMAND>examplescript.bat</COMMAND> 
 <NOTIFY_USER>0</NOTIFY_USER>
 <NOTIFY_TEXT/>
 <NOTIFY_COUNTDOWN/>
