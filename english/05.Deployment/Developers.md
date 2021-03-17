@@ -174,6 +174,31 @@ File form block example :
 </formblock>
 ```
 
+Code form block example :
+
+```
+<formblock>
+    <id>editorCode</id> <-- Don't change the id -->
+    <label>12005</label>
+    <mandatory>true</mandatory>
+    <type>code</type>
+    <language>batch</language> <-- Set your language code here -->
+    <disabled>false</disabled>
+    <defaultvalue/>
+    <description/>
+    <specialcharallowed>false</specialcharallowed>
+</formblock>
+<formblock> <-- This form block is mandatory for code editor and not editable -->
+    <id>getcode</id>
+    <label></label>
+    <mandatory>false</mandatory>
+    <type>hidden</type>
+    <disabled>false</disabled>
+    <defaultvalue/>
+    <specialcharallowed>false</specialcharallowed>
+</formblock>
+```
+
 `Notice : The following formblocks are required and should not be changed except for the default value of FORMTYPE.`
 
 ```
@@ -209,14 +234,16 @@ File form block example :
 
 #### **Package builder**
 
+Package builder TAG is especially if code formblock or file formblock are present.
+
 ```
 <codeasfile>
     <targetid>examplescript</targetid>
-    <filename>examplescript.ps1</filename>
+    <filename>examplescript.bat</filename>
 </codeasfile>
 <filesinarchive>
     <targetid>additionalfiles</targetid>
-    <replacename>examplecript.ps1</replacename>
+    <replacename>examplecript.bat</replacename>
 </filesinarchive>
 ```
 
