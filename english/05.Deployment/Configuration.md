@@ -1,14 +1,14 @@
 # Deployment configuration
 
-In this chapter, you will be found how to configure properly the OCS Inventory deployment feature. The deployment configuration is available on `Configuration > General configuration > Deployment`.
+In this chapter, we will get through how to configure properly the OCS Inventory deployment feature. The deployment configuration is available on `Configuration > General configuration > Deployment`.
 
-First step to use OCS Inventory deployment feature is to activate it. Set the `DOWNLOAD` parameter to `ON`.
+In the first place, to use OCS Inventory deployment feature is to activate it. Set the `DOWNLOAD` parameter to `ON`.
 
 ![teledeploy_operating_systems](../../img/server/deployment/teledeploy_configuration_enable.png)
 
-`Note : package creation is still available even the DOWNLOAD parameter is disabled. However, the package will not be deploy on the machines.`
+`Note : package creation is still available even if the DOWNLOAD parameter is disabled. However, the package will not be deployed on the machines.`
 
-When Agent receives a deployment package, the download start by a "download period". A period is composed of cycles defined by the configuration `DOWNLOAD_PERIOD_LENGTH`. By default, a period contains 10 cycles.
+When an Agent receives a deployment package, the download start by a "download period". A period is composed of cycles defined by the configuration `DOWNLOAD_PERIOD_LENGTH`. By default, a period contains 10 cycles.
 
 ![teledeploy_operating_systems](../../img/server/deployment/teledeploy_configuration_period_latency.png)
 
@@ -25,7 +25,7 @@ When all fragments of a cycle are downloaded, the agent will wait `DOWNLOAD_CYCL
 
 `Note: You may use these three settings to customize your network bandwidth usage. By increasing latency options, you will increase time to download fragments and reduce network use average.`
 
-The `DOWNLOAD_TIMEOUT` parameter correspond to the validity in days of a package on an agent. If the time used to download a package is over `DOWNLOAD_TIMEOUT` days, package will be cleaned and `ERR_TIMEOUT` will be sent to OCS Inventory server.
+The `DOWNLOAD_TIMEOUT` parameter correspond to the validity in days of a package on an agent. If the time used to deploy a package is over `DOWNLOAD_TIMEOUT` days, package will be cleaned and `ERR_TIMEOUT` will be sent to OCS Inventory server.
 
 ![teledeploy_operating_systems](../../img/server/deployment/teledeploy_configuration_timeout.png)
 
@@ -45,9 +45,11 @@ The `DOWNLOAD_URI_INFO` parameter is to specify the address where INFO files of 
 
 **The three following parameters are only available since OCS Inventory 2.9.** 
 
-Since OCS Inventory 2.9, the deployment feature builds the package in one fragment.
+By default, since OCS Inventory 2.9, the deployment feature builds the package in one fragment.
 
-If you want to cut the package in more fragments, set `DOWNLOAD_ACTIVATE_FRAG` at `ON` then configure the `DOWNLOAD_RATIO_FRAG`. The fragment number is calculated as follows : 
+If you want to cut the package in more fragments, set `DOWNLOAD_ACTIVATE_FRAG` at `ON` then configure the `DOWNLOAD_RATIO_FRAG`. 
+
+The fragment number is calculated as follows : 
 
 If your `DOWNLOAD_RATIO_FRAG` is equal to 5MB and your package size is equal to 20MB, the package will be automatically cut in 4 fragments during the package creation.
 
@@ -55,6 +57,8 @@ If your `DOWNLOAD_RATIO_FRAG` is equal to 5MB and your package size is equal to 
 
 To activate a package directly after its creation without manually action, set `DOWNLOAD_AUTO_ACTIVATE` at `ON`.
 
+The auto activate package uses the `DOWNLOAD_URI_FRAG` and `DOWNLOAD_URI_INFO` values.
+
 ![teledeploy_operating_systems](../../img/server/deployment/teledeploy_configuration_activate.png)
 
-`Notice : don't forget to click on UPDATE button at the bottom page after configuration modification.`
+`Notice : don't forget to click on UPDATE button at the bottom page after any configuration modification.`
