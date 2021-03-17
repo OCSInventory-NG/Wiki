@@ -2,7 +2,7 @@
 
 OCS Inventory have the capability to deployment softwares when agent are properly configured. This feature gives you a simple and efficient to manage software installation / update and script execution on the remote machine.
 
-*This pre-requisites and configuration won't be discussed in this chapter, refer to corresponding chapter for more info*
+`This` [pre-requisites](Prerequisites.md) `and` [configuration](Configuration.md)`  won't be discussed in this chapter, refer to corresponding chapter for more info.`
 
 ## How does it work ?
 
@@ -20,7 +20,7 @@ In the case you install a software for example, the executable / setup of the so
 
 ## Accessing the deployment wizard
 
-You can access the deployment wizard by clicking on the `Deployment -> Build` menu.
+You can access the deployment wizard by clicking on the `Deployment > Build` menu.
 
 ![teledeploy_operating_systems](../../img/server/deployment/teledeploy_operating_systems.png)
 
