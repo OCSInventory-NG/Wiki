@@ -64,9 +64,9 @@ List of installation .pkg application's form parameters :
 Below the list of default installation .pkg application's parameters (not configurable by the user):
 
 * **Priority** : 5
-* **Action** : Store
+* **Action** : Execute
 * **Protocole** : HTTP
-* **Command** : {custom path file}
+* **Command** : installer -pkg application.pkg -target {custom path file}
 * **Notify User** : No
 * **Notify can abort** : No
 * **Notify can delay** : No
@@ -94,9 +94,9 @@ List of installation with brew's form parameters :
 Below the list of default installation with brew's parameters (not configurable by the user):
 
 * **Priority** : 5
-* **Action** : Store
+* **Action** : Execute
 * **Protocole** : HTTP
-* **Command** : {custom path file}
+* **Command** : username=$(last -1 | awk '{print $1}');su - $username -c 'brew install {custom application name}
 * **Notify User** : No
 * **Notify can abort** : No
 * **Notify can delay** : No
@@ -128,7 +128,7 @@ Below the list of default Apple script's parameters (not configurable by the use
 * **Priority** : 5
 * **Action** : Execute
 * **Protocole** : HTTP
-* **Command** : sh bashscript.sh {custom arguments}
+* **Command** : osascript applescript.scpt {custom arguments}
 * **Notify User** : No
 * **Notify can abort** : No
 * **Notify can delay** : No
