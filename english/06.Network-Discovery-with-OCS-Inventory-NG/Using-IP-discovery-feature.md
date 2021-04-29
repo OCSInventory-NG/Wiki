@@ -183,6 +183,7 @@ You can make a request to scan a specific IP address to obtain information about
     * Perl module DBI
     * Perl module DBD::mysql
     * Perl module XML::Simple
+    * fping
 
 #### **Command line options**
 
@@ -197,6 +198,8 @@ USAGE
 -ipdiscover=X | Show all the subnet with up to XX ipdiscover
 -xml | XML output
 -list | Show all the networks present in the database with "connected"/"discovered" computers
+-network=X.X.X.X/X | Subnet to scan (ex: 10.1.1.0/24)
+-scantype=xxxx | Tool to scan (ping or nmap, default nmap)
 
 DATABASE
 
@@ -218,3 +221,22 @@ of mysql server _OCSserveur_, witch listen on port 3306, using _gui_ account wit
 Result example:
 
 ![Perl Ipdiscover](../../img/server/linux/ip_discover_feature.png)
+
+## Scan on server ##
+
+You can launch a scan from the server with the **-network** option. You can set the type of scanning with the **-scantype** option.
+
+**`Note: If you want to scan with ping, make sure fping is installed.`**
+
+**Examples :**
+
+This command will scan the subnet and add all ip in the database :
+```
+perl ipdiscover-util.pl -network=10.1.1.0/24 -scantype=ping
+```
+
+You can also set multiple networks in the command : 
+```
+perl ipdiscover-util.pl -network=10.1.1.0/24 -network=10.1.2.0/24 -scantype=nmap
+```
+In this way, the script will scan both networks and add all the IP found to the database.
