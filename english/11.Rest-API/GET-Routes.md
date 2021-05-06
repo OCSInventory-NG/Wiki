@@ -26,12 +26,12 @@ Start and limit offset are mandatory !
 {ID} is the ID in ocs database
 {specificSection} is the section you want to retrieve.
 
-For example, `/ocsapi/v1/computer/4/softwares` will retrieve the software list of the computer with the id 4 in database.
+For example, `/ocsapi/v1/computer/4/software` will retrieve the software list of the computer with the id 4 in database.
 
 For example, `/ocsapi/v1/computer/4/officepack` will retrieve the office plugin informations of the computer with the id 4 in database.
 
 If you want to do a simple search on a computer, add parameters at the end.
-For example, `/ocsapi/v1/computer/4/softwares?where=PUBLISHER&operator=like&value=OCS`.
+For example, `/ocsapi/v1/computer/4/software?where=PUBLISHER&operator=like&value=OCS`.
 
 Operator list :
 
