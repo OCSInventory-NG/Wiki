@@ -172,3 +172,23 @@ For example, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from
 For example, `/ocsapi/v1/ipdiscover/NA` will retrieve the elements from ipdiscover with NA tag
 
 <hr>
+
+## CVE Routes
+
+### List CVE by CVSS
+
+`http://myocsserver/ocsapi/v1/cve/cvss/`
+
+<hr>
+
+### List CVE by software
+
+`http://myocsserver/ocsapi/v1/cve/software/`
+
+<hr>
+
+### List CVE by computer
+
+`http://myocsserver/ocsapi/v1/cve/computer/`
+
+<hr>
