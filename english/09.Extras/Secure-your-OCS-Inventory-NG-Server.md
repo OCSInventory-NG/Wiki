@@ -30,7 +30,7 @@ Connect to your mysql server
 
 Create a new user: **user** with password:**password** with all privileges for ocsweb database.
 
-    GRANT ALL PRIVILEGES ON `ocsweb` .* TO 'user'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+    GRANT ALL PRIVILEGES ON ocsweb.* TO 'user'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
 
 ![Error message](../../img/server/linux/secure_ocs_database.png)
 
