@@ -63,7 +63,7 @@ Select the plugin and click on "Install".
 
 ![OCS plugin installation](../../img/server/reports/plugin_installation.png)
 
-Logout and login for finish the web installation.
+Logout and login to finish the web installation.
 
 You can now proceed with the installation on your Communication server.
 
@@ -165,3 +165,25 @@ Then, create a deployment package with the `Store` action as explained in
 [Deploying packages or executing commands on client hosts](../05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
 
 Specify `C:\Program Files (x86)\OCS Inventory Agent\Plugins` as the path where the files need to be copied on the agents.
+
+## Uninstallation
+
+Uninstalling a plugin on your server(s) occurs in 2 steps:
+
+1. Deactivation of the extension via the Administration console;
+3. Uninstallation of the extension for the Communication server.
+
+Once the plugin is uninstalled from your server(s) you may remove the agent-part from your agents (optional).
+
+### Plugin deactivation
+
+Log into your Administration console and go to the "Extensions" tab.
+
+Click on the red cross next to the plugin in the list of activated plugin.
+
+### Uninstallation from the Communication server
+
+To uninstall the plugin from the Communication server, log in via ssh and delete the plugin's configuration file
+from the plugin folder (By default "/etc/ocsinventory-server/plugings").
+
+Then, restart your web server.
