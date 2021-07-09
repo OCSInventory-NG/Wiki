@@ -8,7 +8,7 @@ An automated deployment is now possible.
 
 You can use the [Packager for unix](https://github.com/OCSInventory-NG/Packager-for-Unix) to create a standalone package
 
-Automated deployment is possible using our [ansible role](https://github.com/OCSInventory-NG/Ansible-Role-For-Unix-Packager)
+Automated deployment is possible using our [ansible role](https://github.com/OCSInventory-NG/Ansible-Role-For-UnixAgent)
 
 **`Warning: You must have root privileges to set Ocsinventory-agent up.`**
 
