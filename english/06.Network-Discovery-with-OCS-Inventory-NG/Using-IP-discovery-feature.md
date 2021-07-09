@@ -200,6 +200,7 @@ USAGE
 -list | Show all the networks present in the database with "connected"/"discovered" computers
 -network=X.X.X.X/X | Subnet to scan (ex: 10.1.1.0/24)
 -scantype=xxxx | Tool to scan (ping or nmap, default nmap)
+-tag=xxxxx | if TAG is activated on ipdiscover and subnets are grouped by TAG (default tag is empty)
 
 DATABASE
 
