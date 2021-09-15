@@ -100,7 +100,7 @@ Already the web communication server requires mysql dependencies if you choose t
 **On Fedora/Redhat/Centos 7 like Linux**, you can use “yum” to set it up:
 
     yum install php-pecl-zip
-    yum install perl-XML-Simple perl-DBI perl-DBD-MySQL perl-Net-IP
+    yum install perl-XML-Simple perl-DBI perl-DBD-MySQL perl-Net-IP php-mbstring
 
 **For later Fedora installations 7.x+ :**
 
