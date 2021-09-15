@@ -70,7 +70,7 @@ Here will be the instructions for installing the server with the Admin GUI.
     yum-config-manager --enable remi
     dnf module reset php
     dnf module install php:remi-7.3
-    dnf install --enablerepo=PowerTools ocsinventory
+    dnf install --enablerepo=powertools ocsinventory
 
 ## Fedora
 
