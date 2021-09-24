@@ -34,6 +34,15 @@ To be able to scan a SNMP device, you must use SNMP community. SNMP community ca
 * SNMP version : it is the SNMP version supported by the SNMP device(s) (can be version 1, version 2, version 2c etc...)
 * SNMP community name : it is the community name you set in your SNMP device(s). For many SNMP devices, the default SNMP community name is public.
 
+SNMPv3 configuration parameters :
+
+* Username : Security name
+* Level : Security level (noAuthNoPriv | authNoPriv | authPriv)
+* Authpasswd : Authentication protocol pass phrase
+* Authproto : Authentication protocol (MD5 | SHA)
+* Privpasswd : Privacy protocol pass phrase
+* Privproto : Privacy protocol (DES | AES)
+
 If you set your own SNMP communities in your SNMP devices, you have to add it in OCS Inventory configuration. OCS agent will received informations about this communities and will try to scans SNMP devices using every SNMP communities you set in administration console. SNMP communites informations are directly added in database.
 
 ![Manage SNMP communities access](../../img/server/reports/manages_menu.png)
@@ -50,6 +59,12 @@ You have to set a community name and a SNMP version (using the drop list).
 
 * To delete a SNMP community, click on the red cross
 * To modify a SNMP community, click on the edit icon
+
+`Required libraries on Unix Agent to use SNMPv3 :`
+```
+apt-get install libcrypt-des-perl
+apt-get install libdigest-hmac-perl
+```
 
 ### **Configuring SNMP data model to scan**
 
