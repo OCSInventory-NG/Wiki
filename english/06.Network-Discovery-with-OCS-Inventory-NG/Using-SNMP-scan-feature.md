@@ -62,8 +62,9 @@ You have to set a community name and a SNMP version (using the drop list).
 
 `Required libraries on Unix Agent to use SNMPv3 :`
 ```
-apt-get install libcrypt-des-perl
 apt-get install libdigest-hmac-perl
+DES Privacy protocol : apt-get install libcrypt-des-perl
+AES Privacy protocol : apt-get install libcrypt-rijndael-perl
 ```
 
 ### **Configuring SNMP data model to scan**
