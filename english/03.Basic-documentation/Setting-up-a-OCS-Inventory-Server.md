@@ -17,7 +17,7 @@ These 4 components can be hosted on a single computer or on different computers 
 **Database** server currently can only be MySQL 5.5 or MariaDB with InnoDB engine active.
 **Communication server** needs Apache Web Server 2.2.X / 2.4.X and is written in PERL as an Apache module. Why? Because PERL scripts are compiled when Apache starts, and not at each request. This is better performance-wise. Communication server may require some additional PERL modules, according to your distribution.
 **Deployment server** needs any Web Server with SSL enabled.
-**Administration console** is written in PHP 5.6 (or higher) and runs under Apache Web Server 2.2.X /2.4.X. Administration console requires ZIP and GD support enabled in PHP in order to use package deployment.
+**Administration console** is written in PHP 7 (or higher) and runs under Apache Web Server 2.2.X /2.4.X. Administration console requires ZIP and GD support enabled in PHP in order to use package deployment.
 
 # Under Fedora/RHEL/Centos
 
@@ -81,7 +81,7 @@ Some of these packages are only available in`[`EPEL`](https://fedoraproject.org/
 
 ## Installing Administration console required PHP modules
 
-The Web Administration console requires Apache web server and PHP 4 scripting language and some additional modules
+The Web Administration console requires Apache web server and PHP 7 scripting language and some additional modules
 for PHP (see [Requirements](Setting-up-a-OCS-Inventory-Server.md#requirements)).
 Already the web communication server requires mysql dependencies if you choose to install the database server alone, you can refers to this page : [`Deploying Database Server`](../03.Basic-documentation/Deploying-database-server.md)
 
