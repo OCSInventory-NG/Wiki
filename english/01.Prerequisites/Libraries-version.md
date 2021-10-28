@@ -6,7 +6,7 @@ Here is the list of the different libraries and modules and their versions usefu
 
 * Apache version 2.2 or higher.
     * Mod_perl version 1.29 or higher.
-* PHP 5.5 or higher, with ZIP and GD support enabled.
+* PHP 7 or higher, with ZIP and GD support enabled.
     * php_curl
     * php_mbstring
     * php_soap
