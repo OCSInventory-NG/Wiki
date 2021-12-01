@@ -53,7 +53,7 @@ Example :
 
     (&(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc)(sAMAccountName=user.login))
 
-To explain this example, the LDAP is going to look for a user who belongs to the group MyGroup `AND` who has user.login as a connection identifier.
+To explain this example, the LDAP is going to look for a user who belongs to the group MyGroup `AND` who has user.login as a login identifier.
 
 In this example, the CONEX_LDAP_FILTER1 is equal to `&(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc)`
 
@@ -63,7 +63,7 @@ So we can use a more intricate filter like :
 
     (&(|(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc)(memberOf=CN=MyGroup2,CN=Users,DC=MyDomain,DC=dc))(sAMAccountName=user.login))
 
-To explain this example, the LDAP is going to look for a user who belongs to the group MyGroup `OR` who belongs to the group MyGroup2 `AND` who has user.login as a connection identifier.
+To explain this example, the LDAP is going to look for a user who belongs to the group MyGroup `OR` who belongs to the group MyGroup2 `AND` who has user.login as a login identifier.
 
 In that case the CONEX_LDAP_FILTER1 is equal to `&(|(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc)(memberOf=CN=MyGroup2,CN=Users,DC=MyDomain,DC=dc))`
 
