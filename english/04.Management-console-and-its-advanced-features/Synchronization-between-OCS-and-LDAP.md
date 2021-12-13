@@ -34,7 +34,38 @@ Here is a summary of the available web configuration :
 | **CONEX_LOGIN_FIELD**  | The attribute with which a user sign in | sAMAccountName or uid |
 | **CONEX_LDAP_PROTOCOL_VERSION**  | Protocol version number | 3 |
 | **CONEX_LDAP_CHECK_DEFAULT_ROLE**  | Default role of LDAP based user |   |
-| **CONEX_LDAP_CHECK_FIELD1_ROLE**  | Role of the user that match FIELD1_VALUE for FIELD1_NAME  |   |
+| **CONEX_LDAP_FILTER1**  | First LDAP filter that will be used for evaluating the security level of a LDAP user (blank for none) | &(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc) |
+| **CONEX_LDAP_FILTER1_ROLE**  | Role of the user that match FILTER1  |   |
+| **CONEX_LDAP_FILTER2**  | Second LDAP filter that will be used for evaluating the security level of a LDAP user (blank for none) | &(memberOf:1.2.840.113556.1.4.1941:=CN=MyParentGroup,CN=Users,DC=MyDomain,DC=dc) |
+| **CONEX_LDAP_FILTER2_ROLE**  | Role of the user that match FILTER2  |   |
+
+### How do filters work ?
+
+The fields CONEX_LDAP_FILTER1 and CONEX_LDAP_FILTER2 correspond to the first part of the LDAP filter request. It mean OCS is going to match the user using the filter and the login field set in the config variable CONEX_LOGIN_FIELD.
+
+Below, the complete query :
+
+    (CONEX_LDAP_FILTER1(CONEX_LOGIN_FIELD=user.login))
+    or
+    (CONEX_LDAP_FILTER2(CONEX_LOGIN_FIELD=user.login))
+
+Example :
+
+    (&(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc)(sAMAccountName=user.login))
+
+To explain this example, the LDAP is going to look for a user who belongs to the group MyGroup `AND` who has user.login as a login identifier.
+
+In this example, the CONEX_LDAP_FILTER1 is equal to `&(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc)`
+
+It exits two operators : `&` for `AND` and `|` for `OR`.
+
+So we can use a more intricate filter like :
+
+    (&(|(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc)(memberOf=CN=MyGroup2,CN=Users,DC=MyDomain,DC=dc))(sAMAccountName=user.login))
+
+To explain this example, the LDAP is going to look for a user who belongs to the group MyGroup `OR` who belongs to the group MyGroup2 `AND` who has user.login as a login identifier.
+
+In that case the CONEX_LDAP_FILTER1 is equal to `&(|(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc)(memberOf=CN=MyGroup2,CN=Users,DC=MyDomain,DC=dc))`
 
 ## Configure AUTH Method from var.php file 
 

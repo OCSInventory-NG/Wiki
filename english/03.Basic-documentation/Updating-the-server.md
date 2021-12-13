@@ -2,6 +2,8 @@
 
 The process is mainly backup your configuration download the new version of OCS-Server use the setup.sh and restore the backed up configuration.
 
+`Note : Since 2.9.2 version, some LDAP configuration fields has been changed. Please, read the documentation` [Manage authentification with LDAP](../04.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
+
 ## Delete existing plugins
 
 If you have plugins installed delete this plugins prior the update otherwise you might have problems with or after re-install them.
@@ -40,7 +42,7 @@ mysqldump -u ocs -p --all-databases > /home/backup_ocs/ocsdbbackup.sql
 
 ## Update the existing installation
 
-Download the last release of OCS from the [Website](https://ocsinventory-ng.org/?page_id=1548&lang=en) or here from github.    
+Download the last release of OCS from the [Website](https://ocsinventory-ng.org/?page_id=1548&lang=en) or [here](https://github.com/OCSInventory-NG/OCSInventory-ocsreports/releases) from github.    
 Unpack it :
 ```
 tar –xvzf OCSNG_UNIX_SERVER-2.x.x.tar.gz
