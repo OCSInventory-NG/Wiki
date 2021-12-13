@@ -4,9 +4,10 @@
 | Agent Version        | Compatibility Note |
 | :-------------       | :---------------   |
 | 2 . X | `Does not work on Windows 9X, Windows Millennium Edition or Windows NT4. You need to use old 1.X agent 4061-1.` |
-| 2 . 1 . 1 . 1 | `On Windows XP and 2003R2 you can only use this Windows agent version. ` | 
-| 2 . 4 | `Last 32-bit compatible release.` |
+| 2 . 1 . 1 . 1 | `On Windows XP and 2003R2 you can only use this Windows agent version. ` |
 | 2 . 6 | `Agent is only installable on 64-bit machines.` |
+| 2.6.0.1 | `Agent is only installable on 64-bit machines.` |
+| 2.7.X.X and newer | `Agent is installable on 64-bit and 32-bit machines.` |
 
 **OCS Inventory NG Agent for Windows can run as a Windows service** automatically at computer startup.
 
@@ -43,7 +44,7 @@ computer is elected to run IPDISCOVERY (see
 [Using IP discovery feature](../06.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md).)
 * **Deploy a package**: Agent contacts the deployment server using the HTTPS protocol to get the information file (file INFO which describes the package), downloads package fragments from the deployment server, rebuilds the package and launches it. 
 
-Since OCS Inventory Agent 2.6, it's possible to deploy package greater than 4GB. 
+Since OCS Inventory Agent 2.6, it's possible to deploy package greater than 4GB (only on 64-bit versions). 
 However, the deployment of such package may cause latency in machines on which it's deployed.
 
 **`Note`**`: The OCS Inventory NG Agent does not listen on the network. It only initiates communications to the server, so you do not have to open inbound port on a personal firewall. However, you must allow outbound connections from OCS Inventory NG agent files "OCSInventory.exe" and "Download.exe" to the Communication Server or Deployment Server using either HTTP or HTTPS.`
