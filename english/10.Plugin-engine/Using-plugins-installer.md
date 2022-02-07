@@ -153,11 +153,11 @@ sudo cp pluginname.conf /etc/ocsinventory-server/plugins/
 
 **`Note :  Don't forget to restart your Communication server's apache service after the installation has finished`**
 
-### Plugin deployment 
+### Windows Plugin deployment 
 
 Now that your Administration and Communication servers support your plugin, you need to deploy the agent part on you clients.
 
-The plugin's agent part is usualy located in the `agent` subfolder of your plugin's zip file.
+The plugin's agent part is usually located in the `agent` subfolder of your plugin's zip file.
 
 So, find this folder back and create a zip file containing all the files in this folder.
 
@@ -165,6 +165,16 @@ Then, create a deployment package with the `Store` action as explained in
 [Deploying packages or executing commands on client hosts](../05.Deployment/Deploying-packages-or-executing-commands-on-client-hosts.md)
 
 Specify `C:\Program Files (x86)\OCS Inventory Agent\Plugins` as the path where the files need to be copied on the agents.
+
+### Unix plugin installation
+
+To install unix agent plugin, copy the Myplugin.pm, usually located in the `agent` subfolder of your plugin's zip file, to /usr/local/share/perl/{perl version}/Ocsinventory/Agent/Modules.
+
+When installing using the RPM package the directory might change to /usr/share/perl5/Ocsinventory/Agent/Modules.
+
+Next, edit the file /etc/ocsinventory/modules.conf and add this line :
+
+    use Ocsinventory::Agent::Modules::Myplugin;
 
 ## Uninstallation
 
