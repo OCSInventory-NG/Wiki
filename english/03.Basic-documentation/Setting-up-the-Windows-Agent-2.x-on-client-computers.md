@@ -165,14 +165,25 @@ indicate which level of system integration you need:
 
 ![Windows Properties](../../img/agent/windows/setup_7.png)
 
-By default, WMI is allowed to retrieve the current domain user.
+By default, OCS Inventory agent use the WBEM_FLAG_RETURN_WBEM_COMPLETE flag WMI to retrieve its data. However in some cases, this can trigger additional queries to the domain controller.
 
-Behavior of WMI calls :
+With the 2.9.1.0 agent, there is the possibility to set the flag to two different mode : 
 
-* COMPLETE (default) : Allow WMI to retrieve current domain user
-* READ : Not allow
+- WBEM_FLAG_RETURN_WBEM_COMPLETE
+- WBEM_FLAG_DIRECT_READ
 
-If the WMI does not allow the recovery of the current user, set the Default user domain should OCS return.
+The WBEM_FLAG_DIRECT_READ flag will only read WMI information present directly on the system and won't trigger any query to the domain controller. 
+
+Please note the use of this flag will most likely result in information loss. 
+
+Possible agent configuration :
+
+* COMPLETE (default) : Allow full WMI query 
+* READ : Read only WMI queries (might lead to inventory data loss)
+
+The READ mode of the agent also comes with a DEFAULT_USER_DOMAIN configuration. Using the read flag will in most of the case make the agent unable to retrieve the current active directory domain user.
+
+Setting DEFAULT_USER_DOMAIN will allow to set a default connected user. 
 
 ![Windows Properties](../../img/agent/windows/setup_10.png)
 
@@ -362,7 +373,7 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
 **/proxy_pwd=password** | Proxy authentication credentials
 **/D=/<directory installation>** | specify the directory where your want to install ocsinventory agent (default %PROGRAMFILES%\ocs inventory agent)
 **/wmi_flag_mode=[COMPLETE/READ]** | WMI flag mode used by the agent
-**/default_user_domain=default.user** | Default user domain name
+**/default_user_domain=default.user** | Read only WMI queries (might lead to inventory data loss)
 
 ## Sample configuration file "ocsinventory.ini"
 
@@ -386,11 +397,10 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
     ; DLL must be in "com" sub directory
     ComProvider=ComHTTP.dll
     ; Behavior of WMI calls
-    ; COMPLETE => Allow WMI to retrieve current domain user
+    ; COMPLETE => Allow WMI full WMI queries
     ; READ => Not allow
     WMI_FLAG_MODE=COMPLETE
-    ; If the WMI does not allow the recovery of the current user 
-    ; wich default user should OCS return
+    ; Read only WMI queries (might lead to inventory data loss)
     DEFAULT_USER_DOMAIN=
 
     [HTTP]
