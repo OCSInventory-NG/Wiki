@@ -165,6 +165,17 @@ indicate which level of system integration you need:
 
 ![Windows Properties](../../img/agent/windows/setup_7.png)
 
+By default, WMI is allowed to retrieve the current domain user.
+
+Behavior of WMI calls :
+
+* COMPLETE (default) : Allow WMI to retrieve current domain user
+* READ : Not allow
+
+If the WMI does not allow the recovery of the current user, set the Default user domain should OCS return.
+
+![Windows Properties](../../img/agent/windows/setup_10.png)
+
 Choose destination folder, “C:\Program Files\OCS Inventory Agent” by default
 (“C:\Program Files (x86)\OCS Inventory Agent” under Windows 64 bits), and click “Install” button.
 
@@ -209,6 +220,8 @@ Also, you can pass to the installer the following agent's command line parameter
 * /NOTAG
 * /TAG=
 * /D=
+* /WMI_FLAG_MODE=
+* /DEFAULT_USER_DOMAIN=
 
 ### **Deploying or running Agent through Active Directory GPO**
 
@@ -348,6 +361,8 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
 **/proxy_user=username** | Proxy authentication credentials
 **/proxy_pwd=password** | Proxy authentication credentials
 **/D=/<directory installation>** | specify the directory where your want to install ocsinventory agent (default %PROGRAMFILES%\ocs inventory agent)
+**/wmi_flag_mode=[COMPLETE/READ]** | WMI flag mode used by the agent
+**/default_user_domain=default.user** | Default user domain name
 
 ## Sample configuration file "ocsinventory.ini"
 
@@ -370,6 +385,13 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
     ; Name of communication DLL and configuration section to use
     ; DLL must be in "com" sub directory
     ComProvider=ComHTTP.dll
+    ; Behavior of WMI calls
+    ; COMPLETE => Allow WMI to retrieve current domain user
+    ; READ => Not allow
+    WMI_FLAG_MODE=COMPLETE
+    ; If the WMI does not allow the recovery of the current user 
+    ; wich default user should OCS return
+    DEFAULT_USER_DOMAIN=
 
     [HTTP]
     ; OCS Inventory NG Communication Server address and port
