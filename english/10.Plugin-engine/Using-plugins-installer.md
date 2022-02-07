@@ -172,9 +172,15 @@ To install unix agent plugin, copy the Myplugin.pm, usually located in the `agen
 
 When installing using the RPM package the directory might change to /usr/share/perl5/Ocsinventory/Agent/Modules.
 
-Next, edit the file /etc/ocsinventory/modules.conf and add this line :
+Then, edit the file /etc/ocsinventory/modules.conf and add this line :
 
     use Ocsinventory::Agent::Modules::Myplugin;
+
+To verify that the plugin is working correctly, run the command :
+
+    perl modules.conf
+
+If the command returns an error, it indicates that the plugin is not loading properly.
 
 ## Uninstallation
 
