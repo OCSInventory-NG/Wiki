@@ -57,6 +57,60 @@ The simplest way is to install the ocsinventory-release package which provides t
 
     dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc34.ocs.noarch.rpm
 
+# Install OCS Inventory server with APT
+
+**On Debian-based distributions** you can install the server with APT
+
+You need to add our repository using the following command
+
+    $ curl -sS http://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+    $ echo "deb http://deb.ocsinventory-ng.org/debian/ <distribution_codename> main" | sudo tee /etc/apt/sources.list.d/ocsinventory.list
+    $ sudo apt update 
+
+You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
+
+* buster | stable 
+* stretch | oldstable
+* sid | unstable
+
+Then install the server using : 
+
+    $ sudo apt install ocsinventory
+
+You can install only the web console with 
+
+    $ sudo apt install ocsinventory-ocsreports
+
+Or only the communication server with :
+
+    $ sudo apt install ocsinventory-server
+
+**On Ubuntu-based distributions** you can install the server with APT
+
+You need to add our repository using the following command
+
+    $ curl -sS http://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+    $ echo "deb http://deb.ocsinventory-ng.org/ubuntu/ <distribution_codename> main" | sudo tee /etc/apt/sources.list.d/ocsinventory.list
+    $ sudo apt update
+
+You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
+
+* focal | stable 
+* bionic | oldstable
+* xenial | backport
+
+Then install the server using : 
+
+    $ sudo apt install ocsinventory
+
+You can install only the web console with 
+
+    $ sudo apt install ocsinventory-ocsreports
+
+Or only the communication server with :
+
+    $ sudo apt install ocsinventory-server
+
 # Install OCS Inventory server
 
 The repo provide the following packages:
