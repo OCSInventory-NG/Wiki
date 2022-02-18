@@ -8,6 +8,7 @@
 * [Uninstall application](#uninstall-application)
 * [Add apt repository](#add-apt-repository)
 * [Add yum repository](#add-yum-repository)
+* [Install plugin](#install-plugin)
 
 ### Scripts
 
@@ -135,6 +136,37 @@ Next, click on `Validate`. After the package has been created its resume is disp
 ![Add yum repository resume](../../../img/server/deployment/teledeploy_linux_yumrepo_resume.png)
 
 The fragments number and the Activated column value depends on your deployment configuration. For more informations see [Deployment configuration](../Configuration.md).
+
+## Install plugin
+
+To install a plugin, go to `Deployment > Build > Linux > Install / Uninstall` and click on `Install plugin`.
+
+![Install plugin resume](../../../img/server/deployment/teledeploy_linux_installplugin_example.png)
+
+List of install plugin's form parameters :
+
+* **Package Name** : the package display name
+* **Description** : the package description
+* **Plugin agent file** : Agent file you wish to deploy on targets (most likely found in the 'agent' directory of the plugin)
+
+Below the list of default install plugin's parameters (not configurable by the user):
+
+* **Priority** : 5
+* **Action** : Execute
+* **Protocole** : HTTP
+* **Command** : sh installplugin.sh
+* **Notify User** : No
+* **Notify can abort** : No
+* **Notify can delay** : No
+* **Need done action** : No
+
+Next, click on `Validate`. After the package has been created its resume is displayed.
+
+![Install plugin resume](../../../img/server/deployment/teledeploy_linux_installplugin_resume.png)
+
+
+The fragments number and the Activated column value depends on your deployment configuration. For more informations see [Deployment configuration](../Configuration.md).
+
 
 ## Bash sh Script
 
