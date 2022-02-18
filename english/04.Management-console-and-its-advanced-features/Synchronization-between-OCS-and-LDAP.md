@@ -34,6 +34,7 @@ Here is a summary of the available web configuration :
 | **CONEX_LOGIN_FIELD**  | The attribute with which a user sign in | sAMAccountName or uid |
 | **CONEX_LDAP_PROTOCOL_VERSION**  | Protocol version number | 3 |
 | **CONEX_LDAP_CHECK_DEFAULT_ROLE**  | Default role of LDAP based user |   |
+| **CONEX_LDAP_NB_FILTERS**  | Default number of LDAP filters |  2 |
 | **CONEX_LDAP_FILTER1**  | First LDAP filter that will be used for evaluating the security level of a LDAP user (blank for none) | &(memberOf=CN=MyGroup,CN=Users,DC=MyDomain,DC=dc) |
 | **CONEX_LDAP_FILTER1_ROLE**  | Role of the user that match FILTER1  |   |
 | **CONEX_LDAP_FILTER2**  | Second LDAP filter that will be used for evaluating the security level of a LDAP user (blank for none) | &(memberOf:1.2.840.113556.1.4.1941:=CN=MyParentGroup,CN=Users,DC=MyDomain,DC=dc) |
@@ -41,9 +42,11 @@ Here is a summary of the available web configuration :
 
 ### How do filters work ?
 
-The fields CONEX_LDAP_FILTER1 and CONEX_LDAP_FILTER2 correspond to the first part of the LDAP filter request. It mean OCS is going to match the user using the filter and the login field set in the config variable CONEX_LOGIN_FIELD.
+The fields CONEX_LDAP_FILTER correspond to the first part of the LDAP filter request. It mean OCS is going to match the user using the filter and the login field set in the config variable CONEX_LOGIN_FIELD. 
 
-Below, the complete query :
+The number of filters can be adjusted with CONEX_LDAP_NB_FILTERS (minimum of 1, default of 2 and maximun equals number of roles).
+
+Below, the complete query for 2 filters :
 
     (CONEX_LDAP_FILTER1(CONEX_LOGIN_FIELD=user.login))
     or
