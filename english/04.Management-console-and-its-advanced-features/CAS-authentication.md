@@ -1,4 +1,4 @@
-# Manage authentification with LDAP
+# Manage authentification with CAS
 
 It is possible to delegate authentication of the administration console of OCS Inventory. 
 So we will see how to delegate the connection to the OCSInventory NG GUI to a CAS server.
