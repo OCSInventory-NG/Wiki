@@ -210,9 +210,8 @@ Service Agent setup "OCS-NG-Windows-Agent-Setup.exe" may be called with some com
 * **/NOW** to launch inventory just after setup
 * **/NOSOFTWARE** to ignore software installed
 * **/D** to install ocsinventory agent in an another directory (default %PROGRAMFILES%\ocs inventory agent)
-* **/UPGRADE** to deploy new agent through OCS deployment feature. Because you upgrade agent using agent itself to run the upgrade, it is needed to notify the installer (which terminates agent's processes) to specify the result in order to send it back to the server next time agent will run.
 
-**`Note: Please, don't use OCSPackager to upgrade OCS Inventory Windows Agent. Create deployement package with "OCS-NG-Windows-Agent-Setup.exe" on zip file and launch with command example : OCS-NG-Windows-Agent-Setup.exe /S /UPGRADE /SERVER=ocs_server_address`**
+**`Note: Please, don't use OCSPackager to upgrade OCS Inventory Windows Agent. Create deployement package with "OCS-NG-Windows-Agent-Setup.exe" on zip file and launch with command example : OCS-NG-Windows-Agent-Setup.exe /S /SERVER=ocs_server_address`**
 
 Also, you can pass to the installer the following agent's command line parameters
 (see agent's options below for more detail):
