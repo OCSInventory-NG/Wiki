@@ -21,8 +21,8 @@ Here is a summary of the available web configuration :
 
 | Configuration item | Description | Example |
 |---|---|---|
-| **CAS_PORT** | CAS Server port  | /cas |
-| **CAS_URI**  | CAS URI | 443   |
+| **CAS_PORT** | CAS Server port  | 443 |
+| **CAS_URI**  | CAS URI | /cas   |
 | **CAS_HOST**  | CAS Server host | authentication.org  |
 | **CAS_DEFAULT_ROLE**  | Default role of CAS based user, assigned at first connection |   |
 
