@@ -1,5 +1,7 @@
 # OCS Inventory Docker image
 
+`Note : since version 2.9.2 of OCS Inventory Docker Image, important changes have been made. Please read the following part of the documentation : OCS Inventory Docker Image - Update 2.9.2.` 
+
 ## Pull image from docker hub
 
 Just launch the following command : 
@@ -65,7 +67,7 @@ git clone https://github.com/OCSInventory-NG/OCSInventory-Docker-Image
 
 Browse to tag directory (i.e) :
 ```
-cd 2.6/
+cd 2.9.2/
 ``` 
 
 An then run : 
@@ -87,7 +89,7 @@ Although there is no volume created to store the SSL certificates.
 
 ## List of all environments variables available 
 
-You will find below the list of all available environments variables available for our docker image.
+You will find below the list of all available environments variables for our docker image.
 
 | ENV Variable name | Description | Default value |
 | :--- | :---: | :--- |
@@ -117,14 +119,62 @@ You will find below the list of all available environments variables available f
 
 *`NOTE : Default volumes are created for OCS_LOG_DIR, OCS_VARLIB_DIR, OCS_WEBCONSOLE_DIR, OCS_PERLEXT_DIR, OCS_PLUGINSEXT_DIR. If you edit these variables you will need to create your own volumes.`*
 
+## OCS Inventory Docker Image - Update 2.9.2
+
+Since version 2.9.2, the OCS Inventory Docker image is based on the Ubuntu image (CentOS before) and a Nginx container has been added to manage proxy, SSL and Api restricted access.
+
+### Update from an old OCS Inventory Image
+
+Si vous souhaitez mettre à jour votre application docker OCS Inventory déjà en place vers la 2.9.2, plusieurs précautions sont à prendre.
+
+Il est tout d'abord très important de sauvegarder vos volumes existants :
+
+* perlcomdata
+* ocsreportsdata
+* varlibdata
+* sqldata
+
+Seul httpdconfdata n'est pas à sauvegarder car la structure du système ayant changé, les chemins d'accès aux fichiers de configuration ne seront pas compatibles avec la nouvelle structure.
+
+### NGINX configuration
+
+Avec l'ajout de l'image Nginx, plusieurs fichiers de bases ont été ajoutés. Afin de configurer au mieux votre proxy, voici un descriptif des différents fichiers et leur emplacement :
+
+* nginx/conf/ocsinventory.conf.template : fichier de configuration de l'application OCS. Ce fichier peut-être remplacé par votre propre fichier de configuration. Attention : le nom de votre fichier de configuration doit impérativement se terminer par .template.
+* nginx/certs/ocs-dummy.crt : certificat SSL par défaut. Ce fichier peut-être remplacé par votre propre certificat. Dans ce cas là, mettre à jour la variable d'environnement SSL_CERT dans le docker-compose.yml.
+* nginx/certs/ocs-dummy.key : clé de certificat SSL par défaut. Ce fichier peut-être remplacé par votre propre clé de certificat. Dans ce cas là, mettre à jour la variable d'environnement SSL_KEY dans le docker-compose.yml.
+* nginx/auth/ocsapi.htpasswd : fichier htpasswd contenant les identifiants des utilisateurs autorisés à se connecter à l'API Rest OCS. Ce fichier peut-être remplacé par votre propre fichier htpasswd. Dans ce cas là, mettre à jour la variable d'environnement API_AUTH_FILE dans le docker-compose.yml.
+
+
+
+You will find below the list of all available environments variables for our nginx docker image.
+
+| ENV Variable name | Description | Default value |
+| :--- | :---: | :--- |
+| **LISTEN_PORT** | Proxy listen port (80 or 443) | 80 |
+| **PORT_TYPE** | OCS SSL port type precision (empty or ssl) | |
+| **SSL_CERT** | OCS SSL certificate name | ocs-dummy.crt |
+| **SSL_KEY** | OCS SSL certificate key name | ocs-dummy.key |
+| **API_AUTH_FILE** | OCS Api htpasswd file name | ocsapi.htpasswd |
+| **READ_TIMEOUT** | OCS donwload read timeout | 300 |
+| **CONNECT_TIMEOUT** | OCS download connect request timeout | 300 |
+| **SEND_TIMEOUT** | OCS download sending request timeout | 300 |
+| **MAX_BODY_SIZE** | OCS download max body size | 1G |
+
+
 ## List of all image tags 
 
-| Tag | Description | Usage |
-| :--- | :---: | :--- |
-| **2.6** | Stable version of OCS Inventory | Production |
-| **nightly** | Rolling releases | Production / Testing |
-| **dev** | Apache run directory | Developpment / Testing |
-| **latest** | Use the last stable version of OCS Inventory | Production |
+| Tag | Description | Images | Usage |
+| :--- | :---: | :--- | :--- |
+| **2.9.2** | Stable version of OCS Inventory | Ubuntu 20.04 / MySQL 8.0 / Nginx latest | Production |
+| **2.9** | Stable version of OCS Inventory | CentOS 7 / MySQL 5.7 | Production |
+| **2.8.1** | Stable version of OCS Inventory | CentOS 7 / MySQL 5.7 | Production |
+| **2.8** | Stable version of OCS Inventory | CentOS 7 / MySQL 5.7 | Production |
+| **2.7** | Stable version of OCS Inventory | CentOS 7 / MySQL 5.7 | Production |
+| **2.6** | Stable version of OCS Inventory | CentOS 7 / MySQL 5.7 | Production |
+| **nightly** | Rolling releases | Ubuntu 20.04 / MySQL 8.0 / Nginx latest | Production / Testing |
+| **dev** | Apache run directory | Ubuntu 20.04 / MySQL 8.0 / Nginx latest | Developpment / Testing |
+| **latest** | Use the last stable version of OCS Inventory | Ubuntu 20.04 / MySQL 8.0 / Nginx latest | Production |
 
 ## Use older image tags
 
