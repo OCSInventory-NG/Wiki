@@ -122,7 +122,6 @@ save logs to a file using “Save logs” button.
 ---|---
 /S|Silent Mode
 /NOSPLASH|disable splash screen when installer starts
-/UPGRADE|to deploy new agent through OCS deployment feature. Because you upgrade agent using agent itself to run the upgrade, it is needed to notify the installer (which terminates agent's processes) to specify the result in order to send it back to the server next time agent will run
 /NO_SERVICE|to not register OCS Inventory NG Agent into Windows Service Manager. Agent can only be launched manually or through a script/GPO
 /NO_SYSTRAY|to not create a shortcut into "All Users" startup folder to start systray applet when user log in.
 /NOW|to launch inventory just after setup
