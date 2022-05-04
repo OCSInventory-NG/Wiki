@@ -1,7 +1,5 @@
 # Use OCSPackager
 
-**`Note: Please, don't use OCSPackager to upgrade OCS Inventory Windows Agent. To upgrade Agent see : ` [ OCS Inventory NG Agent 2.X on Windows Operating Systems](../03.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md) `part "OCS Inventory NG Agent for Windows Setup command line options"`**
-
 ## Introduction
 
 **Open Computer and Software Inventory NG Packager** is an application designed to prepare automated
