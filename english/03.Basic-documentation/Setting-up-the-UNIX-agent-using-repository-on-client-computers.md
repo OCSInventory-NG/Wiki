@@ -15,8 +15,9 @@ You need to add our repository using the following command
 
 You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
 
-* buster | stable 
-* stretch | oldstable
+* bullseye | stable
+* buster | oldstable 
+* stretch | oldoldstable
 * sid | unstable
 
 Then install the agent using : 
@@ -33,8 +34,9 @@ You need to add our repository using the following command
 
 You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
 
-* focal | stable 
-* bionic | oldstable
+* jammy | stable
+* focal | oldstable 
+* bionic | backport
 * xenial | backport
 
 Then install the agent using : 
