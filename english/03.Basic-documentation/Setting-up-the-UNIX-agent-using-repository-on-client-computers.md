@@ -26,9 +26,17 @@ Then install the agent using :
 
 **On Ubuntu-based distributions** you can install the agent with APT
 
-You need to add our repository using the following command
+You need to add our repository using the following commands :
+
+    $ curl -sS http://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+
+**Note** : apt-key is now deprecated as of Ubuntu 22.04, and will issue a warning. We recommend using the below gpg alternative :
+
 
     $ curl -fsSL http://deb.ocsinventory-ng.org/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/ocs-archive-keyring.gpg
+
+Then : 
+  
     $ echo "deb http://deb.ocsinventory-ng.org/ubuntu/ <distribution_codename> main" | sudo tee /etc/apt/sources.list.d/ocsinventory.list
     $ sudo apt update
 
