@@ -436,3 +436,24 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
     PROLOG_FREQ=5
     ; Old value of PROLOG_FREQ
     OLD_PROLOG_FREQ=10
+
+
+
+## Using the portable agent
+
+The portable agent can be used if you are looking for a way to run the agent as a one time thing, without any installation.
+
+
+- The "**RunPortableAgent.bat**" script needs to be modified : edit OCS_SERVER_URL and OCS_CLIENT_TAG if needed.
+
+
+- Execute this same script to launch an inventory. Once this is done, run the "**CleanPortableAgent.bat**" script to clear the system from any agent related files.
+
+
+Command line options for the Windows agent are also available for the portable agent. 
+
+When using them, you won't have to modify the script mentionned above, just navigate to the directory, edit the "**ocsinventory.ini**" file to configure the agent and launch **"OCSInventory.exe"** with any useful options. 
+
+Alternatively, you can provide configuration through the command line as well, and leave the .ini file as is.
+
+ 
