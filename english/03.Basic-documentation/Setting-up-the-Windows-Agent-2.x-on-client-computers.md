@@ -437,7 +437,30 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
     ; Old value of PROLOG_FREQ
     OLD_PROLOG_FREQ=10
 
+## Uninstalling the agent 
 
+Starting the 2.10.0.0, the Windows agent add some housecleaning option on the uninstaller.
+
+_Note : The uninstaller is present in the installation directory of the agent (uninst.exe)_
+
+If you uninstall the agent manually, you'll see a new window ask you if you desire to clean remaining agent files : 
+![End of the installation](../../img/agent/windows/uninstaller.png)
+
+The agent provide three differents options in order to clean the configuration files and data files present on the %ProgramData% directory : 
+* NONE (Doesn't remove anything)
+* ONLY CONFIGURATION (Remove the ocsinventory.ini and the Download folder)
+* ALL FILES (Completely remove the OCS Inventory NG folder in %ProgramData%)
+
+_Note : If you choose the last option and reinstall the agent later, it'll most likely lead to a duplicate in the webconsole since the agent will have to regenerate a deviceid (ocsinventory.dat)_
+
+You can also run the uninstaller programmatically with the /CLEAN option.
+It can be useful if you plan a mass uninstallation of the agent.
+
+By default, if you run `.\uninst.exe /S` it won't clean the files in the %ProgramData% directory.
+
+In order to only clean the files (ONLY CONFIGURATION), you can use : `.\uninst.exe /S /CLEAN=FILES`
+
+To clean everything in the %ProgramData% directory (ALL FILES) : `.\uninst.exe /S /CLEAN=ALL`
 
 ## Using the portable agent
 
