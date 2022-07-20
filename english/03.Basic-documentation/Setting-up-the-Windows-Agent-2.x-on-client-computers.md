@@ -441,7 +441,7 @@ Agent\OCSInventory.exe [options]” command line where [options] may be in the f
 
 Starting the 2.10.0.0, the Windows agent add some housecleaning option on the uninstaller.
 
-_Note : The uninstaller is present the installation directory of the agent (uninst.exe)_
+_Note : The uninstaller is present in the installation directory of the agent (uninst.exe)_
 
 If you uninstall the agent manually, you'll see a new window ask you if you desire to clean remaining agent files : 
 ![End of the installation](../../img/agent/windows/uninstaller.png)
