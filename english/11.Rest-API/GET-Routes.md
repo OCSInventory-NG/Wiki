@@ -126,7 +126,11 @@ Example of result:
 
 ### List X SNMP Type details (start, limit)
 
-`http://myocsserver/ocsapi/v1/snmps?start={startoffset}&limit={limitoffset}`
+`http://myocsserver/ocsapi/v1/snmp/{TABLE_TYPE_NAME}?start={startoffset}&limit={limitoffset}`
+
+{TABLE_TYPE_NAME} is the type you want to retrieve.
+
+For example, `/ocsapi/v1/snmp/snmp_printer?start=0&limit=10` will retrieve the first 10 SNMP Printer Type results.
 
 Start and limit offset are mandatory !
 
@@ -141,8 +145,6 @@ Start and limit offset are mandatory !
 
 For example, `/ocsapi/v1/snmp/snmp_printer/1` will retrieve the SNMP Printer Type with the id 1 in database.
 
-In the case you want to retrieve everything from this snmp type just remove {ID} parameters
-
 <hr>
 
 ## IP Discover Routes
@@ -155,7 +157,7 @@ In the case you want to retrieve everything from this snmp type just remove {ID}
 
 ### List IP Discover Networks Elements
 
-`http://myocsserver/ocsapi/v1/ipdiscover/{networkID}`
+`http://myocsserver/ocsapi/v1/ipdiscover/network/{networkID}`
 
 {networkID} is the network number
 
@@ -165,7 +167,7 @@ For example, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from
 
 ### List IP Discover Elements by TAG
 
-`http://myocsserver/ocsapi/v1/ipdiscover/{TAG}`
+`http://myocsserver/ocsapi/v1/ipdiscover/tag/{TAG}`
 
 {TAG} is the computer TAG
 
