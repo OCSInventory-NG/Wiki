@@ -161,7 +161,7 @@ For example, `/ocsapi/v1/snmp/snmp_printer/1` will retrieve the SNMP Printer Typ
 
 {networkID} is the network number
 
-For example, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from the network 172.18.27.0
+For example, `/ocsapi/v1/ipdiscover/network/172.18.27.0` will retrieve the elements from the network 172.18.27.0
 
 <hr>
 
@@ -171,7 +171,7 @@ For example, `/ocsapi/v1/ipdiscover/172.18.27.0` will retrieve the elements from
 
 {TAG} is the computer TAG
 
-For example, `/ocsapi/v1/ipdiscover/NA` will retrieve the elements from ipdiscover with NA tag
+For example, `/ocsapi/v1/ipdiscover/tag/NA` will retrieve the elements from ipdiscover with NA tag
 
 <hr>
 
