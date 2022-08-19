@@ -67,7 +67,7 @@ which contact it.`**
 
 ## Set an anti-spam system
 We recommend setting an anti-spam such as fail2ban to monitor the server logs and detect any suspicious activity.
-Using an anti spam system adds a security layer and helps reducing the impact of automated attacks.
+Using an anti spam system adds a security layer and helps reducing the impact of automated attacks such as deny of service attacks for example.
 For more information on fail2ban, visit [fail2ban.org](https://www.fail2ban.org/wiki/index.php/Main_Page).
 
 
