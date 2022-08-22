@@ -64,6 +64,13 @@ Under Linux, generally in
 **`Warning: Don't forget to restart apache. Else, OCS Inventory NG server will return an ERROR 500 to agents
 which contact it.`**
 
+
+## Set an anti-spam system
+We recommend setting an anti-spam such as fail2ban to monitor the server logs and detect any suspicious activity.
+Using an anti spam system adds a security layer and helps reducing the impact of automated attacks such as deny of service attacks for example.
+For more information on fail2ban, visit [fail2ban.org](https://www.fail2ban.org/wiki/index.php/Main_Page).
+
+
 # Desactivate warning message in management console
 
 **`Warning: We recommend you to secure your server following preceding paragraphs, but if you want,
