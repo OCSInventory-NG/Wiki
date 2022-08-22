@@ -14,8 +14,7 @@ Install it with the command pip3.
 On debian based systems :
 
 ```
-sudo apt install python3-pip
-sudo pip3 install scp
+sudo apt install python3-scp
 ```
 
 On redhat based systems :
