@@ -27,6 +27,7 @@ First of all, choose an OCS MacOSX installer package path by clicking the _Brows
 
 Set your custom OCS MacOSX agent configuration by choosing serveral options:
 
+Files and options : 
 * Http or https for OCS MacOSX agent communication to OCS server ("http" by default).
 * OCS server server name ("ocsinventory-ng" by default).
 * OCS MacOSX agent TAG value (optional).
@@ -34,6 +35,11 @@ Set your custom OCS MacOSX agent configuration by choosing serveral options:
 * Activate or Unactivate OCS MacOSX agent debug mode for logs (activated by default).
 * Activate or Unactivate OCS MacOSX agent packages download feature (activated by default).
 * Activate or Unactivate OCS MacOSX agent lazy mode (inactivated by default).
+
+Authentication (available with the 2.1 version of the MacOSX Packager):
+* Specificy authentication credentials for the agent to use if required by the server. (Username and password will be encoded using base64 encoding)
+
+Launch options : 
 * Periodicity for OCS MacOSX agent to be launched by Launchd daemon (5 hours by default).
 * Activate or Unactivate OCS MacOSX agent launch at Launchd daemon start (activated by default).
 * Activate or Unactivate OCS MacOSX agent launch, using Launchd daemon, after OCS agent installation
