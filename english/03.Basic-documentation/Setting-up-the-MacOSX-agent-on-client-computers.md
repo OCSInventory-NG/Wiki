@@ -41,12 +41,24 @@ Click on "Continue" to validate configuration.
 
 ![Ocs agent configuration](../../img/agent/macOS/macosx_agent_install_configuration.png)
 
+
+
 If you activate OCS MacOSX agent packages download feature and SSL feature without specifying a certificate file path, you may have this warning.
 
 **`Warning: message=If you activate OCS MacOSX agent packages download feature without specifying a
 certificate file path, OCS MacOSX agent packages download feature won't work !!!`**
 
 ![No folder specify](../../img/agent/macOS/macosx_agent_download_warn.png)
+
+Since version 2.10 of the MacOS agent, a new module has been added to the installer, allowing you to specify authentication settings. 
+
+Fill in the **Username**, **Password** and **Realm** fields to use this feature, or leave them blank if you do not wish to use authentication. 
+
+These fields will be written in the agent configuration file, username et password being encoded using base64 encoding. 
+
+Hit "Continue" to validate authentication settings.
+
+![Ocs agent configuration](../../img/agent/macOS/macosx_agent_install_authentication.png)
 
 Set how OCS MacOSX agent will be launched by MacOSX Launchd daemon by choosing several options:
 * Periodicity for OCS MacOSX agent to be launched by Launchd daemon (5 hours by default).
