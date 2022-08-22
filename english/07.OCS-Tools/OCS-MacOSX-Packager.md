@@ -36,7 +36,7 @@ Files and options :
 * Activate or Unactivate OCS MacOSX agent packages download feature (activated by default).
 * Activate or Unactivate OCS MacOSX agent lazy mode (inactivated by default).
 
-Authentication :
+Authentication (available with the 2.1 version of the MacOSX Packager):
 * Specificy authentication credentials for the agent to use if required by the server. (Username and password will be encoded using base64 encoding)
 
 Launch options : 
