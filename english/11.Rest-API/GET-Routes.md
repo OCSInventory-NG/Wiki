@@ -19,6 +19,14 @@ Start and limit offset are mandatory !
 
 <hr>
 
+### List last updated computers
+
+`http://myocsserver/ocsapi/v1/computers/lastupdate/{timestamp}`
+
+ The timestamp is optionnal, if not provided it will default to 1 day (i.e. computers updated since yesterday).
+
+<hr>
+
 ### List one computer details
 
 `http://myocsserver/ocsapi/v1/computer/{ID}/{specificSection}`
