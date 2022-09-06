@@ -83,6 +83,23 @@ To install the unix agent and requirement use this command:
 
     $ sudo dnf --enablerepo=PowerTools --enablerepo=epel-playground install ocsinventory-agent
 
+**On Rocky/Alma and RHEL 9** you can install the unix agent with RPM
+
+You need to have "wget" to download the repo of EPEL and OCS
+
+    $ sudo wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+    $ sudo wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el9.ocs.noarch.rpm
+
+You can install the repo with "dnf"
+
+    $ sudo  dnf install ocsinventory-release-latest.el9.ocs.noarch.rpm epel-release-latest-9.noarch.rpm
+
+To install the unix agent and requirement use this command:
+
+    $ sudo dnf install yum-utils
+    $ sudo yum-config-manager --enable crb
+    $ sudo dnf install ocsinventory-agent
+
 **On Fedora** you can install the unix agent with RPM
 
 You need to have "wget" to download the OCS's repo
