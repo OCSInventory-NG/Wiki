@@ -33,7 +33,7 @@ The simplest way is to install the ocsinventory-release package which provides t
     wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el8.ocs.noarch.rpm
     dnf install ocsinventory-release-latest.el8.ocs.noarch.rpm epel-release-latest-8.noarch.rpm remi-release-8.rpm
 
-### Enterprise Linux 9 (with EPEL and Remi) x86_64
+### Enterprise Linux 9 (with EPEL and Remi) x86_64 (Rocky, Alma and RHEL)
 
     wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
     wget https://rpms.remirepo.net/enterprise/remi-release-9.rpm
