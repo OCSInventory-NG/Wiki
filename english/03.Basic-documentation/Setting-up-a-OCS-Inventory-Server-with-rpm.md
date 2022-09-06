@@ -33,6 +33,13 @@ The simplest way is to install the ocsinventory-release package which provides t
     wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el8.ocs.noarch.rpm
     dnf install ocsinventory-release-latest.el8.ocs.noarch.rpm epel-release-latest-8.noarch.rpm remi-release-8.rpm
 
+### Enterprise Linux 9 (with EPEL and Remi) x86_64 (Rocky, Alma and RHEL)
+
+    wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+    wget https://rpms.remirepo.net/enterprise/remi-release-9.rpm
+    wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el9.ocs.noarch.rpm
+    dnf install ocsinventory-release-latest.el9.ocs.noarch.rpm epel-release-latest-9.noarch.rpm remi-release-9.rpm
+
 ### Fedora 29 (with Remi) x86_64
 
     dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc29.ocs.noarch.rpm https://rpms.remirepo.net/fedora/remi-release-29.rpm
@@ -56,6 +63,14 @@ The simplest way is to install the ocsinventory-release package which provides t
 ### Fedora 34 x86_64
 
     dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc34.ocs.noarch.rpm
+
+### Fedora 35 x86_64
+
+    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc35.ocs.noarch.rpm
+
+### Fedora 36 x86_64
+
+    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc36.ocs.noarch.rpm
 
 # Install OCS Inventory server with APT
 
@@ -137,6 +152,13 @@ Here will be the instructions for installing the server with the Admin GUI.
     dnf module reset php
     dnf module install php:remi-7.3
     dnf install --enablerepo=powertools ocsinventory
+
+## Enterprise Linux 9
+
+    dnf install yum-utils
+    yum-config-manager --enable remi
+    yum-config-manager --enable crb
+    dnf install ocsinventory
 
 ## Fedora
 
