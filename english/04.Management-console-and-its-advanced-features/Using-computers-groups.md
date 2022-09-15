@@ -62,6 +62,40 @@ If you click on "All computers (cached)", you can see all the computers members 
 
 ![All computers (cached)](../../img/server/reports/computers_groups_5.png)
 
+## Setting up a recurring notification
+
+As of version 2.11.0, a new "Notifications" tab has been added to the group detail page. Group reports can now be automatically generated and sent by email to one ore more recipients.
+
+Notifications must be configured : [Configure mail notifications](Configure-mail-notification.md)
+
+![Group notification](../../img/server/reports/group_report_notification_detail.png)
+
+Options :
+- Activate : ON / OFF (used to activate/desactivate an existing notification)
+- Report recurrence : daily / weekly / monthly (weekly reports will prompt you to choose a weekday, in the case of a monthly report, notification will be sent every 1st of the month)
+- Recipient(s) : needs to be completed, a unique recipient can be provided (e.g. `example@example.com`) or multiple if using the following syntax : `example@example.com, another@example.com`. **Emails must be separated by a comma**. 
+- End Date : ON / OFF (if set to ON, a date picker will be displayed, report will be sent until the date is reached)
+
+### Updating an existing group notification
+
+Modifying the options fields for an already set up notification and hitting the 'Update' button will update the current report.
+
+To desactivate/activate a group notification, use the **Activate**
+ option.
+
+### Configuring a cron job
+Reports are generated and sent by the `cron_report_notification.php` file. This script should be executed at a daily frequency, setting up a cron job for it : 
+```
+0 5 * * * cd /usr/share/ocsinventory-reports/ocsreports/crontab/ && php cron_report_notification.php >> /var/log/OCS_group_notification.log
+```
+Script will be run at 5am everyday and output will be redirected to a log file.
+
+### Mail notification example
+Report will be attached to the email, the group name is specified within the subject, and the group ID and generation date are included in the body.
+
+![Group notification](../../img/server/reports/mail_template_group_report.png)
+
+
 ## Using static groups
 
 Static groups of computers corresponds to the result of a various criteria search. For example,
