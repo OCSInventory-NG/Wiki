@@ -165,7 +165,7 @@ The left panel lists all types that you created before with the SNMP data model 
 
 ![SNMP Inventory table](../../img/server/reports/snmp_inventory.png)
 
-Click on the detail icon to display a quick overview of a device's SNMP information.
+Click on the detail icon to display a quick overview of a SNMP device's information.
 
 ![SNMP Inventory table](../../img/server/reports/snmp_feature_inventory_detail.png)
 
@@ -187,7 +187,7 @@ Go to `Inventory > Search with various criteria` and click on `SNMP` tab at the 
 
 ![SNMP Inventory multisearch tab](../../img/server/reports/snmp_multisearch_tab.png)
 
-`Note : the SNMP tab is available only if the SNMP feature is enable`
+`Note : the SNMP tab is available only if the SNMP feature is enabled`
 
 Select the type you want and the column you want to search on and click `Add`.
 
@@ -203,4 +203,4 @@ At the bottom of the dashboard, you will find the SNMP statistics.
 
 ![SNMP Inventory stats](../../img/server/reports/snmp_stats.png)
 
-`Note : the SNMP statistics are available only if the SNMP feature is enable`
+`Note : the SNMP statistics are available only if the SNMP feature is enabled`
