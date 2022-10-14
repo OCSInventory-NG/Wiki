@@ -163,10 +163,44 @@ You can see all SNMP Inventory on `Inventory > SNMP`.
 
 The left panel lists all types that you created before with the SNMP data model configuration.
 
-![SNMP Inventory table](../../img/server/reports/snmp_feature_inventory_tables.png)
+![SNMP Inventory table](../../img/server/reports/snmp_inventory.png)
 
-Click on the detail icon to display the SNMP Inventory details of one equipment.
+Click on the detail icon to display a quick overview of a device's SNMP information.
 
 ![SNMP Inventory table](../../img/server/reports/snmp_feature_inventory_detail.png)
 
 Click on the red cross to delete an equipment.
+
+Click on `Export all SNMP type` to export all equipments of all types in CSV format.
+
+Click on the window icon to open the details page.
+
+![SNMP Inventory details](../../img/server/reports/snmp_details.png)
+
+On the details page, you can export the informations of this equipment in XML format and update the administrative datas.
+
+## Search with various criteria
+
+Since 2.11, the SNMP feature has been added in `Search with various criteria`.
+
+Go to `Inventory > Search with various criteria` and click on `SNMP` tab at the top of the page.
+
+![SNMP Inventory multisearch tab](../../img/server/reports/snmp_multisearch_tab.png)
+
+`Note : the SNMP tab is available only if the SNMP feature is enable`
+
+Select the type you want and the column you want to search on and click `Add`.
+
+Select the operator and set the value and click on `Send`.
+
+![SNMP Inventory multisearch query](../../img/server/reports/snmp_multisearch_query.png)
+
+For the moment, the SNMP multi-criteria search only allows you to search on one type at a time.
+
+## SNMP statistics
+
+At the bottom of the dashboard, you will find the SNMP statistics.
+
+![SNMP Inventory stats](../../img/server/reports/snmp_stats.png)
+
+`Note : the SNMP statistics are available only if the SNMP feature is enable`
