@@ -1,6 +1,6 @@
 # Manage layout
 
-Since 2.10, it is possible to create custom table layout in the console interface. This feature allows you to save the displayed columns of the tables and to re-display them quickly.
+Since 2.10, it is possible to create custom table layout in the console interface. This feature allows you to save the displayed columns of the tables and re-display them quickly.
 
 ## How to create a layout
 
@@ -8,7 +8,7 @@ On any page with a table (except the multi-criteria page), select the columns yo
 
 ![layout_columns](../../img/server/reports/layout_columns.png)
 
-Set the `layout name`, the `layout description` and the `visibility scope` (only me, my group ou all users) and click on `OK`.
+Set the `layout name`, the `layout description` and the `visibility scope` (only me, my group or all users) and click on `OK`.
 
 ![layout_creation](../../img/server/reports/layout_creation.png)
 
