@@ -202,3 +202,15 @@ For example, `/ocsapi/v1/ipdiscover/tag/NA` will retrieve the elements from ipdi
 `http://myocsserver/ocsapi/v1/cve/computer/`
 
 <hr>
+
+### List computers vulnerable (at least one CVE)
+
+`http://myocsserver/ocsapi/v1/cve/computerslist`
+
+<hr>
+
+### Get CVE history
+
+`http://myocsserver/ocsapi/v1/cve/history`
+
+<hr>
