@@ -175,6 +175,6 @@ Obviously, we don't recommend to use these old tags since they are related to ol
 
 ## Crontab implementation
 
-To implement crontab outside of the container, you can configure them directly in your server like the example below :
+To implement a crontab outside of the container, you can configure it directly on your server following the example below :
 
     0 0 * * * root docker exec <your_container_name> bash -c 'cd /usr/share/ocsinventory-reports/ocsreports/crontab && php cron_all_software.php'
