@@ -172,3 +172,9 @@ To use the older image tags (2.5 and below), please check the following link :
 [OLD Documentation](../14.Archive/OLD-Docker-documentation.md)
 
 Obviously, we don't recommend to use these old tags since they are related to older versions of OCS Inventory product.
+
+## Crontab implementation
+
+To implement a crontab outside of the container, you can configure it directly on your server following the example below :
+
+    0 0 * * * root docker exec <your_container_name> bash -c 'cd /usr/share/ocsinventory-reports/ocsreports/crontab && php cron_all_software.php'
