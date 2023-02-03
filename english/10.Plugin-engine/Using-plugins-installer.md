@@ -62,6 +62,9 @@ Select the plugin and click on "Install".
 
 ![OCS plugin installation](../../img/server/reports/plugin_installation.png)
 
+If the newly installed plugin implements a specific page, remember to **modify your users' profiles to grant them access to the plugin page**. This can be done from the profile configuration.
+
+
 Logout and login to finish the web installation.
 
 You can now proceed with the installation on your Communication server.
