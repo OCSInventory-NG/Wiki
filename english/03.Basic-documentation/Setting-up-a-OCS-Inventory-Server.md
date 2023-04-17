@@ -128,12 +128,22 @@ Already the web communication server requires mysql dependencies if you choose t
 Open my.cnf and ensure there is no line “skip-innodb” or this line is commented (begins with ‘#’).`**
 
 
-Download latest version of server tarball “OCSNG_UNIX_SERVER-2.4.x.tar.gz” from OCS Inventory Web Site.
+Download latest version of server tarball “OCSNG_UNIX_SERVER-2.11.x.tar.gz” from OCS Inventory Web Site.
 
 Unpack it.
 
-    tar –xvzf OCSNG_UNIX_SERVER-2.4.x.tar.gz
-    cd OCSNG_UNIX_SERVER-2.4.x
+    tar –xvzf OCSNG_UNIX_SERVER-2.11.x.tar.gz
+    cd OCSNG_UNIX_SERVER-2.11.x
+
+Since 2.12.x, it is possible to provide a `setup.answers` file with default configuration.
+
+You will find a default `setup.answers` file at the root of the `OCSNG_UNIX_SERVER-2.11.x` folder.
+
+You can also create your own `setup.answers` file like this:
+
+    echo 'OCS_DB_HOST=localhost' > setup.answers
+
+The responses from the file will override the default choices in the `setup.sh` file. 
 
 Run “setup.sh” installer. During the installer, default choice is presented between [].
 For example, [y]/n means that “y” (yes) is the default choice, and “n” (no) is the other choice.
