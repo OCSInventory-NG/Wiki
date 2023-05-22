@@ -83,6 +83,11 @@ To install the unix agent and requirement use this command:
 
     $ sudo dnf --enablerepo=PowerTools --enablerepo=epel-playground install ocsinventory-agent
 
+**On Oracle Linux 8 and superior**, you'll have to enable the CodeReady Builder repository instead of Powertools to install the agent, e.g. for Oracle Linux 8 :
+
+    $ sudo dnf --enablerepo=ol8_codeready_builder install ocsinventory-agent
+
+
 **On Rocky/Alma and RHEL 9** you can install the unix agent with RPM
 
 You need to have "wget" to download the repo of EPEL and OCS
