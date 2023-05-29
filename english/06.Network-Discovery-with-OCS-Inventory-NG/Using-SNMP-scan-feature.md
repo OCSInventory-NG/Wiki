@@ -90,7 +90,7 @@ To make a single Agent to scan its network using SNMP, you have to set it in its
 ![Networks scans tab](../../img/server/reports/networks_scan_configurations.png)
 
 * If no network address appears in **IPDISCOVER** option, you have to set it manually using the drop list 
-* You can enable/disable a computer to make SNMP scans using **SNMP_SWITCH** option. By default, global configuration parameter is taken, corresponding to the Default radio button.
+* You can enable/disable a computer to make SNMP scans using **SNMP_SWITCH** option. By default, global configuration parameter set in `Configuration > General configuration > SNMP` is taken, corresponding to the Default radio button.
 
 Click on the `Update` button to save your modifications.
 
