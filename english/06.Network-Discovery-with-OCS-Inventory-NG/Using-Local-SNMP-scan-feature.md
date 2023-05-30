@@ -55,7 +55,7 @@ After following the configuration steps, performing the scan locally is only a m
 
 `ocsinventory-agent --local=/tmp/`
 
-The output of the local SNMP scan will be an XML file named `<DEVICEID>_snmp.xml` in the directory specified by the --local option.
+The output of the local SNMP scan will be an XML file named `<DEVICEID>_snmp.ocs` in the directory specified by the --local option.
 
 This file can then be injected into the OCS server using the perl `ocsinventory-injector.pl` script.
 
