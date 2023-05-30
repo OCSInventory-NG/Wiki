@@ -27,6 +27,35 @@ This is the SNMP configuration options available:
 * **SNMP**: activate or deactivate SNMP scan feature. If this option is _OFF_, no SNMP scans will be made by any OCS agent
 * **SNMP_MIB_DIRECTORY**: set the server MIBs folder path
 
+For more in depth configuration options, see the `Network Scans`  tab :
+
+![Network Scans tab](../../img/server/reports/network_scans_configuration.png)
+
+* **SCAN_TYPE_SNMP**: set the SNMP scan type (by default set to ICMP. Possible values are ICMP, NMAP, ARPSCAN)
+* **SCAN_ARP_BANDWIDTH**: set the ARP scan bandwidth (by default set to 256kbps. Option will be displayed if SCAN_TYPE_SNMP is set to ARPSCAN)
+
+**`Note: ARPSCAN will require the arp-scan command line tool to be installed on the agent.`**
+
+These values are also customizable per group or per device. You will need to access the `Configuration` tab of the group or device you want to configure.
+As an example, from a device details : 
+
+![Device details](../../img/server/reports/device_configuration.png)
+
+After scrolling a bit, you will see the options and their values :
+
+![Device SNMP configuration](../../img/server/reports/network_scans_device_config_options.png)
+
+To edit the values, click on the `Edit` button at the top, right under the device name. 
+
+On the next page, go to the `Networks scans` tab :
+
+![Edit device options](../../img/server/reports/networks_scans_device_edit.png)
+
+You can now edit the values and click the 'Update' button to save your changes.
+
+**`Note: Since these options are customizable at the general, group and device level, the device value will override the group value, which will override the general value (i.e. general < group < device).`**
+
+
 ### **Manage SNMP communities**
 
 To be able to scan a SNMP device, you must use SNMP community. SNMP community can be viewed as authentication informations to be allowed to scan SNMP devices. SNMP community is created by 2 informations:
