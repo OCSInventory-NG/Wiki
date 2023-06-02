@@ -72,6 +72,14 @@ The simplest way is to install the ocsinventory-release package which provides t
 
     dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc36.ocs.noarch.rpm
 
+### Fedora 37 x86_64
+
+    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc37.ocs.noarch.rpm
+
+### Fedora 38 x86_64
+
+    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc38.ocs.noarch.rpm
+
 # Install OCS Inventory server with APT
 
 **On Debian-based distributions** you can install the server with APT
