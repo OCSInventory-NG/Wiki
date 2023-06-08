@@ -121,7 +121,7 @@ Result :
 **Parameters :** (query string)
 
 * _:id_ : unique identifier of the computer in the database. Mandatory.
-* _:specificSection_ (return all details by default) : specific section of inventory to display. Optional.
+* _:specificSection_ (return all details by default) : specific section of inventory to display. The possible values of this parameter can be retrieved by looking at an inventory XML file comming from an agent. Optional.
 * _where_ : search on a specific column of the specific section. Optional.
 * _operator_ : search operator (`like`, `not like`, `=`, `!=`, `<`, `>`, `<=`, `>=`). Mandatory if _where_ parameter is set.
 * _value_ : search value. Mandatory if _where_ parameter is set.
