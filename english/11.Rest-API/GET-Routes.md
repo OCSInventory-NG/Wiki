@@ -186,6 +186,37 @@ Result :
 }
 ```
 
+_Usage example with a plugin section :_
+
+Full URL : `http://myocsserver/ocsapi/v1/computer/16/dbinstances`
+
+Result :
+```json
+{
+  "16": {
+    "dbinstances": [
+      {
+        "EDITION": "Standard Edition",
+        "HARDWARE_ID": 16,
+        "ID": 1,
+        "INSTANCE": "MSSQLSERVER",
+        "PUBLISHER": "Microsoft Corporation",
+        "VERSION": "15.0.2000.5",
+        "VERSION_NAME": ""
+      },
+      ...
+    ],
+    "hardware": {
+      "ARCH": null,
+      "ARCHIVE": null,
+      "CATEGORY_ID": null,
+      "CHECKSUM": 328449,
+      ...
+    }
+  }
+}
+```
+
 _Usage example with simple search :_
 
 Full URL : `http://myocsserver/ocsapi/v1/computer/16/software?where=NAME&operator=like&value=bash`
