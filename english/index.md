@@ -4,140 +4,141 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 ## Prerequisites
 
-* [Libraries and Modules versions](01.Prerequisites/Libraries-version.md)
+- [Libraries and Modules versions](01.Prerequisites/Libraries-version.md)
 
 ## Newbie documentation
 
-* [OCS Inventory NG - Basics](02.Newbie-documentation/OCS-Inventory-NG-Basics.md)
+- [OCS Inventory NG - Basics](02.Newbie-documentation/OCS-Inventory-NG-Basics.md)
 
 ## Basic documentation
 
-* [Setting up a OCS Inventory server](03.Basic-documentation/Setting-up-a-OCS-Inventory-Server.md)
-* [Setting up manually the UNIX agent on client computers](03.Basic-documentation/Setting-up-the-UNIX-agent-manually-on-client-computers.md)
-* [Setting up the UNIX agent on client computers using offical repositories](03.Basic-documentation/Setting-up-the-UNIX-agent-using-repository-on-client-computers.md)
-* [Setting up the Windows Agent 2.X on client computers](03.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
-* [Setting up the MacOSX agent on client computers](03.Basic-documentation/Setting-up-the-MacOSX-agent-on-client-computers.md)
-* [Setting up the Android Agent](03.Basic-documentation/Setting-up-the-Android-Agent.md)
-* [Administration of OCS Inventory NG](03.Basic-documentation/Administration-of-OCS-Inventory-NG.md)
-* [Deploying database server](03.Basic-documentation/Deploying-database-server.md)
-* [Updating the server](03.Basic-documentation/Updating-the-server.md)
-* [Understanding OCS Crontab](03.Basic-documentation/Understanding-OCS-Crontab.md)
+- [Setting up a OCS Inventory server](03.Basic-documentation/Setting-up-a-OCS-Inventory-Server.md)
+- [Setting up manually the UNIX agent on client computers](03.Basic-documentation/Setting-up-the-UNIX-agent-manually-on-client-computers.md)
+- [Setting up the UNIX agent on client computers using offical repositories](03.Basic-documentation/Setting-up-the-UNIX-agent-using-repository-on-client-computers.md)
+- [Setting up the Windows Agent 2.X on client computers](03.Basic-documentation/Setting-up-the-Windows-Agent-2.x-on-client-computers.md)
+- [Setting up the MacOSX agent on client computers](03.Basic-documentation/Setting-up-the-MacOSX-agent-on-client-computers.md)
+- [Setting up the Android Agent](03.Basic-documentation/Setting-up-the-Android-Agent.md)
+- [Administration of OCS Inventory NG](03.Basic-documentation/Administration-of-OCS-Inventory-NG.md)
+- [Deploying database server](03.Basic-documentation/Deploying-database-server.md)
+- [Updating the server](03.Basic-documentation/Updating-the-server.md)
+- [Understanding OCS Crontab](03.Basic-documentation/Understanding-OCS-Crontab.md)
 
 ## Deploying softwares and execute commands using OCS
 
 ## Docker documentation
 
-* [Using docker image](13.Docker-documentation/Using-the-docker-image.md)
+- [Using docker image](13.Docker-documentation/Using-the-docker-image.md)
 
 ## Authentication
 
-* [Managing users profiles of the web interface](04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
-* [Synchronization between OCS and LDAP](04.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
+- [Managing users profiles of the web interface](04.Management-console-and-its-advanced-features/Managing-users-profiles-of-the-web-interface.md)
+- [Synchronization between OCS and LDAP](04.Management-console-and-its-advanced-features/Synchronization-between-OCS-and-LDAP.md)
 
 ## Management console and its advanced features
 
-* [Querying inventory results](04.Management-console-and-its-advanced-features/Querying-inventory-results.md)
-* [Using computers archiving capabilities](04.Management-console-and-its-advanced-features/Using-computers-archive-feature.md)
-* [Using computers groups](04.Management-console-and-its-advanced-features/Using-computers-groups.md)
-* [Using assets categorization](04.Management-console-and-its-advanced-features/Using-Assets-Categorization.md)
-* [Using softwares categorization](04.Management-console-and-its-advanced-features/Using-Software-Categorization.md)
-* [Using Wake On Lan](04.Management-console-and-its-advanced-features/Using-wake-on-lan-feature.md)
-* [Using and managing saved searches](04.Management-console-and-its-advanced-features/Using-Saved-Searches.md)
-* [Managing administrative data](04.Management-console-and-its-advanced-features/Managing-administrative-data.md)
-* [Managing Web application Inventory](04.Management-console-and-its-advanced-features/Managing-SAAS-inventory.md)
-* [Managing layouts](04.Management-console-and-its-advanced-features/Layout-management.md)
-* [Export a computer](04.Management-console-and-its-advanced-features/Export-a-computer.md)
-* [Configure mail notification](04.Management-console-and-its-advanced-features/Configure-mail-notification.md)
-* [Configure OCS news](04.Management-console-and-its-advanced-features/Configure-OCS-news.md)
+- [Querying inventory results](04.Management-console-and-its-advanced-features/Querying-inventory-results.md)
+- [Using computers archiving capabilities](04.Management-console-and-its-advanced-features/Using-computers-archive-feature.md)
+- [Using computers groups](04.Management-console-and-its-advanced-features/Using-computers-groups.md)
+- [Using assets categorization](04.Management-console-and-its-advanced-features/Using-Assets-Categorization.md)
+- [Using softwares categorization](04.Management-console-and-its-advanced-features/Using-Software-Categorization.md)
+- [Using Wake On Lan](04.Management-console-and-its-advanced-features/Using-wake-on-lan-feature.md)
+- [Using and managing saved searches](04.Management-console-and-its-advanced-features/Using-Saved-Searches.md)
+- [Managing administrative data](04.Management-console-and-its-advanced-features/Managing-administrative-data.md)
+- [Managing Web application Inventory](04.Management-console-and-its-advanced-features/Managing-SAAS-inventory.md)
+- [Managing layouts](04.Management-console-and-its-advanced-features/Layout-management.md)
+- [Export a computer](04.Management-console-and-its-advanced-features/Export-a-computer.md)
+- [Configure mail notification](04.Management-console-and-its-advanced-features/Configure-mail-notification.md)
+- [Configure OCS news](04.Management-console-and-its-advanced-features/Configure-OCS-news.md)
+- [Configure GreenIT Plugin](04.Management-console-and-its-advanced-features/GreenIT-plugin-installation.md)
+- [Configure GreenIT Service](04.Management-console-and-its-advanced-features/GreenIT-service-installation.md)
 
 ## Deployment
 
-* [Prerequisites to packages deployment](05.Deployment/Prerequisites.md)
-* [Introduction and working principle](05.Deployment/Introduction.md)
-* [Configuring the deployment](05.Deployment/Configuration.md)
-* [Windows deployment templates](05.Deployment/Windows/Summary.md)
-* [Linux deployment templates](05.Deployment/Linux/Summary.md)
-* [MacOS deployment templates](05.Deployment/Mac/Summary.md)
-* [Developers - Creating your own templates](05.Deployment/Developers.md)
+- [Prerequisites to packages deployment](05.Deployment/Prerequisites.md)
+- [Introduction and working principle](05.Deployment/Introduction.md)
+- [Configuring the deployment](05.Deployment/Configuration.md)
+- [Windows deployment templates](05.Deployment/Windows/Summary.md)
+- [Linux deployment templates](05.Deployment/Linux/Summary.md)
+- [MacOS deployment templates](05.Deployment/Mac/Summary.md)
+- [Developers - Creating your own templates](05.Deployment/Developers.md)
 
-## CVE Inventory 
+## CVE Inventory
 
-* [Enabled and configure CVE-search reporting](04.Management-console-and-its-advanced-features/CVE-Search-management.md)
-* [Setup matching regex for CVE-search server](04.Management-console-and-its-advanced-features/CVE-Search-match-regex.md)
-* [Visualize CVE Inventory history](04.Management-console-and-its-advanced-features/CVE-Search-visualize-history.md)
+- [Enabled and configure CVE-search reporting](04.Management-console-and-its-advanced-features/CVE-Search-management.md)
+- [Setup matching regex for CVE-search server](04.Management-console-and-its-advanced-features/CVE-Search-match-regex.md)
+- [Visualize CVE Inventory history](04.Management-console-and-its-advanced-features/CVE-Search-visualize-history.md)
 
 ## Network Discovery with OCS Inventory NG
 
-* [Using IP discovery feature](06.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md)
-* [Using SNMP scan feature](06.Network-Discovery-with-OCS-Inventory-NG/Using-SNMP-scan-feature.md)
-* [Managing SNMP on Web Console](06.Network-Discovery-with-OCS-Inventory-NG/Managing-and-using-SNMP-feature.md)
+- [Using IP discovery feature](06.Network-Discovery-with-OCS-Inventory-NG/Using-IP-discovery-feature.md)
+- [Using SNMP scan feature](06.Network-Discovery-with-OCS-Inventory-NG/Using-SNMP-scan-feature.md)
+- [Managing SNMP on Web Console](06.Network-Discovery-with-OCS-Inventory-NG/Managing-and-using-SNMP-feature.md)
 
 ## OCS Tools
 
-* [OCS Inventory NG Agent Deployement Tool](07.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
-* [OCS Packager for Windows](07.OCS-Tools/OCS-Windows-Packager.md)
-* [OCS Packager for MacOSX](07.OCS-Tools/OCS-MacOSX-Packager.md)
-* [OCS Packager for Unix](07.OCS-Tools/OCS-Unix-Packager.md)
-* [Ansible role for Unix Packager](07.OCS-Tools/OCS-Ansible-Role-for-Unix-Packager.md)
+- [OCS Inventory NG Agent Deployement Tool](07.OCS-Tools/OCS-Inventory-NG-Agent-Deployement-Tool.md)
+- [OCS Packager for Windows](07.OCS-Tools/OCS-Windows-Packager.md)
+- [OCS Packager for MacOSX](07.OCS-Tools/OCS-MacOSX-Packager.md)
+- [OCS Packager for Unix](07.OCS-Tools/OCS-Unix-Packager.md)
+- [Ansible role for Unix Packager](07.OCS-Tools/OCS-Ansible-Role-for-Unix-Packager.md)
 
 ## Multi-site network architecture
 
-* [Using local proxy cache to deploy](08.Multi-site-network-architecture/Using-local-proxy-cache-to-deploy.md)
-* [Synchronisation between OCS server master/slaves](08.Multi-site-network-architecture/Synchronisation-between-OCS-server-master-slaves.md)
+- [Using local proxy cache to deploy](08.Multi-site-network-architecture/Using-local-proxy-cache-to-deploy.md)
+- [Synchronisation between OCS server master/slaves](08.Multi-site-network-architecture/Synchronisation-between-OCS-server-master-slaves.md)
 
 ## Extras
 
-* [Secure your OCS Inventory NG Server](09.Extras/Secure-your-OCS-Inventory-NG-Server.md)
-* [Management server tuning](09.Extras/Management-server-tuning.md)
-* [Enable Powershell Support on Windows Agent](09.Extras/Enable-Powershell-Support-on-Windows-Agent.md)
-* [Backup/restore of OCS Inventory NG database ](09.Extras/Backup-restore-of-OCS-Inventory-NG-database.md)
-* [Common errors](09.Extras/Common-errors.md)
+- [Secure your OCS Inventory NG Server](09.Extras/Secure-your-OCS-Inventory-NG-Server.md)
+- [Management server tuning](09.Extras/Management-server-tuning.md)
+- [Enable Powershell Support on Windows Agent](09.Extras/Enable-Powershell-Support-on-Windows-Agent.md)
+- [Backup/restore of OCS Inventory NG database ](09.Extras/Backup-restore-of-OCS-Inventory-NG-database.md)
+- [Common errors](09.Extras/Common-errors.md)
 
 ## Plugin Engine
 
-* [Plugin installer](10.Plugin-engine/Using-plugins-installer.md)
+- [Plugin installer](10.Plugin-engine/Using-plugins-installer.md)
 
 ## REST API
-* [Introduction](11.Rest-API/Introduction.md)
-* [Configuration](11.Rest-API/Configuration.md)
-* [Autentification](11.Rest-API/Authentification.md)
-* [GET Routes](11.Rest-API/GET-Routes.md)
-* [POST Routes](11.Rest-API/POST-Routes.md)
-* [DELETE Routes](11.Rest-API/DELETE-Routes.md)
-* [PUT Routes](11.Rest-API/PUT-Routes.md)
+
+- [Introduction](11.Rest-API/Introduction.md)
+- [Configuration](11.Rest-API/Configuration.md)
+- [Autentification](11.Rest-API/Authentification.md)
+- [GET Routes](11.Rest-API/GET-Routes.md)
+- [POST Routes](11.Rest-API/POST-Routes.md)
+- [DELETE Routes](11.Rest-API/DELETE-Routes.md)
+- [PUT Routes](11.Rest-API/PUT-Routes.md)
 
 ## Developers
 
-* [XML-Format](12.Developers/XML-Format.md)
-* [HOWTO create theme](12.Developers/HOWTO-create-theme.md)
-* [HOWTO package OCS Unix server releases](12.Developers/HOWTO-package-OCS-Unix-server-releases.md)
-* [HOWTO package OCS Unix agent releases](12.Developers/HOWTO-package-OCS-Unix-agent-releases.md)
-* [HOWTO package OCS MacOSX agent releases](12.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
-* [HOWTO compile OCS Windows Agent](12.Developers/HOWTO-compile-OCS-Windows-Agent.md)
-
+- [XML-Format](12.Developers/XML-Format.md)
+- [HOWTO create theme](12.Developers/HOWTO-create-theme.md)
+- [HOWTO package OCS Unix server releases](12.Developers/HOWTO-package-OCS-Unix-server-releases.md)
+- [HOWTO package OCS Unix agent releases](12.Developers/HOWTO-package-OCS-Unix-agent-releases.md)
+- [HOWTO package OCS MacOSX agent releases](12.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
+- [HOWTO compile OCS Windows Agent](12.Developers/HOWTO-compile-OCS-Windows-Agent.md)
 
 # FAQ
 
+- Can I upgrade my server from version X to the last stable version ?
 
-* Can I upgrade my server from version X to the last stable version ?
+  **Solution**: Since we made a lot of changes from 2.0 to 2.5 in the database schema. We recommend you to not upgrade your OCS from 1.0 to 2.5 and newer directly. You may need to upgrade to 2.0 before.
 
-    **Solution**: Since we made a lot of changes from 2.0 to 2.5 in the database schema. We recommend you to not upgrade your OCS from 1.0 to 2.5 and newer directly. You may need to upgrade to 2.0 before.
+- After installing the server, I go to the graphical admin console (GUI) and it asks me to install the database ?
 
-* After installing the server, I go to the graphical admin console (GUI) and it asks me to install the database ?
+  **Solution**: The database is installed on the first access to the graphical admin console (GUI).
 
-    **Solution**: The database is installed on the first access to the graphical admin console (GUI).
+- What URL must I put in the agent to contact the server ?
 
-* What URL must I put in the agent to contact the server ?
+  **Solution**: The URL must be in this form `http://dns_or_ip/ocsinventory`. It is recommended that you use DNS instead of IP.
 
-    **Solution**: The URL must be in this form ``http://dns_or_ip/ocsinventory``. It is recommended that you use DNS instead of IP.
+- ocsinventory directory does not exist on my server
 
-* ocsinventory directory does not exist on my server
+  **Solution**: ocsinventory is a virtual directory call by mod_perl in apache. ocsinventory directory must not exist.
 
-    **Solution**: ocsinventory is a virtual directory call by mod_perl in apache. ocsinventory directory must not exist.
+- Error 500:
 
-* Error 500:
-
-    **Solution**: OCS engine can't comunicate with mysql server. Probably due to a wrong mysql account. You have to check z-ocsinventory-server.conf exactly theses few lines
+  **Solution**: OCS engine can't comunicate with mysql server. Probably due to a wrong mysql account. You have to check z-ocsinventory-server.conf exactly theses few lines
 
         # Master Database settings
           # Replace localhost by hostname or ip of MySQL server for WRITE
@@ -152,12 +153,11 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
           # Password for user
           PerlSetVar OCS_DB_PWD ocs
 
-    Modify **OCS_DB_USER** and **OCS_DB_PWD** with your own account, restart apache, and finaly launch an inventory.
+  Modify **OCS_DB_USER** and **OCS_DB_PWD** with your own account, restart apache, and finaly launch an inventory.
 
-* Error 417:
+- Error 417:
 
-    **Solution** : insert ignore_expect_100 on into your squid.conf file and then run squid -k reconfigure.
-
+  **Solution** : insert ignore_expect_100 on into your squid.conf file and then run squid -k reconfigure.
 
 # Contribution
 
