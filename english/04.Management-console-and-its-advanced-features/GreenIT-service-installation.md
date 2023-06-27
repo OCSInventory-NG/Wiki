@@ -44,8 +44,7 @@ To install the service on your agents :
 
   - The period between upload is a time in minutes that will allow the service to write information collected into the data file _(C:\\ProgramData\GreenIT\data.json)_
 
-    > _Example : if you put it to 5, it will write information into data file every 5 minutes._
-    > _**If you put it to 0, it will write information in data file each data collect.**_
+    > _Example : if you put it to 5, it will write information into data file every 5 minutes._ > _**If you put it to 0, it will write information in data file each data collect.**_
 
     > _NOTE : "C:\\ProgramData" is an unvisible folder._
 
@@ -62,3 +61,9 @@ To install the service on your agents :
   - Run the command `.\GreenIT.exe install` and wait until the plugin is installed.
 
 And yes, that's all :-)
+
+## For developers
+
+We made the project on Visual Studio Community 2022 version 17.5.0 on windows 10 Pro x64 (22H2) distribution.
+
+> _IMPORTANT NOTE : It is important to check ".NET desktop development" and ".NET framework 6.0" at the installation to don't have any problem when you are working on the project !_
