@@ -33,7 +33,7 @@ To install the service on your agents :
 - Go to the config page :
 
 <p align="center">
-  <img src="https://i.postimg.cc/FzPtShfw/Capture-d-cran-du-2023-06-27-10-12-01.png" alt="Config Page"/>
+  <img src="https://i.postimg.cc/VsXYPhJH/Capture-d-cran-du-2023-05-10-11-33-16.png" alt="Config Page"/>
 </p>
 
 - Configuration :
@@ -45,6 +45,7 @@ To install the service on your agents :
   - The period between upload is a time in minutes that will allow the service to write information collected into the data file _(C:\\ProgramData\GreenIT\data.json)_
 
     > _Example : if you put it to 5, it will write information into data file every 5 minutes._
+    > _**If you put it to 0, it will write information in data file each data collect.**_
 
     > _NOTE : "C:\\ProgramData" is an unvisible folder._
 
