@@ -3,7 +3,8 @@
 ## Introduction
 
 Here is the documentation to properly configure the GreenIT plugin.
-Please, be careful with important notes.
+
+> _IMPORTANT NOTE : Please, be careful with important notes._
 
 ## Description
 
@@ -26,7 +27,7 @@ To install the plugin on your server :
 - Copy the files from the `datafilter` folder into your server folder (`/etc/ocsinventory-server`):
 
 <p align="center">
-  <img src="../../img/service/GreenIT_arborescence.png" alt="tree"/>
+  <img src="../../img/service/GreenIT_Plugin_arborescence.png" alt="tree"/>
 </p>
 
 - Set up the crontab :

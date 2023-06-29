@@ -3,7 +3,8 @@
 ## Introduction
 
 Here is the documentation to properly configure the GreenIT service.
-Please, be careful with important notes.
+
+> _IMPORTANT NOTE : Please, be careful with important notes._
 
 ## Description
 
@@ -17,6 +18,8 @@ Currently supported on Windows, this service is made to gather power consumption
 
 - Windows 10
 
+> _**IMPORTANT NOTE : You can install it on a virtual machine but it will not count in the comsumption calculation !**_
+
 ## Installation
 
 To install the service on your agents :
@@ -26,7 +29,7 @@ To install the service on your agents :
 - Go to the config page :
 
 <p align="center">
-  <img src="../../img/service/GreenIT_configuration.png" alt="Config Page"/>
+  <img src="../../img/service/GreenIT_Service_configuration.png" alt="Config Page"/>
 </p>
 
 - Configuration :
@@ -55,9 +58,3 @@ To install the service on your agents :
   - Run the command `.\GreenIT.exe install` and wait until the plugin is installed.
 
 And yes, that's all :-)
-
-## For developers
-
-We made the project on Visual Studio Community 2022 version 17.5.0 on windows 10 Pro x64 (22H2) distribution.
-
-> _IMPORTANT NOTE : It is important to check ".NET desktop development" and ".NET framework 6.0" at the installation to don't have any problem when you are working on the project !_
