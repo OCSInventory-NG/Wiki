@@ -33,7 +33,7 @@ To install the service on your agents :
 - Go to the config page :
 
 <p align="center">
-  <img src="https://i.postimg.cc/VsXYPhJH/Capture-d-cran-du-2023-05-10-11-33-16.png" alt="Config Page"/>
+  <img src="../../img/service/GreenIT_configuration.png" alt="Config Page"/>
 </p>
 
 - Configuration :

@@ -33,7 +33,7 @@ To install the plugin on your server :
 - Copy the files from the `datafilter` folder into your server folder (`/etc/ocsinventory-server`):
 
 <p align="center">
-  <img src="https://i.postimg.cc/pVk79B1r/Capture-d-cran-du-2023-05-09-16-22-38.png" alt="tree"/>
+  <img src="../../img/service/GreenIT_arborescence.png" alt="tree"/>
 </p>
 
 - Set up the crontab :
