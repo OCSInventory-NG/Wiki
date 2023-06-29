@@ -1,16 +1,9 @@
 # OCS Inventory Plugin - Green IT
 
-<p align="center">
-  <img src="https://cdn.ocsinventory-ng.org/common/banners/banner660px.png" height=300 width=660 alt="Banner">
-</p>
+## Introduction
 
-<h1 align="center">Plugin GreenIT</h1>
-<p align="center">
-  <b>Some Links :</b><br>
-  <a href="http://ask.ocsinventory-ng.org" target="_blank">Ask question</a> |
-  <a href="https://www.ocsinventory-ng.org/?utm_source=github-ocs" target="_blank">Website</a> |
-  <a href="https://www.ocsinventory-ng.org/en/#ocs-pro-en" target="_blank">OCS Professional</a>
-</p>
+Here is the documentation to properly configure the GreenIT plugin.
+Please, be careful with important notes.
 
 ## Description
 
