@@ -51,6 +51,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 - [Configure OCS news](04.Management-console-and-its-advanced-features/Configure-OCS-news.md)
 - [Configure GreenIT Plugin](04.Management-console-and-its-advanced-features/GreenIT-plugin-installation.md)
 - [Configure GreenIT Service](04.Management-console-and-its-advanced-features/GreenIT-service-installation.md)
+- [GreenIT Service for developers](04.Management-console-and-its-advanced-features/GreenIT-service-developers.md)
 
 ## Deployment
 
