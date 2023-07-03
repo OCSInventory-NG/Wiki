@@ -2,15 +2,13 @@
 
 ## Introduction
 
-Here is the documentation to properly configure the GreenIT plugin.
-
-> _IMPORTANT NOTE : Please, be careful with important notes._
+This documentation provides instructions for installing the GreenIT plugin.
 
 ## Description
 
-Currently supported on Windows, this plugin is made to retrieve power consumption information.
+This plugin is designed to retrieve power consumption information and is currently supported on Windows.
 
-> _**IMPORTANT NOTE : This plugin works with a windows service application which can be downloaded from <a href="https://github.com/Atineon/ocsinventory-service_greenit" target="_blank">here</a>**_
+> _**IMPORTANT NOTE: This plugin requires a Windows service application, which can be downloaded from <a href="https://github.com/OCSInventory-NG/greenit_service" target="_blank">here</a>**_
 
 ## Prerequisites
 
@@ -31,12 +29,12 @@ To install the plugin on your server :
 </p>
 
 - Set up the crontab :
-  - Use the command `$ crontab -e` in the server terminal
-  - Add these two crontabs :
+  - Use the command `crontab -e` in the server terminal
+  - Add the following two crontabs :
     - `0 5 * * 1 php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/script/cron_stats.php --mode full`
     - `0 * * * * php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/script/cron_stats.php --mode delta`
 
-> _NOTE: These two crontabs are the default ones. You are allowed to change the execution time. (By default, every Monday at 5 a.m for full mode and every hour for delta mode)_
+> _NOTE: These two crontabs are the default ones. You can modify the execution time as needed. (By default, every Monday at 5 a.m for full mode and every hour for delta mode)_
 
 Execution modes:
 

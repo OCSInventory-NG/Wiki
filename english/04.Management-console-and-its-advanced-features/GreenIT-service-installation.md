@@ -2,31 +2,27 @@
 
 ## Introduction
 
-Here is the documentation to properly configure the GreenIT service.
-
-> _IMPORTANT NOTE : Please, be careful with important notes._
+This documentation provides instructions for properly installing and configuring the GreenIT service.
 
 ## Description
 
-Currently supported on Windows, this service is made to gather power consumption information.
+The GreenIT service is designed to gather power consumption information and is currently supported on Windows.
 
-> _**IMPORTANT NOTE : This service is required if you use GreenIT Plugin downloadable <a href="https://github.com/Atineon/ocsinventory-plugin_greenit">here</a>**_
+> _**IMPORTANT NOTE: This service is required when using the GreenIT Plugin, available <a href="https://github.com/PluginsOCSInventory-NG/greenit">here</a>**_
 
 ## Prerequisites
 
-> _NOTE : Every agents which have the service installed can return GreenIT data._
+- Environment: Windows 10
 
-- Windows 10
-
-> _**IMPORTANT NOTE : You can install it on a virtual machine but it will not count in the comsumption calculation !**_
+> _**IMPORTANT NOTE: The service can be installed on a virtual machine, but no consumption data will be retrieved.**_
 
 ## Installation
 
 To install the service on your agents :
 
-- Download the service <a href="https://github.com/Atineon/ocsinventory-service_greenit/releases/">here</a> to get the executable and start it.
+- Download the service executable from <a href="https://github.com/OCSInventory-NG/greenit_service/releases">here</a> and start it.
 
-- Go to the config page :
+- Access the configuration page :
 
 <p align="center">
   <img src="../../img/service/GreenIT_Service_configuration.png" alt="Config Page"/>
@@ -34,27 +30,27 @@ To install the service on your agents :
 
 - Configuration :
 
-  - The period between collecting information is a time in seconds that will allow the service to start colecting information.
+  - The "Period between collecting information" is the time in seconds that determines how often the service collects information.
 
-    > _Example : if you put it to 5, it will collect information every 5 seconds._
+    > _Example: If you set it to 5, it will collect information every 5 seconds._
 
-  - The period between upload is a time in minutes that will allow the service to write information collected into the data file _(C:\\ProgramData\GreenIT\data.json)_
+  - The "Period between upload" is the time in minutes that determines how often the service writes the collected information to the data file (C:\ProgramData\GreenIT\data.json)._
 
-    > _Example : if you put it to 5, it will write information into data file every 5 minutes.
-    > **If you put it to 0, it will write information in data file each data collect.**_
+    > _Example: If you set it to 5, it will write information to the data file every 5 minutes.
+    > **If you set it to 0, it will write information to the data file with each data collection.**_
 
-    > _NOTE : "C:\\ProgramData" is an unvisible folder._
+    > _NOTE : "C:\\ProgramData" is a hidden folder._
 
-  - The period between saves is a time in hours that will allow the service to create a ".bak" file next to data file to don't lose your last data.
+  - The "Period between saves" is the time in hours that determines how often the service creates a ".bak" backup file next to the data file to prevent data loss.
 
-    > _Example : if you put it to 5, it will create/update the backup file every 5 hours._
+    > _Example: If you set it to 5, it will create/update the backup file every 5 hours._
 
 - Click on install and don't forget to check "Run GreenIT Service 1.0" at the end.
 
 > _IMPORTANT NOTE : It is important to check "Run GreenIT Service 1.0" to install the software as a Windows service !_
 
-- If you haven't checked the box, you can install it manually after the install of the software :
-  - Open a terminal and go in the software installation folder path.
-  - Run the command `.\GreenIT.exe install` and wait until the plugin is installed.
+If you haven't checked the box, you can install it manually after the install of the software :
+  - Open a terminal and navigate to the software installation folder.
+  - Run the command `.\GreenIT.exe install` and wait until the service is installed.
 
 And yes, that's all :-)
