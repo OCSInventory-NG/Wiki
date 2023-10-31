@@ -116,6 +116,9 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [HOWTO compile OCS Windows Agent](12.Developers/HOWTO-compile-OCS-Windows-Agent.md)
 
 
+## GreenIT
+* [Content table](15.GreenIT/index.md)
+
 # FAQ
 
 
