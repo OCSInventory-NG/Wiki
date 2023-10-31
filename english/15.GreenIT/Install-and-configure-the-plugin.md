@@ -31,15 +31,6 @@ There is one more step to install your plugin on the server. You'll need to acti
 
 Activate the plugin with the script and don't forget to restart apache service.
 
-## Client side installation
-Inside the plugin folder, there is a PowerShell script *(greenit.ps1)* that needs to be copied in the client plugin folder.
-
-> ***NOTE**: The default PowerShell script folder is: <br> `greenit/agent/Windows/greenit.ps1`*
-
-![](../../img/agent/greenit/install_plugin_1.png)
-
-> ***NOTE**: The default plugin folder of a client is: <br> `C:\Program Files (x86)\OCS Inventory Agent\Plugins`*
-
 ## Allow access to GreenIT pages
 When the plugin is installed, on the web interface you'll have to allow profile to access to two menus.
 
@@ -60,6 +51,16 @@ To finish, check ms_greenit_config to allow profile to have access to GreenIT co
 ![](../../img/server/greenit/allow_access_4.png)
 
 > ***IMPORTANT NOTE**: Don't forget to save, logout and reconnect to the account.*
+
+
+## Client side installation
+Inside the plugin folder, there is a PowerShell script *(greenit.ps1)* that needs to be copied in the client plugin folder.
+
+> ***NOTE**: The default PowerShell script folder is: <br> `greenit/agent/Windows/greenit.ps1`*
+
+![](../../img/agent/greenit/install_plugin_1.png)
+
+> ***NOTE**: The default plugin folder of a client is: <br> `C:\Program Files (x86)\OCS Inventory Agent\Plugins`*
 
 ## Configuration
 To configure the dashboard, you need to have access to the configuration page like we saw it before. When you have the access, go to `Manage >> GreenIT`:
