@@ -23,4 +23,7 @@ Our GreenIT module is used to retreive consumption data of IT parcs and estimate
 ## Client side
 
 - [Installation](02.Client/Client-installation-and-configuration.md#installation)
+    - [Plugin](02.Client/Client-installation-and-configuration.md#plugin)
+    - [Service](02.Client/Client-installation-and-configuration.md#service)
 - [Configuration](02.Client/Client-installation-and-configuration.md#configuration)
+    - [Service configuration](02.Client/Client-installation-and-configuration.md#service-configuration)
