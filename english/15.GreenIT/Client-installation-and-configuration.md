@@ -1,7 +1,7 @@
 # GreenIT - Server installation
 
 ## Introduction
-This documentation will show you how to install the GreenIT script and service into a client machine.
+This documentation will show you how to install the GreenIT script and service for client machine.
 
 ## Installation
 

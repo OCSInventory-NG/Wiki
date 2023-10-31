@@ -1,6 +1,6 @@
 # OCS Inventory NG 2.x Documentation
 
-To make it easier to read, the OCS Inventory NG documentation has been divided into 11 sections.
+To make it easier to read, the OCS Inventory NG documentation has been divided into 15 sections.
 
 ## Prerequisites
 
@@ -117,7 +117,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 
 
 ## GreenIT
-* [Content table](15.GreenIT/index.md)
+* [Install and using GreenIT](15.GreenIT/index.md)
 
 # FAQ
 
