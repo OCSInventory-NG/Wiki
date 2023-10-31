@@ -36,7 +36,7 @@ Inside the plugin folder, there is a PowerShell script *(greenit.ps1)* that need
 
 > ***NOTE**: The default PowerShell script folder is: <br> `greenit/agent/Windows/greenit.ps1`*
 
-![](../../img/server/greenit/install_plugin_4.png)
+![](../../img/agent/greenit/install_plugin_1.png)
 
 > ***NOTE**: The default plugin folder of a client is: <br> `C:\Program Files (x86)\OCS Inventory Agent\Plugins`*
 
