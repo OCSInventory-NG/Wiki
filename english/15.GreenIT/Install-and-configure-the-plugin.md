@@ -11,7 +11,7 @@ First, you can download the zip file by clicking [here](https://github.com/Plugi
 
 Or you can clone the repository to the extensions folder: <br> `git clone https://github.com/PluginsOCSInventory-NG/greenit`
 
-Then, install it through the web interface by clicking in the extensions menu then extensions manager.
+Then, install it through the web interface by clicking in `Extensions >> Extensions manager`.
 
 ![](../../img/server/greenit/install_plugin_1.png)
 
@@ -43,15 +43,15 @@ Inside the plugin folder, there is a PowerShell script *(greenit.ps1)* that need
 ## Allow access to GreenIT pages
 When the plugin is installed, on the web interface you'll have to allow profile to access to two menus.
 
-First, go to the configuration menu, then users:
+First, go to `Configuration >> Users`:
 
 ![](../../img/server/greenit/allow_access_1.png)
 
-When you are in this page, go to the left side of your screen and select profiles:
+When you are on this page, go to the left side of your screen and select `Profiles`:
 
 ![](../../img/server/greenit/allow_access_2.png)
 
-Then choose the profile which can configure and/or see the greenit interface:
+Then chose the profile which can configure and/or see the greenit interface:
 
 ![](../../img/server/greenit/allow_access_3.png)
 
@@ -62,7 +62,7 @@ To finish, check ms_greenit_config to allow profile to have access to GreenIT co
 > ***IMPORTANT NOTE**: Don't forget to save, logout and reconnect to the account.*
 
 ## Configuration
-To configure the dashboard, you need to have access to the configuration page like we saw it before. When you have the access, go to Manage menu, then GreenIT:
+To configure the dashboard, you need to have access to the configuration page like we saw it before. When you have the access, go to `Manage >> GreenIT`:
 
 ![](../../img/server/greenit/configuration_1.png)
 
@@ -81,10 +81,30 @@ And for the API data, there is:
 - API key <br> *(If you have subscribed to OCS-Inventory GreenIT offer, you have recived by mail an API key that needs to be written here)*
 - Comsumption type <br> *(There is deferent slice in industry electricity prices, if you don't know what slice you are, keep it at default. if you precise the slice, it will be more accurate during the approximation of the IT cost)*
 
+
+## Dashboard
+There is a dashboard to display calculated data. You can go to `Inventory >> GreenIT Manager`.
+
+![](../../img/server/greenit/dashboard_1.png)
+
+Then you'll have this page:
+
+![](../../img/server/greenit/dashboard_2.png)
+
+This is the global statistics view of your IT parc.
+As you can see, there is 5 differents views that can be seen:
+- Global <br> *(Data of all the IT parc)*
+- Filtered <br> *(Data of a single machine or a filtered group)*
+- Operating system <br> *(Data per operating system)*
+- Computer type <br> *(Data per computer types)*
+- Manufacturer <br> *(Data per manufacturers)*
+
+
+
 ## Crontab
 The GreenIT module have two cronjob that's needs to be configured if you want the dashboard works well.
 
-The crontab can do calculation at a specific time and permit to the software to be less long to load a page.
+The crontab can do calculation at a specific time and permit to the software to be faster to load a page.
 
 There is two execution modes:
 - `full`: This mode calculates the power consumption statistics for all computers in the database using the data gathered by the plugin. Please note that executing this mode may take a long time, particularly if there are a large number of computers in the database.
