@@ -17,7 +17,7 @@ To install it, download the setup of the service [here](https://github.com/OCSIn
 ### Service configuration
 When you start the service setup, you'll get this configuration page:
 
-![](../../img/agent/greenit/service_configuration.png)
+![](../../../img/agent/greenit/service_configuration.png)
 
 Here you can configure:
 
