@@ -8,7 +8,6 @@ This documentation will show you how to install the GreenIT script and service f
 ### Plugin
 > ***NOTE**: A documentation already exist to install a plugin script. You can go check [here](https://wiki.ocsinventory-ng.org/10.Plugin-engine/Using-plugins-installer/#windows-plugin-deployment)*
 
-
 ### Service
 To install it, download the setup of the service [here](https://github.com/OCSInventory-NG/greenit_service/releases/)
 
@@ -34,5 +33,15 @@ Here you can configure:
 - The period between saves is a time in hours that will allow the service to create a `.bak` file next to data file to don't lose your last data.
 
     > ***Example** : if you put it to 5, it will create/update the backup file every 5 hours.*
+
+To finish, click on install and don't forget to check `Run GreenIT Service 1.0` at the end.
+
+> ***IMPORTANT NOTE**: It is important to check `Run GreenIT Service 1.0` to install the software as a Windows service !*
+
+If you haven't checked the box, you can install it manually after the install of the software:
+
+- Open a terminal and go in the software installation folder path.
+
+- Run the command `.\GreenIT.exe install` and wait until the plugin is installed.
 
 And it's done :-)
