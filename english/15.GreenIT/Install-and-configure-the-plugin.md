@@ -81,4 +81,17 @@ And for the API data, there is:
 - API key <br> *(If you have subscribed to OCS-Inventory GreenIT offer, you have recived by mail an API key that needs to be written here)*
 - Comsumption type <br> *(There is deferent slice in industry electricity prices, if you don't know what slice you are, keep it at default. if you precise the slice, it will be more accurate during the approximation of the IT cost)*
 
+## Crontab
+The GreenIT module have two cronjob that's needs to be configured if you want the dashboard works well.
+
+The crontab can do calculation at a specific time and permit to the software to be less long to load a page.
+
+To configure the two cronjobs, you'll only have to write this command: <br> `crontab -e`
+
+And then enter these two lines in:
+- `0 5 * * 1 php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/script/cron_stats.php --mode full`
+- `0 5 * * * php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/script/cron_stats.php --mode delta`
+
+> ***NOTE**: These two cronjobs are the default ones. You are allowed to change the execution time. (By default, every Monday at 5 a.m for full mode and every days at 5 a.m for delta mode)*
+
 And it's done :-)
