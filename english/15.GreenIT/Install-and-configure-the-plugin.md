@@ -55,7 +55,7 @@ Then choose the profile which can configure and/or see the greenit interface:
 
 ![](../../img/server/greenit/allow_access_3.png)
 
-To finish, check ms_greenit_config to allow profile to have access to GreenIT configuration page and msg_greenit_dashboard to have access to the GreenIT dashboard:
+To finish, check ms_greenit_config to allow profile to have access to GreenIT configuration page and ms_greenit_dashboard to have access to the GreenIT dashboard:
 
 ![](../../img/server/greenit/allow_access_4.png)
 
@@ -85,6 +85,10 @@ And for the API data, there is:
 The GreenIT module have two cronjob that's needs to be configured if you want the dashboard works well.
 
 The crontab can do calculation at a specific time and permit to the software to be less long to load a page.
+
+There is two execution modes:
+- `full`: This mode calculates the power consumption statistics for all computers in the database using the data gathered by the plugin. Please note that executing this mode may take a long time, particularly if there are a large number of computers in the database.
+- `delta`: This mode calculates the power consumption statistics for the current day only. Since it processes only the data of the current day, this mode is significantly faster than the full mode. As a result, it can be executed more frequently to update the statistics with the latest data.
 
 To configure the two cronjobs, you'll only have to write this command: <br> `crontab -e`
 
