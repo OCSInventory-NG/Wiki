@@ -81,7 +81,6 @@ And for the API data, there is:
 - API key <br> *(If you have subscribed to OCS-Inventory GreenIT offer, you have recived by mail an API key that needs to be written here)*
 - Comsumption type <br> *(There is deferent slice in industry electricity prices, if you don't know what slice you are, keep it at default. if you precise the slice, it will be more accurate during the approximation of the IT cost)*
 
-
 ## Dashboard
 There is a dashboard to display calculated data. You can go to `Inventory >> GreenIT Manager`.
 
@@ -101,8 +100,6 @@ As you can see, there is 5 differents statistiics views that can be seen:
 - Operating system <br> *(Data per operating system)*
 - Computer type <br> *(Data per computer types)*
 - Manufacturer <br> *(Data per manufacturers)*
-
-
 
 ## Crontab
 The GreenIT module have two cronjob that's needs to be configured if you want the dashboard works well.
