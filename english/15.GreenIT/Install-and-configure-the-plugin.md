@@ -92,7 +92,10 @@ Then you'll have this page:
 ![](../../img/server/greenit/dashboard_2.png)
 
 This is the global statistics view of your IT parc.
-As you can see, there is 5 differents views that can be seen:
+
+![](../../img/server/greenit/dashboard_3.png)
+
+As you can see, there is 5 differents statistiics views that can be seen:
 - Global <br> *(Data of all the IT parc)*
 - Filtered <br> *(Data of a single machine or a filtered group)*
 - Operating system <br> *(Data per operating system)*
