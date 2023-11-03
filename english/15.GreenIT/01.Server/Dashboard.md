@@ -64,8 +64,24 @@ The operating system stats view is a preset to compare windows clients and serve
 
 This view is splited into 2 parts:
 - D-1 uptime and total consumption
-- 3 doughnuts of cost per operating system to compare D-1, compare date X and compare date Y
+- 3 doughnuts diagram of cost per operating system to compare D-1, compare date X and compare date Y
 
 Example picture of operating system stats view with data:
 
 ![](../../../img/server/greenit/dashboard_os_2.png)
+
+### Computer type statistics
+This view is a preset that compare between 3 different type of computer:
+- Desktop
+- Laptop
+- Other
+
+![](../../../img/server/greenit/dashboard_computerType_1.png)
+
+This view is splited into 2 parts:
+- The first part cannot be displayed when there isn't data, it is an average cost of compare data X and Y for each computer type. 
+- The second part is 3 verticals bar diagrams that compare total consumption with the cost of each computer type.
+
+Example picture of operating system stats view with data:
+
+![](../../../img/server/greenit/dashboard_computerType_2.png)
