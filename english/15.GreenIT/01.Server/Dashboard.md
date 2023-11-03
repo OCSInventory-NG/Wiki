@@ -10,9 +10,9 @@ Then on the left, you'll have this menu:
 As you can see, there is 5 differents statistics views that can be seen:
 - Global <br> *(Data of all the IT parc)*
 - Filtered <br> *(Data of a single machine or a filtered group)*
-- Operating system <br> *(Data per operating system)*
-- Computer type <br> *(Data per computer types)*
-- Manufacturer <br> *(Data per manufacturers)*
+- Operating system <br> *(Preset to display data per operating system)*
+- Computer type <br> *(Preset to display data per computer types)*
+- Manufacturer <br> *(Preset to display data per manufacturers)*
 
 ### The global statistics
 This is the global statistics and the default view of your IT parc.
@@ -28,7 +28,7 @@ The yesterday's statistics block have 3 parts than explain:
 - Uptime
 - Cost
 
-Each block have a total of and an average of the data.
+Each blocks have a total of and an average of the data.
 
 Whereas the statistics comparator have only the cost part and a graphical view wich compare the total consumption with the cost. There is two comparators dates which can be changed in the config view.
 
@@ -56,3 +56,16 @@ or you can apply a filter, when you apply it, there is a message that inform you
 If you click on generate filtered stats, the filtered view will be displayed like the global stats view but with filtered data:
 
 ![](../../../img/server/greenit/dashboard_filtered_5.png)
+
+### Operating system statistics
+The operating system stats view is a preset to compare windows clients and servers.
+
+![](../../../img/server/greenit/dashboard_os_1.png)
+
+This view is splited into 2 parts:
+- D-1 uptime and total consumption
+- 3 doughnuts of cost per operating system to compare D-1, compare date #1 and compare date #2
+
+Example picture of operating system stats view with data:
+
+![](../../../img/server/greenit/dashboard_os_2.png)
