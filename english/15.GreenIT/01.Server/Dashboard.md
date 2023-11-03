@@ -1,4 +1,8 @@
-## Dashboard
+# Dashboard
+
+## Introduction
+This documentation is about different view in the dashboard. You'll be able to understand all the dashboard with it.
+
 There is a dashboard to display calculated data. You can go to `Inventory >> GreenIT Manager`.
 
 ![](../../../img/server/greenit/dashboard_1.png)
@@ -14,7 +18,7 @@ As you can see, there is 5 differents statistics views that can be seen:
 - Computer type <br> *(Preset to display data per computer types)*
 - Manufacturer <br> *(Preset to display data per manufacturers)*
 
-### The global statistics
+## The global statistics
 This is the global statistics and the default view of your IT parc.
 
 ![](../../../img/server/greenit/dashboard_global_1.png)
@@ -36,7 +40,7 @@ Example picture of the global stats view with data:
 
 ![](../../../img/server/greenit/dashboard_global_2.png)
 
-### Filtered statistics
+## Filtered statistics
 The filtered view is usefull to apply a filter on the global data. The OCS-Inventory filter can help you to filter with assets category, groups, operating system or tags.
 
 ![](../../../img/server/greenit/dashboard_filtered_1.png)
@@ -57,7 +61,7 @@ If you click on generate filtered stats, the filtered view will be displayed lik
 
 ![](../../../img/server/greenit/dashboard_filtered_5.png)
 
-### Operating system statistics
+## Operating system statistics
 The operating system stats view is a preset to compare windows clients and servers.
 
 ![](../../../img/server/greenit/dashboard_os_1.png)
@@ -70,7 +74,7 @@ Example picture of operating system stats view with data:
 
 ![](../../../img/server/greenit/dashboard_os_2.png)
 
-### Computer type statistics
+## Computer type statistics
 This view is a preset that compare between 3 different type of computer:
 - Desktop
 - Laptop
@@ -86,7 +90,7 @@ Example picture of operating system stats view with data:
 
 ![](../../../img/server/greenit/dashboard_computerType_2.png)
 
-### Manufacturer statistics
+## Manufacturer statistics
 This preset is used to see the top 5 of consumption per manufacturer.
 
 ![](../../../img/server/greenit/dashboard_manufacturer_1.png)
