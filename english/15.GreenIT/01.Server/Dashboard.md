@@ -17,7 +17,7 @@ As you can see, there is 5 differents statistics views that can be seen:
 ### The global statistics
 This is the global statistics and the default view of your IT parc.
 
-![](../../../img/server/greenit/dashboard_3.png)
+![](../../../img/server/greenit/dashboard_global_1.png)
 
 It can display two principal blocks:
 - Yesterday's statistics
@@ -31,3 +31,28 @@ The yesterday's statistics block have 3 parts than explain:
 Each block have a total of and an average of the data.
 
 Whereas the statistics comparator have only the cost part and a graphical view wich compare the total consumption with the cost. There is two comparators dates which can be changed in the config view.
+
+Example picture of the global stats view with data:
+
+![](../../../img/server/greenit/dashboard_global_2.png)
+
+### Filtered statistics
+The filtered view is usefull to apply a filter on the global data. The OCS-Inventory filter can help you to filter with assets category, groups, operating system or tags.
+
+![](../../../img/server/greenit/dashboard_filtered_1.png)
+
+If you already have executed the crontab and you have result like this:
+
+![](../../../img/server/greenit/dashboard_filtered_2.png)
+
+you can interact with the name of the computer in the table to have unique data about this computer:
+
+![](../../../img/server/greenit/dashboard_filtered_3.png)
+
+or you can apply a filter, when you apply it, there is a message that inform you the filter is active. Below this message, a generate filtered stats button is available too.
+
+![](../../../img/server/greenit/dashboard_filtered_4.png)
+
+If you click on generate filtered stats, the filtered view will be displayed like the global stats view but with filtered data:
+
+![](../../../img/server/greenit/dashboard_filtered_5.png)
