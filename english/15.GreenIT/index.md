@@ -26,10 +26,10 @@ Our GreenIT module is used to retreive consumption data of IT infrastructure and
     - [Computer type stats view](01.Server/Dashboard.md#computer-type-statistics)
     - [Manufacturer stats view](01.Server/Dashboard.md#manufacturer-statistics)
 
-## Client side
+## Agent side
 
-- [Installation](02.Client/Client-installation-and-configuration.md#installation)
-    - [Plugin](02.Client/Client-installation-and-configuration.md#plugin)
-    - [Service](02.Client/Client-installation-and-configuration.md#service)
-- [Configuration](02.Client/Client-installation-and-configuration.md#configuration)
-    - [Service configuration](02.Client/Client-installation-and-configuration.md#service-configuration)
+- [Installation](02.Agent/Agent-installation-and-configuration.md#installation)
+    - [Plugin](02.Agent/Agent-installation-and-configuration.md#plugin)
+    - [Service](02.Agent/Agent-installation-and-configuration.md#service)
+- [Configuration](02.Agent/Agent-installation-and-configuration.md#configuration)
+    - [Service configuration](02.Agent/Agent-installation-and-configuration.md#service-configuration)

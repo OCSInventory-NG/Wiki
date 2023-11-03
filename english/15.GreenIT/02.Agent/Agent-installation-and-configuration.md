@@ -1,4 +1,4 @@
-# GreenIT - Server installation
+# GreenIT - Agent installation
 
 ## Introduction
 This documentation will show you how to install the GreenIT script and service for client machine.
