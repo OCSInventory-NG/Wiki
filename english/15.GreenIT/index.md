@@ -9,7 +9,6 @@ GreenIT aims to minimize the negative effects of IT operations on the environmen
 Our GreenIT module is used to retreive consumption data of IT infrastructure and estimate a cost of it. Thanks to that, a company can measure his own infrastructure and take choices to try to reduce his IT cost.
 
 ## Server side
-
 - [Installation](01.Server/Server-installation-and-configuration.md#installation)
     - [Prerequisites](01.Server/Server-installation-and-configuration.md#prerequisites)
     - [Plugin](01.Server/Server-installation-and-configuration.md#plugin)
@@ -27,7 +26,6 @@ Our GreenIT module is used to retreive consumption data of IT infrastructure and
     - [Manufacturer stats view](01.Server/Dashboard.md#manufacturer-statistics)
 
 ## Agent side
-
 - [Installation](02.Agent/Agent-installation-and-configuration.md#installation)
     - [Plugin](02.Agent/Agent-installation-and-configuration.md#plugin)
     - [Service](02.Agent/Agent-installation-and-configuration.md#service)
