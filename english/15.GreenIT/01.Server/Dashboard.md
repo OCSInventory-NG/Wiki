@@ -78,10 +78,23 @@ This view is a preset that compare between 3 different type of computer:
 
 ![](../../../img/server/greenit/dashboard_computerType_1.png)
 
-This view is splited into 2 parts:
+This view is cut into 2 parts:
 - The first part cannot be displayed when there isn't data, it is an average cost of compare data X and Y for each computer type. 
 - The second part is 3 verticals bar diagrams that compare total consumption with the cost of each computer type.
 
 Example picture of operating system stats view with data:
 
 ![](../../../img/server/greenit/dashboard_computerType_2.png)
+
+### Manufacturer statistics
+This preset is used to see the top 5 of consumption per manufacturer.
+
+![](../../../img/server/greenit/dashboard_manufacturer_1.png)
+
+As computer type stats view, the view is cut into 2 parts:
+- The first part cannot be displayed when there isn't data, it is an average cost of compare data X and Y for each 5 first manufacturers.
+- The second part is 3 honrizontal bar diagrams that compare total consumption with the cost of each 5 first manufacturers.
+
+Example picture of operating system stats view with data:
+
+![](../../../img/server/greenit/dashboard_manufacturer_2.png)

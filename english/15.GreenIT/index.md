@@ -24,6 +24,7 @@ Our GreenIT module is used to retreive consumption data of IT parcs and estimate
     - [Filtered stats view](01.Server/Dashboard.md#filtered-statistics)
     - [Operating system stats view](01.Server/Dashboard.md#operating-system-statistics)
     - [Computer type stats view](01.Server/Dashboard.md#computer-type-statistics)
+    - [Manufacturer stats view](01.Server/Dashboard.md#manufacturer-statistics)
 
 ## Client side
 
