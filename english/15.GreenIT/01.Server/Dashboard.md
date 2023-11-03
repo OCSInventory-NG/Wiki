@@ -16,14 +16,14 @@ Then on the left, you'll have this menu:
 </p>
 
 As you can see, there is 5 differents statistics views that can be seen:
-- Global <br> *(Data of all the IT parc)*
+- Global <br> *(Data of all the IT infrastructure)*
 - Filtered <br> *(Data of a single machine or a filtered group)*
 - Operating system <br> *(Preset to display data per operating system)*
 - Computer type <br> *(Preset to display data per computer types)*
 - Manufacturer <br> *(Preset to display data per manufacturers)*
 
 ## The global statistics
-This is the global statistics and the default view of your IT parc.
+This is the global statistics and the default view of your IT infrastructure.
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_global_1.png"/>
