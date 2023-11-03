@@ -16,7 +16,9 @@ To install it, download the setup of the service [here](https://github.com/OCSIn
 ### Service configuration
 When you start the service setup, you'll get this configuration page:
 
-![](../../../img/agent/greenit/service_configuration.png)
+<p align="center">
+  <img src="../../../img/agent/greenit/service_configuration.png"/>
+</p>
 
 Here you can configure:
 - The period between collecting information is a time in seconds that will allow the service to start colecting information.

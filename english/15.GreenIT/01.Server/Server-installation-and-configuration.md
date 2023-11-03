@@ -29,32 +29,44 @@ When the plugin is installed, on the web interface you'll have to allow profile 
 
 First, go to `Configuration >> Users`:
 
-![](../../../img/server/greenit/allow_access_1.png)
+<p align="center">
+  <img src="../../../img/server/greenit/allow_access_1.png"/>
+</p>
 
 When you are on this page, go to the left side of your screen and select `Profiles`:
 
-![](../../../img/server/greenit/allow_access_2.png)
+<p align="center">
+  <img src="../../../img/server/greenit/allow_access_2.png"/>
+</p>
 
 Then chose the profile which can configure and/or see the greenit interface:
 
-![](../../../img/server/greenit/allow_access_3.png)
+<p align="center">
+  <img src="../../../img/server/greenit/allow_access_3.png"/>
+</p>
 
 To finish, check ms_greenit_config to allow profile to have access to GreenIT configuration page and ms_greenit_dashboard to have access to the GreenIT dashboard:
 
-![](../../../img/server/greenit/allow_access_4.png)
+<p align="center">
+  <img src="../../../img/server/greenit/allow_access_4.png"/>
+</p>
 
 > ***IMPORTANT NOTE**: Don't forget to save, logout and reconnect to the account.*
 
 ### Plugin configuration
 To configure the dashboard, you need to have access to the configuration page like we saw it before. When you have the access, go to `Manage >> GreenIT`:
 
-![](../../../img/server/greenit/configuration_1.png)
+<p align="center">
+  <img src="../../../img/server/greenit/configuration_1.png"/>
+</p>
 
 This page will be displayed, from here, you can configure two things:
 - the dashboard data
 - the API we use to get electricity prices
 
-![](../../../img/server/greenit/configuration_2.png)
+<p align="center">
+  <img src="../../../img/server/greenit/configuration_2.png"/>
+</p>
 
 For the dashboard data, there is:
 - Two periods that can be defined <br> *(Aim to compare with both periods + D-1 period)*
