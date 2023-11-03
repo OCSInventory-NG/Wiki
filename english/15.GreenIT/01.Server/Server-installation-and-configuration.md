@@ -45,32 +45,24 @@ To finish, check ms_greenit_config to allow profile to have access to GreenIT co
 
 > ***IMPORTANT NOTE**: Don't forget to save, logout and reconnect to the account.*
 
-
 ### Plugin configuration
 To configure the dashboard, you need to have access to the configuration page like we saw it before. When you have the access, go to `Manage >> GreenIT`:
 
 ![](../../../img/server/greenit/configuration_1.png)
 
 This page will be displayed, from here, you can configure two things:
-
 - the dashboard data
-
 - the API we use to get electricity prices
 
 ![](../../../img/server/greenit/configuration_2.png)
 
 For the dashboard data, there is:
-
 - Two periods that can be defined <br> *(Aim to compare with both periods + D-1 period)*
-
 - Two data precision <br> *(Define how many decimal you want for each data result)*
-
 - Two other data are for the display format.
 
 And for the API data, there is:
-
 - API key <br> *(If you have subscribed to OCS-Inventory GreenIT offer, you have recived by mail an API key that needs to be written here)*
-
 - Comsumption type <br> *(There is deferent slice in industry electricity prices, if you don't know what slice you are, keep it at default. if you precise the slice, it will be more accurate during the approximation of the IT cost)*
 
 ### Crontab
@@ -79,19 +71,14 @@ The GreenIT module have two cronjob that's needs to be configured if you want th
 The crontab can do calculation at a specific time and permit to the software to be faster to load a page.
 
 There is two execution modes:
-
 - `full`: This mode calculates the power consumption statistics for all computers in the database using the data gathered by the plugin. Please note that executing this mode may take a long time, particularly if there are a large number of computers in the database.
-
 - `delta`: This mode calculates the power consumption statistics for the current day only. Since it processes only the data of the current day, this mode is significantly faster than the full mode. As a result, it can be executed more frequently to update the statistics with the latest data.
 
 To configure the two cronjobs, you'll only have to write this command: <br> `crontab -e`
 
 And then enter these two lines in:
-
 - `0 5 * * 1 php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/script/cron_stats.php --mode full`
-
 - `0 5 * * * php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/script/cron_stats.php --mode delta`
-
 > ***NOTE**: These two cronjobs are the default ones. You are allowed to change the execution time. (By default, every Monday at 5 a.m for full mode and every days at 5 a.m for delta mode)*
 
 And it's done :-)
