@@ -19,6 +19,10 @@ Our GreenIT module is used to retreive consumption data of IT parcs and estimate
     - [Plugin Configuration](01.Server/Server-installation-and-configuration.md#plugin-configuration)
     - [Crontab](01.Server/Server-installation-and-configuration.md#crontab)
 - [Dashboard](01.Server/Dashboard.md)
+    - [Menu](01.Server/Dashboard.md)
+    - [Global stats view](01.Server/Dashboard.md#the-global-statistics)
+    - [Filtered stats view](01.Server/Dashboard.md#filtered-statistics)
+    - [Operating system stats view](01.Server/Dashboard.md#operating-system-statistics)
 
 ## Client side
 

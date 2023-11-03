@@ -64,7 +64,7 @@ The operating system stats view is a preset to compare windows clients and serve
 
 This view is splited into 2 parts:
 - D-1 uptime and total consumption
-- 3 doughnuts of cost per operating system to compare D-1, compare date #1 and compare date #2
+- 3 doughnuts of cost per operating system to compare D-1, compare date X and compare date Y
 
 Example picture of operating system stats view with data:
 
