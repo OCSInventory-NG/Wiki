@@ -110,25 +110,25 @@ This view is a preset comparing the consumption of 3 different types of assets:
 </p>
 
 This view has 2 parts:
-- The first part cannot be displayed if there is not data available. Statistics show the average cost per computer type for period X and Y.
+- The first part cannot be displayed if there is no data available. Statistics show the average cost per computer type for period X and Y.
 - The 3 vertical bar diagrams on the second part show the total consumption and cost per computer type.
 
-Example of operating system stats view with data:
+Example of computer type stats view with data:
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_computerType_2.png"/>
 </p>
 
 ## Manufacturer statistics
-This preset shows the consumption of the 5 first manufacturers.
+This preset shows the consumption for the 5 first manufacturers with the highest consumption.
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_manufacturer_1.png"/>
 </p>
 
 This view follows the structure of the Computer type statistics view:
-- The first part cannot be displayed if there is not data available. Statistics show the average cost per manufacturer for period X and Y (limited to 5 first manufacturers).
-- The 3 honrizontal bar diagrams on the second part show the total consumption and cost for the 5 first manufacturers.
+- The first part cannot be displayed if there is no data available. Statistics show the average cost per manufacturer for period X and Y (limited to 5 first manufacturers with the highest consumption).
+- The 3 honrizontal bar diagrams on the second part show the total consumption and cost for the 5 first manufacturers with the highest consumption.
 
 Example picture of manufacturer statistics view with data:
 
