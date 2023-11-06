@@ -1,26 +1,27 @@
 # Dashboard
 
 ## Introduction
-This documentation is about different view in the dashboard. You'll be able to understand all the dashboard with it.
+This documentation explains the GreenIT dashboard views and provides examples of the data that can be displayed.
 
-There is a dashboard to display calculated data. You can go to `Inventory >> GreenIT Manager`.
+
+To access the dashboard, go to `Inventory >> GreenIT Manager` :
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_1.png"/>
 </p>
 
-Then on the left, you'll have this menu:
+Then on the left side, you'll have this menu:
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_2.png"/>
 </p>
 
-As you can see, there is 5 differents statistics views that can be seen:
-- Global <br> *(Data of all the IT infrastructure)*
-- Filtered <br> *(Data of a single machine or a filtered group)*
-- Operating system <br> *(Preset to display data per operating system)*
-- Computer type <br> *(Preset to display data per computer types)*
-- Manufacturer <br> *(Preset to display data per manufacturers)*
+As you can see, there are 5 different statistic views:
+- Global <br> *(Overview of your IT infrastructure)*
+- Filtered <br> *(Statistics for group of assets, based on filters)*
+- Operating system <br> *(Statistics per operating system)*
+- Computer type <br> *(Statistics per computer type)*
+- Manufacturer <br> *(Statistics per manufacturer)*
 
 ## The global statistics
 This is the global statistics and the default view of your IT infrastructure.
@@ -29,75 +30,77 @@ This is the global statistics and the default view of your IT infrastructure.
   <img src="../../../img/server/greenit/dashboard_global_1.png"/>
 </p>
 
-It can display two principal blocks:
+It displays two blocks:
 - Yesterday's statistics
 - Statistics comparator
 
-The yesterday's statistics block have 3 parts than explain:
+The "yesterday's statistics" block has 3 parts:
 - Consumption
 - Uptime
 - Cost
 
-Each blocks have a total of and an average of the data.
+Each block has a total and an average of the data.
 
-Whereas the statistics comparator have only the cost part and a graphical view wich compare the total consumption with the cost. There is two comparators dates which can be changed in the config view.
+Whereas the statistics comparator has a cost part and a graphical view, which compares the total consumption with the cost. 
+Two time periods are used for comparison, their length can be changed in the configuration page.
 
-Example picture of the global stats view with data:
+Example of the global statistic view with data:
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_global_2.png"/>
 </p>
 
 ## Filtered statistics
-The filtered view is usefull to apply a filter on the global data. The OCS-Inventory filter can help you to filter with assets category, groups, operating system or tags.
+The filtered view allows you to filter the global data.
+The OCS-Inventory filters are used to filter by assets category, groups, operating system or tags.
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_filtered_1.png"/>
 </p>
 
-If you already have executed the crontab and you have result like this:
+If the cronjob has been runned and data is available, the page should display a table similar to this one :
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_filtered_2.png"/>
 </p>
 
-you can interact with the name of the computer in the table to have unique data about this computer:
+By clicking on a computer's name, you can access detailed data about it :
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_filtered_3.png"/>
 </p>
 
-or you can apply a filter, when you apply it, there is a message that inform you the filter is active. Below this message, a generate filtered stats button is available too.
+Or you can apply a filter. When applying it, a message informs you that the filter is active. Below this message, a `Generate filtered stats` button is displayed.
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_filtered_4.png"/>
 </p>
 
-If you click on generate filtered stats, the filtered view will be displayed like the global stats view but with filtered data:
+When clicking on this button, the page will display a similar view to the Global Statistics view but with filtered data:
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_filtered_5.png"/>
 </p>
 
 ## Operating system statistics
-The operating system stats view is a preset to compare windows clients and servers.
+The operating system statistics view is a preset to compare Windows clients and servers.
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_os_1.png"/>
 </p>
 
-This view is splited into 2 parts:
+This view is split into 2 parts:
 - D-1 uptime and total consumption
-- 3 doughnuts diagram of cost per operating system to compare D-1, compare date X and compare date Y
+- 3 doughnut diagrams of cost per operating system (D-1, period X, period Y, which are configurable in the configuration page of the plugin, see [dashboard configuration](Server-installation-and-configuration.md#dashboard-configuration))
 
-Example picture of operating system stats view with data:
+Example of operating system stats view with data:
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_os_2.png"/>
 </p>
 
 ## Computer type statistics
-This view is a preset that compare between 3 different type of computer:
+This view is a preset comparing the consumption of 3 different types of assets:
 - Desktop
 - Laptop
 - Other
@@ -106,28 +109,28 @@ This view is a preset that compare between 3 different type of computer:
   <img src="../../../img/server/greenit/dashboard_computerType_1.png"/>
 </p>
 
-This view is cut into 2 parts:
-- The first part cannot be displayed when there isn't data, it is an average cost of compare data X and Y for each computer type. 
-- The second part is 3 verticals bar diagrams that compare total consumption with the cost of each computer type.
+This view has 2 parts:
+- The first part cannot be displayed if there is not data available. Statistics show the average cost per computer type for period X and Y.
+- The 3 vertical bar diagrams on the second part show the total consumption and cost per computer type.
 
-Example picture of operating system stats view with data:
+Example of operating system stats view with data:
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_computerType_2.png"/>
 </p>
 
 ## Manufacturer statistics
-This preset is used to see the top 5 of consumption per manufacturer.
+This preset shows the consumption of the 5 first manufacturers.
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_manufacturer_1.png"/>
 </p>
 
-As computer type stats view, the view is cut into 2 parts:
-- The first part cannot be displayed when there isn't data, it is an average cost of compare data X and Y for each 5 first manufacturers.
-- The second part is 3 honrizontal bar diagrams that compare total consumption with the cost of each 5 first manufacturers.
+This view follows the structure of the Computer type statistics view:
+- The first part cannot be displayed if there is not data available. Statistics show the average cost per manufacturer for period X and Y (limited to 5 first manufacturers).
+- The 3 honrizontal bar diagrams on the second part show the total consumption and cost for the 5 first manufacturers.
 
-Example picture of operating system stats view with data:
+Example picture of manufacturer statistics view with data:
 
 <p align="center">
   <img src="../../../img/server/greenit/dashboard_manufacturer_2.png"/>
