@@ -29,6 +29,8 @@ The GreenIT plugin is designed to collect electrical consumption data from IT in
 - [Installation](02.Agent/Agent-installation-and-configuration.md#installation)
     - [Plugin](02.Agent/Agent-installation-and-configuration.md#plugin)
     - [Service](02.Agent/Agent-installation-and-configuration.md#service)
+        - [Executable file](02.Agent/Agent-installation-and-configuration.md#executable-file)
+        - [CLI installation](02.Agent/Agent-installation-and-configuration.md#cli-installation)
 - [Configuration](02.Agent/Agent-installation-and-configuration.md#configuration)
     - [Service configuration](02.Agent/Agent-installation-and-configuration.md#service-configuration)
 - [Service](02.Agent/Agent-service-for-developpers.md)
