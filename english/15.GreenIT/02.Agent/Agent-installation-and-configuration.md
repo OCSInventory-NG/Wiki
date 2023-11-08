@@ -24,15 +24,15 @@ You can also install the service in CLI mode.
 
 Open a terminal and move to the executable folder.
 
-Then you can execute the setup by enter the following command :
+Then you can execute the setup by entering the following command :
 
 `GreenITService_Installer.exe`
 
-It will launch the setup normaly but you can add `/silent` argument to start it in silent mode.
+It will launch the setup as usual. The `/silent` argument can be added to start the setup in silent mode.
 
-> ***IMPORTANT NOTE**: You must specify more arguments if you use the silent mode!*
+> ***IMPORTANT NOTE**: All of the below arguments must be provided when using the /silent argument !*
 
-Here is the 3 arguments you need to add in silent mode:
+Here are the 3 arguments you will need to add when using silent mode:
 - /collectPeriod
 - /uploadPeriod
 - /savesPeriod
