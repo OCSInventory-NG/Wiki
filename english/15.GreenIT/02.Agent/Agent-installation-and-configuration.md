@@ -3,13 +3,13 @@
 ## Introduction
 This documentation explains how to install the GreenIT plugin and service on Windows.
 
+## Installation
+
 <font color="red">
 
 > ***Known issue**: Concerning the EDR detection, the library we use to get consumption data (OpenHardwareMonitor) might have an intrusive behavior, whitelisting the process and its file is recommended.*
 
 </font>
-
-## Installation
 
 ### Plugin
 > ***NOTE**: Documentation already exists for plugin installation. Please refer to this [link](https://wiki.ocsinventory-ng.org/10.Plugin-engine/Using-plugins-installer/#windows-plugin-deployment)*
@@ -62,12 +62,4 @@ Here you can configure:
 - Period between saves: a time in hours for the service to save the data file into the following file *`C:\ProgramData\GreenIT\data.bak`*
     > ***Example** : if you set it to 5, it will save the data file every 5 hours.*
 
-Once configured, click on **Install** and then check `Run GreenIT Service 1.0` at the end.
-
-> ***IMPORTANT NOTE**: It is important to check `Run GreenIT Service 1.0` to install the software as a Windows service !*
-
-If you haven't checked the box, you can install it manually after the install of the software:
-- Open a terminal and go to the software installation folder path.
-- Run the command `.\GreenIT.exe install` and wait until the plugin is installed.
-
-And that's it :-)
+Once configured, click on **Install** and that's it :-)
