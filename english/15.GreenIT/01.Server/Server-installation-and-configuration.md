@@ -104,8 +104,8 @@ crontab -e
 ```
 
 Then add these two lines:
-- `0 5 * * 1 php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/script/cron_stats.php --mode full`
-- `0 5 * * * php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/script/cron_stats.php --mode delta`
+- `0 5 * * 1 php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/crontab/cron_stats.php --mode full`
+- `0 5 * * * php /usr/share/ocsinventory-reports/ocsreports/extensions/greenit/crontab/cron_stats.php --mode delta`
 
 > ***NOTE**: These two cronjobs are the default ones. You are allowed to change the execution time. (By default, every Monday at 5 a.m for full mode and every day at 5 a.m. for delta mode)*
 
