@@ -28,6 +28,7 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 ## Docker documentation
 
 * [Using docker image](13.Docker-documentation/Using-the-docker-image.md)
+* [Deploy with kubernetes](15.Kubernetes/Helm-charts.md)
 
 ## Authentication
 
