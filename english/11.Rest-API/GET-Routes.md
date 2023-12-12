@@ -1,7 +1,7 @@
 # GET Routes
 
-By default, the API can be access trough : 
-`http://myocsserver/ocsapi/v1/my/routes`
+By default, the API root URI is the following one : 
+`http://myocsserver/ocsapi/v1`
 
 ## Computers Routes
 

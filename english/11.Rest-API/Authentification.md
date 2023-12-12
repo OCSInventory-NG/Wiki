@@ -6,5 +6,5 @@ You need to add your restrictions in the `<Location /ocsapi></Location>`. You ca
 
 In the future we plan to use a restful process and stop rely on apache configuration.
 
-By default, the API can be access trough : 
-`http://myocsserver/ocsapi/v1/my/routes`
+By default, the API base URI is the following one : 
+`http://myocsserver/ocsapi/v1`
