@@ -25,7 +25,7 @@ Here is the list of the different libraries and modules and their versions usefu
     * Perl module YAML
     * Perl module XML::Entities
     * Perl module Switch
-* MySQL or MariaDB version 4.1.0 or higher with InnoDB engine active. Mysql version upper than 5.5 are not supported but may work.
+* We recommend MySQL 8.0 or higher and MariaDB 10.3 or higher in order to be compatible and have the latest security fixes.
 * Make utility such as GNU make.
 
 **`Note : We highly recommend to use mariaDB`**
