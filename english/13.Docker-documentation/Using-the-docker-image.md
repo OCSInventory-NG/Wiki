@@ -52,7 +52,7 @@ You currently have two options :
 
 ### OCS Inventory image (without MySQL and Nginx Proxy)
 
-OCS Inventory image doesn't come with MySQL instance, if you want one, please check the documentation below (docker-compose)
+OCS Inventory image doesn't come with MySQL instance, if you want one, please check the documentation below (docker compose)
 
 To run a OCS Inventory instance with the most basics settings, you can use the following command :
 
@@ -110,9 +110,9 @@ You will find below the list of all available environments variables for our doc
 
 *`NOTE : Default volumes are created for OCS_LOG_DIR, OCS_VARLIB_DIR, OCS_WEBCONSOLE_DIR, OCS_PERLEXT_DIR, OCS_PLUGINSEXT_DIR. If you edit these variables you will need to create your own volumes.`*
 
-## OCS Inventory image with Mariadb and Proxy (using docker-compose)
+## OCS Inventory image with Mariadb and Proxy (using docker compose)
 
-We have a docker-compose example in every folder for each tag of our image.
+We have a docker compose example in every folder for each tag of our image.
 
 To get these examples / templates, clone our git repository :
 ```
@@ -126,7 +126,7 @@ cd 2.9.2/
 
 Then run : 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 ### NGINX configuration
@@ -135,8 +135,8 @@ From the 2.9.2 tag, we added a Nginx service inside the docker compose we provid
 A few files has been added to the docker repository in order to manage this configuration : 
 
 * nginx/conf/ocsinventory.conf.template : Nginx configuration of the OCS Inventory application, it can be replaced with an other Nginx configuration that will suit you needs. As documented on the NGINX docker image, the file name need to end with ".template" 
-* nginx/certs/ocs-dummy.crt : Dummy ssl certificate, can be replaced by a self-signed one or one from a certificate authority. In the case you change the file name, you'll have to edit the SSL_CERT variable in the docker-compose file.
-* nginx/certs/ocs-dummy.key : Dummy ssl certificate key, can be replaced by a self-signed one or one from a certificate authority. In the case you change the file name, you'll have to edit the SSL_KEY variable in the docker-compose file.
+* nginx/certs/ocs-dummy.crt : Dummy ssl certificate, can be replaced by a self-signed one or one from a certificate authority. In the case you change the file name, you'll have to edit the SSL_CERT variable in the docker compose file.
+* nginx/certs/ocs-dummy.key : Dummy ssl certificate key, can be replaced by a self-signed one or one from a certificate authority. In the case you change the file name, you'll have to edit the SSL_KEY variable in the docker compose file.
 * nginx/auth/ocsapi.htpasswd : By default, OCS' REST API is not secured in any way. This file will contain the username / password that can be used to access it. You can generate your own file and replace it. If you change the file's name you need to change the API_AUTH_FILE environement variable.
 
 You will find below the list of all available environments variables for our nginx docker implementation.
