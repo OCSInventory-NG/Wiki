@@ -19,12 +19,14 @@ Before you start it´s better to stop the web server that nobody could do change
 service apache2 stop
 ```
 You need to backup the following configuration files:
+
 1. Apache files:    
-* ~/apache2/conf-available/z-ocsinventory-server.conf
-* ~/apache2/conf-available/zz-ocsinventory-restapi.conf
-* ~/apache2/conf-available/ocsinventory-reports.conf
+    * ~/apache2/conf-available/z-ocsinventory-server.conf
+    * ~/apache2/conf-available/zz-ocsinventory-restapi.conf
+    * ~/apache2/conf-available/ocsinventory-reports.conf
+
 2. OCS configuration:
-* /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php
+    * /usr/share/ocsinventory-reports/ocsreports/dbconfig.inc.php
 
 It´s recommended to create a folder where you store all backed up files :
 ```
@@ -39,6 +41,9 @@ If your scared about losing data then better backup your database, but theoretic
 ```
 mysqldump -u ocs -p --all-databases > /home/backup_ocs/ocsdbbackup.sql
 ```
+
+
+> Take note of the `AUTH_TYPE` value in the `/usr/share/ocsinventory-reports/ocsreports/var.php` file. If different from '**LOCAL**', you will have to edit the file after the update to restore the value.
 
 ## Update the existing installation
 
