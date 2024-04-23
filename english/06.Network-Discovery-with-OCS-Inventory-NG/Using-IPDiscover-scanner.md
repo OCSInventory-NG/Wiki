@@ -14,7 +14,12 @@ apt install fping nmap
 
 ## Usage
 
-To start the scanner, run the file `ipd_scanner.py` in the root folder.
+You can begin to clone the repository:
+```shell
+git clone https://github.com/OCSInventory-NG/IpdiscoverScanner
+```
+
+Then, to start the scanner, run the file `ipd_scanner.py` in the root folder.
 
 Detailed example:
 ```shell
