@@ -272,7 +272,7 @@ Result :
 
 ### List computer that match a term
 
-**URL :** `ocsapi/v1/computers/search?start=:startoffset&limit=:limitoffset&:searchCriteria=:valueToMatch`
+**URL :** `ocsapi/v1/computers/search?start=:startoffset&limit=:limitoffset&:searchCriteria=:valueToMatch&orderby=:searchCriteria;:sort`
 
 **Description :** Retrieve computer IDs list with a simple search on hardware table (other table are not supported).
 
@@ -282,12 +282,14 @@ Result :
 * _limit_ : limit offset of the list. Mandatory.
 * _:searchCriteria_ : hardware column name. Mandatory.
 * _:valueToMatch_ : value to match for the hardware column. Mandatory.
+* _orderby_ : order the result by an hardware column. The _:searchCriteria_ value and the _:sort_ value should be separate by a `;`.
+* _:sort_ : set the sort type [ `ASC`, `DESC` ]. By default `ASC`.
 
 **Return :** Table of computer IDs in JSON format.
 
 _Usage example :_
 
-Full URL : `http://myocsserver/ocsapi/v1/computers/search?start=0&limit=10&userid=root`
+Full URL : `http://myocsserver/ocsapi/v1/computers/search?start=0&limit=10&userid=root&orderby=lastdate;desc`
 
 Result :
 ```json
