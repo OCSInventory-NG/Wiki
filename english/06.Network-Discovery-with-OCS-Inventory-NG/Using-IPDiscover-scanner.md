@@ -7,12 +7,26 @@ This script is meant as an alternative to the existing IpDiscover perl script in
 - fping
 - nmap
 
-First, you can use this command to install requirements:
+First, you can use this command to install scanner requirements:
 ```shell
 apt install fping nmap
 ```
 
 ## Usage
+
+To start the scanner, run the file `ipd_scanner.py` in the root folder.
+
+Detailed example:
+```shell
+python3 ipd_scanner.py --scantype=<fping || nmap> --subnets=[X.X.X.X/XX || X.X.X.X/XX:tag] --output_dir=<yourOutputDirectory> --debug
+```
+
+### Options
+
+- `--scantype` - The type of scan to perform, fping or nmap. Required.
+- `--subnets` - A comma separated list of subnets to scan. Required. The format is subnet:tag, where tag is optional.
+- `--output_dir` - The directory where the output files will be saved. Defaults to the `results` directory in the script's directory.
+- `--debug` - Enable debug output. Optional.
 
 Example usage:
 ```shell
@@ -20,12 +34,6 @@ python3 ipd_scanner.py --scantype=fping --subnets=172.18.25.0/24,172.18.15.0/24:
 ```
 
 This will scan the subnets 172.18.25.0/24 and 172.18.15.0/24 using fping and output the results to the /tmp/ directory. The "tag15" tag will be added to all the hosts in the 172.18.15.0/24 subnet. The tag is optional and can be omitted. The debug flag will output additional information to the console such as command outputs.
-
-## Options
-- `--scantype` - The type of scan to perform, fping or nmap. Required.
-- `--subnets` - A comma separated list of subnets to scan. Required. The format is subnet:tag, where tag is optional.
-- `--output_dir` - The directory where the output files will be saved. Defaults to the `results` directory in the script's directory.
-- `--debug` - Enable debug output. Optional.
 
 ## Injecting the results into OCS
 
