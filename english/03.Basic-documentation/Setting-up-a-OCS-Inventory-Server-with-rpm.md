@@ -92,8 +92,9 @@ You need to add our repository using the following command
 
 You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
 
-* buster | stable 
-* stretch | oldstable
+* bookworm | stable
+* bullseye | oldstable
+* buster | oldoldstable 
 * sid | unstable
 
 Then install the server using : 
@@ -118,9 +119,9 @@ You need to add our repository using the following command
 
 You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
 
-* focal | stable 
-* bionic | oldstable
-* xenial | backport
+* jammy | stable 
+* focal | oldstable
+* bionic | backport
 
 Then install the server using : 
 
