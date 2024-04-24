@@ -1,4 +1,4 @@
-# Using IPDiscover scanner
+# Using the IpDiscover Scanner
 
 This script is meant as an alternative to the existing IpDiscover perl script included with ocsreports. It will not insert data into the database, but the results of the scan will be output to a file in XML format. The files can then be injected into an OCS server, either by using the perl injector script or any tool able to POST data to /ocsinventory.
 
@@ -7,14 +7,14 @@ This script is meant as an alternative to the existing IpDiscover perl script in
 - fping
 - nmap
 
-First, you can use this command to install scanner requirements:
+Install the required packages on Debian-based systems:
 ```shell
 apt install fping nmap
 ```
 
 ## Usage
 
-You can begin to clone the repository:
+Clone the repository:
 ```shell
 git clone https://github.com/OCSInventory-NG/IpdiscoverScanner
 ```
