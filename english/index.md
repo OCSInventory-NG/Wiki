@@ -1,6 +1,6 @@
 # OCS Inventory NG 2.x Documentation
 
-To make it easier to read, the OCS Inventory NG documentation has been divided into 11 sections.
+To make it easier to read, the OCS Inventory NG documentation has been divided into 15 sections.
 
 ## Prerequisites
 
@@ -116,6 +116,9 @@ To make it easier to read, the OCS Inventory NG documentation has been divided i
 * [HOWTO package OCS MacOSX agent releases](12.Developers/HOWTO-package-OCS-MacOSX-agent-releases.md)
 * [HOWTO compile OCS Windows Agent](12.Developers/HOWTO-compile-OCS-Windows-Agent.md)
 
+
+## GreenIT
+* [Install and using GreenIT](15.GreenIT/index.md)
 
 # FAQ
 
