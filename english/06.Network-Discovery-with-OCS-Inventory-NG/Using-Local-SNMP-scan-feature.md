@@ -44,7 +44,7 @@ You should have downloaded 4 files so far. Place them inside the snmp/ directory
 localsnmp_communities_conf.xml  localsnmp_scans_conf.xml  localsnmp_subnets_conf.xml  localsnmp_types_conf.xml
 ```
 
-Located on the same path, edit the following two files to enable the feature :
+Located at the same path, edit the following two files to enable the feature :
 
 * `ocsinventory-agent.cfg`: add the line `localsnmp=1`
 
