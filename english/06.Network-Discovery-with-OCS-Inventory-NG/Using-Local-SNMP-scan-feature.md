@@ -5,6 +5,7 @@ The local SNMP feature allows the agent to perform an SNMP scan even if it can't
 ## Using the Local SNMP Scan Feature
 ### Prerequisites
 
+- Unix agent version 2.10.2 or higher
 - Net::Ping, Nmap::Parser or arp-scan command-line tool
 - Local SNMP configuration files (see the Configuration section for details about configuring and retrieving the files)
 
@@ -43,9 +44,16 @@ You should have downloaded 4 files so far. Place them inside the snmp/ directory
 localsnmp_communities_conf.xml  localsnmp_scans_conf.xml  localsnmp_subnets_conf.xml  localsnmp_types_conf.xml
 ```
 
-Located at the same path, edit the ocsinventory-agent.cfg file and add the line `localsnmp=1` to enable the feature. 
+Located at the same path, edit the following two files to enable the feature :
 
-If SNMP was already configured, the snmp=1 line can be left as is : if performing the inventory locally (i.e. using --local), only the localsnmpscan module will be used.
+* `ocsinventory-agent.cfg`: add the line `localsnmp=1`
+
+If SNMP was already configured, the `snmp=1` line can be left as is : if performing the inventory locally (i.e. using --local), only the localsnmpscan module will be used.
+
+* `modules.conf`: add or uncomment the following line:
+```
+use Ocsinventory::Agent::Modules::LocalSnmpScan;
+```
 
 ___
 
