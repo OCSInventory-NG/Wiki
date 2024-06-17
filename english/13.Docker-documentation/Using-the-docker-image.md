@@ -6,6 +6,10 @@
 
 | Tag | Description | Images | Usage |
 | :--- | :---: | :--- | :--- |
+| **2.12.1** | Stable version of OCS Inventory | Ubuntu 22.04 / MySQL 8.0 / Nginx latest | Production |
+| **2.12** | Stable version of OCS Inventory | Ubuntu 22.04 / MySQL 8.0 / Nginx latest | Production |
+| **2.11** | Stable version of OCS Inventory | Ubuntu 22.04 / MySQL 8.0 / Nginx latest | Production |
+| **2.10** | Stable version of OCS Inventory | Ubuntu 22.04 / MySQL 8.0 / Nginx latest | Production |
 | **2.9.2** | Stable version of OCS Inventory | Ubuntu 20.04 / MySQL 8.0 / Nginx latest | Production |
 | **2.9** | Stable version of OCS Inventory | CentOS 7 / MySQL 5.7 | Production |
 | **2.8.1** | Stable version of OCS Inventory | CentOS 7 / MySQL 5.7 | Production |
@@ -84,20 +88,20 @@ You will find below the list of all available environments variables for our doc
 
 | ENV Variable name | Description | Default value |
 | :--- | :---: | :--- |
-| **APACHE_RUN_USER** | Apache's user | apache |
-| **APACHE_RUN_GROUP** | Apache's group | apache |
-| **APACHE_RUN_DIR** | Apache run directory | /var/run/httpd |
-| **APACHE_LOCK_DIR** | Apache lock directory | /var/lock/httpd |
-| **APACHE_PID_FILE** | Apache PID file | /var/run/httpd.pid |
-| **APACHE_LOG_DIR** | Apache log directory | /var/log/httpd |
-| **OCS_DB_SERVER** | Database hostname | ocsdb |
+| **APACHE_RUN_USER** | Apache's user | www-data |
+| **APACHE_RUN_GROUP** | Apache's group | www-data |
+| **APACHE_RUN_DIR** | Apache run directory | /var/run/apache2 |
+| **APACHE_LOCK_DIR** | Apache lock directory | /var/lock/apache2 |
+| **APACHE_PID_FILE** | Apache PID file | /var/run/apache2/apache2.pid |
+| **APACHE_LOG_DIR** | Apache log directory | /var/log/apache2 |
+| **OCS_DB_SERVER** | Database hostname | dbsrv |
 | **OCS_DB_PORT** | Database port | 3306 |
 | **OCS_DB_USER** | OCS Mysql user | ocs |
 | **OCS_DB_PASS** | OCS Mysql pass | ocs |
 | **OCS_DB_NAME** | OCS Database name | ocsweb |
-| **OCS_LOG_DIR** | OCS Inventory log directory | /var/log/ocsinventory-server/ |
+| **OCS_LOG_DIR** | OCS Inventory log directory | /var/log/ocsinventory-server |
 | **OCS_VARLIB_DIR** | OCS var lib directory (used to store deployment packages)  | /var/lib/ocsinventory-reports/ |
-| **OCS_WEBCONSOLE_DIR** | OCS webconsole directory  | /usr/share/ocsinventory-reports/ocsreports/ |
+| **OCS_WEBCONSOLE_DIR** | OCS webconsole directory  | /usr/share/ocsinventory-reports |
 | **OCS_PERLEXT_DIR** | OCS communication perl extensions directory | /etc/ocsinventory-server/perl/ |
 | **OCS_PLUGINSEXT_DIR** | OCS communication plugins extensions directory | /etc/ocsinventory-server/plugins/ |
 | **OCS_SSL_ENABLED** | OCS MySQL SSL Enabled | 0 (NO) |
