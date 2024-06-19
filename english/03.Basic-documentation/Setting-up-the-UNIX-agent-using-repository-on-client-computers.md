@@ -42,10 +42,9 @@ Then :
 
 You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
 
-* jammy | stable
-* focal | oldstable 
-* bionic | backport
-* xenial | backport
+* noble | stable 
+* jammy | oldstable
+* focal | backport
 
 Then install the agent using : 
 
