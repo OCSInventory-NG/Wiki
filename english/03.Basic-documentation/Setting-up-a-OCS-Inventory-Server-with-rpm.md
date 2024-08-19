@@ -86,7 +86,7 @@ The simplest way is to install the ocsinventory-release package which provides t
 
 You need to add our repository using the following command
 
-    $ curl -sS http://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+    $ curl -sS https://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
     $ echo "deb http://deb.ocsinventory-ng.org/debian/ <distribution_codename> main" | sudo tee /etc/apt/sources.list.d/ocsinventory.list
     $ sudo apt update 
 
@@ -113,7 +113,7 @@ Or only the communication server with :
 
 You need to add our repository using the following command
 
-    $ curl -sS http://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+    $ curl -sS https://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
     $ echo "deb http://deb.ocsinventory-ng.org/ubuntu/ <distribution_codename> main" | sudo tee /etc/apt/sources.list.d/ocsinventory.list
     $ sudo apt update
 

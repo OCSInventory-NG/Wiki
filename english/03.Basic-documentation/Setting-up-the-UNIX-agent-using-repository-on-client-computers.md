@@ -9,7 +9,7 @@ You will find below how to install OCS Inventory agent unix using our repository
 
 You need to add our repository using the following command
 
-    $ curl -sS http://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+    $ curl -sS https://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
     $ echo "deb http://deb.ocsinventory-ng.org/debian/ <distribution_codename> main" | sudo tee /etc/apt/sources.list.d/ocsinventory.list
     $ sudo apt update 
 
@@ -28,12 +28,12 @@ Then install the agent using :
 
 You need to add our repository using the following commands :
 
-    $ curl -sS http://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+    $ curl -sS https://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
 
 **Note** : apt-key is now deprecated as of Ubuntu 22.04, and will issue a warning. We recommend using the below gpg alternative :
 
 
-    $ curl -fsSL http://deb.ocsinventory-ng.org/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/ocs-archive-keyring.gpg
+    $ curl -fsSL https://deb.ocsinventory-ng.org/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/ocs-archive-keyring.gpg
 
 Then : 
   
