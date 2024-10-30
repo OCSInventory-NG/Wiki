@@ -279,8 +279,8 @@ as you can do in interactive mode. This is a list of all available _postinst.pl_
 ``http://ocsinventory-ng/ocsinventory``)
 * **--basevardir** : set OCS Inventory NG Unix Unified agent variables directory (e.g: /var/lib/ocsinventory-agent)
 * **--configdir** : set OCS Inventory NG Unix Unified configuration directory (e.g: /etc/ocsinventory-agent)
-* **--user** : set username for OCS Inventory server Apache authentication (if needed)
-* **--password** : set password for OCS Inventory NG server Apache authentication (if needed)
+* **--user** : set username for OCS Inventory server Apache authentication (if needed). User must be encoded base64.
+* **--password** : set password for OCS Inventory NG server Apache authentication (if needed). Password must be encoded base64;
 * **--realm**: set realm name for OCS Inventory NG server Apache authentication (if needed)
 * **--crontab** : set a crontab while installing OCS Inventory NG Unix Unified agent
 * **--get-old-linux-agent-config** : retrieve old OCS Inventory NG Linux agent configuration (if needed)
@@ -321,8 +321,8 @@ Agent’s command line switch | Meaning
 **--daemon** | Launch ocsinventory-agent in background. Proc::Daemon is needed.
 **--basevardir=”PATH”** | Used to specify the place where the agent should store its files.
 **--logfile=”PATH”** | Used to record log message in FILE and turn off STDERR.
-**--user=”PASSWORD”** | Used to specify a user for server authentification.
-**--password=”PASSWORD”** | Used to specify a password for server authentification.
+**--user=”USER”** | Used to specify a user for server authentification. USER stored in base64 format 
+**--password=”PASSWORD”** | Used to specify a password for server authentification. PASSWORD stored in base64 format.
 
 For more informations, use
 
