@@ -105,3 +105,24 @@ expose_php = Off
 ```
 
 You need to restart apache2 after these to apply modifications.
+
+# PHP Session Cookie Security
+
+Since OCS Inventory NG uses PHP sessions for authentication, it's important to ensure proper session cookie security. While the application doesn't handle session cookies directly, administrators should configure their PHP settings appropriately, especially for production or public-facing instances.
+
+Consider adding or modifying these settings in your php.ini file, depending on your configuration:
+
+```
+session.cookie_httponly = 1
+session.cookie_secure = 1
+session.cookie_samesite = "Strict"
+```
+
+These settings:
+- Enable HttpOnly flag to prevent JavaScript access to session cookies
+- Enable Secure flag to ensure cookies are only sent over HTTPS (if you use HTTPS)
+- Set SameSite to Strict to prevent CSRF attacks
+
+For reference, here is the [PHP Securing Session INI documentation](https://www.php.net/manual/en/session.security.ini.php).
+
+Remember to restart your web server after modifying php.ini settings.
