@@ -40,45 +40,11 @@ The simplest way is to install the ocsinventory-release package which provides t
     wget https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.el9.ocs.noarch.rpm
     dnf install ocsinventory-release-latest.el9.ocs.noarch.rpm epel-release-latest-9.noarch.rpm remi-release-9.rpm
 
-### Fedora 29 (with Remi) x86_64
+### Fedora x86_64
 
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc29.ocs.noarch.rpm https://rpms.remirepo.net/fedora/remi-release-29.rpm
+    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fcXX.ocs.noarch.rpm
 
-### Fedora 30 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc30.ocs.noarch.rpm
-
-### Fedora 31 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc31.ocs.noarch.rpm
-
-### Fedora 32 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc32.ocs.noarch.rpm
-
-### Fedora 33 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc33.ocs.noarch.rpm
-
-### Fedora 34 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc34.ocs.noarch.rpm
-
-### Fedora 35 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc35.ocs.noarch.rpm
-
-### Fedora 36 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc36.ocs.noarch.rpm
-
-### Fedora 37 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc37.ocs.noarch.rpm
-
-### Fedora 38 x86_64
-
-    dnf install https://rpm.ocsinventory-ng.org/ocsinventory-release-latest.fc38.ocs.noarch.rpm
+Where XX can be replaced by 39, 40, 41 or 42.
 
 # Install OCS Inventory server with APT
 
