@@ -5,19 +5,22 @@ This documentation explains how to install the GreenIT plugin and service on Win
 
 ## Installation
 
-<font color="red">
-
-> ***Known issue**: Concerning the EDR detection, the library we use to get consumption data (OpenHardwareMonitor) might have an intrusive behavior, whitelisting the process and its file is recommended.*
-
-</font>
-
 ### Plugin
 > ***NOTE**: Documentation already exists for plugin installation. Please refer to this [link](https://wiki.ocsinventory-ng.org/10.Plugin-engine/Using-plugins-installer/#windows-plugin-deployment)*
 
 ### Service
 
-#### Executable file
+<font color="red">
+
+> ***Known issue**: Concerning the EDR detection, the library we use to get consumption data (LibreHardwareMonitor) might have an intrusive behavior, whitelisting the process and its file is recommended.*
+
+</font>
+
+#### Prerequisites
 > ***NOTE**: To install it, download the setup of the service [here](https://github.com/OCSInventory-NG/greenit_service/releases/)*
+
+### You'll also need to download .NET **AND** ASP .NET runtime version 8.0.19 or upper to make the service working!
+
 
 #### CLI Installation
 You can also install the service in CLI mode.
