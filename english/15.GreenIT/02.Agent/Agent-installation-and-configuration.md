@@ -22,7 +22,7 @@ This documentation explains how to install the GreenIT plugin and service on Win
 ### You'll also need to download .NET **AND** ASP .NET runtime version 8.0.19 or upper to make the service working!
 
 
-#### CLI Installation
+#### CLI Installation for the version 1.0
 You can also install the service in CLI mode.
 
 Open a terminal and move to the executable folder.
@@ -41,6 +41,28 @@ Here are the 3 arguments you will need to add when using silent mode:
 - /savesPeriod
 
 > ***Example**: `GreenITService_Installer.exe /silent /collectPeriod=1 /uploadPeriod=0 /savesPeriod=1`*
+
+> ***NOTE**: More details about arguments [here](#service-configuration)*
+
+#### CLI Installation for the version 2.0
+You can also install the service in CLI mode.
+
+Open a terminal and move to the executable folder.
+
+Then you can execute the setup by entering the following command :
+
+`GreenIT-Service-Setup-2.0.exe`
+
+It will launch the setup as usual. The `/VERYSILENT` argument can be added to start the setup in silent mode.
+
+> ***IMPORTANT NOTE**: All of the below arguments must be provided when using the /VERYSILENT argument !*
+
+Here are the 3 arguments you will need to add when using silent mode:
+- /COLLECT_PERIOD
+- /WRITING_PERIOD
+- /BACKUP_PERIOD
+
+> ***Example**: `GreenIT-Service-Setup-2.0.exe /VERYSILENT /COLLECT_PERIOD=1 /WRITING_PERIOD=0 /BACKUP_PERIOD=1`*
 
 > ***NOTE**: More details about arguments [here](#service-configuration)*
 
