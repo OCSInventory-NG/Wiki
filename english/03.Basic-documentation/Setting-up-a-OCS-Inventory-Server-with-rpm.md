@@ -52,15 +52,15 @@ Where XX can be replaced by 39, 40, 41 or 42.
 
 You need to add our repository using the following command
 
-    $ curl -sS https://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+    $ curl -fsSL https://deb.ocsinventory-ng.org/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/ocs-archive-keyring.gpg
     $ echo "deb http://deb.ocsinventory-ng.org/debian/ <distribution_codename> main" | sudo tee /etc/apt/sources.list.d/ocsinventory.list
     $ sudo apt update 
 
 You will have to replace <distribution_codename> by one of the following term depending on the installation context : 
 
-* bookworm | stable
-* bullseye | oldstable
-* buster | oldoldstable 
+* trixie | stable
+* bookworm | oldstable
+* bullseye | oldoldstable 
 * sid | unstable
 
 Then install the server using : 
@@ -79,7 +79,7 @@ Or only the communication server with :
 
 You need to add our repository using the following command
 
-    $ curl -sS https://deb.ocsinventory-ng.org/pubkey.gpg | sudo apt-key add -
+    $ curl -fsSL https://deb.ocsinventory-ng.org/pubkey.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/ocs-archive-keyring.gpg
     $ echo "deb http://deb.ocsinventory-ng.org/ubuntu/ <distribution_codename> main" | sudo tee /etc/apt/sources.list.d/ocsinventory.list
     $ sudo apt update
 
