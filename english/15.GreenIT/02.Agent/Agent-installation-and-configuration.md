@@ -5,19 +5,22 @@ This documentation explains how to install the GreenIT plugin and service on Win
 
 ## Installation
 
-<font color="red">
-
-> ***Known issue**: Concerning the EDR detection, the library we use to get consumption data (OpenHardwareMonitor) might have an intrusive behavior, whitelisting the process and its file is recommended.*
-
-</font>
-
 ### Plugin
 > ***NOTE**: Documentation already exists for plugin installation. Please refer to this [link](https://wiki.ocsinventory-ng.org/10.Plugin-engine/Using-plugins-installer/#windows-plugin-deployment)*
 
 ### Service
 
-#### Executable file
+<font color="red">
+
+> ***Known issue**: Concerning the EDR detection, the library we use to get consumption data (LibreHardwareMonitor) might have an intrusive behavior, whitelisting the process and its file is recommended.*
+
+</font>
+
+#### Prerequisites
 > ***NOTE**: To install it, download the setup of the service [here](https://github.com/OCSInventory-NG/greenit_service/releases/)*
+
+### You'll also need to download .NET **AND** ASP .NET runtime version 8.0.19 or upper to make the service working!
+
 
 #### CLI Installation
 You can also install the service in CLI mode.
@@ -26,18 +29,18 @@ Open a terminal and move to the executable folder.
 
 Then you can execute the setup by entering the following command :
 
-`GreenITService_Installer.exe`
+`GreenIT-Service-Setup-2.0.exe`
 
-It will launch the setup as usual. The `/silent` argument can be added to start the setup in silent mode.
+It will launch the setup as usual. The `/VERYSILENT` argument can be added to start the setup in silent mode.
 
-> ***IMPORTANT NOTE**: All of the below arguments must be provided when using the /silent argument !*
+> ***IMPORTANT NOTE**: All of the below arguments must be provided when using the /VERYSILENT argument !*
 
 Here are the 3 arguments you will need to add when using silent mode:
-- /collectPeriod
-- /uploadPeriod
-- /savesPeriod
+- /COLLECT_PERIOD
+- /WRITING_PERIOD
+- /BACKUP_PERIOD
 
-> ***Example**: `GreenITService_Installer.exe /silent /collectPeriod=1 /uploadPeriod=0 /savesPeriod=1`*
+> ***Example**: `GreenIT-Service-Setup-2.0.exe /VERYSILENT /COLLECT_PERIOD=1 /WRITING_PERIOD=0 /BACKUP_PERIOD=1`*
 
 > ***NOTE**: More details about arguments [here](#service-configuration)*
 
