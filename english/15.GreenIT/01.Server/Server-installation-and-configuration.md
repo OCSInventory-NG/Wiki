@@ -63,10 +63,6 @@ To access the configuration page, go to `Management >> GreenIT`:
   <img src="../../../img/server/greenit/configuration_1.png"/>
 </p>
 
-The below screenshot shows the configuration page. There are two sections:
-- Interface's settings: dashboard configuration
-- API configuration: used to retrieve electricity prices
-
 <p align="center">
   <img src="../../../img/server/greenit/configuration_2.png"/>
 </p>
@@ -85,9 +81,8 @@ Last two items are formatting options :
 - **Cost format** : currency symbol to use (€, $, £, etc.)
 - **Uptime format** : format to use for uptime values
 
-#### API configuration
-- **API key** : If you subscribed to the OCS-Inventory GreenIT offer, you received an API key by email. Enter it here.
-- **Consumption type** : Based on the tresholds defined by the electricity provider, the price per kWh varies. If you don't know which treshold/segment you are in, leave the default value. If you know the treshold, enter it here to get a more accurate cost approximation.
+And to finish, if you want to make the cost calculation works, you'll need to add the price of the current kilowatt cost :
+- **Kilowatt cost** : Current kilowatt price in your country
 
 ### Crontab
 The GreenIT plugin has two cronjobs that need to be configured for the dashboard to work properly.
